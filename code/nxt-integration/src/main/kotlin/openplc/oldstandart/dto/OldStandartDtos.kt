@@ -19,7 +19,7 @@ class Project(
 class A(val b: B)
 
 class B(
-    @ChildElementList("c", C::class)
+//    @ChildElementList(target = C::class)
     val c: List<C>
 )
 
@@ -27,8 +27,9 @@ class C(
     @ElementObject
     val body: Element,
 
-    @Attribute("att")
+    @Attribute
     val att: String,
 
+    @ChildElement(optional = true)
     val gapa: NotImplemented?
 )
