@@ -1,6 +1,4 @@
 
-9
-	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 ®
 ~code/platform/solutions/org.fbme.ide.platform/source_gen/org/fbme/ide/platform/projectWizard/SystemConfigSolutionSettings.java,a\f\af7cba70097048551f07f5b1a605c59897b551dd
 ¥
@@ -23,8 +21,6 @@ Ycode/library/src/main/kotlin/org/fbme/lib/iec61499/parser/FBInterfaceAdaptersCo
 ]code/library/src/main/kotlin/org/fbme/lib/iec61499/declarations/CompositeFBTypeDeclaration.kt,e\5\e533b9af8e6e5eb3f1a6ac897d40889794e8f3bd
 “
 ccode/library/src/main/java/org/fbme/lib/iec61499/parser/StandardIec61499ConverterConfiguration.java,5\5\5559c85dd421d30cd34de6bf9a99c0795b96adea
-‚
-Rcode/platform/src/main/java/org/fbme/ide/platform/converter/PlatformConverter.java,f\9\f9adb4483a3ee9357d88b84658e029b34b6a6592
 n
 >code/library/src/main/kotlin/org/fbme/lib/common/Identifier.kt,a\b\abbee606a8b2a9bb99f08e8a1a17d7243c68e466
 u

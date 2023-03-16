@@ -1,5 +1,6 @@
 package org.fbme.integration.nxt.importer;
 
+import openplc.oldstandart.dto.A;
 import openplc.oldstandart.dto.Iec61131Parser;
 import org.fbme.ide.platform.testing.PlatformTestBase;
 import org.fbme.ide.platform.testing.PlatformTestRunner;
@@ -20,7 +21,7 @@ public class BasicFbTypeNxtImporterTest extends PlatformTestBase {
     @Test
     public void parseTest0() throws ParserConfigurationException, IOException, SAXException {
         var root = new DOMBuilder().build(DocumentBuilderFactory.newInstance().newDocumentBuilder().parse("C:\\Users\\tolisso\\Desktop\\fbme-master\\code\\nxt-integration\\src\\test\\resources\\ParserTestFbt1.fbt"));
-        var a = new Iec61131Parser().parse(root.getRootElement());
+        var a = new Iec61131Parser().parse(root.getRootElement(), A.class);
         System.out.println(a);
     }
 

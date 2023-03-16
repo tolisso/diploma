@@ -1,9 +1,11 @@
 package openplc.oldstandart.dto
 
+import org.jdom.Element
+
 sealed class Iec61131Xml;
 
 //TODO: Get rid of all instances
-class NotImplemented : Iec61131Xml();
+class NotImplemented
 
 class Project(
     val fileHeader: NotImplemented,
@@ -14,6 +16,19 @@ class Project(
     val documentation: NotImplemented
 ) : Iec61131Xml();
 
-class A (val b: B): Iec61131Xml()
-class B(val c: C): Iec61131Xml()
-class C: Iec61131Xml()
+class A(val b: B)
+
+class B(
+    @ChildElementList("c", C::class)
+    val c: List<C>
+)
+
+class C(
+    @ElementObject
+    val body: Element,
+
+    @Attribute("att")
+    val att: String,
+
+    val gapa: NotImplemented?
+)
