@@ -1,0 +1,6 @@
+
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(óÄ}
+a
+java:S1874"FRemove this use of "AbstractModuleCreationSettings"; it is deprecated.(õÁÜøşÿÿÿÿ
+I
+java:S1874".Remove this use of "<init>"; it is deprecated.(Á²êµıÿÿÿÿ

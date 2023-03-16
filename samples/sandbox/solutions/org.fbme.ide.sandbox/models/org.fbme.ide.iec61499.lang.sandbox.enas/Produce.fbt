@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "https://www.holobloc.com/xml/LibraryElement.dtd">
+
+<FBType Name="Produce">
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="START" />
+      <Event Name="AT_W2" />
+      <Event Name="ASSEMBLY_DONE" />
+      <Event Name="AT_W3" />
+      <Event Name="TEST_OK" />
+      <Event Name="DELIVERED" />
+      <Event Name="TEST_FAIL" />
+      <Event Name="AT_W4" />
+      <Event Name="WP_REMOVED" />
+      <Event Name="RESET" />
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="DONE" />
+      <Event Name="W1W2" />
+      <Event Name="PLACE_CAP" />
+      <Event Name="W2W3" />
+      <Event Name="TEST" />
+      <Event Name="W3W1" />
+      <Event Name="W3W4" />
+      <Event Name="J2_REMOVE_WP" />
+      <Event Name="W4W2" />
+      <Event Name="REJECTED" />
+    </EventOutputs>
+  </InterfaceList>
+  <BasicFB>
+    <ECC>
+      <ECState Name="START" x="392" y="300" />
+      <ECState Name="TO_ASSEMBLY" x="1200" y="668">
+        <ECAction Output="W1W2" />
+      </ECState>
+      <ECState Name="ASSEMBLE" x="1452" y="1060">
+        <ECAction Output="PLACE_CAP" />
+      </ECState>
+      <ECState Name="TO_TEST" x="1808" y="1480">
+        <ECAction Output="W2W3" />
+      </ECState>
+      <ECState Name="TEST" x="2236" y="1848">
+        <ECAction Output="TEST" />
+      </ECState>
+      <ECState Name="TO_OUTPUT" x="3784" y="3092">
+        <ECAction Output="W3W1" />
+      </ECState>
+      <ECState Name="DONE" x="539" y="2192">
+        <ECAction Output="DONE" />
+      </ECState>
+      <ECState Name="REJECT" x="3184" y="1444">
+        <ECAction Output="W3W4" />
+      </ECState>
+      <ECState Name="REMOVE" x="3000" y="1068">
+        <ECAction Output="J2_REMOVE_WP" />
+      </ECState>
+      <ECState Name="REJECT_DONE" x="3240" y="716">
+        <ECAction Output="REJECTED" />
+      </ECState>
+      <ECState Name="RESET" x="2432" y="688" />
+      <ECState Name="TO_ASSEMBLY1" x="2368" y="236">
+        <ECAction Output="W4W2" />
+      </ECState>
+      <ECTransition Source="START" Destination="TO_ASSEMBLY" x="838" y="392" Condition="START" />
+      <ECTransition Source="TO_ASSEMBLY" Destination="ASSEMBLE" x="1401" y="823" Condition="AT_W2" />
+      <ECTransition Source="ASSEMBLE" Destination="TO_TEST" x="1700" y="1221" Condition="ASSEMBLY_DONE" />
+      <ECTransition Source="TO_TEST" Destination="TEST" x="2071" y="1598" Condition="AT_W3" />
+      <ECTransition Source="TEST" Destination="TO_OUTPUT" x="2723" y="2284" Condition="[1 + 2]" />
+      <ECTransition Source="TO_OUTPUT" Destination="DONE" x="2084" y="2723" Condition="DELIVERED" />
+      <ECTransition Source="DONE" Destination="START" x="430" y="1315" Condition="1" />
+      <ECTransition Source="TEST" Destination="REJECT" x="2616" y="1578" Condition="TEST_FAIL" />
+      <ECTransition Source="REJECT" Destination="REMOVE" x="3201" y="1253" Condition="AT_W4" />
+      <ECTransition Source="REMOVE" Destination="REJECT_DONE" x="3204" y="891" Condition="WP_REMOVED" />
+      <ECTransition Source="REJECT_DONE" Destination="TO_ASSEMBLY1" x="3030" y="363" Condition="1" />
+      <ECTransition Source="TO_ASSEMBLY" Destination="RESET" x="1856" y="566" Condition="RESET" />
+      <ECTransition Source="ASSEMBLE" Destination="RESET" x="1906" y="795" Condition="RESET" />
+      <ECTransition Source="TO_TEST" Destination="RESET" x="2088" y="1021" Condition="RESET" />
+      <ECTransition Source="TEST" Destination="RESET" x="2269" y="1267" Condition="RESET" />
+      <ECTransition Source="TO_OUTPUT" Destination="RESET" x="3053" y="2007" Condition="RESET" />
+      <ECTransition Source="REJECT" Destination="RESET" x="2735" y="1109" Condition="RESET" />
+      <ECTransition Source="REMOVE" Destination="RESET" x="2676" y="922" Condition="RESET" />
+      <ECTransition Source="RESET" Destination="START" x="1530" y="338" Condition="1" />
+      <ECTransition Source="TO_ASSEMBLY1" Destination="ASSEMBLE" x="767" y="635" Condition="AT_W2" />
+      <ECTransition Source="TO_ASSEMBLY1" Destination="RESET" x="2482" y="451" Condition="RESET" />
+    </ECC>
+    <Algorithm Name="INIT">
+      <ST Text="" />
+    </Algorithm>
+    <Algorithm Name="REQ">
+      <ST Text="" />
+    </Algorithm>
+  </BasicFB>
+</FBType>
+

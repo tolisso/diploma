@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "https://www.holobloc.com/xml/LibraryElement.dtd">
+
+<FBType Name="S5Gate">
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="INIT" />
+      <Event Name="OPEN" />
+      <Event Name="CLOSE" />
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="INITO" />
+    </EventOutputs>
+  </InterfaceList>
+  <FBNetwork>
+    <FB Name="SR" Type="E_SR" x="1360" y="380" />
+    <FB Name="GATE" Type="PUBLISH_1" x="3269" y="184" />
+    <DataConnections>
+      <Connection Source="SR.Q" Destination="GATE.SD_1" dx1="700" />
+    </DataConnections>
+    <EventConnections>
+      <Connection Source="OPEN" Destination="SR.S" dx1="234" />
+      <Connection Source="CLOSE" Destination="SR.R" dx1="45" />
+      <Connection Source="INIT" Destination="GATE.INIT" dx1="2700" />
+      <Connection Source="SR.EO" Destination="GATE.REQ" dx1="615" />
+      <Connection Source="GATE.INITO" Destination="INITO" dx1="330" />
+    </EventConnections>
+  </FBNetwork>
+</FBType>
+

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "https://www.holobloc.com/xml/LibraryElement.dtd">
+
+<FBType Name="Calculator">
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="INIT" />
+      <Event Name="Addition" />
+      <Event Name="Substraction" />
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="CNF" />
+      <Event Name="INITO" />
+    </EventOutputs>
+    <InputVars>
+      <VarDeclaration Name="IN1" Type="INT" />
+      <VarDeclaration Name="IN2" Type="INT" />
+    </InputVars>
+    <OutputVars>
+      <VarDeclaration Name="OUT" Type="INT" />
+    </OutputVars>
+  </InterfaceList>
+  <BasicFB>
+    <ECC>
+      <ECState Name="START" x="1770" y="383" />
+      <ECState Name="INIT" x="354" y="908">
+        <ECAction Output="INITO" Algorithm="INIT" />
+      </ECState>
+      <ECState Name="Addition" x="1545" y="1233">
+        <ECAction Output="CNF" Algorithm="Addition" />
+      </ECState>
+      <ECState Name="Substraction" x="3412" y="679">
+        <ECAction Output="CNF" Algorithm="Substraction" />
+      </ECState>
+      <ECTransition Source="START" Destination="INIT" x="1075" y="554" Condition="INIT" />
+      <ECTransition Source="INIT" Destination="START" x="1375" y="783" Condition="1" />
+      <ECTransition Source="START" Destination="Addition" x="1750" y="875" Condition="Addition" />
+      <ECTransition Source="Addition" Destination="START" x="2054" y="829" Condition="1" />
+      <ECTransition Source="START" Destination="Substraction" x="2762" y="716" Condition="Substraction" />
+      <ECTransition Source="Substraction" Destination="START" x="2875" y="487" Condition="1" />
+    </ECC>
+    <Algorithm Name="INIT">
+      <ST Text="OUT := 0;&amp;#38;#10;" />
+    </Algorithm>
+    <Algorithm Name="Addition">
+      <ST Text="OUT := IN1 + IN2;&amp;#38;#10;" />
+    </Algorithm>
+    <Algorithm Name="Substraction">
+      <ST Text="OUT := IN1 - IN2;&amp;#38;#10;" />
+    </Algorithm>
+  </BasicFB>
+</FBType>
+

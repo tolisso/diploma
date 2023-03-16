@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "https://www.holobloc.com/xml/LibraryElement.dtd">
+
+<FBType Name="DisableConveyor">
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="INIT">
+        <With Var="QI" />
+        <With Var="ConvIn" />
+      </Event>
+      <Event Name="REQ">
+        <With Var="QI" />
+        <With Var="ConvIn" />
+      </Event>
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="INITO">
+        <With Var="ConvOut" />
+      </Event>
+      <Event Name="CNF">
+        <With Var="ConvOut" />
+      </Event>
+    </EventOutputs>
+    <InputVars>
+      <VarDeclaration Name="QI" Type="BOOL" />
+      <VarDeclaration Name="ConvIn" Type="BOOL" />
+    </InputVars>
+    <OutputVars>
+      <VarDeclaration Name="ConvOut" Type="BOOL" />
+    </OutputVars>
+  </InterfaceList>
+  <BasicFB>
+    <ECC>
+      <ECState Name="START" x="552" y="429" />
+      <ECState Name="INIT" x="923" y="141">
+        <ECAction Output="INITO" Algorithm="INIT" />
+      </ECState>
+      <ECState Name="ENABLED" x="1253" y="848">
+        <ECAction Output="CNF" Algorithm="ENABLE" />
+      </ECState>
+      <ECState Name="DISABLED" x="253" y="828">
+        <ECAction Output="CNF" Algorithm="DISABLE" />
+      </ECState>
+      <ECTransition Source="START" Destination="INIT" x="731" y="204" Condition="INIT" />
+      <ECTransition Source="INIT" Destination="START" x="797" y="348" Condition="1" />
+      <ECTransition Source="ENABLED" Destination="DISABLED" x="757" y="924" Condition="REQ[NOT (QI)]" />
+      <ECTransition Source="START" Destination="ENABLED" x="952" y="571" Condition="REQ" />
+      <ECTransition Source="DISABLED" Destination="ENABLED" x="758" y="753" Condition="REQ[QI]" />
+      <ECTransition Source="ENABLED" Destination="ENABLED" x="1253" y="1031" Condition="REQ" />
+    </ECC>
+    <Algorithm Name="INIT">
+      <ST Text="" />
+    </Algorithm>
+    <Algorithm Name="ENABLE">
+      <ST Text="ConvOut := ConvIn;&amp;#38;#10;" />
+    </Algorithm>
+    <Algorithm Name="DISABLE">
+      <ST Text="ConvOut := FALSE;&amp;#38;#10;" />
+    </Algorithm>
+  </BasicFB>
+</FBType>
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "https://www.holobloc.com/xml/LibraryElement.dtd">
+
+<FBType Name="SimpleMove_E">
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="TRIGGER" />
+      <Event Name="AT_POSITION" />
+      <Event Name="RESET" />
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="DONE" />
+      <Event Name="TO_POSITION" />
+    </EventOutputs>
+  </InterfaceList>
+  <BasicFB>
+    <ECC>
+      <ECState Name="START" x="552" y="429" />
+      <ECState Name="OPERATE" x="1336" y="664">
+        <ECAction Output="TO_POSITION" />
+      </ECState>
+      <ECState Name="DONE" x="896" y="1144">
+        <ECAction Output="DONE" />
+      </ECState>
+      <ECTransition Source="START" Destination="OPERATE" x="957" y="463" Condition="TRIGGER" />
+      <ECTransition Source="OPERATE" Destination="DONE" x="1182" y="954" Condition="AT_POSITION" />
+      <ECTransition Source="DONE" Destination="START" x="477" y="885" Condition="1" />
+      <ECTransition Source="OPERATE" Destination="START" x="918" y="623" Condition="RESET" />
+    </ECC>
+    <Algorithm Name="INIT">
+      <ST Text="" />
+    </Algorithm>
+    <Algorithm Name="REQ">
+      <ST Text="" />
+    </Algorithm>
+  </BasicFB>
+</FBType>
+

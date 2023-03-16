@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "https://www.holobloc.com/xml/LibraryElement.dtd">
+
+<FBType Name="W3W4">
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="TRIGGER" />
+      <Event Name="S6_DELIVERED" />
+      <Event Name="S5_SENSOR" />
+      <Event Name="CONFIG">
+        <With Var="configurationID" />
+      </Event>
+      <Event Name="RESET" />
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="S5_ON" />
+      <Event Name="S5_OFF" />
+      <Event Name="S6_DELIVERY" />
+      <Event Name="DONE" />
+      <Event Name="REQ_CONFIG" />
+    </EventOutputs>
+    <InputVars>
+      <VarDeclaration Name="configurationID" Type="STRING" />
+    </InputVars>
+  </InterfaceList>
+  <BasicFB>
+    <ECC>
+      <ECState Name="START" x="848" y="477" />
+      <ECState Name="S5_TRANSPORT" x="2384" y="1280">
+        <ECAction Output="S5_ON" />
+      </ECState>
+      <ECState Name="S6_DELIVER" x="2196" y="2048">
+        <ECAction Output="S6_DELIVERY" />
+      </ECState>
+      <ECState Name="DONE" x="836" y="1768">
+        <ECAction Output="DONE" />
+        <ECAction Output="S5_OFF" />
+      </ECState>
+      <ECState Name="READY" x="1092" y="952" />
+      <ECState Name="SET_CONFIGURATION" x="2276" y="444">
+        <ECAction Output="REQ_CONFIG" />
+      </ECState>
+      <ECTransition Source="START" Destination="READY" x="839" y="718" Condition="1" />
+      <ECTransition Source="S5_TRANSPORT" Destination="S6_DELIVER" x="2365" y="1668" Condition="S5_SENSOR" />
+      <ECTransition Source="S6_DELIVER" Destination="DONE" x="1388" y="2073" Condition="S6_DELIVERED" />
+      <ECTransition Source="READY" Destination="SET_CONFIGURATION" x="1530" y="415" Condition="TRIGGER" />
+      <ECTransition Source="SET_CONFIGURATION" Destination="S5_TRANSPORT" x="2394" y="913" Condition="[configurationID = &amp;#39;REJECT&amp;#39;]" />
+      <ECTransition Source="DONE" Destination="READY" x="805" y="1297" Condition="1" />
+      <ECTransition Source="SET_CONFIGURATION" Destination="READY" x="1721" y="770" Condition="RESET" />
+      <ECTransition Source="S5_TRANSPORT" Destination="READY" x="1693" y="1188" Condition="RESET" />
+      <ECTransition Source="S6_DELIVER" Destination="READY" x="1640" y="1575" Condition="RESET" />
+    </ECC>
+    <Algorithm Name="INIT">
+      <ST Text="" />
+    </Algorithm>
+    <Algorithm Name="REQ">
+      <ST Text="" />
+    </Algorithm>
+  </BasicFB>
+</FBType>
+

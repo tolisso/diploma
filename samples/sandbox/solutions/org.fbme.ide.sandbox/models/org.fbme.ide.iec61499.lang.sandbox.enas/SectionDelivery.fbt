@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "https://www.holobloc.com/xml/LibraryElement.dtd">
+
+<FBType Name="SectionDelivery">
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="TRIGGER" />
+      <Event Name="SENSOR" />
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="DONE" />
+      <Event Name="DRIVE_ON" />
+      <Event Name="DRIVE_OFF" />
+    </EventOutputs>
+  </InterfaceList>
+  <BasicFB>
+    <ECC>
+      <ECState Name="START" x="552" y="429" />
+      <ECState Name="MOVING" x="1612" y="768">
+        <ECAction Output="DRIVE_ON" />
+      </ECState>
+      <ECState Name="WAIT" x="568" y="796" />
+      <ECState Name="DONE" x="912" y="1312">
+        <ECAction Output="DRIVE_OFF" />
+        <ECAction Output="DONE" />
+      </ECState>
+      <ECTransition Source="START" Destination="WAIT" x="626" y="591" Condition="1" />
+      <ECTransition Source="WAIT" Destination="MOVING" x="1081" y="607" Condition="TRIGGER" />
+      <ECTransition Source="MOVING" Destination="DONE" x="1405" y="1203" Condition="SENSOR" />
+      <ECTransition Source="DONE" Destination="WAIT" x="609" y="1125" Condition="1" />
+    </ECC>
+    <Algorithm Name="INIT">
+      <ST Text="" />
+    </Algorithm>
+    <Algorithm Name="REQ">
+      <ST Text="" />
+    </Algorithm>
+  </BasicFB>
+</FBType>
+

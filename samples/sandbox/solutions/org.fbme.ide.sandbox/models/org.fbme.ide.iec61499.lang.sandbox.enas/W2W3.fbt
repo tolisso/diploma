@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "https://www.holobloc.com/xml/LibraryElement.dtd">
+
+<FBType Name="W2W3">
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="TRIGGER" />
+      <Event Name="S5_DELIVERED" />
+      <Event Name="S3_SENSOR" />
+      <Event Name="S4_SENSOR" />
+      <Event Name="RESET" />
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="S3_ON" />
+      <Event Name="S3_OFF" />
+      <Event Name="S4_ON" />
+      <Event Name="S4_OFF" />
+      <Event Name="S5_DELIVERY" />
+      <Event Name="DONE" />
+    </EventOutputs>
+  </InterfaceList>
+  <BasicFB>
+    <ECC>
+      <ECState Name="START" x="848" y="477" />
+      <ECState Name="S3_TRANSPORT" x="2609" y="876">
+        <ECAction Output="S3_ON" />
+      </ECState>
+      <ECState Name="S4_TRANSPORT" x="2761" y="1342">
+        <ECAction Output="S4_ON" />
+      </ECState>
+      <ECState Name="S5_DELIVER" x="1884" y="2412">
+        <ECAction Output="S5_DELIVERY" />
+        <ECAction Output="S3_OFF" />
+      </ECState>
+      <ECState Name="DONE" x="836" y="1768">
+        <ECAction Output="DONE" />
+        <ECAction Output="S4_OFF" />
+      </ECState>
+      <ECState Name="READY" x="1092" y="952" />
+      <ECTransition Source="START" Destination="READY" x="839" y="718" Condition="1" />
+      <ECTransition Source="S3_TRANSPORT" Destination="S4_TRANSPORT" x="2746" y="1066" Condition="S3_SENSOR" />
+      <ECTransition Source="S5_DELIVER" Destination="DONE" x="1177" y="2197" Condition="S5_DELIVERED" />
+      <ECTransition Source="READY" Destination="S3_TRANSPORT" x="1807" y="741" Condition="TRIGGER" />
+      <ECTransition Source="DONE" Destination="READY" x="805" y="1297" Condition="1" />
+      <ECTransition Source="S4_TRANSPORT" Destination="S5_DELIVER" x="2652" y="1973" Condition="S4_SENSOR" />
+      <ECTransition Source="S3_TRANSPORT" Destination="READY" x="1795" y="1000" Condition="RESET" />
+      <ECTransition Source="S4_TRANSPORT" Destination="READY" x="1877" y="1218" Condition="RESET" />
+      <ECTransition Source="S5_DELIVER" Destination="READY" x="1486" y="1757" Condition="RESET" />
+    </ECC>
+    <Algorithm Name="INIT">
+      <ST Text="" />
+    </Algorithm>
+    <Algorithm Name="REQ">
+      <ST Text="" />
+    </Algorithm>
+  </BasicFB>
+</FBType>
+

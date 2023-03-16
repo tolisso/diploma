@@ -1,0 +1,14 @@
+
+n
+java:S2293U"YReplace the type specification in this constructor call with the diamond operator ("<>").(êË¡'
+k	java:S117+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(éõ©ûÿÿÿÿ
+k	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±Üôİûÿÿÿÿ
+f	java:S1177"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì¦ß–
+f	java:S117P"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É©ÁÛ
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(öœâà
+H
+java:S1199;"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
+H
+java:S1199A"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
+H
+java:S1199G"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
