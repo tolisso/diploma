@@ -1,7 +1,6 @@
 package openplc.oldstandart.dto
 
 import org.jdom.Element
-import java.lang.reflect.Field
 import kotlin.reflect.KClass
 import kotlin.reflect.KProperty
 import kotlin.reflect.full.declaredMemberProperties
@@ -19,25 +18,24 @@ class Iec61131Parser {
 
     private fun <T : Any> parse(element: Element, elementClass: KClass<T>): T {
         val constructor = elementClass.constructors.stream().findAny().get()
-        val fieldNameToValue = elementClass.declaredMemberProperties.associateBy({ it.name }, { field ->
-            val javaField = field.javaField!!
-            if (javaField.isAnnotationPresent(ChildElement::class.java)) {
-                val xmlAnnotation = javaField.getAnnotation(ChildElement::class.java)
-                parseChildElement(element, javaField, xmlAnnotation)
-            } else if (javaField.isAnnotationPresent(ChildElementList::class.java)) {
-                val xmlAnnotation = javaField.getAnnotation(ChildElementList::class.java)
-                val name = if (xmlAnnotation.name == "") javaField.name else xmlAnnotation.name
+        val fieldNameToValue = elementClass.declaredMemberProperties.associateBy({ it.name }, { property ->
+            val field = property.javaField!!
+            if (field.isAnnotationPresent(ChildElement::class.java)) {
+                val xmlAnnotation = field.getAnnotation(ChildElement::class.java)
+                val name = if (xmlAnnotation.name == "") property.name else xmlAnnotation.name
+                parseChildElement(element, property, name)
+            } else if (field.isAnnotationPresent(ChildElementList::class.java)) {
+                val xmlAnnotation = field.getAnnotation(ChildElementList::class.java)
+                val name = if (xmlAnnotation.name == "") field.name else xmlAnnotation.name
                 element.getChildren(name).map { childElement ->
                     parse(childElement, xmlAnnotation.target)
                 }
-            } else if (javaField.isAnnotationPresent(Attribute::class.java)) {
-                val xmlAnnotation = javaField.getAnnotation(Attribute::class.java)
-                val name = if (xmlAnnotation.name == "") javaField.name else xmlAnnotation.name
-                element.getAttributeValue(name)
-            } else if (javaField.isAnnotationPresent(ElementObject::class.java)) {
+            } else if (field.isAnnotationPresent(Attribute::class.java)) {
+                parseAttribute(element, property)
+            } else if (field.isAnnotationPresent(ElementObject::class.java)) {
                 element
             } else {
-                parseNotAnnotatedField(element, field)
+                parseChildElement(element, property, property.name)
             }
         })
         val args = constructor.valueParameters
@@ -48,42 +46,48 @@ class Iec61131Parser {
             return constructor.call(*args)
         } catch (exc: RuntimeException) {
             throw Iec61131ParserException(
-                "Can't create instance of class $elementClass (class must have one all arguments constructor)",
-                exc
+                "Can't create instance of class $elementClass (class must have one all arguments constructor)", exc)
+        }
+    }
+
+    private fun parseChildElement(parentElement: Element, property: KProperty<*>, childElementName: String): Any? {
+        val target = property.javaField!!.type.kotlin
+        val childElement = parentElement.getChild(childElementName)
+
+        if (target.isSubclassOf(List::class)) {
+            val fieldClass = property.javaField!!.declaringClass
+            throw Iec61131ParserException(
+                "Field [" + property.name + "] of $fieldClass returning List of objects, " +
+                        "but not marked with annotation @" + ChildElementList::class.qualifiedName
             )
         }
-    }
 
-    private fun parseChildElement(parentElement: Element, field: Field, fieldAnnotation: ChildElement): Any? {
-        val name = if (fieldAnnotation.name == "") field.name else fieldAnnotation.name
-        val target = field.type.kotlin
-        val childElement = parentElement.getChild(name)
-        if (!fieldAnnotation.optional && childElement == null) {
-            throw Iec61131ParserException("Can't find element with name [$name] for class [$target]")
-        } else {
-            return parse(childElement, target)
-        }
-    }
-
-    private fun parseNotAnnotatedField(parentElement: Element, field: KProperty<*>): Any? {
-        val name = field.javaField!!.name
-        val childElement = parentElement.getChild(name)
-        val type = field.returnType.jvmErasure
         if (childElement == null) {
-            if (field.returnType.isMarkedNullable) {
+            if (property.returnType.isMarkedNullable) {
                 return null
             } else {
-                throw Iec61131ParserException(
-                    "Can't find element with name [" + name + "] for class [" + field.returnType.jvmErasure + "]"
-                )
+                throw Iec61131ParserException("Can't find element with name [$childElementName] for class [$target], but it is not optional")
             }
         }
-        if (type.isSubclassOf(List::class)) {
-            val fieldClass = field.javaField!!.declaringClass
-            throw Iec61131ParserException("Field [$name] of $fieldClass returning List of objects, " +
-                    "but not marked with annotation @" + ChildElementList::class.qualifiedName)
+        return parse(childElement, target)
+    }
+
+    private fun parseAttribute(element: Element, property: KProperty<*>): String? {
+        if (property.returnType.jvmErasure != String::class) {
+            throw Iec61131ParserException("Attribute field [" + property.name + "] of [" + property.javaField!!.declaringClass + "] must be the String or String?")
         }
-        return parse(childElement, type)
+        val xmlAnnotation = property.javaField!!.getAnnotation(Attribute::class.java)
+        val name = if (xmlAnnotation.name == "") property.name else xmlAnnotation.name
+        val attrValue = element.getAttributeValue(name)
+        if (attrValue == null) {
+            if (property.returnType.isMarkedNullable) {
+                return null
+            } else {
+                throw Iec61131ParserException("Can't find attribute [$name] in element [$element], but it is not optional")
+            }
+        } else {
+            return attrValue
+        }
     }
 
     fun <T : Any> parse(element: Element, elementClass: Class<T>): T {
@@ -93,8 +97,7 @@ class Iec61131Parser {
 
 @Target(AnnotationTarget.FIELD)
 annotation class ChildElement(
-    val name: String = "",
-    val optional: Boolean = false
+    val name: String = ""
 )
 
 @Target(AnnotationTarget.FIELD)
@@ -104,7 +107,9 @@ annotation class ChildElementList(
 )
 
 @Target(AnnotationTarget.FIELD)
-annotation class Attribute(val name: String = "")
+annotation class Attribute(
+    val name: String = ""
+)
 
 @Target(AnnotationTarget.FIELD)
 annotation class ElementObject
