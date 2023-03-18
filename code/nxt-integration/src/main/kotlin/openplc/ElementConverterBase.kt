@@ -1,6 +1,5 @@
 package openplc
 
-import openplc.oldstandart.dto.Iec61131Xml
 import org.fbme.lib.common.Identifier
 import org.fbme.lib.iec61499.parser.ConverterArguments
 import org.fbme.lib.iec61499.parser.ConverterBase

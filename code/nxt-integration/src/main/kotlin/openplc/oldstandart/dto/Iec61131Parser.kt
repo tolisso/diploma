@@ -15,6 +15,12 @@ class Iec61131ParserException : RuntimeException {
 }
 
 class Iec61131Parser {
+    private val attributeTypeMappers: Map<KClass<*>, (String) -> Any> = listOf(
+        Pair(String::class) { a: String -> a },
+        Pair(Long::class) { a: String -> a.toLong() },
+        Pair(Double::class) { a: String -> a.toDouble() },
+        Pair(Boolean::class) { a: String -> a.toBoolean() },
+    ).toMap()
 
     private fun <T : Any> parse(element: Element, elementClass: KClass<T>): T {
         val constructor = elementClass.constructors.stream().findAny().get()
@@ -35,7 +41,11 @@ class Iec61131Parser {
             } else if (field.isAnnotationPresent(ElementObject::class.java)) {
                 element
             } else {
-                parseChildElement(element, property, property.name)
+                if (attributeTypeMappers.containsKey(property.returnType.jvmErasure)) {
+                    parseAttribute(element, property)
+                } else {
+                    parseChildElement(element, property, property.name)
+                }
             }
         })
         val args = constructor.valueParameters
@@ -44,9 +54,10 @@ class Iec61131Parser {
             .toTypedArray()
         try {
             return constructor.call(*args)
-        } catch (exc: RuntimeException) {
+        } catch (exc: Exception) {
             throw Iec61131ParserException(
-                "Can't create instance of class $elementClass (class must have one all arguments constructor)", exc)
+                "Can't create instance of class $elementClass (class must have one all arguments constructor)", exc
+            )
         }
     }
 
@@ -72,12 +83,9 @@ class Iec61131Parser {
         return parse(childElement, target)
     }
 
-    private fun parseAttribute(element: Element, property: KProperty<*>): String? {
-        if (property.returnType.jvmErasure != String::class) {
-            throw Iec61131ParserException("Attribute field [" + property.name + "] of [" + property.javaField!!.declaringClass + "] must be the String or String?")
-        }
+    private fun parseAttribute(element: Element, property: KProperty<*>): Any? {
         val xmlAnnotation = property.javaField!!.getAnnotation(Attribute::class.java)
-        val name = if (xmlAnnotation.name == "") property.name else xmlAnnotation.name
+        val name = xmlAnnotation?.name ?: property.name
         val attrValue = element.getAttributeValue(name)
         if (attrValue == null) {
             if (property.returnType.isMarkedNullable) {
@@ -86,7 +94,21 @@ class Iec61131Parser {
                 throw Iec61131ParserException("Can't find attribute [$name] in element [$element], but it is not optional")
             }
         } else {
-            return attrValue
+            val type = property.returnType.jvmErasure
+            if (!attributeTypeMappers.containsKey(type)) {
+                throw Iec61131ParserException(
+                    "Attribute field [" + property.name + "] of ["
+                            + property.javaField!!.declaringClass + "] must be one of ["
+                            + attributeTypeMappers.keys.joinToString(", ", transform = Any::toString) + "]"
+                )
+            }
+            try {
+                return attributeTypeMappers[type]!!(attrValue)
+            } catch (exc: Exception) {
+                throw Iec61131ParserException(
+                    "Can't parse value [$attrValue] in attribute [$name] of element [$element]", exc
+                )
+            }
         }
     }
 
@@ -108,7 +130,7 @@ annotation class ChildElementList(
 
 @Target(AnnotationTarget.FIELD)
 annotation class Attribute(
-    val name: String = ""
+    val name: String
 )
 
 @Target(AnnotationTarget.FIELD)
