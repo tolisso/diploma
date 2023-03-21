@@ -3,20 +3,22 @@ package org.fbme.ide.platform.testing
 import jetbrains.mps.module.ReloadableModule
 import jetbrains.mps.smodel.MPSModuleRepository
 import jetbrains.mps.smodel.ModelAccessHelper
-import jetbrains.mps.tool.environment.Environment
 import jetbrains.mps.tool.environment.EnvironmentConfig
 import jetbrains.mps.tool.environment.IdeaEnvironment
 import jetbrains.mps.util.PathManager
+import org.apache.commons.io.FileUtils
 import org.junit.runner.notification.RunNotifier
 import org.junit.runners.BlockJUnit4ClassRunner
 import org.junit.runners.model.FrameworkMethod
 import org.junit.runners.model.InitializationError
 import org.junit.runners.model.Statement
 import java.io.File
-import java.lang.reflect.Field
 import java.net.MalformedURLException
+import java.net.URL
 import java.net.URLClassLoader
+import java.nio.file.Files
 import java.nio.file.Path
+import java.nio.file.Paths
 import java.util.concurrent.ConcurrentHashMap
 
 class PlatformTestRunner(clazz: Class<*>) : BlockJUnit4ClassRunner(loadFromCustomClassloader(clazz)) {
@@ -50,9 +52,14 @@ class PlatformTestRunner(clazz: Class<*>) : BlockJUnit4ClassRunner(loadFromCusto
 
     class PlatformTestClassloader(private val myParentModule: ReloadableModule) : URLClassLoader(
         arrayOf(
+            getDependencyUrl("javax.activation", "javax.activation-api", "1.2.0"),
+            getDependencyUrl("javax.xml.bind", "jaxb-api", "2.3.1"),
+            getDependencyUrl("com.sun.xml.bind", "jaxb-core", "2.3.0"),
+            getDependencyUrl("com.sun.xml.bind", "jaxb-impl", "2.3.0"),
+            getDependencyUrl("org.javassist", "javassist", "3.25.0-GA"),
             File("build/classes/java/test").toURI().toURL(),
             File("build/classes/kotlin/test").toURI().toURL(),
-            File("build/resources/test").toURI().toURL()
+            File("build/resources/test").toURI().toURL(),
         ),
         null
     ) {
@@ -143,6 +150,32 @@ class PlatformTestRunner(clazz: Class<*>) : BlockJUnit4ClassRunner(loadFromCusto
         init {
             System.setProperty("ide.widget.toolbar", "false")
             System.setProperty("ide.cancellation.propagate", "false")
+        }
+
+        private fun getDependencyUrl(groupId: String, artifactId: String, version: String): URL {
+            val pathDoGradleDependencies =
+                Path.of(System.getProperty("user.home"), ".gradle", "caches", "modules-2", "files-2.1");
+            val pathToDependency = pathDoGradleDependencies.resolve(Path.of(groupId, artifactId, version));
+
+            val urls = ArrayList<URL>();
+            Files.walk(pathToDependency)
+                .filter(Files::isRegularFile)
+                .filter { file -> !file.toString().endsWith("-sources.jar")}
+                .filter { file -> file.toString().endsWith(".jar") }
+            .forEach { file ->
+                try {
+                    urls.add(file.toUri().toURL());
+                } catch (e: MalformedURLException) {
+                    e.printStackTrace();
+                }
+            };
+            if (urls.isEmpty()) {
+                throw RuntimeException("Can't find dependency $groupId:$artifactId:$version")
+            }
+            if (urls.size > 1) {
+                throw RuntimeException("Two or more jars for dependency $groupId:$artifactId:$version - can't choose what to use: [${urls.joinToString(", ")}]")
+            }
+            return urls[0]
         }
     }
 }

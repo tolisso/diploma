@@ -5,6 +5,7 @@ class IEC61131XmlObjects {
     class NotImplemented
 
     class Project(
+        val schemaVersion: String?,
         val fileHeader: NotImplemented,
         val contentHeader: NotImplemented,
         val types: Types,
@@ -13,14 +14,17 @@ class IEC61131XmlObjects {
         val documentation: Documentation?
     )
 
-    class AddData() // TODO
+    class AddData // TODO
 
-    class Documentation() // TODO
+    class Documentation // TODO
 
     class Types(
         val dataTypes: NotImplemented?,
         val pous: NotImplemented?,
+        val namespaces: Namespaces?
     )
+
+    class Namespaces // TODO
 
     class Pous(
         @ChildElementList(target = Pou::class, name = "pou")
