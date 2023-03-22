@@ -1,5 +1,7 @@
 package openplc.oldstandart.dto
 
+import org.jdom.Element
+
 class IEC61131XmlObjects {
 
     class NotImplemented
@@ -20,11 +22,9 @@ class IEC61131XmlObjects {
 
     class Types(
         val dataTypes: NotImplemented?,
-        val pous: NotImplemented?,
-        val namespaces: Namespaces?
+        val pous: Pous,
     )
 
-    class Namespaces // TODO
 
     class Pous(
         @ChildElementList(target = Pou::class, name = "pou")
@@ -32,28 +32,23 @@ class IEC61131XmlObjects {
     )
 
     class Pou(
-        val name: String,
-        val pouType: String,
-        val globalId: Long?,
-
         @ChildElement("interface")
         val pouInterface: Interface?,
-
-        val actions: NotImplemented?,
+        val actions: Actions?,
         val transitions: NotImplemented?,
 
         @ChildElementList(target = Body::class, name = "body")
         val bodyList: List<Body>,
 
-        val addData: AddData?,
-        val documentation: Documentation?
-    )
+        val name: String,
+        val pouType: String,
+        val globalId: String?,
+
+        )
+
+    class Actions // TODO
 
     class Body(
-        @Attribute("WorksheetName")
-        val worksheetName: String?,
-        val globalId: Long?,
-
         @ChildElement("IL")
         val il: NotImplemented?,
 
@@ -70,11 +65,17 @@ class IEC61131XmlObjects {
         val sfc: NotImplemented?,
 
         val addData: AddData?,
-        val documentation: Documentation?
+        val documentation: Documentation?,
+
+        @Attribute("WorksheetName")
+        val worksheetName: String?,
+
+        val globalId: String?
+
     )
 
     class Interface(
-        val returnType: Type?,
+        val returnType: DataType?,
 
         @ChildElementList(target = VariableList::class)
         val localVars: List<VariableList>,
@@ -104,7 +105,7 @@ class IEC61131XmlObjects {
         val documentation: Documentation?
     )
 
-    class Type // TODO
+    class DataType // TODO
 
 
     class VariableList(
@@ -115,22 +116,25 @@ class IEC61131XmlObjects {
         val persistent: Boolean?,
         val nonpersistent: Boolean?,
 
-        @ChildElementList(target = InterfaceVariable::class, name = "variable")
-        val variableList: List<InterfaceVariable>,
+        @ChildElementList(target = Variable::class, name = "variable")
+        val variableList: List<Variable>,
 
         val addData: AddData?,
         val documentation: Documentation?
-    )
+    ) {
+        companion object {
+            class Variable(
+                val type: DataType,
+                val initialValue: NotImplemented?,
+                val addData: AddData?,
+                val documentation: Documentation?,
+                val name: String,
+                val address: String?,
+                val globalId: String?
+            )
+        }
+    }
 
-    class InterfaceVariable(
-        val name: String,
-        val address: String?,
-        val globalId: Long?,
-        val type: Type,
-        val initialValue: NotImplemented?,
-        val addData: AddData?,
-        val documentation: Documentation?
-    )
 
     //body common objects
     class Comment // TODO
@@ -140,23 +144,78 @@ class IEC61131XmlObjects {
     class ActionBlock // TODO
     class VendorElement // TODO
 
-    // FBD objects
-    // block objects
+    class Position // TODO
+
     class Block(
+        val position: Position,
+        val inputVariables: InOutVariables,
+        val inOutVariables: InOutVariables,
+        val outputVariables: InOutVariables,
+        val addData: AddData?,
+        val documentation: Documentation?,
         val localId: Long,
         val width: Long?,
         val height: Long?,
         val typeName: String,
         val instanceName: String?,
         val executionOrderId: Long?,
-        val globalId: Long?
-    )
-    // block objects end
+        val globalId: String?
+    ) {
+        companion object {
+            class InOutVariables(
+                @ChildElementList(target = InOutVariable::class, name = "variable")
+                val variables: List<InOutVariable>
+            )
 
-    class InOutVariable // TODO
+            class InOutVariable(
+                val connectionPointIn: ConnectionPointIn?,
+                val connectionPointOut: ConnectionPointOut?,
+                val documentation: Documentation?,
+                val formalParameter: String,
+                val negated: Boolean?,
+                val edge: String?,
+                val storage: String?,
+                val hidden: Boolean?
+            )
+        }
+    }
+
+    class ConnectionPointIn(
+        val relPosition: Position?,
+
+        @ChildElementList(target = Connection::class, name = "connection")
+        val connections: List<Connection>,
+
+        val expression: ElementNode?,
+        val addData: AddData?,
+        val globalId: String?
+    )
+
+    class ConnectionPointOut(
+        val relPosition: Position?,
+        val expression: ElementNode?,
+        val addData: AddData?,
+        val globalId: String?
+    )
+
+    class Connection(
+        @ChildElementList(target = Position::class, name = "position")
+        val positions: List<Position>,
+
+        val addData: AddData?,
+        val globalId: String?,
+        val refLocalId: Long,
+        val formalParameter: String?
+    )
+
     class Label // TODO
     class Jump // TODO
     class Return // TODO
+
+    class ElementNode(
+        @ElementObject
+        val element: Element
+    )
 
     class FBD(
         @ChildElementList(target = Comment::class, name = "comment")
@@ -181,10 +240,10 @@ class IEC61131XmlObjects {
         val blockList: List<Block>,
 
         @ChildElementList(target = InOutVariable::class, name = "inVariable")
-        val inVariableList: List<InOutVariable>,
+        val inVariableList: List<InVariable>,
 
         @ChildElementList(target = InOutVariable::class, name = "outVariable")
-        val outVariableList: List<InOutVariable>,
+        val outVariableList: List<OutVariable>,
 
         @ChildElementList(target = InOutVariable::class, name = "inOutVariable")
         val inOutVariableList: List<InOutVariable>,
@@ -197,6 +256,60 @@ class IEC61131XmlObjects {
 
         @ChildElementList(target = Return::class, name = "return")
         val returnList: List<Return>,
-    )
+    ) {
+        companion object {
+            class InOutVariable(
+                val position: Position,
+                val connectionPointIn: ConnectionPointIn?,
+                val connectionPointOut: ConnectionPointOut?,
+                val expression: ElementNode,
+                val addData: AddData?,
+                val documentation: Documentation?,
+                val localId: Long,
+                val height: Long?,
+                val width: Long?,
+                val executionOrderId: Long?,
+                val negatedIn: Boolean?,
+                val edgeIn: String?,
+                val storageIn: String?,
+                val negatedOut: Boolean?,
+                val edgeOut: String?,
+                val storageOut: String?,
+                val globalId: String?
+            )
+
+            class InVariable(
+                val position: Position,
+                val connectionPointOut: ConnectionPointOut?,
+                val expression: ElementNode,
+                val addData: AddData?,
+                val documentation: Documentation?,
+                val localId: Long,
+                val height: Long?,
+                val width: Long?,
+                val executionOrderId: Long?,
+                val negated: Boolean?,
+                val edge: String?,
+                val storage: String?,
+                val globalId: String?
+            )
+
+            class OutVariable(
+                val position: Position,
+                val connectionPointIn: ConnectionPointIn?,
+                val expression: ElementNode,
+                val addData: AddData?,
+                val documentation: Documentation?,
+                val localId: Long,
+                val height: Long?,
+                val width: Long?,
+                val executionOrderId: Long?,
+                val negated: Boolean?,
+                val edge: String?,
+                val storage: String?,
+                val globalId: String?
+            )
+        }
+    }
     // FBD objects end
 }
