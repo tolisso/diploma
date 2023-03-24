@@ -1,6 +1,7 @@
 package openplc.oldstandart.dto
 
 import org.jdom.Element
+import org.jdom.Namespace
 import kotlin.reflect.KClass
 import kotlin.reflect.KProperty
 import kotlin.reflect.full.declaredMemberProperties
@@ -15,6 +16,8 @@ class Iec61131ParserException : RuntimeException {
 }
 
 class Iec61131Parser {
+    private val namespace = Namespace.getNamespace("http://www.plcopen.org/xml/tc6_0201");
+
     private val attributeTypeMappers: Map<KClass<*>, (String) -> Any> = listOf(
         Pair(String::class) { a: String -> a },
         Pair(Long::class) { a: String -> a.toLong() },
@@ -33,7 +36,7 @@ class Iec61131Parser {
             } else if (field.isAnnotationPresent(ChildElementList::class.java)) {
                 val xmlAnnotation = field.getAnnotation(ChildElementList::class.java)
                 val name = if (xmlAnnotation.name == "") field.name else xmlAnnotation.name
-                element.getChildren(name).map { childElement ->
+                element.getChildren(name, namespace).map { childElement ->
                     parse(childElement, xmlAnnotation.target)
                 }
             } else if (field.isAnnotationPresent(Attribute::class.java)) {
@@ -63,7 +66,7 @@ class Iec61131Parser {
 
     private fun parseChildElement(parentElement: Element, property: KProperty<*>, childElementName: String): Any? {
         val target = property.javaField!!.type.kotlin
-        val childElement = parentElement.getChild(childElementName)
+        val childElement = parentElement.getChild(childElementName, namespace)
 
         if (target.isSubclassOf(List::class)) {
             val fieldClass = property.javaField!!.declaringClass

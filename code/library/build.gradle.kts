@@ -1,3 +1,5 @@
+import org.fbme.gradle.ModuleDependency
+import org.fbme.gradle.moduleDependency
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -5,6 +7,7 @@ plugins {
     antlr
     mps
     kotlin
+    idea
 }
 
 dependencies {
@@ -12,11 +15,15 @@ dependencies {
     implementation("org.jetbrains:annotations:19.0.0")
     // TODO use real JDOM and somehow bridge it in the intellij platform environment?
     implementation("org.jetbrains.intellij.deps:jdom:2.0.6")
+    implementation("io.github.pdvrieze.xmlutil:serialization-jvm:0.83.0")
 }
 
 mps {
     buildScriptName.set("fbme_library")
+
     libraryFilters.add("antlr4-runtime")
+    libraryFilters.add("xmlutil")
+    libraryFilters.add("serialization")
     moduleName.set("org.fbme.lib")
 }
 

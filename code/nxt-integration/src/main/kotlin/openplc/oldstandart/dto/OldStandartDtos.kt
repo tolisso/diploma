@@ -1,19 +1,23 @@
 package openplc.oldstandart.dto
 
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 import org.jdom.Element
 
 class IEC61131XmlObjects {
 
     class NotImplemented
 
+    @Serializable
     class Project(
+//        @XmlSerialName
         val schemaVersion: String?,
-        val fileHeader: NotImplemented,
-        val contentHeader: NotImplemented,
-        val types: Types,
-        val instances: NotImplemented,
-        val addData: AddData?,
-        val documentation: Documentation?
+//        val fileHeader: NotImplemented,
+//        val contentHeader: NotImplemented,
+//        val types: Types,
+//        val instances: NotImplemented,
+//        val addData: AddData?,
+//        val documentation: Documentation?
     )
 
     class AddData // TODO

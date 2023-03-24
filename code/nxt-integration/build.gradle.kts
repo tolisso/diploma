@@ -7,7 +7,6 @@ plugins {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation(mpsDistribution())
 
     implementation(project(":code:library"))
@@ -38,3 +37,4 @@ val test by tasks.getting(Test::class) {
         "buildDistPlugin"
     )
 }
+
