@@ -15,15 +15,17 @@ dependencies {
     implementation("org.jetbrains:annotations:19.0.0")
     // TODO use real JDOM and somehow bridge it in the intellij platform environment?
     implementation("org.jetbrains.intellij.deps:jdom:2.0.6")
-    implementation("io.github.pdvrieze.xmlutil:serialization-jvm:0.83.0")
+    api("io.github.pdvrieze.xmlutil:serialization-jvm:0.83.0")
 }
 
 mps {
     buildScriptName.set("fbme_library")
 
     libraryFilters.add("antlr4-runtime")
+    // 3 фильтра для зависимостей xmlutil
     libraryFilters.add("xmlutil")
     libraryFilters.add("serialization")
+    libraryFilters.add("core-jvm")
     moduleName.set("org.fbme.lib")
 }
 

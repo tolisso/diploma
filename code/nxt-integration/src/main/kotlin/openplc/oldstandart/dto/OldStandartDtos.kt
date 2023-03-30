@@ -1,23 +1,22 @@
 package openplc.oldstandart.dto
 
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
+import nl.adaptivity.xmlutil.serialization.XmlSerialName
 import org.jdom.Element
 
 class IEC61131XmlObjects {
 
+
     class NotImplemented
 
-    @Serializable
     class Project(
-//        @XmlSerialName
+        @XmlSerialName
         val schemaVersion: String?,
-//        val fileHeader: NotImplemented,
-//        val contentHeader: NotImplemented,
-//        val types: Types,
-//        val instances: NotImplemented,
-//        val addData: AddData?,
-//        val documentation: Documentation?
+        val fileHeader: NotImplemented,
+        val contentHeader: NotImplemented,
+        val types: Types,
+        val instances: NotImplemented,
+        val addData: AddData?,
+        val documentation: Documentation?
     )
 
     class AddData // TODO
@@ -126,17 +125,15 @@ class IEC61131XmlObjects {
         val addData: AddData?,
         val documentation: Documentation?
     ) {
-        companion object {
-            class Variable(
-                val type: DataType,
-                val initialValue: NotImplemented?,
-                val addData: AddData?,
-                val documentation: Documentation?,
-                val name: String,
-                val address: String?,
-                val globalId: String?
-            )
-        }
+        class Variable(
+            val type: DataType,
+            val initialValue: NotImplemented?,
+            val addData: AddData?,
+            val documentation: Documentation?,
+            val name: String,
+            val address: String?,
+            val globalId: String?
+        )
     }
 
 
@@ -165,23 +162,21 @@ class IEC61131XmlObjects {
         val executionOrderId: Long?,
         val globalId: String?
     ) {
-        companion object {
-            class InOutVariables(
-                @ChildElementList(target = InOutVariable::class, name = "variable")
-                val variables: List<InOutVariable>
-            )
+        class InOutVariables(
+            @ChildElementList(target = InOutVariable::class, name = "variable")
+            val variables: List<InOutVariable>
+        )
 
-            class InOutVariable(
-                val connectionPointIn: ConnectionPointIn?,
-                val connectionPointOut: ConnectionPointOut?,
-                val documentation: Documentation?,
-                val formalParameter: String,
-                val negated: Boolean?,
-                val edge: String?,
-                val storage: String?,
-                val hidden: Boolean?
-            )
-        }
+        class InOutVariable(
+            val connectionPointIn: ConnectionPointIn?,
+            val connectionPointOut: ConnectionPointOut?,
+            val documentation: Documentation?,
+            val formalParameter: String,
+            val negated: Boolean?,
+            val edge: String?,
+            val storage: String?,
+            val hidden: Boolean?
+        )
     }
 
     class ConnectionPointIn(
@@ -243,10 +238,10 @@ class IEC61131XmlObjects {
         @ChildElementList(target = Block::class, name = "block")
         val blockList: List<Block>,
 
-        @ChildElementList(target = InOutVariable::class, name = "inVariable")
+        @ChildElementList(target = InVariable::class, name = "inVariable")
         val inVariableList: List<InVariable>,
 
-        @ChildElementList(target = InOutVariable::class, name = "outVariable")
+        @ChildElementList(target = OutVariable::class, name = "outVariable")
         val outVariableList: List<OutVariable>,
 
         @ChildElementList(target = InOutVariable::class, name = "inOutVariable")
@@ -261,59 +256,57 @@ class IEC61131XmlObjects {
         @ChildElementList(target = Return::class, name = "return")
         val returnList: List<Return>,
     ) {
-        companion object {
-            class InOutVariable(
-                val position: Position,
-                val connectionPointIn: ConnectionPointIn?,
-                val connectionPointOut: ConnectionPointOut?,
-                val expression: ElementNode,
-                val addData: AddData?,
-                val documentation: Documentation?,
-                val localId: Long,
-                val height: Long?,
-                val width: Long?,
-                val executionOrderId: Long?,
-                val negatedIn: Boolean?,
-                val edgeIn: String?,
-                val storageIn: String?,
-                val negatedOut: Boolean?,
-                val edgeOut: String?,
-                val storageOut: String?,
-                val globalId: String?
-            )
+        class InOutVariable(
+            val position: Position,
+            val connectionPointIn: ConnectionPointIn?,
+            val connectionPointOut: ConnectionPointOut?,
+            val expression: ElementNode,
+            val addData: AddData?,
+            val documentation: Documentation?,
+            val localId: Long,
+            val height: Long?,
+            val width: Long?,
+            val executionOrderId: Long?,
+            val negatedIn: Boolean?,
+            val edgeIn: String?,
+            val storageIn: String?,
+            val negatedOut: Boolean?,
+            val edgeOut: String?,
+            val storageOut: String?,
+            val globalId: String?
+        )
 
-            class InVariable(
-                val position: Position,
-                val connectionPointOut: ConnectionPointOut?,
-                val expression: ElementNode,
-                val addData: AddData?,
-                val documentation: Documentation?,
-                val localId: Long,
-                val height: Long?,
-                val width: Long?,
-                val executionOrderId: Long?,
-                val negated: Boolean?,
-                val edge: String?,
-                val storage: String?,
-                val globalId: String?
-            )
+        class InVariable(
+            val position: Position,
+            val connectionPointOut: ConnectionPointOut?,
+            val expression: ElementNode,
+            val addData: AddData?,
+            val documentation: Documentation?,
+            val localId: Long,
+            val height: Long?,
+            val width: Long?,
+            val executionOrderId: Long?,
+            val negated: Boolean?,
+            val edge: String?,
+            val storage: String?,
+            val globalId: String?
+        )
 
-            class OutVariable(
-                val position: Position,
-                val connectionPointIn: ConnectionPointIn?,
-                val expression: ElementNode,
-                val addData: AddData?,
-                val documentation: Documentation?,
-                val localId: Long,
-                val height: Long?,
-                val width: Long?,
-                val executionOrderId: Long?,
-                val negated: Boolean?,
-                val edge: String?,
-                val storage: String?,
-                val globalId: String?
-            )
-        }
+        class OutVariable(
+            val position: Position,
+            val connectionPointIn: ConnectionPointIn?,
+            val expression: ElementNode,
+            val addData: AddData?,
+            val documentation: Documentation?,
+            val localId: Long,
+            val height: Long?,
+            val width: Long?,
+            val executionOrderId: Long?,
+            val negated: Boolean?,
+            val edge: String?,
+            val storage: String?,
+            val globalId: String?
+        )
     }
     // FBD objects end
 }

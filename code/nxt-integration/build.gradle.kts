@@ -1,9 +1,9 @@
 import org.fbme.gradle.moduleDependency
 
 plugins {
-    kotlin
     java
     mps
+    kotlin
 }
 
 dependencies {
