@@ -16,11 +16,12 @@ class Iec61131ParserException : RuntimeException {
 }
 
 class Iec61131Parser {
-    private val namespace = Namespace.getNamespace("http://www.plcopen.org/xml/tc6_0201");
+    val namespace = Namespace.getNamespace("http://www.plcopen.org/xml/tc6_0201");
 
     private val attributeTypeMappers: Map<KClass<*>, (String) -> Any> = listOf(
         Pair(String::class) { a: String -> a },
         Pair(Long::class) { a: String -> a.toLong() },
+        Pair(Int::class) { a: String -> a.toInt() },
         Pair(Double::class) { a: String -> a.toDouble() },
         Pair(Boolean::class) { a: String -> a.toBoolean() },
     ).toMap()

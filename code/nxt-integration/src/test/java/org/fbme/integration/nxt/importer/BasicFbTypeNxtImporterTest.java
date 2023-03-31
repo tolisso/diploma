@@ -1,7 +1,7 @@
 package org.fbme.integration.nxt.importer;
 
 import openplc.converter.ConverterBaseArguments;
-import openplc.converter.FbdConverter;
+import openplc.converter.FbdNetworkConverter;
 import openplc.oldstandart.dto.IEC61131XmlObjects;
 import openplc.oldstandart.dto.Iec61131Parser;
 import org.fbme.ide.platform.testing.PlatformTestBase;
@@ -23,7 +23,7 @@ public class BasicFbTypeNxtImporterTest extends PlatformTestBase {
         var a = new Iec61131Parser().parse(root.getRootElement(), IEC61131XmlObjects.Project.class);
         var network = getFactory().createCompositeFBTypeDeclaration(null);
         var converterBaseArguments = new ConverterBaseArguments(getFactory(), getStFactory());
-        new FbdConverter(
+        new FbdNetworkConverter(
                 a.getTypes().getPous().getPouList().get(0).getBodyList().get(0).getFbd(),
                 network.getNetwork(),
                 converterBaseArguments

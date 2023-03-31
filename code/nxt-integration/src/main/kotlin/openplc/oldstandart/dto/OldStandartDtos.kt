@@ -108,7 +108,10 @@ class IEC61131XmlObjects {
         val documentation: Documentation?
     )
 
-    class DataType // TODO
+    class DataType (
+        @ElementObject
+        val element: Element
+    )
 
 
     class VariableList(
@@ -145,7 +148,10 @@ class IEC61131XmlObjects {
     class ActionBlock // TODO
     class VendorElement // TODO
 
-    class Position // TODO
+    class Position (
+        val x: Int,
+        val y: Int
+    )
 
     class Block(
         val position: Position,
@@ -162,6 +168,8 @@ class IEC61131XmlObjects {
         val executionOrderId: Long?,
         val globalId: String?
     ) {
+        fun getName() = instanceName ?: "UnnamedBlock$localId"
+
         class InOutVariables(
             @ChildElementList(target = InOutVariable::class, name = "variable")
             val variables: List<InOutVariable>
