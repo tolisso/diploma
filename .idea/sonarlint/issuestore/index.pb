@@ -7,8 +7,6 @@ ucode/nxt-integration/solutions/org.fbme.integration.nxt/source_gen/org/fbme/int
 öcode/nxt-integration/solutions/org.fbme.integration.nxt/source_gen/org/fbme/integration/nxt/plugin/ImporterByDefaultIdeaEnabler_Plug_in_AppPluginPart.java,3\6\361717d91fdacbfe40244250c028d8446c79349e
 Æ
 ~code/nxt-integration/solutions/org.fbme.integration.nxt/source_gen/org/fbme/integration/nxt/plugin/CreateComposite_Action.java,1\a\1ac3f90796a26730383b775d223b2b733972591d
-æ
-çcode/nxt-integration/solutions/org.fbme.integration.nxt/source_gen/org/fbme/integration/nxt/plugin/NxtImportSystemConfigSolutionSettings.java,0\5\05f67688e46950214af73434acefa1ace11cced2
 ì
 ccode/library/src/main/java/org/fbme/lib/iec61499/parser/StandardIec61499ConverterConfiguration.java,5\5\5559c85dd421d30cd34de6bf9a99c0795b96adea
 Ç
