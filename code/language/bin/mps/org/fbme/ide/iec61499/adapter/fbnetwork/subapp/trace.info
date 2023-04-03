@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1082485599095:jetbrains.mps.baseLanguage.structure.BlockStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+  <root nodeRef="r:832201cc-eba2-477d-a9e1-8c050863a010(org.fbme.ide.iec61499.adapter.fbnetwork.subapp)/4526655945950647866">
+    <file name="SubapplicationDeclarationByNode.java">
+      <node id="4526655945951539740" at="31,88,32,28" concept="7" />
+      <node id="4526655945951532943" at="36,33,37,66" concept="5" />
+      <node id="3846589015136626098" at="42,70,43,135" concept="5" />
+      <node id="3846589015136647359" at="47,37,48,80" concept="4" />
+      <node id="3846589015136658564" at="48,80,49,69" concept="4" />
+      <node id="3846589015136664961" at="50,25,51,40" concept="5" />
+      <node id="3846589015136677645" at="52,12,53,70" concept="5" />
+      <node id="1990232304504222561" at="59,39,60,101" concept="4" />
+      <node id="1990232304504222571" at="60,101,61,63" concept="5" />
+      <node id="9016038726377562150" at="66,52,67,35" concept="5" />
+      <node id="4526655945950647866" at="71,0,72,0" concept="6" trace="position$q_e6" />
+      <node id="4526655945950647866" at="72,0,73,0" concept="6" trace="type$G2OO" />
+      <node id="3846589015136671748" at="52,10,54,5" concept="0" />
+      <node id="4526655945951539734" at="31,0,34,0" concept="1" trace="SubapplicationDeclarationByNode#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/fbme/ide/iec61499/repository/PlatformElementsOwner;)V" />
+      <node id="4526655945951532939" at="35,0,39,0" concept="3" trace="getPosition#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="3846589015136622702" at="40,0,45,0" concept="3" trace="getTypeReference#()Lorg/fbme/lib/common/Reference;" />
+      <node id="3846589015136650756" at="49,69,54,5" concept="2" />
+      <node id="9016038726377560010" at="64,0,69,0" concept="3" trace="getParameters#()Ljava/util/List;" />
+      <node id="1990232304504196856" at="57,0,63,0" concept="3" trace="getContainer#()Lorg/fbme/lib/iec61499/fbnetwork/subapp/SubappNetwork;" />
+      <node id="4526655945952285566" at="46,0,56,0" concept="3" trace="getType#()Lorg/fbme/lib/iec61499/descriptors/FBTypeDescriptor;" />
+      <scope id="4526655945951539738" at="31,88,32,28" />
+      <scope id="4526655945951532942" at="36,33,37,66" />
+      <scope id="3846589015136622713" at="42,70,43,135" />
+      <scope id="3846589015136650758" at="50,25,51,40" />
+      <scope id="3846589015136671749" at="52,12,53,70" />
+      <scope id="9016038726377560026" at="66,52,67,35" />
+      <scope id="1990232304504196887" at="59,39,61,63">
+        <var name="container" id="1990232304504222562" />
+      </scope>
+      <scope id="4526655945951539734" at="31,0,34,0">
+        <var name="node" id="4526655945951539741" />
+        <var name="repository" id="4526655945951539745" />
+      </scope>
+      <scope id="4526655945951532939" at="35,0,39,0" />
+      <scope id="3846589015136622702" at="40,0,45,0" />
+      <scope id="9016038726377560010" at="64,0,69,0" />
+      <scope id="1990232304504196856" at="57,0,63,0" />
+      <scope id="4526655945952285581" at="47,37,54,5">
+        <var name="target" id="3846589015136658565" />
+        <var name="typeReference" id="3846589015136647360" />
+      </scope>
+      <scope id="4526655945952285566" at="46,0,56,0" />
+      <unit id="4526655945950647866" at="70,0,74,0" name="org.fbme.ide.iec61499.adapter.fbnetwork.subapp.SubapplicationDeclarationByNode$LINKS" />
+      <unit id="4526655945950647866" at="29,0,75,0" name="org.fbme.ide.iec61499.adapter.fbnetwork.subapp.SubapplicationDeclarationByNode" />
+    </file>
+  </root>
+  <root nodeRef="r:832201cc-eba2-477d-a9e1-8c050863a010(org.fbme.ide.iec61499.adapter.fbnetwork.subapp)/8038025982722815326">
+    <file name="SubappNetworkByNode.java">
+      <node id="8038025982722830472" at="20,76,21,28" concept="7" />
+      <node id="8038025982722830914" at="25,63,26,220" concept="5" />
+      <node id="8038025982722815326" at="30,0,31,0" concept="6" trace="IWithSubappNetwork$Dk" />
+      <node id="8038025982722815326" at="34,0,35,0" concept="6" trace="subapplications$rHpi" />
+      <node id="8038025982722830466" at="20,0,23,0" concept="1" trace="SubappNetworkByNode#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/fbme/ide/iec61499/repository/PlatformElementsOwner;)V" />
+      <node id="8038025982722830714" at="24,0,28,0" concept="3" trace="getSubapplications#()Ljava/util/List;" />
+      <scope id="8038025982722830470" at="20,76,21,28" />
+      <scope id="8038025982722830721" at="25,63,26,220" />
+      <scope id="8038025982722830466" at="20,0,23,0">
+        <var name="node" id="8038025982722830473" />
+        <var name="repository" id="8038025982722830477" />
+      </scope>
+      <scope id="8038025982722830714" at="24,0,28,0" />
+      <unit id="8038025982722815326" at="29,0,32,0" name="org.fbme.ide.iec61499.adapter.fbnetwork.subapp.SubappNetworkByNode$CONCEPTS" />
+      <unit id="8038025982722815326" at="33,0,36,0" name="org.fbme.ide.iec61499.adapter.fbnetwork.subapp.SubappNetworkByNode$LINKS" />
+      <unit id="8038025982722815326" at="18,0,37,0" name="org.fbme.ide.iec61499.adapter.fbnetwork.subapp.SubappNetworkByNode" />
+    </file>
+  </root>
+</debug-info>
+

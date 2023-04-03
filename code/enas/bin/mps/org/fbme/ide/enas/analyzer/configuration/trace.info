@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068390468200:jetbrains.mps.baseLanguage.structure.FieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1144226303539:jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <root nodeRef="r:0f5e1743-c8a3-4563-9c16-aa34c9de7080(org.fbme.ide.enas.analyzer.configuration)/7558503085826183987">
+    <file name="ReceiptCorrectnessChecker.java">
+      <node id="7558503085826258764" at="17,0,18,0" concept="2" trace="mySystem" />
+      <node id="7558503085826257519" at="19,0,20,0" concept="2" trace="myConfigurationGraphs" />
+      <node id="7558503085826258848" at="21,50,22,22" concept="1" />
+      <node id="7558503085826261649" at="23,119,24,107" concept="1" />
+      <node id="7558503085826282512" at="29,126,30,33" concept="1" />
+      <node id="7558503085826183987" at="35,0,36,0" concept="9" trace="configurations$Lkxy" />
+      <node id="7558503085826260157" at="22,22,25,5" concept="3" />
+      <node id="7558503085826279494" at="28,25,31,5" concept="3" />
+      <node id="7558503085826279050" at="28,0,33,0" concept="5" trace="prepare#()V" />
+      <node id="7558503085826258840" at="21,0,27,0" concept="0" trace="ReceiptCorrectnessChecker#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="7558503085826260163" at="23,119,24,107" />
+      <scope id="7558503085826279497" at="29,126,30,33" />
+      <scope id="7558503085826260157" at="22,22,25,5">
+        <var name="configuration" id="7558503085826260159" />
+      </scope>
+      <scope id="7558503085826279053" at="28,25,31,5" />
+      <scope id="7558503085826279494" at="28,25,31,5">
+        <var name="configurationGraph" id="7558503085826279495" />
+      </scope>
+      <scope id="7558503085826258844" at="21,50,25,5" />
+      <scope id="7558503085826279050" at="28,0,33,0" />
+      <scope id="7558503085826258840" at="21,0,27,0">
+        <var name="system" id="7558503085826258847" />
+      </scope>
+      <unit id="7558503085826183987" at="34,0,37,0" name="org.fbme.ide.enas.analyzer.configuration.ReceiptCorrectnessChecker$LINKS" />
+      <unit id="7558503085826183987" at="15,0,38,0" name="org.fbme.ide.enas.analyzer.configuration.ReceiptCorrectnessChecker" />
+    </file>
+  </root>
+  <root nodeRef="r:0f5e1743-c8a3-4563-9c16-aa34c9de7080(org.fbme.ide.enas.analyzer.configuration)/7558503085826184171">
+    <file name="ReceiptState.java">
+      <node id="7558503085826184252" at="9,0,10,0" concept="2" trace="point" />
+      <node id="7558503085826184284" at="10,0,11,0" concept="2" trace="configuration" />
+      <node id="7558503085826184383" at="12,57,13,23" concept="1" />
+      <node id="7558503085826184395" at="13,23,14,39" concept="1" />
+      <node id="7558503085826184375" at="12,0,16,0" concept="0" trace="ReceiptState#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="7558503085826184379" at="12,57,14,39" />
+      <scope id="7558503085826184375" at="12,0,16,0">
+        <var name="configuration" id="7558503085826184394" />
+        <var name="point" id="7558503085826184382" />
+      </scope>
+      <unit id="7558503085826184171" at="7,0,17,0" name="org.fbme.ide.enas.analyzer.configuration.ReceiptState" />
+    </file>
+  </root>
+  <root nodeRef="r:0f5e1743-c8a3-4563-9c16-aa34c9de7080(org.fbme.ide.enas.analyzer.configuration)/7558503085826185058">
+    <file name="ReceiptItemTranslation.java">
+      <node id="7558503085826185191" at="9,0,10,0" concept="2" trace="sourcePoint" />
+      <node id="7558503085826185565" at="10,0,11,0" concept="2" trace="targetPoint" />
+      <node id="7558503085826185194" at="11,0,12,0" concept="2" trace="configuration" />
+      <node id="7558503085826185202" at="13,92,14,35" concept="1" />
+      <node id="7558503085826186054" at="14,35,15,35" concept="1" />
+      <node id="7558503085826185208" at="15,35,16,39" concept="1" />
+      <node id="7558503085826185198" at="13,0,18,0" concept="0" trace="ReceiptItemTranslation#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="7558503085826185201" at="13,92,16,39" />
+      <scope id="7558503085826185198" at="13,0,18,0">
+        <var name="configuration" id="7558503085826185216" />
+        <var name="sourcePoint" id="7558503085826185214" />
+        <var name="targetPoint" id="7558503085826185867" />
+      </scope>
+      <unit id="7558503085826185058" at="7,0,20,0" name="org.fbme.ide.enas.analyzer.configuration.ReceiptItemTranslation" />
+    </file>
+  </root>
+  <root nodeRef="r:0f5e1743-c8a3-4563-9c16-aa34c9de7080(org.fbme.ide.enas.analyzer.configuration)/7558503085826188010">
+    <file name="ConfigurationGraph.java">
+      <node id="7558503085826228593" at="16,0,17,0" concept="2" trace="mySystem" />
+      <node id="7558503085826221185" at="17,0,18,0" concept="2" trace="myConfiguration" />
+      <node id="7558503085826188181" at="18,0,19,0" concept="2" trace="myGraph" />
+      <node id="7558503085826235780" at="20,50,21,102" concept="1" />
+      <node id="7558503085826230342" at="21,102,22,36" concept="1" />
+      <node id="3558036305400299165" at="28,52,29,17" concept="7" />
+      <node id="3558036305400270771" at="33,0,34,0" concept="2" trace="itemStartsX" />
+      <node id="3558036305400270946" at="34,0,35,0" concept="2" trace="itemStartsY" />
+      <node id="3558036305400271086" at="35,0,36,0" concept="2" trace="itemEndsX" />
+      <node id="3558036305400271089" at="36,0,37,0" concept="2" trace="itemEndsY" />
+      <node id="7558503085826190502" at="40,0,41,0" concept="2" trace="sectionIndex" />
+      <node id="7558503085826190915" at="41,0,42,0" concept="2" trace="sectionPointKind" />
+      <node id="7558503085826191256" at="43,82,44,39" concept="1" />
+      <node id="7558503085826191268" at="44,39,45,47" concept="1" />
+      <node id="7558503085826192609" at="51,22,52,20" concept="7" />
+      <node id="7558503085826192615" at="54,40,55,21" concept="7" />
+      <node id="7558503085826192628" at="56,7,57,0" concept="8" />
+      <node id="7558503085826192629" at="57,0,58,37" concept="6" />
+      <node id="7558503085826192647" at="59,46,60,21" concept="7" />
+      <node id="7558503085826192655" at="62,54,63,21" concept="7" />
+      <node id="7558503085826192669" at="64,7,65,0" concept="8" />
+      <node id="7558503085826192670" at="65,0,66,18" concept="7" />
+      <node id="7558503085826192677" at="69,27,70,21" concept="6" />
+      <node id="7558503085826192689" at="70,21,71,42" concept="1" />
+      <node id="7558503085826192698" at="71,42,72,57" concept="1" />
+      <node id="7558503085826192712" at="72,57,73,20" concept="7" />
+      <node id="7558503085826188010" at="86,0,87,0" concept="9" trace="EnasSystem$e8" />
+      <node id="7558503085826277223" at="25,0,27,0" concept="5" trace="build#()V" />
+      <node id="7558503085826247900" at="28,0,31,0" concept="5" trace="isReachable#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="7558503085826192607" at="50,37,53,7" concept="4" />
+      <node id="7558503085826192613" at="53,7,56,7" concept="4" />
+      <node id="7558503085826192643" at="58,37,61,7" concept="4" />
+      <node id="7558503085826192653" at="61,7,64,7" concept="4" />
+      <node id="7558503085826230334" at="20,0,24,0" concept="0" trace="ConfigurationGraph#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="7558503085826191248" at="43,0,47,0" concept="0" trace="ItemPoint#(ILorg/fbme/ide/enas/analyzer/configuration/ConfigurationGraph/Kind;)V" />
+      <node id="7558503085826192672" at="68,0,75,0" concept="5" trace="hashCode#()I" />
+      <node id="7558503085826192603" at="49,0,68,0" concept="5" trace="equals#(Ljava/lang/Object;)Z" />
+      <scope id="7558503085826277226" at="25,23,25,23" />
+      <scope id="7558503085826247903" at="28,52,29,17" />
+      <scope id="7558503085826192608" at="51,22,52,20" />
+      <scope id="7558503085826192614" at="54,40,55,21" />
+      <scope id="7558503085826192646" at="59,46,60,21" />
+      <scope id="7558503085826192654" at="62,54,63,21" />
+      <scope id="7558503085826230338" at="20,50,22,36" />
+      <scope id="7558503085826277223" at="25,0,27,0" />
+      <scope id="7558503085826191252" at="43,82,45,47" />
+      <scope id="7558503085826247900" at="28,0,31,0">
+        <var name="from" id="7558503085826248489" />
+        <var name="to" id="7558503085826252733" />
+      </scope>
+      <scope id="7558503085826230334" at="20,0,24,0">
+        <var name="configuration" id="7558503085826230341" />
+      </scope>
+      <scope id="7558503085826191248" at="43,0,47,0">
+        <var name="sectionIndex" id="7558503085826191255" />
+        <var name="sectionPointKind" id="7558503085826191267" />
+      </scope>
+      <scope id="7558503085826192675" at="69,27,73,20">
+        <var name="result" id="7558503085826192678" />
+      </scope>
+      <scope id="7558503085826192672" at="68,0,75,0" />
+      <scope id="7558503085826192606" at="50,37,66,18">
+        <var name="that" id="7558503085826192630" />
+      </scope>
+      <scope id="7558503085826192603" at="49,0,68,0">
+        <var name="o" id="7558503085826192635" />
+      </scope>
+      <unit id="7558503085826188010" at="85,0,88,0" name="org.fbme.ide.enas.analyzer.configuration.ConfigurationGraph$CONCEPTS" />
+      <unit id="3558036305400269669" at="32,0,38,0" name="org.fbme.ide.enas.analyzer.configuration.ConfigurationGraph$SectionSpec" />
+      <unit id="7558503085826188479" at="77,0,84,0" name="org.fbme.ide.enas.analyzer.configuration.ConfigurationGraph$Kind" />
+      <unit id="7558503085826188322" at="39,0,76,0" name="org.fbme.ide.enas.analyzer.configuration.ConfigurationGraph$ItemPoint" />
+      <unit id="7558503085826188010" at="14,0,89,0" name="org.fbme.ide.enas.analyzer.configuration.ConfigurationGraph" />
+    </file>
+  </root>
+  <root nodeRef="r:0f5e1743-c8a3-4563-9c16-aa34c9de7080(org.fbme.ide.enas.analyzer.configuration)/7558503085826278550">
+    <file name="ReceiptCheckResult.java">
+      <unit id="7558503085826278550" at="6,0,8,0" name="org.fbme.ide.enas.analyzer.configuration.ReceiptCheckResult" />
+    </file>
+  </root>
+</debug-info>
+

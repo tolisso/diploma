@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1082485599095:jetbrains.mps.baseLanguage.structure.BlockStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068390468200:jetbrains.mps.baseLanguage.structure.FieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1144226303539:jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/6329021646629104954:jetbrains.mps.baseLanguage.structure.SingleLineComment" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1164991038168:jetbrains.mps.baseLanguage.structure.ThrowStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/5351203823916750322:jetbrains.mps.baseLanguage.structure.TryUniversalStatement" />
+  <root>
+    <file name="IconContainer.java">
+      <unit at="8,0,11,0" name="org.fbme.integration.nxt.plugin.IconContainer" />
+    </file>
+  </root>
+  <root nodeRef="r:fa1d0806-1ef2-432a-bb40-cd4f72545972(org.fbme.integration.nxt.plugin)/3937089952561617693">
+    <file name="NxtImportSystemConfigSolutionSettings.java">
+      <node id="3937089952561636868" at="21,0,22,0" concept="3" trace="nxtImportLocation" />
+      <node id="3937089952561641161" at="23,0,24,0" concept="3" trace="nxtImportLocationChangedByUser" />
+      <node id="3937089952561644099" at="24,0,25,0" concept="3" trace="nxtImportLocationDocListenerEnabled" />
+      <node id="3937089952561618046" at="26,68,27,23" concept="12" />
+      <node id="3937089952561717192" at="27,23,28,0" concept="10" />
+      <node id="3937089952561718304" at="28,0,29,59" concept="2" />
+      <node id="3937089952561767517" at="29,59,30,0" concept="10" />
+      <node id="3937089952561772635" at="30,0,31,41" concept="2" />
+      <node id="3937089952561804031" at="31,41,32,38" concept="2" />
+      <node id="289384041347543407" at="35,50,36,48" concept="2" />
+      <node id="289384041347543411" at="39,7,40,103" concept="7" />
+      <node id="289384041347543415" at="40,103,41,58" concept="2" />
+      <node id="289384041347543419" at="41,58,42,126" concept="7" />
+      <node id="289384041347543428" at="42,126,43,113" concept="7" />
+      <node id="289384041347543438" at="43,113,44,111" concept="2" />
+      <node id="289384041347543448" at="44,111,45,55" concept="2" />
+      <node id="3937089952561647755" at="48,40,49,46" concept="8" />
+      <node id="3937089952561667447" at="52,62,53,48" concept="2" />
+      <node id="3937089952561673033" at="53,48,54,49" concept="2" />
+      <node id="3937089952561685348" at="54,49,55,47" concept="2" />
+      <node id="289384041347543404" at="34,52,37,9" concept="5" />
+      <node id="3937089952561646579" at="48,0,51,0" concept="6" trace="getNxtImportLocation#()Ljava/lang/String;" />
+      <node id="289384041347543398" at="34,0,39,0" concept="6" trace="textChanged#(Ljavax/swing/event/DocumentEvent;)V" />
+      <node id="3937089952561663595" at="52,0,57,0" concept="6" trace="setNxtImportLocation#(Ljava/lang/String;)V" />
+      <node id="289384041347543388" at="32,38,39,7" concept="2" />
+      <node id="3937089952561618023" at="26,0,47,0" concept="1" trace="NxtImportSystemConfigSolutionSettings#(Ljava/lang/String;)V" />
+      <scope id="289384041347543406" at="35,50,36,48" />
+      <scope id="3937089952561646582" at="48,40,49,46" />
+      <scope id="289384041347543403" at="34,52,37,9" />
+      <scope id="3937089952561646579" at="48,0,51,0" />
+      <scope id="3937089952561663598" at="52,62,55,47" />
+      <scope id="289384041347543398" at="34,0,39,0">
+        <var name="p0" id="289384041347543401" />
+      </scope>
+      <scope id="3937089952561663595" at="52,0,57,0">
+        <var name="importProjectPath" id="3937089952561664512" />
+      </scope>
+      <scope id="3937089952561618026" at="26,68,45,55">
+        <var name="descriptor" id="289384041347543412" />
+        <var name="fieldPanel" id="289384041347543429" />
+        <var name="listener" id="289384041347543420" />
+      </scope>
+      <scope id="3937089952561618023" at="26,0,47,0">
+        <var name="defaultName" id="3937089952561618044" />
+      </scope>
+      <unit id="289384041347543396" at="33,60,39,5" name="org.fbme.integration.nxt.plugin.NxtImportSystemConfigSolutionSettings$1" />
+      <unit id="3937089952561617693" at="19,0,58,0" name="org.fbme.integration.nxt.plugin.NxtImportSystemConfigSolutionSettings" />
+    </file>
+  </root>
+  <root nodeRef="r:fa1d0806-1ef2-432a-bb40-cd4f72545972(org.fbme.integration.nxt.plugin)/5130266120276214293">
+    <file name="Nxt_ApplicationPlugin.java">
+      <node id="5130266120276214293" at="13,0,14,0" concept="3" trace="myId" />
+      <node id="5130266120276214293" at="19,27,20,16" concept="8" />
+      <node id="5130266120276214293" at="23,30,24,29" concept="9" />
+      <node id="5130266120276214293" at="25,44,26,13" concept="9" />
+      <node id="5130266120276214293" at="15,0,17,0" concept="1" trace="Nxt_ApplicationPlugin#()V" />
+      <node id="5130266120276214293" at="29,0,32,0" concept="6" trace="adjustRegularGroups#()V" />
+      <node id="5130266120276214293" at="18,0,22,0" concept="6" trace="getId#()Lcom/intellij/openapi/extensions/PluginId;" />
+      <node id="5130266120276214293" at="32,0,36,0" concept="6" trace="fillCustomParts#(Ljava/util/List;)V" />
+      <node id="5130266120276214293" at="23,0,29,0" concept="6" trace="createGroups#()V" />
+      <scope id="5130266120276214293" at="15,34,15,34" />
+      <scope id="5130266120276214293" at="19,27,20,16" />
+      <scope id="5130266120276214293" at="29,37,30,101" />
+      <scope id="5130266120276214293" at="33,66,34,72" />
+      <scope id="5130266120276214293" at="15,0,17,0" />
+      <scope id="5130266120276214293" at="29,0,32,0" />
+      <scope id="5130266120276214293" at="18,0,22,0" />
+      <scope id="5130266120276214293" at="23,30,27,56" />
+      <scope id="5130266120276214293" at="32,0,36,0">
+        <var name="parts" id="5130266120276214293" />
+      </scope>
+      <scope id="5130266120276214293" at="23,0,29,0" />
+      <unit id="5130266120276214293" at="12,0,37,0" name="org.fbme.integration.nxt.plugin.Nxt_ApplicationPlugin" />
+    </file>
+    <file name="startup.properties">
+      <unit id="5130266120276214293" at="1,0,5,0" name="org.fbme.integration.nxt.plugin.startup" />
+    </file>
+  </root>
+  <root nodeRef="r:fa1d0806-1ef2-432a-bb40-cd4f72545972(org.fbme.integration.nxt.plugin)/7497122049919704481">
+    <file name="CreateComposite_Action.java">
+      <node id="7497122049919704481" at="31,0,32,0" concept="11" trace="ICON" />
+      <node id="7497122049919704481" at="33,35,34,40" concept="12" />
+      <node id="7497122049919704481" at="34,40,35,35" concept="2" />
+      <node id="7497122049919704481" at="35,35,36,57" concept="2" />
+      <node id="7497122049919704481" at="39,32,40,16" concept="8" />
+      <node id="7497122049919704561" at="43,87,44,74" concept="7" />
+      <node id="7497122049919704569" at="44,74,45,69" concept="7" />
+      <node id="7497122049919851888" at="45,69,46,102" concept="7" />
+      <node id="7497122049919846880" at="46,102,47,0" concept="10" />
+      <node id="7497122049919704590" at="47,0,48,47" concept="8" />
+      <node id="7497122049919704481" at="51,89,52,85" concept="2" />
+      <node id="7497122049919704481" at="56,53,57,19" concept="8" />
+      <node id="7497122049919704482" at="59,5,60,66" concept="7" />
+      <node id="7497122049919704483" at="61,22,62,21" concept="8" />
+      <node id="7497122049919837160" at="65,5,66,68" concept="7" />
+      <node id="7497122049919837162" at="67,26,68,21" concept="8" />
+      <node id="7497122049919843336" at="71,5,72,66" concept="7" />
+      <node id="7497122049919843337" at="73,22,74,21" concept="8" />
+      <node id="7497122049919704481" at="76,5,77,16" concept="8" />
+      <node id="7497122049919704486" at="80,96,81,74" concept="7" />
+      <node id="7497122049919869800" at="81,74,82,69" concept="7" />
+      <node id="7497122049919869807" at="82,69,83,102" concept="7" />
+      <node id="7497122049919874304" at="83,102,84,119" concept="7" />
+      <node id="7497122049919882306" at="84,119,85,89" concept="7" />
+      <node id="1254587009837585897" at="87,51,88,97" concept="2" />
+      <node id="4263467032707670856" at="90,5,91,0" concept="10" />
+      <node id="4263467032707676562" at="91,0,92,142" concept="2" />
+      <node id="7497122049919704481" at="55,95,58,5" concept="5" />
+      <node id="7497122049919704483" at="60,66,63,7" concept="5" />
+      <node id="7497122049919837162" at="66,68,69,7" concept="5" />
+      <node id="7497122049919843337" at="72,66,75,7" concept="5" />
+      <node id="1254587009837581514" at="86,98,89,7" concept="5" />
+      <node id="7497122049919704481" at="38,0,42,0" concept="6" trace="isDumbAware#()Z" />
+      <node id="7497122049919704481" at="50,0,54,0" concept="6" trace="doUpdate#(Lcom/intellij/openapi/actionSystem/AnActionEvent;Ljava/util/Map;)V" />
+      <node id="7497122049919704481" at="33,0,38,0" concept="1" trace="CreateComposite_Action#()V" />
+      <node id="7497122049919902874" at="85,89,90,5" concept="4" />
+      <node id="7497122049919704482" at="58,5,64,5" concept="0" />
+      <node id="7497122049919837160" at="64,5,70,5" concept="0" />
+      <node id="7497122049919843336" at="70,5,76,5" concept="0" />
+      <node id="7497122049919704481" at="42,0,50,0" concept="6" trace="isApplicable#(Lcom/intellij/openapi/actionSystem/AnActionEvent;Ljava/util/Map;)Z" />
+      <node id="7497122049919704481" at="79,0,94,0" concept="6" trace="doExecute#(Lcom/intellij/openapi/actionSystem/AnActionEvent;Ljava/util/Map;)V" />
+      <node id="7497122049919704481" at="54,0,79,0" concept="6" trace="collectActionData#(Lcom/intellij/openapi/actionSystem/AnActionEvent;Ljava/util/Map;)Z" />
+      <scope id="7497122049919704481" at="39,32,40,16" />
+      <scope id="7497122049919704481" at="51,89,52,85" />
+      <scope id="7497122049919704481" at="56,53,57,19" />
+      <scope id="7497122049919704483" at="61,22,62,21" />
+      <scope id="7497122049919837162" at="67,26,68,21" />
+      <scope id="7497122049919843337" at="73,22,74,21" />
+      <scope id="1254587009837581516" at="87,51,88,97" />
+      <scope id="7497122049919704481" at="33,35,36,57" />
+      <scope id="7497122049919902880" at="86,98,89,7" />
+      <scope id="7497122049919704481" at="38,0,42,0" />
+      <scope id="7497122049919704481" at="50,0,54,0">
+        <var name="_params" id="7497122049919704481" />
+        <var name="event" id="7497122049919704481" />
+      </scope>
+      <scope id="7497122049919704482" at="59,5,63,7">
+        <var name="p" id="7497122049919704482" />
+      </scope>
+      <scope id="7497122049919837160" at="65,5,69,7">
+        <var name="model" id="7497122049919837160" />
+      </scope>
+      <scope id="7497122049919843336" at="71,5,75,7">
+        <var name="p" id="7497122049919843336" />
+      </scope>
+      <scope id="7497122049919704481" at="33,0,38,0" />
+      <scope id="7497122049919704560" at="43,87,48,47">
+        <var name="network" id="7497122049919704570" />
+        <var name="selected" id="7497122049919851889" />
+        <var name="style" id="7497122049919704562" />
+      </scope>
+      <scope id="7497122049919902874" at="85,89,90,5">
+        <var name="component" id="7497122049919902876" />
+      </scope>
+      <scope id="7497122049919704481" at="42,0,50,0">
+        <var name="_params" id="7497122049919704481" />
+        <var name="event" id="7497122049919704481" />
+      </scope>
+      <scope id="7497122049919704481" at="80,96,92,142">
+        <var name="blockList" id="7497122049919882307" />
+        <var name="instance" id="7497122049919874305" />
+        <var name="network" id="7497122049919869801" />
+        <var name="selected" id="7497122049919869808" />
+        <var name="style" id="7497122049919704487" />
+      </scope>
+      <scope id="7497122049919704481" at="79,0,94,0">
+        <var name="_params" id="7497122049919704481" />
+        <var name="event" id="7497122049919704481" />
+      </scope>
+      <scope id="7497122049919704481" at="55,95,77,16" />
+      <scope id="7497122049919704481" at="54,0,79,0">
+        <var name="_params" id="7497122049919704481" />
+        <var name="event" id="7497122049919704481" />
+      </scope>
+      <unit id="7497122049919704481" at="30,0,95,0" name="org.fbme.integration.nxt.plugin.CreateComposite_Action" />
+    </file>
+    <file name="Nxt_ApplicationPlugin.java">
+      <node id="7497122049919704481" at="24,29,25,44" concept="2" />
+    </file>
+  </root>
+  <root nodeRef="r:fa1d0806-1ef2-432a-bb40-cd4f72545972(org.fbme.integration.nxt.plugin)/7497122049919928022">
+    <file name="NxtIntegrationGroup_ActionGroup.java">
+      <node id="7497122049919928022" at="10,0,11,0" concept="11" trace="ID" />
+      <node id="7497122049919928022" at="12,77,13,45" concept="12" />
+      <node id="7497122049919928022" at="13,45,14,25" concept="2" />
+      <node id="7497122049919928022" at="14,25,15,20" concept="2" />
+      <node id="7497122049919929902" at="15,20,16,109" concept="2" />
+      <node id="7497122049919928022" at="12,0,18,0" concept="1" trace="NxtIntegrationGroup_ActionGroup#(Ljetbrains/mps/workbench/action/ApplicationPlugin;)V" />
+      <scope id="7497122049919928022" at="12,77,16,109" />
+      <scope id="7497122049919928022" at="12,0,18,0">
+        <var name="plugin" id="7497122049919928022" />
+      </scope>
+      <unit id="7497122049919928022" at="9,0,19,0" name="org.fbme.integration.nxt.plugin.NxtIntegrationGroup_ActionGroup" />
+    </file>
+    <file name="Nxt_ApplicationPlugin.java">
+      <node id="7497122049919928022" at="26,13,27,56" concept="2" />
+      <node id="7497122049919928026" at="29,37,30,101" concept="2" />
+    </file>
+  </root>
+  <root nodeRef="r:fa1d0806-1ef2-432a-bb40-cd4f72545972(org.fbme.integration.nxt.plugin)/8395375938839836026">
+    <file name="ImporterByDefaultIdeaEnabler_Plug_in_AppPluginPart.java">
+      <node id="8840348264795729756" at="12,22,13,85" concept="2" />
+      <node id="8840348264796167270" at="16,25,17,88" concept="2" />
+      <node id="8395375938839836026" at="9,0,11,0" concept="1" trace="ImporterByDefaultIdeaEnabler_Plug_in_AppPluginPart#()V" />
+      <node id="8395375938839836026" at="11,0,15,0" concept="6" trace="init#()V" />
+      <node id="8395375938839836026" at="15,0,19,0" concept="6" trace="dispose#()V" />
+      <scope id="8395375938839836026" at="9,63,9,63" />
+      <scope id="8395375938839836028" at="12,22,13,85" />
+      <scope id="2587708749830476544" at="16,25,17,88" />
+      <scope id="8395375938839836026" at="9,0,11,0" />
+      <scope id="8395375938839836026" at="11,0,15,0" />
+      <scope id="8395375938839836026" at="15,0,19,0" />
+      <unit id="8395375938839836026" at="8,0,20,0" name="org.fbme.integration.nxt.plugin.ImporterByDefaultIdeaEnabler_Plug_in_AppPluginPart" />
+    </file>
+    <file name="Nxt_ApplicationPlugin.java">
+      <node id="8395375938839836026" at="33,66,34,72" concept="2" />
+    </file>
+  </root>
+  <root nodeRef="r:fa1d0806-1ef2-432a-bb40-cd4f72545972(org.fbme.integration.nxt.plugin)/8840348264795757622">
+    <file name="IconContainer.java">
+      <node id="3937089952561582596" at="9,0,10,0" concept="11" trace="ICON_a0a6a0a0" />
+    </file>
+    <file name="NxtProjectTemplate.java">
+      <node id="3937089952561582570" at="39,29,40,39" concept="8" />
+      <node id="3937089952561582579" at="45,36,46,49" concept="8" />
+      <node id="3937089952561582585" at="49,35,50,22" concept="8" />
+      <node id="3937089952561582595" at="55,27,56,41" concept="8" />
+      <node id="5741928247517950312" at="60,41,61,129" concept="7" />
+      <node id="5741928247517979653" at="61,129,62,0" concept="10" />
+      <node id="5741928247518149232" at="62,0,63,61" concept="7" />
+      <node id="5741928247517961397" at="63,61,64,0" concept="10" />
+      <node id="9018357307812715277" at="64,0,65,45" concept="7" />
+      <node id="1982240578374670484" at="65,45,66,50" concept="7" />
+      <node id="4786190228558957523" at="66,50,67,107" concept="7" />
+      <node id="1971319233001568909" at="67,107,68,105" concept="7" />
+      <node id="3205718205900547120" at="68,105,69,0" concept="10" />
+      <node id="8740475964789758837" at="69,0,70,160" concept="2" />
+      <node id="8740475964789452749" at="70,160,71,0" concept="10" />
+      <node id="956259817900935370" at="72,11,73,44" concept="2" />
+      <node id="1971319233001624953" at="75,7,76,0" concept="10" />
+      <node id="5741928247518222187" at="77,79,78,54" concept="8" />
+      <node id="5741928247518309200" at="79,7,80,0" concept="10" />
+      <node id="3937089952561582611" at="80,0,81,221" concept="7" />
+      <node id="3937089952561582617" at="81,221,82,79" concept="2" />
+      <node id="3937089952561582623" at="82,79,83,25" concept="8" />
+      <node id="6199944328923177864" at="87,11,88,56" concept="7" />
+      <node id="6199944328923177891" at="89,57,90,48" concept="2" />
+      <node id="7208633271598124655" at="92,29,93,106" concept="13" />
+      <node id="3208906764513865877" at="97,60,98,64" concept="7" />
+      <node id="3208906764513865882" at="98,64,99,113" concept="7" />
+      <node id="946336218368533688" at="100,11,101,153" concept="7" />
+      <node id="937315741664697139" at="101,153,102,52" concept="7" />
+      <node id="937315741664999115" at="102,52,103,0" concept="10" />
+      <node id="937315741664946856" at="104,91,105,62" concept="2" />
+      <node id="946336218369127901" at="106,9,107,27" concept="8" />
+      <node id="946336218368342811" at="107,27,108,0" concept="10" />
+      <node id="8129272592931552627" at="109,31,110,40" concept="13" />
+      <node id="3018159903920795262" at="114,60,115,444" concept="8" />
+      <node id="8840348264795757622" at="120,0,121,0" concept="11" trace="name$MnvL" />
+      <node id="3937089952561582583" at="49,0,52,0" concept="6" trace="getStereotype#()Ljava/lang/String;" />
+      <node id="5741928247518278749" at="76,0,79,7" concept="5" />
+      <node id="937315741665087822" at="88,56,91,9" concept="4" />
+      <node id="937315741664909443" at="103,0,106,9" concept="4" />
+      <node id="3018159903920779887" at="114,0,117,0" concept="6" trace="supportedFileExtension#(Ljava/lang/String;)Z" />
+      <node id="1971319233001612347" at="71,0,75,7" concept="14" />
+      <node id="3937089952561582565" at="37,0,42,0" concept="6" trace="getName#()Ljava/lang/String;" />
+      <node id="3937089952561582574" at="43,0,48,0" concept="6" trace="getDescription#()Ljava/lang/String;" />
+      <node id="3937089952561582590" at="53,0,58,0" concept="6" trace="getIcon#()Ljavax/swing/Icon;" />
+      <node id="7208633271598124522" at="86,121,94,7" concept="14" />
+      <node id="7208633271597856235" at="86,0,96,0" concept="6" trace="readModel#(Ljetbrains/mps/extapi/model/SModelSimpleHeader;Lorg/jetbrains/mps/openapi/model/SModel;Ljava/lang/String;)V" />
+      <node id="8129272592931497162" at="99,113,111,7" concept="14" />
+      <node id="3208906764513865874" at="97,0,113,0" concept="6" trace="getRootNodes#(Ljava/lang/String;)Ljava/util/List;" />
+      <node id="3937089952561582605" at="59,0,85,0" concept="6" trace="initModel#(Lorg/jetbrains/mps/openapi/model/SModel;)Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="3937089952561582560" at="36,0,118,0" concept="11" trace="NXT_IMPORT_TEMPLATE" />
+      <scope id="1971319233001615920" at="74,38,74,38" />
+      <scope id="3937089952561582569" at="39,29,40,39" />
+      <scope id="3937089952561582578" at="45,36,46,49" />
+      <scope id="3937089952561582584" at="49,35,50,22" />
+      <scope id="3937089952561582594" at="55,27,56,41" />
+      <scope id="1971319233001612349" at="72,11,73,44" />
+      <scope id="1971319233001615917" at="74,7,75,7">
+        <var name="e" id="1971319233001615918" />
+      </scope>
+      <scope id="5741928247518278751" at="77,79,78,54" />
+      <scope id="937315741665087828" at="89,57,90,48" />
+      <scope id="7208633271598124651" at="92,29,93,106" />
+      <scope id="937315741664909449" at="104,91,105,62" />
+      <scope id="8129272592931503455" at="109,31,110,40" />
+      <scope id="3018159903920779890" at="114,60,115,444" />
+      <scope id="7208633271598124647" at="92,7,94,7">
+        <var name="e" id="7208633271598124648" />
+      </scope>
+      <scope id="8129272592931503452" at="109,7,111,7">
+        <var name="exc" id="8129272592931503453" />
+      </scope>
+      <scope id="3937089952561582583" at="49,0,52,0" />
+      <scope id="937315741665087822" at="88,56,91,9">
+        <var name="node" id="937315741665087824" />
+      </scope>
+      <scope id="937315741664909443" at="103,0,106,9">
+        <var name="fbtd" id="937315741664909445" />
+      </scope>
+      <scope id="3018159903920779887" at="114,0,117,0">
+        <var name="fileExt" id="3018159903920787325" />
+      </scope>
+      <scope id="7208633271598124523" at="87,11,91,9">
+        <var name="nodes" id="6199944328923177865" />
+      </scope>
+      <scope id="3937089952561582565" at="37,0,42,0" />
+      <scope id="3937089952561582574" at="43,0,48,0" />
+      <scope id="3937089952561582590" at="53,0,58,0" />
+      <scope id="7208633271597856244" at="86,121,94,7" />
+      <scope id="8129272592931497164" at="100,11,108,0">
+        <var name="nodeStructure" id="946336218368533694" />
+        <var name="resultNodes" id="937315741664697145" />
+      </scope>
+      <scope id="7208633271597856235" at="86,0,96,0">
+        <var name="header" id="7208633271597856240" />
+        <var name="m" id="956259817900877091" />
+        <var name="nxtImportFile" id="4385549277373279756" />
+      </scope>
+      <scope id="3208906764513865876" at="97,60,111,7">
+        <var name="configuration" id="3208906764513865883" />
+        <var name="owner" id="3208906764513865878" />
+      </scope>
+      <scope id="3208906764513865874" at="97,0,113,0">
+        <var name="nxtImportFile" id="4385549277373335907" />
+      </scope>
+      <scope id="3937089952561582610" at="60,41,83,25">
+        <var name="basicFBType" id="3937089952561582612" />
+        <var name="header" id="1971319233001568910" />
+        <var name="modelId" id="9018357307812715278" />
+        <var name="modelName" id="1982240578374670485" />
+        <var name="nxtImportFile" id="5741928247518149233" />
+        <var name="ref" id="4786190228558957524" />
+        <var name="settings" id="5741928247517950313" />
+      </scope>
+      <scope id="3937089952561582605" at="59,0,85,0">
+        <var name="m" id="3937089952561582607" />
+      </scope>
+      <unit id="8840348264795757622" at="119,0,122,0" name="org.fbme.integration.nxt.plugin.NxtProjectTemplate$PROPS" />
+      <unit id="3937089952561582564" at="36,77,117,3" name="org.fbme.integration.nxt.plugin.NxtProjectTemplate$1" />
+      <unit id="8840348264795757622" at="35,0,123,0" name="org.fbme.integration.nxt.plugin.NxtProjectTemplate" />
+    </file>
+  </root>
+</debug-info>
+

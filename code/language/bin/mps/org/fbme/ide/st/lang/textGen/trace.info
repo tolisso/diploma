@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1082485599095:jetbrains.mps.baseLanguage.structure.BlockStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1144226303539:jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <root>
+    <file name="TextGenAspectDescriptor.java">
+      <unit at="12,0,71,0" name="org.fbme.ide.st.lang.textGen.TextGenAspectDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:5166b05c-4b71-4398-b13f-339ae9c4deac(org.fbme.ide.st.lang.textGen)/2377145822814769593">
+    <file name="ElementaryType_TextGen.java">
+      <node id="2377145822814769593" at="13,54,14,55" concept="5" />
+      <node id="2377145822814769636" at="14,55,15,99" concept="1" />
+      <node id="2377145822814769593" at="12,0,17,0" concept="4" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
+      <scope id="2377145822814769593" at="13,54,15,99">
+        <var name="tgs" id="2377145822814769593" />
+      </scope>
+      <scope id="2377145822814769593" at="12,0,17,0">
+        <var name="ctx" id="2377145822814769593" />
+      </scope>
+      <unit id="2377145822814769593" at="11,0,18,0" name="org.fbme.ide.st.lang.textGen.ElementaryType_TextGen" />
+    </file>
+    <file name="TextGenAspectDescriptor.java">
+      <node id="2377145822814769593" at="34,48,35,44" concept="6" />
+      <scope id="2377145822814769593" at="34,48,35,44" />
+    </file>
+  </root>
+  <root nodeRef="r:5166b05c-4b71-4398-b13f-339ae9c4deac(org.fbme.ide.st.lang.textGen)/2377145822814779013">
+    <file name="DerivedType_TextGen.java">
+      <node id="2377145822814779013" at="16,54,17,55" concept="5" />
+      <node id="2377145822814780376" at="17,55,18,137" concept="1" />
+      <node id="2377145822814779013" at="22,0,23,0" concept="8" trace="declaration$prBg" />
+      <node id="2377145822814779013" at="26,0,27,0" concept="8" trace="name$MnvL" />
+      <node id="2377145822814779013" at="15,0,20,0" concept="4" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
+      <scope id="2377145822814779013" at="16,54,18,137">
+        <var name="tgs" id="2377145822814779013" />
+      </scope>
+      <scope id="2377145822814779013" at="15,0,20,0">
+        <var name="ctx" id="2377145822814779013" />
+      </scope>
+      <unit id="2377145822814779013" at="21,0,24,0" name="org.fbme.ide.st.lang.textGen.DerivedType_TextGen$LINKS" />
+      <unit id="2377145822814779013" at="25,0,28,0" name="org.fbme.ide.st.lang.textGen.DerivedType_TextGen$PROPS" />
+      <unit id="2377145822814779013" at="14,0,29,0" name="org.fbme.ide.st.lang.textGen.DerivedType_TextGen" />
+    </file>
+    <file name="TextGenAspectDescriptor.java">
+      <node id="2377145822814779013" at="32,45,33,41" concept="6" />
+      <scope id="2377145822814779013" at="32,45,33,41" />
+    </file>
+  </root>
+  <root nodeRef="r:5166b05c-4b71-4398-b13f-339ae9c4deac(org.fbme.ide.st.lang.textGen)/2377145822815796605">
+    <file name="GenericType_TextGen.java">
+      <node id="2377145822815796605" at="13,54,14,55" concept="5" />
+      <node id="2377145822815796648" at="14,55,15,99" concept="1" />
+      <node id="2377145822815796605" at="12,0,17,0" concept="4" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
+      <scope id="2377145822815796605" at="13,54,15,99">
+        <var name="tgs" id="2377145822815796605" />
+      </scope>
+      <scope id="2377145822815796605" at="12,0,17,0">
+        <var name="ctx" id="2377145822815796605" />
+      </scope>
+      <unit id="2377145822815796605" at="11,0,18,0" name="org.fbme.ide.st.lang.textGen.GenericType_TextGen" />
+    </file>
+    <file name="TextGenAspectDescriptor.java">
+      <node id="2377145822815796605" at="46,45,47,41" concept="6" />
+      <scope id="2377145822815796605" at="46,45,47,41" />
+    </file>
+  </root>
+  <root nodeRef="r:5166b05c-4b71-4398-b13f-339ae9c4deac(org.fbme.ide.st.lang.textGen)/2377145822817888739">
+    <file name="FunctionCall_TextGen.java">
+      <node id="2377145822817888739" at="18,54,19,55" concept="5" />
+      <node id="2377145822817888782" at="19,55,20,94" concept="1" />
+      <node id="2377145822817891201" at="20,94,21,20" concept="1" />
+      <node id="2377145822817891546" at="22,5,23,105" concept="5" />
+      <node id="2377145822817891546" at="23,105,24,70" concept="5" />
+      <node id="2377145822817891546" at="25,37,26,29" concept="1" />
+      <node id="2377145822817891546" at="27,31,28,27" concept="1" />
+      <node id="2377145822817904189" at="31,5,32,20" concept="1" />
+      <node id="2377145822817888739" at="36,0,37,0" concept="8" trace="functionName$2XHO" />
+      <node id="2377145822817888739" at="40,0,41,0" concept="8" trace="params$34xh" />
+      <node id="2377145822817891546" at="26,29,29,9" concept="3" />
+      <node id="2377145822817891546" at="24,70,30,7" concept="2" />
+      <node id="2377145822817891546" at="21,20,31,5" concept="0" />
+      <node id="2377145822817888739" at="17,0,34,0" concept="4" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
+      <scope id="2377145822817891546" at="27,31,28,27" />
+      <scope id="2377145822817891546" at="25,37,29,9" />
+      <scope id="2377145822817891546" at="24,70,30,7">
+        <var name="item" id="2377145822817891546" />
+      </scope>
+      <scope id="2377145822817891546" at="22,5,30,7">
+        <var name="collection" id="2377145822817891546" />
+        <var name="lastItem" id="2377145822817891546" />
+      </scope>
+      <scope id="2377145822817888739" at="18,54,32,20">
+        <var name="tgs" id="2377145822817888739" />
+      </scope>
+      <scope id="2377145822817888739" at="17,0,34,0">
+        <var name="ctx" id="2377145822817888739" />
+      </scope>
+      <unit id="2377145822817888739" at="35,0,38,0" name="org.fbme.ide.st.lang.textGen.FunctionCall_TextGen$PROPS" />
+      <unit id="2377145822817888739" at="39,0,42,0" name="org.fbme.ide.st.lang.textGen.FunctionCall_TextGen$LINKS" />
+      <unit id="2377145822817888739" at="16,0,43,0" name="org.fbme.ide.st.lang.textGen.FunctionCall_TextGen" />
+    </file>
+    <file name="TextGenAspectDescriptor.java">
+      <node id="2377145822817888739" at="44,46,45,42" concept="6" />
+      <scope id="2377145822817888739" at="44,46,45,42" />
+    </file>
+  </root>
+  <root nodeRef="r:5166b05c-4b71-4398-b13f-339ae9c4deac(org.fbme.ide.st.lang.textGen)/2377145822820283342">
+    <file name="ArrayVariable_TextGen.java">
+      <node id="2377145822820283342" at="16,54,17,55" concept="5" />
+      <node id="2377145822820283385" at="17,55,18,93" concept="1" />
+      <node id="2377145822820285272" at="18,93,19,20" concept="1" />
+      <node id="2377145822820285888" at="20,5,21,109" concept="5" />
+      <node id="2377145822820285888" at="21,109,22,70" concept="5" />
+      <node id="2377145822820285888" at="23,37,24,29" concept="1" />
+      <node id="2377145822820285888" at="25,31,26,27" concept="1" />
+      <node id="2377145822820298295" at="29,5,30,20" concept="1" />
+      <node id="2377145822820283342" at="34,0,35,0" concept="8" trace="subscripted$$HaD" />
+      <node id="2377145822820283342" at="35,0,36,0" concept="8" trace="subscripts$$HCF" />
+      <node id="2377145822820285888" at="24,29,27,9" concept="3" />
+      <node id="2377145822820285888" at="22,70,28,7" concept="2" />
+      <node id="2377145822820285888" at="19,20,29,5" concept="0" />
+      <node id="2377145822820283342" at="15,0,32,0" concept="4" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
+      <scope id="2377145822820285888" at="25,31,26,27" />
+      <scope id="2377145822820285888" at="23,37,27,9" />
+      <scope id="2377145822820285888" at="22,70,28,7">
+        <var name="item" id="2377145822820285888" />
+      </scope>
+      <scope id="2377145822820285888" at="20,5,28,7">
+        <var name="collection" id="2377145822820285888" />
+        <var name="lastItem" id="2377145822820285888" />
+      </scope>
+      <scope id="2377145822820283342" at="16,54,30,20">
+        <var name="tgs" id="2377145822820283342" />
+      </scope>
+      <scope id="2377145822820283342" at="15,0,32,0">
+        <var name="ctx" id="2377145822820283342" />
+      </scope>
+      <unit id="2377145822820283342" at="33,0,37,0" name="org.fbme.ide.st.lang.textGen.ArrayVariable_TextGen$LINKS" />
+      <unit id="2377145822820283342" at="14,0,38,0" name="org.fbme.ide.st.lang.textGen.ArrayVariable_TextGen" />
+    </file>
+    <file name="TextGenAspectDescriptor.java">
+      <node id="2377145822820283342" at="22,47,23,43" concept="6" />
+      <scope id="2377145822820283342" at="22,47,23,43" />
+    </file>
+  </root>
+  <root nodeRef="r:5166b05c-4b71-4398-b13f-339ae9c4deac(org.fbme.ide.st.lang.textGen)/4046047820618744560">
+    <file name="Literal_TextGen.java">
+      <node id="4046047820618744560" at="12,54,13,55" concept="5" />
+      <node id="4046047820618744603" at="13,55,14,104" concept="1" />
+      <node id="4046047820618744560" at="11,0,16,0" concept="4" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
+      <scope id="4046047820618744560" at="12,54,14,104">
+        <var name="tgs" id="4046047820618744560" />
+      </scope>
+      <scope id="4046047820618744560" at="11,0,16,0">
+        <var name="ctx" id="4046047820618744560" />
+      </scope>
+      <unit id="4046047820618744560" at="10,0,17,0" name="org.fbme.ide.st.lang.textGen.Literal_TextGen" />
+    </file>
+    <file name="TextGenAspectDescriptor.java">
+      <node id="4046047820618744560" at="50,41,51,37" concept="6" />
+      <scope id="4046047820618744560" at="50,41,51,37" />
+    </file>
+  </root>
+  <root nodeRef="r:5166b05c-4b71-4398-b13f-339ae9c4deac(org.fbme.ide.st.lang.textGen)/73760825480129309">
+    <file name="StatementList_TextGen.java">
+      <node id="73760825480129309" at="16,54,17,55" concept="5" />
+      <node id="73760825481121599" at="18,126,19,19" concept="1" />
+      <node id="73760825480131690" at="19,19,20,32" concept="1" />
+      <node id="73760825480131931" at="20,32,21,22" concept="1" />
+      <node id="73760825480131992" at="21,22,22,20" concept="1" />
+      <node id="73760825480129309" at="27,0,28,0" concept="8" trace="statements$AKSQ" />
+      <node id="73760825480129396" at="17,55,23,5" concept="2" />
+      <node id="73760825480129309" at="15,0,25,0" concept="4" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
+      <scope id="73760825480129399" at="18,126,22,20" />
+      <scope id="73760825480129396" at="17,55,23,5">
+        <var name="statement" id="73760825480129397" />
+      </scope>
+      <scope id="73760825480129309" at="16,54,23,5">
+        <var name="tgs" id="73760825480129309" />
+      </scope>
+      <scope id="73760825480129309" at="15,0,25,0">
+        <var name="ctx" id="73760825480129309" />
+      </scope>
+      <unit id="73760825480129309" at="26,0,29,0" name="org.fbme.ide.st.lang.textGen.StatementList_TextGen$LINKS" />
+      <unit id="73760825480129309" at="14,0,30,0" name="org.fbme.ide.st.lang.textGen.StatementList_TextGen" />
+    </file>
+    <file name="TextGenAspectDescriptor.java">
+      <node id="73760825480129309" at="58,47,59,43" concept="6" />
+      <scope id="73760825480129309" at="58,47,59,43" />
+    </file>
+  </root>
+  <root nodeRef="r:5166b05c-4b71-4398-b13f-339ae9c4deac(org.fbme.ide.st.lang.textGen)/73760825480132041">
+    <file name="AssignmentStatement_TextGen.java">
+      <node id="73760825480132041" at="14,54,15,55" concept="5" />
+      <node id="73760825480132603" at="15,55,16,90" concept="1" />
+      <node id="73760825480136305" at="16,90,17,23" concept="1" />
+      <node id="73760825480137016" at="17,23,18,92" concept="1" />
+      <node id="73760825480132041" at="22,0,23,0" concept="8" trace="variable$InFQ" />
+      <node id="73760825480132041" at="23,0,24,0" concept="8" trace="expression$Io9S" />
+      <node id="73760825480132041" at="13,0,20,0" concept="4" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
+      <scope id="73760825480132041" at="14,54,18,92">
+        <var name="tgs" id="73760825480132041" />
+      </scope>
+      <scope id="73760825480132041" at="13,0,20,0">
+        <var name="ctx" id="73760825480132041" />
+      </scope>
+      <unit id="73760825480132041" at="21,0,25,0" name="org.fbme.ide.st.lang.textGen.AssignmentStatement_TextGen$LINKS" />
+      <unit id="73760825480132041" at="12,0,26,0" name="org.fbme.ide.st.lang.textGen.AssignmentStatement_TextGen" />
+    </file>
+    <file name="TextGenAspectDescriptor.java">
+      <node id="73760825480132041" at="24,53,25,49" concept="6" />
+      <scope id="73760825480132041" at="24,53,25,49" />
+    </file>
+  </root>
+  <root nodeRef="r:5166b05c-4b71-4398-b13f-339ae9c4deac(org.fbme.ide.st.lang.textGen)/73760825480140082">
+    <file name="CaseStatement_TextGen.java">
+      <node id="73760825480140082" at="15,54,16,55" concept="5" />
+      <node id="73760825480140575" at="16,55,17,24" concept="1" />
+      <node id="73760825480140662" at="17,24,18,92" concept="1" />
+      <node id="73760825480144096" at="18,92,19,23" concept="1" />
+      <node id="73760825480144757" at="19,23,20,18" concept="1" />
+      <node id="73760825480140082" at="20,18,21,44" concept="1" />
+      <node id="73760825480169198" at="22,93,23,27" concept="1" />
+      <node id="73760825480171362" at="24,5,25,0" concept="7" />
+      <node id="73760825481921503" at="26,90,27,19" concept="1" />
+      <node id="73760825480155502" at="27,19,28,29" concept="1" />
+      <node id="73760825480158353" at="28,29,29,20" concept="1" />
+      <node id="73760825480149214" at="29,20,30,46" concept="1" />
+      <node id="73760825480155761" at="30,46,31,92" concept="1" />
+      <node id="73760825480149214" at="31,92,32,46" concept="1" />
+      <node id="73760825480140082" at="33,5,34,44" concept="1" />
+      <node id="73760825481921547" at="34,44,35,17" concept="1" />
+      <node id="73760825480146346" at="35,17,36,27" concept="1" />
+      <node id="73760825480140082" at="40,0,41,0" concept="8" trace="expression$93tQ" />
+      <node id="73760825480140082" at="41,0,42,0" concept="8" trace="cases$98Rd" />
+      <node id="73760825480140082" at="42,0,43,0" concept="8" trace="elseCase$99Nh" />
+      <node id="73760825480169198" at="21,44,24,5" concept="2" />
+      <node id="73760825480149212" at="25,0,33,5" concept="3" />
+      <node id="73760825480140082" at="14,0,38,0" concept="4" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
+      <scope id="73760825480169198" at="22,93,23,27" />
+      <scope id="73760825480169198" at="21,44,24,5">
+        <var name="item" id="73760825480169198" />
+      </scope>
+      <scope id="73760825480149214" at="26,90,32,46" />
+      <scope id="73760825480140082" at="15,54,36,27">
+        <var name="tgs" id="73760825480140082" />
+      </scope>
+      <scope id="73760825480140082" at="14,0,38,0">
+        <var name="ctx" id="73760825480140082" />
+      </scope>
+      <unit id="73760825480140082" at="39,0,44,0" name="org.fbme.ide.st.lang.textGen.CaseStatement_TextGen$LINKS" />
+      <unit id="73760825480140082" at="13,0,45,0" name="org.fbme.ide.st.lang.textGen.CaseStatement_TextGen" />
+    </file>
+    <file name="TextGenAspectDescriptor.java">
+      <node id="73760825480140082" at="30,47,31,43" concept="6" />
+      <scope id="73760825480140082" at="30,47,31,43" />
+    </file>
+  </root>
+  <root nodeRef="r:5166b05c-4b71-4398-b13f-339ae9c4deac(org.fbme.ide.st.lang.textGen)/73760825480158686">
+    <file name="CaseElement_TextGen.java">
+      <node id="73760825480158686" at="14,54,15,55" concept="5" />
+      <node id="73760825481919884" at="15,55,16,17" concept="1" />
+      <node id="73760825480158729" at="16,17,17,89" concept="1" />
+      <node id="73760825480162050" at="17,89,18,23" concept="1" />
+      <node id="73760825480162709" at="18,23,19,18" concept="1" />
+      <node id="73760825480158686" at="19,18,20,44" concept="1" />
+      <node id="73760825480163655" at="20,44,21,86" concept="1" />
+      <node id="73760825480158686" at="21,86,22,44" concept="1" />
+      <node id="73760825480158686" at="26,0,27,0" concept="8" trace="element$Px5z" />
+      <node id="73760825480158686" at="27,0,28,0" concept="8" trace="body$PAuU" />
+      <node id="73760825480158686" at="13,0,24,0" concept="4" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
+      <scope id="73760825480158686" at="14,54,22,44">
+        <var name="tgs" id="73760825480158686" />
+      </scope>
+      <scope id="73760825480158686" at="13,0,24,0">
+        <var name="ctx" id="73760825480158686" />
+      </scope>
+      <unit id="73760825480158686" at="25,0,29,0" name="org.fbme.ide.st.lang.textGen.CaseElement_TextGen$LINKS" />
+      <unit id="73760825480158686" at="12,0,30,0" name="org.fbme.ide.st.lang.textGen.CaseElement_TextGen" />
+    </file>
+    <file name="TextGenAspectDescriptor.java">
+      <node id="73760825480158686" at="28,45,29,41" concept="6" />
+      <scope id="73760825480158686" at="28,45,29,41" />
+    </file>
+  </root>
+  <root nodeRef="r:5166b05c-4b71-4398-b13f-339ae9c4deac(org.fbme.ide.st.lang.textGen)/73760825480171850">
+    <file name="EmptyStatement_TextGen.java">
+      <node id="73760825480171850" at="11,54,12,55" concept="5" />
+      <node id="73760825480171850" at="10,0,14,0" concept="4" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
+      <scope id="73760825480171850" at="11,54,12,55">
+        <var name="tgs" id="73760825480171850" />
+      </scope>
+      <scope id="73760825480171850" at="10,0,14,0">
+        <var name="ctx" id="73760825480171850" />
+      </scope>
+      <unit id="73760825480171850" at="9,0,15,0" name="org.fbme.ide.st.lang.textGen.EmptyStatement_TextGen" />
+    </file>
+    <file name="TextGenAspectDescriptor.java">
+      <node id="73760825480171850" at="38,48,39,44" concept="6" />
+      <scope id="73760825480171850" at="38,48,39,44" />
+    </file>
+  </root>
+  <root nodeRef="r:5166b05c-4b71-4398-b13f-339ae9c4deac(org.fbme.ide.st.lang.textGen)/73760825480171939">
+    <file name="ExitStatement_TextGen.java">
+      <node id="73760825480171939" at="11,54,12,55" concept="5" />
+      <node id="73760825480172009" at="12,55,13,23" concept="1" />
+      <node id="73760825480171939" at="10,0,15,0" concept="4" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
+      <scope id="73760825480171939" at="11,54,13,23">
+        <var name="tgs" id="73760825480171939" />
+      </scope>
+      <scope id="73760825480171939" at="10,0,15,0">
+        <var name="ctx" id="73760825480171939" />
+      </scope>
+      <unit id="73760825480171939" at="9,0,16,0" name="org.fbme.ide.st.lang.textGen.ExitStatement_TextGen" />
+    </file>
+    <file name="TextGenAspectDescriptor.java">
+      <node id="73760825480171939" at="40,47,41,43" concept="6" />
+      <scope id="73760825480171939" at="40,47,41,43" />
+    </file>
+  </root>
+  <root nodeRef="r:5166b05c-4b71-4398-b13f-339ae9c4deac(org.fbme.ide.st.lang.textGen)/73760825480172070">
+    <file name="ForStatement_TextGen.java">
+      <node id="73760825480172070" at="17,54,18,55" concept="5" />
+      <node id="73760825480178799" at="18,55,19,81" concept="5" />
+      <node id="73760825480172113" at="19,81,20,23" concept="1" />
+      <node id="73760825480172200" at="20,23,21,68" concept="1" />
+      <node id="73760825480178071" at="21,68,22,23" concept="1" />
+      <node id="73760825480180095" at="22,23,23,79" concept="1" />
+      <node id="73760825480187185" at="23,79,24,23" concept="1" />
+      <node id="73760825480184993" at="24,23,25,77" concept="1" />
+      <node id="73760825480199289" at="26,78,27,25" concept="1" />
+      <node id="73760825480199346" at="27,25,28,80" concept="1" />
+      <node id="73760825480207754" at="29,5,30,22" concept="1" />
+      <node id="73760825480205640" at="30,22,31,18" concept="1" />
+      <node id="73760825480207042" at="31,18,32,0" concept="7" />
+      <node id="73760825480172070" at="32,0,33,44" concept="1" />
+      <node id="73760825480207828" at="33,44,34,86" concept="1" />
+      <node id="73760825480172070" at="34,86,35,44" concept="1" />
+      <node id="73760825481916107" at="35,44,36,17" concept="1" />
+      <node id="73760825480212041" at="36,17,37,26" concept="1" />
+      <node id="73760825480172070" at="41,0,42,0" concept="8" trace="var$sOVa" />
+      <node id="73760825480172070" at="42,0,43,0" concept="8" trace="beginExpression$MTFO" />
+      <node id="73760825480172070" at="43,0,44,0" concept="8" trace="endExpression$MZ5b" />
+      <node id="73760825480172070" at="44,0,45,0" concept="8" trace="stepExpression$MZMe" />
+      <node id="73760825480172070" at="45,0,46,0" concept="8" trace="body$C1pG" />
+      <node id="73760825480172070" at="49,0,50,0" concept="8" trace="name$MnvL" />
+      <node id="73760825480187932" at="25,77,29,5" concept="3" />
+      <node id="73760825480172070" at="16,0,39,0" concept="4" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
+      <scope id="73760825480187934" at="26,78,28,80" />
+      <scope id="73760825480172070" at="17,54,37,26">
+        <var name="tgs" id="73760825480172070" />
+        <var name="var" id="73760825480178800" />
+      </scope>
+      <scope id="73760825480172070" at="16,0,39,0">
+        <var name="ctx" id="73760825480172070" />
+      </scope>
+      <unit id="73760825480172070" at="48,0,51,0" name="org.fbme.ide.st.lang.textGen.ForStatement_TextGen$PROPS" />
+      <unit id="73760825480172070" at="40,0,47,0" name="org.fbme.ide.st.lang.textGen.ForStatement_TextGen$LINKS" />
+      <unit id="73760825480172070" at="15,0,52,0" name="org.fbme.ide.st.lang.textGen.ForStatement_TextGen" />
+    </file>
+    <file name="TextGenAspectDescriptor.java">
+      <node id="73760825480172070" at="42,46,43,42" concept="6" />
+      <scope id="73760825480172070" at="42,46,43,42" />
+    </file>
+  </root>
+  <root nodeRef="r:5166b05c-4b71-4398-b13f-339ae9c4deac(org.fbme.ide.st.lang.textGen)/73760825480212147">
+    <file name="IfStatement_TextGen.java">
+      <node id="73760825480212147" at="15,54,16,55" concept="5" />
+      <node id="73760825480212190" at="16,55,17,22" concept="1" />
+      <node id="73760825480212247" at="17,22,18,91" concept="1" />
+      <node id="73760825480216177" at="18,91,19,24" concept="1" />
+      <node id="73760825480216853" at="19,24,20,18" concept="1" />
+      <node id="73760825480212147" at="20,18,21,44" concept="1" />
+      <node id="73760825480217802" at="21,44,22,92" concept="1" />
+      <node id="73760825480212147" at="22,92,23,44" concept="1" />
+      <node id="73760825480221935" at="24,101,25,27" concept="1" />
+      <node id="73760825481917365" at="27,92,28,19" concept="1" />
+      <node id="73760825480232745" at="28,19,29,25" concept="1" />
+      <node id="73760825480233464" at="29,25,30,20" concept="1" />
+      <node id="73760825480223725" at="30,20,31,46" concept="1" />
+      <node id="73760825480230420" at="31,46,32,94" concept="1" />
+      <node id="73760825480223725" at="32,94,33,46" concept="1" />
+      <node id="73760825481917321" at="34,5,35,17" concept="1" />
+      <node id="73760825480235456" at="35,17,36,25" concept="1" />
+      <node id="73760825480212147" at="40,0,41,0" concept="8" trace="condition$y9bO" />
+      <node id="73760825480212147" at="41,0,42,0" concept="8" trace="thenClause$z2TE" />
+      <node id="73760825480212147" at="42,0,43,0" concept="8" trace="elseifClauses$z3AH" />
+      <node id="73760825480212147" at="43,0,44,0" concept="8" trace="elseClause$z4yL" />
+      <node id="73760825480221935" at="23,44,26,5" concept="2" />
+      <node id="73760825480223723" at="26,5,34,5" concept="3" />
+      <node id="73760825480212147" at="14,0,38,0" concept="4" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
+      <scope id="73760825480221935" at="24,101,25,27" />
+      <scope id="73760825480221935" at="23,44,26,5">
+        <var name="item" id="73760825480221935" />
+      </scope>
+      <scope id="73760825480223725" at="27,92,33,46" />
+      <scope id="73760825480212147" at="15,54,36,25">
+        <var name="tgs" id="73760825480212147" />
+      </scope>
+      <scope id="73760825480212147" at="14,0,38,0">
+        <var name="ctx" id="73760825480212147" />
+      </scope>
+      <unit id="73760825480212147" at="39,0,45,0" name="org.fbme.ide.st.lang.textGen.IfStatement_TextGen$LINKS" />
+      <unit id="73760825480212147" at="13,0,46,0" name="org.fbme.ide.st.lang.textGen.IfStatement_TextGen" />
+    </file>
+    <file name="TextGenAspectDescriptor.java">
+      <node id="73760825480212147" at="48,45,49,41" concept="6" />
+      <scope id="73760825480212147" at="48,45,49,41" />
+    </file>
+  </root>
+  <root nodeRef="r:5166b05c-4b71-4398-b13f-339ae9c4deac(org.fbme.ide.st.lang.textGen)/73760825480235592">
+    <file name="ElseIfClause_TextGen.java">
+      <node id="73760825480235592" at="14,54,15,55" concept="5" />
+      <node id="73760825481918812" at="15,55,16,17" concept="1" />
+      <node id="73760825480235635" at="16,17,17,25" concept="1" />
+      <node id="73760825480235752" at="17,25,18,91" concept="1" />
+      <node id="73760825480237524" at="18,91,19,24" concept="1" />
+      <node id="73760825480238148" at="19,24,20,18" concept="1" />
+      <node id="73760825480235592" at="20,18,21,44" concept="1" />
+      <node id="73760825480240508" at="21,44,22,86" concept="1" />
+      <node id="73760825480235592" at="22,86,23,44" concept="1" />
+      <node id="73760825480235592" at="27,0,28,0" concept="8" trace="condition$y9Uk" />
+      <node id="73760825480235592" at="28,0,29,0" concept="8" trace="body$yaom" />
+      <node id="73760825480235592" at="13,0,25,0" concept="4" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
+      <scope id="73760825480235592" at="14,54,23,44">
+        <var name="tgs" id="73760825480235592" />
+      </scope>
+      <scope id="73760825480235592" at="13,0,25,0">
+        <var name="ctx" id="73760825480235592" />
+      </scope>
+      <unit id="73760825480235592" at="26,0,30,0" name="org.fbme.ide.st.lang.textGen.ElseIfClause_TextGen$LINKS" />
+      <unit id="73760825480235592" at="12,0,31,0" name="org.fbme.ide.st.lang.textGen.ElseIfClause_TextGen" />
+    </file>
+    <file name="TextGenAspectDescriptor.java">
+      <node id="73760825480235592" at="36,46,37,42" concept="6" />
+      <scope id="73760825480235592" at="36,46,37,42" />
+    </file>
+  </root>
+  <root nodeRef="r:5166b05c-4b71-4398-b13f-339ae9c4deac(org.fbme.ide.st.lang.textGen)/73760825480242873">
+    <file name="RepeatStatement_TextGen.java">
+      <node id="73760825480242873" at="14,54,15,55" concept="5" />
+      <node id="73760825480242916" at="15,55,16,25" concept="1" />
+      <node id="73760825480242988" at="16,25,17,18" concept="1" />
+      <node id="73760825480242873" at="17,18,18,44" concept="1" />
+      <node id="73760825480243076" at="18,44,19,86" concept="1" />
+      <node id="73760825480242873" at="19,86,20,44" concept="1" />
+      <node id="73760825481922837" at="20,44,21,17" concept="1" />
+      <node id="73760825480246416" at="21,17,22,25" concept="1" />
+      <node id="73760825480246488" at="22,25,23,91" concept="1" />
+      <node id="73760825480248469" at="23,91,24,30" concept="1" />
+      <node id="73760825480242873" at="28,0,29,0" concept="8" trace="body$NfKm" />
+      <node id="73760825480242873" at="29,0,30,0" concept="8" trace="condition$Nfik" />
+      <node id="73760825480242873" at="13,0,26,0" concept="4" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
+      <scope id="73760825480242873" at="14,54,24,30">
+        <var name="tgs" id="73760825480242873" />
+      </scope>
+      <scope id="73760825480242873" at="13,0,26,0">
+        <var name="ctx" id="73760825480242873" />
+      </scope>
+      <unit id="73760825480242873" at="27,0,31,0" name="org.fbme.ide.st.lang.textGen.RepeatStatement_TextGen$LINKS" />
+      <unit id="73760825480242873" at="12,0,32,0" name="org.fbme.ide.st.lang.textGen.RepeatStatement_TextGen" />
+    </file>
+    <file name="TextGenAspectDescriptor.java">
+      <node id="73760825480242873" at="54,49,55,45" concept="6" />
+      <scope id="73760825480242873" at="54,49,55,45" />
+    </file>
+  </root>
+  <root nodeRef="r:5166b05c-4b71-4398-b13f-339ae9c4deac(org.fbme.ide.st.lang.textGen)/73760825480249533">
+    <file name="ReturnStatement_TextGen.java">
+      <node id="73760825480249533" at="11,54,12,55" concept="5" />
+      <node id="73760825480249576" at="12,55,13,25" concept="1" />
+      <node id="73760825480249533" at="10,0,15,0" concept="4" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
+      <scope id="73760825480249533" at="11,54,13,25">
+        <var name="tgs" id="73760825480249533" />
+      </scope>
+      <scope id="73760825480249533" at="10,0,15,0">
+        <var name="ctx" id="73760825480249533" />
+      </scope>
+      <unit id="73760825480249533" at="9,0,16,0" name="org.fbme.ide.st.lang.textGen.ReturnStatement_TextGen" />
+    </file>
+    <file name="TextGenAspectDescriptor.java">
+      <node id="73760825480249533" at="56,49,57,45" concept="6" />
+      <scope id="73760825480249533" at="56,49,57,45" />
+    </file>
+  </root>
+  <root nodeRef="r:5166b05c-4b71-4398-b13f-339ae9c4deac(org.fbme.ide.st.lang.textGen)/73760825480249727">
+    <file name="TextGenAspectDescriptor.java">
+      <node id="73760825480249727" at="64,48,65,44" concept="6" />
+      <scope id="73760825480249727" at="64,48,65,44" />
+    </file>
+    <file name="WhileStatement_TextGen.java">
+      <node id="73760825480249727" at="14,54,15,55" concept="5" />
+      <node id="73760825480249770" at="15,55,16,25" concept="1" />
+      <node id="73760825480249887" at="16,25,17,91" concept="1" />
+      <node id="73760825480252938" at="17,91,18,22" concept="1" />
+      <node id="73760825480253584" at="18,22,19,18" concept="1" />
+      <node id="73760825480249727" at="19,18,20,44" concept="1" />
+      <node id="73760825480254533" at="20,44,21,86" concept="1" />
+      <node id="73760825480249727" at="21,86,22,44" concept="1" />
+      <node id="73760825481916618" at="22,44,23,17" concept="1" />
+      <node id="73760825480257552" at="23,17,24,28" concept="1" />
+      <node id="73760825480249727" at="28,0,29,0" concept="8" trace="condition$MD1k" />
+      <node id="73760825480249727" at="29,0,30,0" concept="8" trace="body$MDvm" />
+      <node id="73760825480249727" at="13,0,26,0" concept="4" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
+      <scope id="73760825480249727" at="14,54,24,28">
+        <var name="tgs" id="73760825480249727" />
+      </scope>
+      <scope id="73760825480249727" at="13,0,26,0">
+        <var name="ctx" id="73760825480249727" />
+      </scope>
+      <unit id="73760825480249727" at="27,0,31,0" name="org.fbme.ide.st.lang.textGen.WhileStatement_TextGen$LINKS" />
+      <unit id="73760825480249727" at="12,0,32,0" name="org.fbme.ide.st.lang.textGen.WhileStatement_TextGen" />
+    </file>
+  </root>
+  <root nodeRef="r:5166b05c-4b71-4398-b13f-339ae9c4deac(org.fbme.ide.st.lang.textGen)/73760825480258649">
+    <file name="BinaryExpression_TextGen.java">
+      <node id="73760825480258649" at="16,54,17,55" concept="5" />
+      <node id="73760825480258692" at="17,55,18,86" concept="1" />
+      <node id="73760825480261741" at="18,86,19,20" concept="1" />
+      <node id="73760825480262370" at="19,20,20,99" concept="1" />
+      <node id="73760825480267890" at="20,99,21,20" concept="1" />
+      <node id="73760825480268701" at="21,20,22,87" concept="1" />
+      <node id="73760825480258649" at="26,0,27,0" concept="8" trace="left$VuGf" />
+      <node id="73760825480258649" at="27,0,28,0" concept="8" trace="right$Vvah" />
+      <node id="73760825480258649" at="15,0,24,0" concept="4" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
+      <scope id="73760825480258649" at="16,54,22,87">
+        <var name="tgs" id="73760825480258649" />
+      </scope>
+      <scope id="73760825480258649" at="15,0,24,0">
+        <var name="ctx" id="73760825480258649" />
+      </scope>
+      <unit id="73760825480258649" at="25,0,29,0" name="org.fbme.ide.st.lang.textGen.BinaryExpression_TextGen$LINKS" />
+      <unit id="73760825480258649" at="14,0,30,0" name="org.fbme.ide.st.lang.textGen.BinaryExpression_TextGen" />
+    </file>
+    <file name="TextGenAspectDescriptor.java">
+      <node id="73760825480258649" at="26,50,27,46" concept="6" />
+      <scope id="73760825480258649" at="26,50,27,46" />
+    </file>
+  </root>
+  <root nodeRef="r:5166b05c-4b71-4398-b13f-339ae9c4deac(org.fbme.ide.st.lang.textGen)/73760825480271906">
+    <file name="TextGenAspectDescriptor.java">
+      <node id="73760825480271906" at="60,49,61,45" concept="6" />
+      <scope id="73760825480271906" at="60,49,61,45" />
+    </file>
+    <file name="UnaryExpression_TextGen.java">
+      <node id="73760825480271906" at="16,54,17,55" concept="5" />
+      <node id="73760825480271949" at="17,55,18,99" concept="1" />
+      <node id="73760825480279951" at="18,99,19,20" concept="1" />
+      <node id="73760825480280212" at="19,20,20,92" concept="1" />
+      <node id="73760825480271906" at="24,0,25,0" concept="8" trace="expression$qSa8" />
+      <node id="73760825480271906" at="15,0,22,0" concept="4" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
+      <scope id="73760825480271906" at="16,54,20,92">
+        <var name="tgs" id="73760825480271906" />
+      </scope>
+      <scope id="73760825480271906" at="15,0,22,0">
+        <var name="ctx" id="73760825480271906" />
+      </scope>
+      <unit id="73760825480271906" at="23,0,26,0" name="org.fbme.ide.st.lang.textGen.UnaryExpression_TextGen$LINKS" />
+      <unit id="73760825480271906" at="14,0,27,0" name="org.fbme.ide.st.lang.textGen.UnaryExpression_TextGen" />
+    </file>
+  </root>
+  <root nodeRef="r:5166b05c-4b71-4398-b13f-339ae9c4deac(org.fbme.ide.st.lang.textGen)/73760825480282016">
+    <file name="ParenthesisExpression_TextGen.java">
+      <node id="73760825480282016" at="14,54,15,55" concept="5" />
+      <node id="73760825480283644" at="15,55,16,20" concept="1" />
+      <node id="73760825480283701" at="16,20,17,86" concept="1" />
+      <node id="73760825480287061" at="17,86,18,20" concept="1" />
+      <node id="73760825480282016" at="22,0,23,0" concept="8" trace="expr$V0Dh" />
+      <node id="73760825480282016" at="13,0,20,0" concept="4" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
+      <scope id="73760825480282016" at="14,54,18,20">
+        <var name="tgs" id="73760825480282016" />
+      </scope>
+      <scope id="73760825480282016" at="13,0,20,0">
+        <var name="ctx" id="73760825480282016" />
+      </scope>
+      <unit id="73760825480282016" at="21,0,24,0" name="org.fbme.ide.st.lang.textGen.ParenthesisExpression_TextGen$LINKS" />
+      <unit id="73760825480282016" at="12,0,25,0" name="org.fbme.ide.st.lang.textGen.ParenthesisExpression_TextGen" />
+    </file>
+    <file name="TextGenAspectDescriptor.java">
+      <node id="73760825480282016" at="52,55,53,51" concept="6" />
+      <scope id="73760825480282016" at="52,55,53,51" />
+    </file>
+  </root>
+  <root nodeRef="r:5166b05c-4b71-4398-b13f-339ae9c4deac(org.fbme.ide.st.lang.textGen)/73760825480287409">
+    <file name="TextGenAspectDescriptor.java">
+      <node id="73760825480287409" at="62,51,63,47" concept="6" />
+      <scope id="73760825480287409" at="62,51,63,47" />
+    </file>
+    <file name="VariableReference_TextGen.java">
+      <node id="73760825480287409" at="16,54,17,55" concept="5" />
+      <node id="73760825480287553" at="17,55,18,137" concept="1" />
+      <node id="73760825480287409" at="22,0,23,0" concept="8" trace="declaration$GKk9" />
+      <node id="73760825480287409" at="26,0,27,0" concept="8" trace="name$MnvL" />
+      <node id="73760825480287409" at="15,0,20,0" concept="4" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
+      <scope id="73760825480287409" at="16,54,18,137">
+        <var name="tgs" id="73760825480287409" />
+      </scope>
+      <scope id="73760825480287409" at="15,0,20,0">
+        <var name="ctx" id="73760825480287409" />
+      </scope>
+      <unit id="73760825480287409" at="21,0,24,0" name="org.fbme.ide.st.lang.textGen.VariableReference_TextGen$LINKS" />
+      <unit id="73760825480287409" at="25,0,28,0" name="org.fbme.ide.st.lang.textGen.VariableReference_TextGen$PROPS" />
+      <unit id="73760825480287409" at="14,0,29,0" name="org.fbme.ide.st.lang.textGen.VariableReference_TextGen" />
+    </file>
+  </root>
+</debug-info>
+

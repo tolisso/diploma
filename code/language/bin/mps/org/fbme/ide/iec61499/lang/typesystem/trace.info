@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1082485599095:jetbrains.mps.baseLanguage.structure.BlockStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+  <root>
+    <file name="TypesystemDescriptor.java">
+      <unit at="8,0,20,0" name="org.fbme.ide.iec61499.lang.typesystem.TypesystemDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:d3f4a0a0-c4fe-4469-baba-a585d555c3fc(org.fbme.ide.iec61499.lang.typesystem)/2377145822819231073">
+    <file name="TypesystemDescriptor.java">
+      <node id="2377145822819231073" at="14,5,15,103" concept="5" />
+      <node id="2377145822819231073" at="15,103,16,55" concept="2" />
+      <node id="2377145822819231073" at="13,5,17,5" concept="0" />
+      <scope id="2377145822819231073" at="14,5,16,55">
+        <var name="nonTypesystemRule" id="2377145822819231073" />
+      </scope>
+    </file>
+    <file name="check_UnknownAlgorithmBody_NonTypesystemRule.java">
+      <node id="2377145822819231080" at="23,5,24,64" concept="5" />
+      <node id="2377145822819231080" at="24,64,25,302" concept="5" />
+      <node id="2377145822819231073" at="28,50,29,44" concept="6" />
+      <node id="2377145822819231073" at="31,68,32,102" concept="6" />
+      <node id="2377145822819231073" at="34,30,35,17" concept="6" />
+      <node id="2377145822819231073" at="39,0,40,0" concept="8" trace="languageName$TRAH" />
+      <node id="2377145822819231073" at="43,0,44,0" concept="8" trace="UnknownAlgorithmBody$oq" />
+      <node id="2377145822819231073" at="20,0,22,0" concept="1" trace="check_UnknownAlgorithmBody_NonTypesystemRule#()V" />
+      <node id="2377145822819231073" at="28,0,31,0" concept="4" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="2377145822819231073" at="31,0,34,0" concept="4" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="2377145822819231073" at="34,0,37,0" concept="4" trace="overrides#()Z" />
+      <node id="2377145822819231080" at="22,117,26,5" concept="0" />
+      <node id="2377145822819231073" at="22,0,28,0" concept="4" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="2377145822819231073" at="20,57,20,57" />
+      <scope id="2377145822819231073" at="28,50,29,44" />
+      <scope id="2377145822819231073" at="31,68,32,102" />
+      <scope id="2377145822819231073" at="34,30,35,17" />
+      <scope id="2377145822819231073" at="20,0,22,0" />
+      <scope id="2377145822819231080" at="23,5,25,302">
+        <var name="_reporter_2309309498" id="2377145822819231080" />
+        <var name="errorTarget" id="2377145822819231080" />
+      </scope>
+      <scope id="2377145822819231073" at="28,0,31,0" />
+      <scope id="2377145822819231073" at="31,0,34,0">
+        <var name="argument" id="2377145822819231073" />
+      </scope>
+      <scope id="2377145822819231073" at="34,0,37,0" />
+      <scope id="2377145822819231074" at="22,117,26,5" />
+      <scope id="2377145822819231073" at="22,0,28,0">
+        <var name="body" id="2377145822819231073" />
+        <var name="status" id="2377145822819231073" />
+        <var name="typeCheckingContext" id="2377145822819231073" />
+      </scope>
+      <unit id="2377145822819231073" at="38,0,41,0" name="org.fbme.ide.iec61499.lang.typesystem.check_UnknownAlgorithmBody_NonTypesystemRule$PROPS" />
+      <unit id="2377145822819231073" at="42,0,45,0" name="org.fbme.ide.iec61499.lang.typesystem.check_UnknownAlgorithmBody_NonTypesystemRule$CONCEPTS" />
+      <unit id="2377145822819231073" at="19,0,46,0" name="org.fbme.ide.iec61499.lang.typesystem.check_UnknownAlgorithmBody_NonTypesystemRule" />
+    </file>
+  </root>
+  <root nodeRef="r:d3f4a0a0-c4fe-4469-baba-a585d555c3fc(org.fbme.ide.iec61499.lang.typesystem)/2934633218616249588">
+    <file name="TypesystemDescriptor.java">
+      <node id="2934633218616249588" at="10,5,11,97" concept="5" />
+      <node id="2934633218616249588" at="11,97,12,55" concept="2" />
+      <node id="2934633218616249588" at="9,33,13,5" concept="0" />
+      <scope id="2934633218616249588" at="10,5,12,55">
+        <var name="nonTypesystemRule" id="2934633218616249588" />
+      </scope>
+    </file>
+    <file name="check_IWithFBNetwork_NonTypesystemRule.java">
+      <node id="2934633218616249588" at="19,50,20,38" concept="6" />
+      <node id="2934633218616249588" at="22,68,23,102" concept="6" />
+      <node id="2934633218616249588" at="25,30,26,17" concept="6" />
+      <node id="2934633218616249588" at="30,0,31,0" concept="8" trace="IWithFBNetwork$Ih" />
+      <node id="2934633218616249588" at="15,0,17,0" concept="1" trace="check_IWithFBNetwork_NonTypesystemRule#()V" />
+      <node id="2934633218616249588" at="17,0,19,0" concept="4" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <node id="2934633218616249588" at="19,0,22,0" concept="4" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="2934633218616249588" at="22,0,25,0" concept="4" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="2934633218616249588" at="25,0,28,0" concept="4" trace="overrides#()Z" />
+      <scope id="2934633218616249588" at="15,51,15,51" />
+      <scope id="2934633218616249589" at="17,120,17,120" />
+      <scope id="2934633218616249588" at="19,50,20,38" />
+      <scope id="2934633218616249588" at="22,68,23,102" />
+      <scope id="2934633218616249588" at="25,30,26,17" />
+      <scope id="2934633218616249588" at="15,0,17,0" />
+      <scope id="2934633218616249588" at="17,0,19,0">
+        <var name="network" id="2934633218616249588" />
+        <var name="status" id="2934633218616249588" />
+        <var name="typeCheckingContext" id="2934633218616249588" />
+      </scope>
+      <scope id="2934633218616249588" at="19,0,22,0" />
+      <scope id="2934633218616249588" at="22,0,25,0">
+        <var name="argument" id="2934633218616249588" />
+      </scope>
+      <scope id="2934633218616249588" at="25,0,28,0" />
+      <unit id="2934633218616249588" at="29,0,32,0" name="org.fbme.ide.iec61499.lang.typesystem.check_IWithFBNetwork_NonTypesystemRule$CONCEPTS" />
+      <unit id="2934633218616249588" at="14,0,33,0" name="org.fbme.ide.iec61499.lang.typesystem.check_IWithFBNetwork_NonTypesystemRule" />
+    </file>
+  </root>
+  <root nodeRef="r:d3f4a0a0-c4fe-4469-baba-a585d555c3fc(org.fbme.ide.iec61499.lang.typesystem)/2934633218616275609">
+    <file name="FixInvalidPaths_QuickFix.java">
+      <node id="2934633218616275609" at="18,37,19,132" concept="9" />
+      <node id="2934633218616310825" at="21,44,22,32" concept="6" />
+      <node id="2934633218616316564" at="27,125,28,17" concept="6" />
+      <node id="2934633218616318359" at="30,188,31,17" concept="6" />
+      <node id="2934633218616319206" at="32,9,33,0" concept="7" />
+      <node id="2934633218616325590" at="33,0,34,128" concept="2" />
+      <node id="2934633218616275609" at="40,0,41,0" concept="8" trace="Connection$dB" />
+      <node id="2934633218616275609" at="41,0,42,0" concept="8" trace="ConstantDataSource$JK" />
+      <node id="2934633218616275609" at="42,0,43,0" concept="8" trace="StraightConnectionPath$wz" />
+      <node id="2934633218616275609" at="43,0,44,0" concept="8" trace="TwoAngleConnectionPath$Ua" />
+      <node id="2934633218616275609" at="47,0,48,0" concept="8" trace="source$ta_q" />
+      <node id="2934633218616275609" at="48,0,49,0" concept="8" trace="path$WEpd" />
+      <node id="2934633218616275609" at="18,0,21,0" concept="1" trace="FixInvalidPaths_QuickFix#()V" />
+      <node id="2934633218616275609" at="21,0,24,0" concept="4" trace="getDescription#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="2934633218616312847" at="26,35,29,9" concept="3" />
+      <node id="2934633218616291890" at="29,9,32,9" concept="3" />
+      <node id="2934633218616290684" at="26,0,36,0" concept="4" trace="visit#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="2934633218616275648" at="24,35,36,7" concept="2" />
+      <node id="2934633218616275609" at="24,0,38,0" concept="4" trace="execute#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="2934633218616275609" at="18,37,19,132" />
+      <scope id="2934633218616310511" at="21,44,22,32" />
+      <scope id="2934633218616312849" at="27,125,28,17" />
+      <scope id="2934633218616291892" at="30,188,31,17" />
+      <scope id="2934633218616275609" at="18,0,21,0" />
+      <scope id="2934633218616275609" at="21,0,24,0">
+        <var name="node" id="2934633218616275609" />
+      </scope>
+      <scope id="2934633218616290685" at="26,35,34,128" />
+      <scope id="2934633218616290684" at="26,0,36,0">
+        <var name="it" id="2934633218616290684" />
+      </scope>
+      <scope id="2934633218616275611" at="24,35,36,7" />
+      <scope id="2934633218616275609" at="24,0,38,0">
+        <var name="node" id="2934633218616275609" />
+      </scope>
+      <unit id="2934633218616275609" at="46,0,50,0" name="org.fbme.ide.iec61499.lang.typesystem.FixInvalidPaths_QuickFix$LINKS" />
+      <unit id="2934633218616275609" at="39,0,45,0" name="org.fbme.ide.iec61499.lang.typesystem.FixInvalidPaths_QuickFix$CONCEPTS" />
+      <unit id="2934633218616290684" at="25,138,36,5" name="org.fbme.ide.iec61499.lang.typesystem.FixInvalidPaths_QuickFix$1" />
+      <unit id="2934633218616275609" at="17,0,51,0" name="org.fbme.ide.iec61499.lang.typesystem.FixInvalidPaths_QuickFix" />
+    </file>
+  </root>
+</debug-info>
+

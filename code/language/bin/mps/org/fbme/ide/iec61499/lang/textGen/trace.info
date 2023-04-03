@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <root>
+    <file name="TextGenAspectDescriptor.java">
+      <unit at="12,0,29,0" name="org.fbme.ide.iec61499.lang.textGen.TextGenAspectDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:8abde5bd-ef4b-487f-ab2e-2497b70407ad(org.fbme.ide.iec61499.lang.textGen)/8283850815389004776">
+    <file name="TextGenAspectDescriptor.java">
+      <node id="8283850815389004776" at="22,53,23,49" concept="4" />
+      <scope id="8283850815389004776" at="22,53,23,49" />
+    </file>
+    <file name="TransitionCondition_TextGen.java">
+      <node id="8283850815389004776" at="15,54,16,55" concept="3" />
+      <node id="8283850815389265596" at="17,176,18,22" concept="0" />
+      <node id="8283850815389265651" at="18,22,19,13" concept="4" />
+      <node id="8283850815389273061" at="21,87,22,151" concept="0" />
+      <node id="8283850815389290021" at="24,96,25,22" concept="0" />
+      <node id="8283850815389290093" at="25,22,26,98" concept="0" />
+      <node id="8283850815389293092" at="26,98,27,22" concept="0" />
+      <node id="8283850815389004776" at="32,0,33,0" concept="5" trace="guardCondition$felU" />
+      <node id="8283850815389004776" at="33,0,34,0" concept="5" trace="event$6f8L" />
+      <node id="8283850815389266097" at="20,5,23,5" concept="1" />
+      <node id="8283850815389005132" at="16,55,20,5" concept="1" />
+      <node id="8283850815389282361" at="23,5,28,5" concept="1" />
+      <node id="8283850815389004776" at="14,0,30,0" concept="2" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
+      <scope id="8283850815389266099" at="21,87,22,151" />
+      <scope id="8283850815389005134" at="17,176,19,13" />
+      <scope id="8283850815389282363" at="24,96,27,22" />
+      <scope id="8283850815389004776" at="15,54,28,5">
+        <var name="tgs" id="8283850815389004776" />
+      </scope>
+      <scope id="8283850815389004776" at="14,0,30,0">
+        <var name="ctx" id="8283850815389004776" />
+      </scope>
+      <unit id="8283850815389004776" at="31,0,35,0" name="org.fbme.ide.iec61499.lang.textGen.TransitionCondition_TextGen$LINKS" />
+      <unit id="8283850815389004776" at="13,0,36,0" name="org.fbme.ide.iec61499.lang.textGen.TransitionCondition_TextGen" />
+    </file>
+  </root>
+</debug-info>
+

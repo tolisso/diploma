@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068390468200:jetbrains.mps.baseLanguage.structure.FieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <root nodeRef="r:ff24162f-099d-43d8-a0b8-3a06f2c9c0a1(org.fbme.ide.platform)/1418938128522647264">
+    <file name="IEC_61499_Persistence_Refs_Fixer_ProjectPluginPart.java">
+      <node id="1418938128522865817" at="10,0,11,0" concept="2" trace="myFixer" />
+      <node id="1418938128522866633" at="14,40,15,84" concept="1" />
+      <node id="1418938128522869512" at="18,43,19,84" concept="1" />
+      <node id="1418938128522647264" at="11,0,13,0" concept="0" trace="IEC_61499_Persistence_Refs_Fixer_ProjectPluginPart#()V" />
+      <node id="1418938128522647264" at="13,0,17,0" concept="3" trace="init#(Ljetbrains/mps/project/MPSProject;)V" />
+      <node id="1418938128522647264" at="17,0,21,0" concept="3" trace="dispose#(Ljetbrains/mps/project/MPSProject;)V" />
+      <scope id="1418938128522647264" at="11,63,11,63" />
+      <scope id="1418938128522647266" at="14,40,15,84" />
+      <scope id="1418938128522869233" at="18,43,19,84" />
+      <scope id="1418938128522647264" at="11,0,13,0" />
+      <scope id="1418938128522647264" at="13,0,17,0">
+        <var name="project" id="1418938128522647264" />
+      </scope>
+      <scope id="1418938128522647264" at="17,0,21,0">
+        <var name="project" id="1418938128522647264" />
+      </scope>
+      <unit id="1418938128522647264" at="9,0,22,0" name="org.fbme.ide.platform.IEC_61499_Persistence_Refs_Fixer_ProjectPluginPart" />
+    </file>
+    <file name="Platform_ProjectPlugin.java">
+      <node id="1418938128522647264" at="14,66,15,72" concept="1" />
+    </file>
+  </root>
+  <root nodeRef="r:ff24162f-099d-43d8-a0b8-3a06f2c9c0a1(org.fbme.ide.platform)/1536246144562463065">
+    <file name="IEC_61499_Headered_Projection_AppPluginPart.java">
+      <node id="9189767216723413506" at="20,27,21,22" concept="4" />
+      <node id="9189767216723413968" at="25,93,26,239" concept="4" />
+      <node id="1529803984067508895" at="30,54,31,303" concept="4" />
+      <node id="1536246144562558996" at="37,22,38,132" concept="1" />
+      <node id="1536246144562563320" at="41,25,42,134" concept="1" />
+      <node id="1536246144562463065" at="46,0,47,0" concept="5" trace="ResourceTypeDeclaration$eV" />
+      <node id="1536246144562463065" at="47,0,48,0" concept="5" trace="DeviceTypeDeclaration$WY" />
+      <node id="1536246144562463065" at="48,0,49,0" concept="5" trace="SystemDeclaration$SC" />
+      <node id="1536246144562463065" at="49,0,50,0" concept="5" trace="DeclarationWithInterface$hp" />
+      <node id="1536246144562463065" at="34,0,36,0" concept="0" trace="IEC_61499_Headered_Projection_AppPluginPart#()V" />
+      <node id="1724686863269278782" at="24,0,28,0" concept="3" trace="create#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/project/Project;)Lorg/fbme/ide/platform/editor/EditorProjectionController;" />
+      <node id="1529803984067487943" at="29,0,33,0" concept="3" trace="isApplicable#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="1536246144562463065" at="36,0,40,0" concept="3" trace="init#()V" />
+      <node id="1536246144562463065" at="40,0,44,0" concept="3" trace="dispose#()V" />
+      <node id="9189767216723413502" at="18,0,23,0" concept="3" trace="getId#()Ljava/lang/String;" />
+      <node id="1536246144562463066" at="17,0,34,0" concept="2" trace="myFactory" />
+      <scope id="1536246144562463065" at="34,56,34,56" />
+      <scope id="9189767216723413505" at="20,27,21,22" />
+      <scope id="1724686863269278793" at="25,93,26,239" />
+      <scope id="1529803984067487951" at="30,54,31,303" />
+      <scope id="1536246144562558306" at="37,22,38,132" />
+      <scope id="1536246144562562829" at="41,25,42,134" />
+      <scope id="1536246144562463065" at="34,0,36,0" />
+      <scope id="1724686863269278782" at="24,0,28,0">
+        <var name="node" id="1724686863269278786" />
+        <var name="project" id="1724686863269278789" />
+      </scope>
+      <scope id="1529803984067487943" at="29,0,33,0">
+        <var name="node" id="1529803984067487944" />
+      </scope>
+      <scope id="1536246144562463065" at="36,0,40,0" />
+      <scope id="1536246144562463065" at="40,0,44,0" />
+      <scope id="9189767216723413502" at="18,0,23,0" />
+      <unit id="1536246144562463065" at="45,0,51,0" name="org.fbme.ide.platform.IEC_61499_Headered_Projection_AppPluginPart$CONCEPTS" />
+      <unit id="9189767216723413500" at="17,61,33,3" name="org.fbme.ide.platform.IEC_61499_Headered_Projection_AppPluginPart$1" />
+      <unit id="1536246144562463065" at="16,0,52,0" name="org.fbme.ide.platform.IEC_61499_Headered_Projection_AppPluginPart" />
+    </file>
+    <file name="Platform_ApplicationPlugin.java">
+      <node id="1536246144562463065" at="24,53,25,65" concept="1" />
+    </file>
+  </root>
+  <root nodeRef="r:ff24162f-099d-43d8-a0b8-3a06f2c9c0a1(org.fbme.ide.platform)/1837268877601290107">
+    <file name="IEC_61499_Persistence_AppPluginPart.java">
+      <node id="7286600719705171115" at="13,22,14,82" concept="1" />
+      <node id="7286600719704913045" at="14,82,15,36" concept="1" />
+      <node id="7286600719705197421" at="18,25,19,84" concept="1" />
+      <node id="7286600719704913429" at="19,84,20,36" concept="1" />
+      <node id="1837268877601290107" at="10,0,12,0" concept="0" trace="IEC_61499_Persistence_AppPluginPart#()V" />
+      <node id="1837268877601290107" at="12,0,17,0" concept="3" trace="init#()V" />
+      <node id="1837268877601290107" at="17,0,22,0" concept="3" trace="dispose#()V" />
+      <scope id="1837268877601290107" at="10,48,10,48" />
+      <scope id="1837268877601290107" at="10,0,12,0" />
+      <scope id="1837268877601324006" at="13,22,15,36" />
+      <scope id="1837268877602083272" at="18,25,20,36" />
+      <scope id="1837268877601290107" at="12,0,17,0" />
+      <scope id="1837268877601290107" at="17,0,22,0" />
+      <unit id="1837268877601290107" at="9,0,23,0" name="org.fbme.ide.platform.IEC_61499_Persistence_AppPluginPart" />
+    </file>
+    <file name="Platform_ApplicationPlugin.java">
+      <node id="1837268877601290107" at="25,65,26,57" concept="1" />
+    </file>
+  </root>
+  <root nodeRef="r:ff24162f-099d-43d8-a0b8-3a06f2c9c0a1(org.fbme.ide.platform)/2212688570782852829">
+    <file name="FBME_Watchers_ProjectPluginPart.java">
+      <node id="2212688570782854967" at="13,40,14,36" concept="1" />
+      <node id="2212688570782855659" at="17,43,18,38" concept="1" />
+      <node id="2212688570782852829" at="10,0,12,0" concept="0" trace="FBME_Watchers_ProjectPluginPart#()V" />
+      <node id="2212688570782852829" at="12,0,16,0" concept="3" trace="init#(Ljetbrains/mps/project/MPSProject;)V" />
+      <node id="2212688570782852829" at="16,0,20,0" concept="3" trace="dispose#(Ljetbrains/mps/project/MPSProject;)V" />
+      <scope id="2212688570782852829" at="10,44,10,44" />
+      <scope id="2212688570782852831" at="13,40,14,36" />
+      <scope id="2212688570782855224" at="17,43,18,38" />
+      <scope id="2212688570782852829" at="10,0,12,0" />
+      <scope id="2212688570782852829" at="12,0,16,0">
+        <var name="project" id="2212688570782852829" />
+      </scope>
+      <scope id="2212688570782852829" at="16,0,20,0">
+        <var name="project" id="2212688570782852829" />
+      </scope>
+      <unit id="2212688570782852829" at="9,0,21,0" name="org.fbme.ide.platform.FBME_Watchers_ProjectPluginPart" />
+    </file>
+    <file name="Platform_ProjectPlugin.java">
+      <node id="2212688570782852829" at="12,62,13,53" concept="1" />
+    </file>
+  </root>
+  <root nodeRef="r:ff24162f-099d-43d8-a0b8-3a06f2c9c0a1(org.fbme.ide.platform)/4656577189956799572">
+    <file name="IEC_61499_Devices_AppPluginPart.java">
+      <node id="4656577189957291047" at="9,0,10,0" concept="2" trace="devices" />
+      <node id="4656577189957341974" at="13,22,14,57" concept="1" />
+      <node id="4656577189957344447" at="17,25,18,56" concept="1" />
+      <node id="4656577189956799572" at="10,0,12,0" concept="0" trace="IEC_61499_Devices_AppPluginPart#()V" />
+      <node id="4656577189956799572" at="12,0,16,0" concept="3" trace="init#()V" />
+      <node id="4656577189956799572" at="16,0,20,0" concept="3" trace="dispose#()V" />
+      <scope id="4656577189956799572" at="10,44,10,44" />
+      <scope id="4656577189956799935" at="13,22,14,57" />
+      <scope id="4656577189956800118" at="17,25,18,56" />
+      <scope id="4656577189956799572" at="10,0,12,0" />
+      <scope id="4656577189956799572" at="12,0,16,0" />
+      <scope id="4656577189956799572" at="16,0,20,0" />
+      <unit id="4656577189956799572" at="8,0,21,0" name="org.fbme.ide.platform.IEC_61499_Devices_AppPluginPart" />
+    </file>
+    <file name="Platform_ApplicationPlugin.java">
+      <node id="4656577189956799572" at="23,66,24,53" concept="1" />
+    </file>
+  </root>
+  <root nodeRef="r:ff24162f-099d-43d8-a0b8-3a06f2c9c0a1(org.fbme.ide.platform)/5130266120276214293">
+    <file name="Platform_ApplicationPlugin.java">
+      <node id="5130266120276214293" at="12,0,13,0" concept="2" trace="myId" />
+      <node id="5130266120276214293" at="18,27,19,16" concept="4" />
+      <node id="5130266120276214293" at="14,0,16,0" concept="0" trace="Platform_ApplicationPlugin#()V" />
+      <node id="5130266120276214293" at="17,0,21,0" concept="3" trace="getId#()Lcom/intellij/openapi/extensions/PluginId;" />
+      <node id="5130266120276214293" at="22,0,29,0" concept="3" trace="fillCustomParts#(Ljava/util/List;)V" />
+      <scope id="5130266120276214293" at="14,39,14,39" />
+      <scope id="5130266120276214293" at="18,27,19,16" />
+      <scope id="5130266120276214293" at="14,0,16,0" />
+      <scope id="5130266120276214293" at="17,0,21,0" />
+      <scope id="5130266120276214293" at="23,66,27,63" />
+      <scope id="5130266120276214293" at="22,0,29,0">
+        <var name="parts" id="5130266120276214293" />
+      </scope>
+      <unit id="5130266120276214293" at="11,0,30,0" name="org.fbme.ide.platform.Platform_ApplicationPlugin" />
+    </file>
+    <file name="Platform_ProjectPlugin.java">
+      <node id="5130266120276214293" at="10,0,12,0" concept="0" trace="Platform_ProjectPlugin#()V" />
+      <node id="5130266120276214293" at="12,0,17,0" concept="3" trace="fillCustomParts#(Ljava/util/List;)V" />
+      <scope id="5130266120276214293" at="10,35,10,35" />
+      <scope id="5130266120276214293" at="10,0,12,0" />
+      <scope id="5130266120276214293" at="12,62,15,72" />
+      <scope id="5130266120276214293" at="12,0,17,0">
+        <var name="parts" id="5130266120276214293" />
+      </scope>
+      <unit id="5130266120276214293" at="9,0,18,0" name="org.fbme.ide.platform.Platform_ProjectPlugin" />
+    </file>
+    <file name="startup.properties">
+      <unit id="5130266120276214293" at="1,0,6,0" name="org.fbme.ide.platform.startup" />
+    </file>
+  </root>
+  <root nodeRef="r:ff24162f-099d-43d8-a0b8-3a06f2c9c0a1(org.fbme.ide.platform)/9018357307821985937">
+    <file name="IEC_61499_Project_Templates_AppPluginPart.java">
+      <node id="9018357307821985938" at="11,0,12,0" concept="2" trace="myTemplateGroup" />
+      <node id="9018357307821990968" at="15,22,16,160" concept="1" />
+      <node id="9018357307822010448" at="19,25,20,162" concept="1" />
+      <node id="9018357307821985937" at="12,0,14,0" concept="0" trace="IEC_61499_Project_Templates_AppPluginPart#()V" />
+      <node id="9018357307821985937" at="14,0,18,0" concept="3" trace="init#()V" />
+      <node id="9018357307821985937" at="18,0,22,0" concept="3" trace="dispose#()V" />
+      <scope id="9018357307821985937" at="12,54,12,54" />
+      <scope id="9018357307821988473" at="15,22,16,160" />
+      <scope id="9018357307822010285" at="19,25,20,162" />
+      <scope id="9018357307821985937" at="12,0,14,0" />
+      <scope id="9018357307821985937" at="14,0,18,0" />
+      <scope id="9018357307821985937" at="18,0,22,0" />
+      <unit id="9018357307821985937" at="10,0,23,0" name="org.fbme.ide.platform.IEC_61499_Project_Templates_AppPluginPart" />
+    </file>
+    <file name="Platform_ApplicationPlugin.java">
+      <node id="9018357307821985937" at="26,57,27,63" concept="1" />
+    </file>
+  </root>
+  <root nodeRef="r:ff24162f-099d-43d8-a0b8-3a06f2c9c0a1(org.fbme.ide.platform)/9189767216721912952">
+    <file name="IEC_61499_Headered_Editors_ProjectPluginPart.java">
+      <node id="9189767216721914924" at="14,40,15,117" concept="1" />
+      <node id="9189767216721944124" at="18,43,19,112" concept="1" />
+      <node id="9189767216721912952" at="11,0,13,0" concept="0" trace="IEC_61499_Headered_Editors_ProjectPluginPart#()V" />
+      <node id="9189767216721912952" at="13,0,17,0" concept="3" trace="init#(Ljetbrains/mps/project/MPSProject;)V" />
+      <node id="9189767216721912952" at="17,0,21,0" concept="3" trace="dispose#(Ljetbrains/mps/project/MPSProject;)V" />
+      <scope id="9189767216721912952" at="11,57,11,57" />
+      <scope id="9189767216721914504" at="14,40,15,117" />
+      <scope id="9189767216721944028" at="18,43,19,112" />
+      <scope id="9189767216721912952" at="11,0,13,0" />
+      <scope id="9189767216721912952" at="13,0,17,0">
+        <var name="project" id="9189767216721912952" />
+      </scope>
+      <scope id="9189767216721912952" at="17,0,21,0">
+        <var name="project" id="9189767216721912952" />
+      </scope>
+      <unit id="9189767216721912952" at="10,0,22,0" name="org.fbme.ide.platform.IEC_61499_Headered_Editors_ProjectPluginPart" />
+    </file>
+    <file name="Platform_ProjectPlugin.java">
+      <node id="9189767216721912952" at="13,53,14,66" concept="1" />
+    </file>
+  </root>
+</debug-info>
+

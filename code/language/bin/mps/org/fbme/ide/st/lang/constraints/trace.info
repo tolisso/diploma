@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+  <root>
+    <file name="ConstraintsAspectDescriptor.java">
+      <unit at="13,0,35,0" name="org.fbme.ide.st.lang.constraints.ConstraintsAspectDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:61b9f20a-ea16-4aa0-9e5f-415cf7d35073(org.fbme.ide.st.lang.constraints)/3822208098717704804">
+    <file name="Identifier_Constraints.java">
+      <node id="3822208098717704804" at="20,35,21,34" concept="8" />
+      <node id="3822208098717704805" at="25,59,26,60" concept="8" />
+      <node id="3822208098717704805" at="29,109,30,99" concept="4" />
+      <node id="3822208098717704805" at="31,53,32,161" concept="1" />
+      <node id="3822208098717704805" at="33,7,34,20" concept="5" />
+      <node id="3822208098717712962" at="36,85,37,118" concept="5" />
+      <node id="3822208098717704804" at="41,84,42,119" concept="4" />
+      <node id="3822208098717704805" at="42,119,43,61" concept="1" />
+      <node id="3822208098717704804" at="43,61,44,22" concept="5" />
+      <node id="3822208098717704804" at="48,0,49,0" concept="6" trace="Identifier$mn" />
+      <node id="3822208098717704804" at="52,0,53,0" concept="6" trace="name$MnvL" />
+      <node id="3822208098717704804" at="20,0,23,0" concept="0" trace="Identifier_Constraints#()V" />
+      <node id="3822208098717704805" at="25,0,28,0" concept="0" trace="Name_Property#(Ljetbrains/mps/smodel/runtime/ConstraintsDescriptor;)V" />
+      <node id="3822208098717704805" at="30,99,33,7" concept="2" />
+      <node id="3822208098717704805" at="36,0,39,0" concept="7" trace="staticValidateProperty#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Z" />
+      <node id="3822208098717704804" at="40,0,46,0" concept="3" trace="getSpecifiedProperties#()Ljava/util/Map;" />
+      <node id="3822208098717704805" at="28,0,36,0" concept="3" trace="validateValue#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/Object;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Z" />
+      <scope id="3822208098717704804" at="20,35,21,34" />
+      <scope id="3822208098717704805" at="25,59,26,60" />
+      <scope id="3822208098717704805" at="31,53,32,161" />
+      <scope id="3822208098717704808" at="36,85,37,118" />
+      <scope id="3822208098717704804" at="20,0,23,0" />
+      <scope id="3822208098717704805" at="25,0,28,0">
+        <var name="container" id="3822208098717704805" />
+      </scope>
+      <scope id="3822208098717704805" at="36,0,39,0">
+        <var name="node" id="3822208098717704805" />
+        <var name="propertyValue" id="3822208098717704805" />
+      </scope>
+      <scope id="3822208098717704804" at="41,84,44,22">
+        <var name="properties" id="3822208098717704804" />
+      </scope>
+      <scope id="3822208098717704805" at="29,109,34,20">
+        <var name="result" id="3822208098717704805" />
+      </scope>
+      <scope id="3822208098717704804" at="40,0,46,0" />
+      <scope id="3822208098717704805" at="28,0,36,0">
+        <var name="checkingNodeContext" id="3822208098717704805" />
+        <var name="node" id="3822208098717704805" />
+        <var name="propertyValue" id="3822208098717704805" />
+      </scope>
+      <unit id="3822208098717704804" at="47,0,50,0" name="org.fbme.ide.st.lang.constraints.Identifier_Constraints$CONCEPTS" />
+      <unit id="3822208098717704804" at="51,0,54,0" name="org.fbme.ide.st.lang.constraints.Identifier_Constraints$PROPS" />
+      <unit id="3822208098717704805" at="24,0,40,0" name="org.fbme.ide.st.lang.constraints.Identifier_Constraints$Name_Property" />
+      <unit id="3822208098717704804" at="19,0,55,0" name="org.fbme.ide.st.lang.constraints.Identifier_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:61b9f20a-ea16-4aa0-9e5f-415cf7d35073(org.fbme.ide.st.lang.constraints)/4476459211447673690">
+    <file name="FunctionCall_Constraints.java">
+      <node id="4476459211447673690" at="20,37,21,36" concept="8" />
+      <node id="4476459211447673700" at="25,67,26,68" concept="8" />
+      <node id="4476459211447673700" at="29,109,30,99" concept="4" />
+      <node id="4476459211447673700" at="31,53,32,161" concept="1" />
+      <node id="4476459211447673700" at="33,7,34,20" concept="5" />
+      <node id="4476459211447674723" at="36,85,37,118" concept="5" />
+      <node id="4476459211447673690" at="41,84,42,119" concept="4" />
+      <node id="4476459211447673700" at="42,119,43,77" concept="1" />
+      <node id="4476459211447673690" at="43,77,44,22" concept="5" />
+      <node id="4476459211447673690" at="48,0,49,0" concept="6" trace="FunctionCall$cu" />
+      <node id="4476459211447673690" at="52,0,53,0" concept="6" trace="functionName$2XHO" />
+      <node id="4476459211447673690" at="20,0,23,0" concept="0" trace="FunctionCall_Constraints#()V" />
+      <node id="4476459211447673700" at="25,0,28,0" concept="0" trace="FunctionName_Property#(Ljetbrains/mps/smodel/runtime/ConstraintsDescriptor;)V" />
+      <node id="4476459211447673700" at="30,99,33,7" concept="2" />
+      <node id="4476459211447673700" at="36,0,39,0" concept="7" trace="staticValidateProperty#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Z" />
+      <node id="4476459211447673690" at="40,0,46,0" concept="3" trace="getSpecifiedProperties#()Ljava/util/Map;" />
+      <node id="4476459211447673700" at="28,0,36,0" concept="3" trace="validateValue#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/Object;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Z" />
+      <scope id="4476459211447673690" at="20,37,21,36" />
+      <scope id="4476459211447673700" at="25,67,26,68" />
+      <scope id="4476459211447673700" at="31,53,32,161" />
+      <scope id="4476459211447674254" at="36,85,37,118" />
+      <scope id="4476459211447673690" at="20,0,23,0" />
+      <scope id="4476459211447673700" at="25,0,28,0">
+        <var name="container" id="4476459211447673700" />
+      </scope>
+      <scope id="4476459211447673700" at="36,0,39,0">
+        <var name="node" id="4476459211447673700" />
+        <var name="propertyValue" id="4476459211447673700" />
+      </scope>
+      <scope id="4476459211447673690" at="41,84,44,22">
+        <var name="properties" id="4476459211447673690" />
+      </scope>
+      <scope id="4476459211447673700" at="29,109,34,20">
+        <var name="result" id="4476459211447673700" />
+      </scope>
+      <scope id="4476459211447673690" at="40,0,46,0" />
+      <scope id="4476459211447673700" at="28,0,36,0">
+        <var name="checkingNodeContext" id="4476459211447673700" />
+        <var name="node" id="4476459211447673700" />
+        <var name="propertyValue" id="4476459211447673700" />
+      </scope>
+      <unit id="4476459211447673690" at="47,0,50,0" name="org.fbme.ide.st.lang.constraints.FunctionCall_Constraints$CONCEPTS" />
+      <unit id="4476459211447673690" at="51,0,54,0" name="org.fbme.ide.st.lang.constraints.FunctionCall_Constraints$PROPS" />
+      <unit id="4476459211447673700" at="24,0,40,0" name="org.fbme.ide.st.lang.constraints.FunctionCall_Constraints$FunctionName_Property" />
+      <unit id="4476459211447673690" at="19,0,55,0" name="org.fbme.ide.st.lang.constraints.FunctionCall_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:61b9f20a-ea16-4aa0-9e5f-415cf7d35073(org.fbme.ide.st.lang.constraints)/8872717756041500653">
+    <file name="Statement_Constraints.java">
+      <node id="8872717756041500653" at="10,34,11,33" concept="8" />
+      <node id="8872717756041500653" at="15,47,16,38" concept="5" />
+      <node id="8872717756041500653" at="20,0,21,0" concept="6" trace="Statement$Ik" />
+      <node id="8872717756041500653" at="21,0,22,0" concept="6" trace="EmptyStatement$vW" />
+      <node id="8872717756041500653" at="10,0,13,0" concept="0" trace="Statement_Constraints#()V" />
+      <node id="8872717756041500653" at="14,0,18,0" concept="3" trace="getDefaultConcreteConcept#()Lorg/jetbrains/mps/openapi/language/SConcept;" />
+      <scope id="8872717756041500653" at="10,34,11,33" />
+      <scope id="8872717756041500653" at="15,47,16,38" />
+      <scope id="8872717756041500653" at="10,0,13,0" />
+      <scope id="8872717756041500653" at="14,0,18,0" />
+      <unit id="8872717756041500653" at="19,0,23,0" name="org.fbme.ide.st.lang.constraints.Statement_Constraints$CONCEPTS" />
+      <unit id="8872717756041500653" at="9,0,24,0" name="org.fbme.ide.st.lang.constraints.Statement_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:61b9f20a-ea16-4aa0-9e5f-415cf7d35073(org.fbme.ide.st.lang.constraints)/8872717756044055251">
+    <file name="VariableReference_Constraints.java">
+      <node id="8872717756044055251" at="18,42,19,41" concept="8" />
+      <node id="8872717756044055252" at="27,56,28,202" concept="5" />
+      <node id="8872717756044055251" at="30,6,31,131" concept="4" />
+      <node id="8872717756044055252" at="31,131,32,42" concept="1" />
+      <node id="8872717756044055251" at="32,42,33,22" concept="5" />
+      <node id="8872717756044055251" at="37,0,38,0" concept="6" trace="VariableReference$BO" />
+      <node id="8872717756044055251" at="38,0,39,0" concept="6" trace="VariableDeclaration$Fn" />
+      <node id="8872717756044055251" at="42,0,43,0" concept="6" trace="declaration$GKk9" />
+      <node id="8872717756044055251" at="18,0,21,0" concept="0" trace="VariableReference_Constraints#()V" />
+      <node id="8872717756044055252" at="25,0,30,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="8872717756044055252" at="23,90,30,6" concept="4" />
+      <node id="8872717756044055251" at="22,0,35,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="8872717756044055251" at="18,42,19,41" />
+      <scope id="8872717756044055252" at="27,56,28,202" />
+      <scope id="8872717756044055251" at="18,0,21,0" />
+      <scope id="8872717756044055252" at="25,0,30,0" />
+      <scope id="8872717756044055251" at="23,90,33,22">
+        <var name="d0" id="8872717756044055252" />
+        <var name="references" id="8872717756044055251" />
+      </scope>
+      <scope id="8872717756044055251" at="22,0,35,0" />
+      <unit id="8872717756044055251" at="41,0,44,0" name="org.fbme.ide.st.lang.constraints.VariableReference_Constraints$LINKS" />
+      <unit id="8872717756044055251" at="36,0,40,0" name="org.fbme.ide.st.lang.constraints.VariableReference_Constraints$CONCEPTS" />
+      <unit id="8872717756044055252" at="24,48,30,5" name="org.fbme.ide.st.lang.constraints.VariableReference_Constraints$1" />
+      <unit id="8872717756044055251" at="17,0,45,0" name="org.fbme.ide.st.lang.constraints.VariableReference_Constraints" />
+    </file>
+  </root>
+</debug-info>
+

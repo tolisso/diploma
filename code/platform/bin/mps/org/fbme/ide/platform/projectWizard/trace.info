@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068390468200:jetbrains.mps.baseLanguage.structure.FieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1164991038168:jetbrains.mps.baseLanguage.structure.ThrowStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/5351203823916750322:jetbrains.mps.baseLanguage.structure.TryUniversalStatement" />
+  <root>
+    <file name="IconContainer.java">
+      <unit at="8,0,12,0" name="org.fbme.ide.platform.projectWizard.IconContainer" />
+    </file>
+  </root>
+  <root nodeRef="r:9323096f-e22f-41d1-bc4e-66d2c0d81159(org.fbme.ide.platform.projectWizard)/9018357307812104866">
+    <file name="IEC61499ProjectTemplate.java">
+      <node id="9018357307820245180" at="34,0,35,0" concept="2" trace="mySettings" />
+      <node id="3937089952561927698" at="36,73,37,31" concept="1" />
+      <node id="9018357307822064179" at="42,35,43,23" concept="1" />
+      <node id="9018357307821535206" at="43,23,44,22" concept="5" />
+      <node id="9018357307821559319" at="48,43,49,36" concept="1" />
+      <node id="9018357307821585602" at="55,33,56,118" concept="1" />
+      <node id="6962228545636721265" at="56,118,57,16" concept="5" />
+      <node id="4524132019819328829" at="60,0,61,0" concept="3" trace="getStereotype#()Ljava/lang/String;" />
+      <node id="9018357307812357921" at="66,68,67,61" concept="4" />
+      <node id="9018357307812359399" at="67,61,68,69" concept="4" />
+      <node id="9018357307812338985" at="69,138,70,96" concept="4" />
+      <node id="9018357307820337446" at="70,96,71,136" concept="4" />
+      <node id="9018357307820411517" at="71,136,72,23" concept="4" />
+      <node id="4524132019819345718" at="73,15,74,48" concept="4" />
+      <node id="4524132019819374204" at="74,48,75,101" concept="4" />
+      <node id="9018357307821932859" at="75,101,76,206" concept="1" />
+      <node id="9018357307821866311" at="76,206,77,0" concept="6" />
+      <node id="9018357307821874579" at="78,53,79,70" concept="10" />
+      <node id="8977553215303170761" at="80,11,81,53" concept="4" />
+      <node id="9018357307820318977" at="82,71,83,88" concept="1" />
+      <node id="1015246790963815476" at="83,88,84,86" concept="1" />
+      <node id="9018357307822250063" at="91,0,92,0" concept="3" trace="initModel#(Lorg/jetbrains/mps/openapi/model/SModel;)Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="9018357307812136113" at="96,29,97,36" concept="5" />
+      <node id="9018357307812137034" at="102,36,103,60" concept="5" />
+      <node id="9018357307812144898" at="108,27,109,42" concept="5" />
+      <node id="4524132019819339266" at="112,35,113,22" concept="5" />
+      <node id="9018357307822300871" at="117,41,118,210" concept="4" />
+      <node id="4524132019819273833" at="118,210,119,91" concept="4" />
+      <node id="9018357307822300877" at="119,91,120,70" concept="1" />
+      <node id="4524132019819297372" at="120,70,121,92" concept="4" />
+      <node id="4524132019819269898" at="121,92,122,75" concept="1" />
+      <node id="8977553215303164286" at="122,75,123,20" concept="5" />
+      <node id="9018357307822462115" at="130,29,131,23" concept="5" />
+      <node id="9018357307822462124" at="136,36,137,75" concept="5" />
+      <node id="4524132019819339409" at="140,35,141,23" concept="5" />
+      <node id="7503898613864216477" at="146,27,147,42" concept="5" />
+      <node id="9018357307822352176" at="151,41,152,112" concept="4" />
+      <node id="9018357307822352182" at="152,112,153,84" concept="1" />
+      <node id="8977553215303183161" at="153,84,154,25" concept="5" />
+      <node id="9018357307820465578" at="157,83,158,47" concept="5" />
+      <node id="9018357307812104866" at="162,0,163,0" concept="7" trace="name$MnvL" />
+      <node id="9018357307812104866" at="166,0,167,0" concept="7" trace="applications$HpWx" />
+      <node id="9018357307812104866" at="170,0,171,0" concept="7" trace="BasicFBTypeDeclaration$CS" />
+      <node id="3937089952561927694" at="36,0,39,0" concept="0" trace="IEC61499ProjectTemplate#(Lorg/fbme/ide/platform/projectWizard/SystemConfigSolutionSettings;)V" />
+      <node id="4524132019819312873" at="112,0,115,0" concept="3" trace="getStereotype#()Ljava/lang/String;" />
+      <node id="4524132019819339407" at="140,0,143,0" concept="3" trace="getStereotype#()Ljava/lang/String;" />
+      <node id="9018357307820465578" at="157,0,160,0" concept="8" trace="as_ew0k8g_a0a1a0a0a0a0a2a0a0a0a41#(Ljava/lang/Object;Ljava/lang/Class;)null" />
+      <node id="9018357307821555006" at="47,0,51,0" concept="3" trace="setProjectPath#(Ljava/lang/String;)V" />
+      <node id="1015246790963601667" at="81,53,85,13" concept="1" />
+      <node id="9018357307812134874" at="94,0,99,0" concept="3" trace="getName#()Ljava/lang/String;" />
+      <node id="9018357307812133033" at="100,0,105,0" concept="3" trace="getDescription#()Ljava/lang/String;" />
+      <node id="9018357307812137675" at="106,0,111,0" concept="3" trace="getIcon#()Ljavax/swing/Icon;" />
+      <node id="9018357307822462110" at="128,0,133,0" concept="3" trace="getName#()Ljava/lang/String;" />
+      <node id="9018357307822462119" at="134,0,139,0" concept="3" trace="getDescription#()Ljava/lang/String;" />
+      <node id="9018357307822462128" at="144,0,149,0" concept="3" trace="getIcon#()Ljavax/swing/Icon;" />
+      <node id="9018357307821443231" at="40,0,46,0" concept="3" trace="getSettings#()Ljavax/swing/JComponent;" />
+      <node id="9018357307821579634" at="53,0,59,0" concept="3" trace="checkSettings#()Ljava/lang/String;" />
+      <node id="9018357307822352170" at="150,0,156,0" concept="3" trace="initModel#(Lorg/jetbrains/mps/openapi/model/SModel;)Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="9018357307821866310" at="72,23,80,11" concept="11" />
+      <node id="9018357307822299978" at="116,0,125,0" concept="3" trace="initModel#(Lorg/jetbrains/mps/openapi/model/SModel;)Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="9018357307812217309" at="68,69,86,12" concept="1" />
+      <node id="9018357307812212537" at="66,0,88,0" concept="3" trace="fillProjectWithModules#(Ljetbrains/mps/project/MPSProject;)V" />
+      <node id="9018357307812147543" at="64,45,88,6" concept="5" />
+      <node id="9018357307812146239" at="62,0,90,0" concept="3" trace="getTemplateFiller#()Ljetbrains/mps/workbench/dialogs/project/newproject/TemplateFiller;" />
+      <node id="9018357307822352163" at="127,0,157,0" concept="7" trace="LIBRARY_TEMPLATE" />
+      <node id="9018357307822263662" at="93,0,126,0" concept="7" trace="SYSTEM_CONFIG_TEMPLATE" />
+      <scope id="3937089952561927697" at="36,73,37,31" />
+      <scope id="9018357307821555013" at="48,43,49,36" />
+      <scope id="4524132019819328829" at="60,0,61,0" />
+      <scope id="9018357307821866319" at="78,53,79,70" />
+      <scope id="9018357307822250063" at="91,0,92,0">
+        <var name="m" id="9018357307822253479" />
+      </scope>
+      <scope id="9018357307812134879" at="96,29,97,36" />
+      <scope id="9018357307812133038" at="102,36,103,60" />
+      <scope id="9018357307812137680" at="108,27,109,42" />
+      <scope id="4524132019819312876" at="112,35,113,22" />
+      <scope id="9018357307822462114" at="130,29,131,23" />
+      <scope id="9018357307822462123" at="136,36,137,75" />
+      <scope id="4524132019819339408" at="140,35,141,23" />
+      <scope id="9018357307822462132" at="146,27,147,42" />
+      <scope id="9018357307820465578" at="157,83,158,47" />
+      <scope id="9018357307821443237" at="42,35,44,22" />
+      <scope id="9018357307821579641" at="55,33,57,16" />
+      <scope id="9018357307821866313" at="78,11,80,11">
+        <var name="e" id="9018357307821866315" />
+      </scope>
+      <scope id="1015246790963617545" at="82,71,84,86" />
+      <scope id="3937089952561927694" at="36,0,39,0">
+        <var name="settings" id="8840348264795864689" />
+      </scope>
+      <scope id="4524132019819312873" at="112,0,115,0" />
+      <scope id="4524132019819339407" at="140,0,143,0" />
+      <scope id="9018357307822352175" at="151,41,154,25">
+        <var name="basicFBType" id="9018357307822352177" />
+      </scope>
+      <scope id="9018357307820465578" at="157,0,160,0">
+        <var name="o" id="9018357307820465578" />
+        <var name="type" id="9018357307820465578" />
+      </scope>
+      <scope id="9018357307821555006" at="47,0,51,0">
+        <var name="path" id="9018357307821555010" />
+      </scope>
+      <scope id="9018357307821866312" at="73,15,77,0">
+        <var name="fullModelName" id="4524132019819374205" />
+        <var name="stereotype" id="4524132019819345721" />
+      </scope>
+      <scope id="9018357307812134874" at="94,0,99,0" />
+      <scope id="9018357307812133033" at="100,0,105,0" />
+      <scope id="9018357307812137675" at="106,0,111,0" />
+      <scope id="9018357307822462110" at="128,0,133,0" />
+      <scope id="9018357307822462119" at="134,0,139,0" />
+      <scope id="9018357307822462128" at="144,0,149,0" />
+      <scope id="9018357307821443231" at="40,0,46,0" />
+      <scope id="9018357307821579634" at="53,0,59,0" />
+      <scope id="9018357307822299985" at="117,41,123,20">
+        <var name="app" id="4524132019819297373" />
+        <var name="config" id="9018357307822300872" />
+        <var name="systemName" id="4524132019819273834" />
+      </scope>
+      <scope id="9018357307822352170" at="150,0,156,0">
+        <var name="m" id="9018357307822352172" />
+      </scope>
+      <scope id="9018357307822299978" at="116,0,125,0">
+        <var name="m" id="9018357307822299981" />
+      </scope>
+      <scope id="9018357307812240010" at="69,138,85,13">
+        <var name="initialNode" id="8977553215303170762" />
+        <var name="model" id="9018357307820411520" />
+        <var name="root" id="9018357307820337447" />
+        <var name="solution" id="9018357307812338986" />
+      </scope>
+      <scope id="9018357307812212543" at="66,68,86,12">
+        <var name="moduleLocation" id="9018357307812359400" />
+        <var name="moduleName" id="9018357307812357922" />
+      </scope>
+      <scope id="9018357307812212537" at="66,0,88,0">
+        <var name="project" id="9018357307812212541" />
+      </scope>
+      <scope id="9018357307812146244" at="64,45,88,6" />
+      <scope id="9018357307812146239" at="62,0,90,0" />
+      <unit id="9018357307812104866" at="161,0,164,0" name="org.fbme.ide.platform.projectWizard.IEC61499ProjectTemplate$PROPS" />
+      <unit id="9018357307812104866" at="165,0,168,0" name="org.fbme.ide.platform.projectWizard.IEC61499ProjectTemplate$LINKS" />
+      <unit id="9018357307812104866" at="169,0,172,0" name="org.fbme.ide.platform.projectWizard.IEC61499ProjectTemplate$CONCEPTS" />
+      <unit id="9018357307812212534" at="65,15,88,5" name="org.fbme.ide.platform.projectWizard.IEC61499ProjectTemplate$1" />
+      <unit id="9018357307822352168" at="127,74,156,3" name="org.fbme.ide.platform.projectWizard.IEC61499ProjectTemplate$3" />
+      <unit id="9018357307822298147" at="93,80,125,3" name="org.fbme.ide.platform.projectWizard.IEC61499ProjectTemplate$2" />
+      <unit id="9018357307812104866" at="32,0,173,0" name="org.fbme.ide.platform.projectWizard.IEC61499ProjectTemplate" />
+    </file>
+    <file name="IconContainer.java">
+      <node id="3937089952561582596" at="9,0,10,0" concept="7" trace="ICON_a0a4a0a81" />
+      <node id="7503898613864216478" at="10,0,11,0" concept="7" trace="ICON_a0a6a0a02" />
+    </file>
+  </root>
+  <root nodeRef="r:9323096f-e22f-41d1-bc4e-66d2c0d81159(org.fbme.ide.platform.projectWizard)/9018357307820152323">
+    <file name="SystemConfigSolutionSettings.java">
+      <node id="8508431837100877566" at="10,0,11,0" concept="2" trace="myDefaultName" />
+      <node id="9018357307820154685" at="12,59,13,68" concept="9" />
+      <node id="9018357307820162108" at="13,68,14,0" concept="6" />
+      <node id="9018357307820164266" at="14,0,15,46" concept="1" />
+      <node id="9018357307820203259" at="15,46,16,12" concept="1" />
+      <node id="8508431837100877570" at="16,12,17,32" concept="1" />
+      <node id="9018357307820229590" at="21,43,22,25" concept="5" />
+      <node id="9018357307820222954" at="26,43,27,42" concept="5" />
+      <node id="9018357307820228025" at="20,0,24,0" concept="3" trace="getDefaultModuleName#()Ljava/lang/String;" />
+      <node id="9018357307820218034" at="25,0,29,0" concept="3" trace="getDefaultModulePath#()Ljava/lang/String;" />
+      <node id="9018357307820154679" at="12,0,19,0" concept="0" trace="SystemConfigSolutionSettings#(Ljava/lang/String;)V" />
+      <scope id="9018357307820228029" at="21,43,22,25" />
+      <scope id="9018357307820218048" at="26,43,27,42" />
+      <scope id="9018357307820228025" at="20,0,24,0" />
+      <scope id="9018357307820218034" at="25,0,29,0" />
+      <scope id="9018357307820154683" at="12,59,17,32" />
+      <scope id="9018357307820154679" at="12,0,19,0">
+        <var name="defaultName" id="8508431837100876345" />
+      </scope>
+      <unit id="9018357307820152323" at="8,0,30,0" name="org.fbme.ide.platform.projectWizard.SystemConfigSolutionSettings" />
+    </file>
+  </root>
+  <root nodeRef="r:9323096f-e22f-41d1-bc4e-66d2c0d81159(org.fbme.ide.platform.projectWizard)/9018357307822200651">
+    <file name="IEC61499ProjectTemplateGroup.java">
+      <node id="9018357307822380493" at="15,0,16,0" concept="7" trace="TEMPLATES" />
+      <node id="9018357307822206140" at="19,56,20,21" concept="5" />
+      <node id="9018357307822385653" at="25,27,26,23" concept="5" />
+      <node id="8840348264796072000" at="29,63,30,58" concept="1" />
+      <node id="8840348264796157199" at="33,66,34,61" concept="1" />
+      <node id="8840348264796069805" at="29,0,32,0" concept="8" trace="addTemplate#(Ljetbrains/mps/workbench/dialogs/project/newproject/MPSProjectTemplate;)V" />
+      <node id="8840348264796154823" at="33,0,36,0" concept="8" trace="removeTemplate#(Ljetbrains/mps/workbench/dialogs/project/newproject/MPSProjectTemplate;)V" />
+      <node id="9018357307822201033" at="17,0,22,0" concept="3" trace="getTemplates#()Ljava/util/Collection;" />
+      <node id="9018357307822384155" at="23,0,28,0" concept="3" trace="getName#()Ljava/lang/String;" />
+      <scope id="9018357307822201039" at="19,56,20,21" />
+      <scope id="9018357307822384160" at="25,27,26,23" />
+      <scope id="8840348264796069808" at="29,63,30,58" />
+      <scope id="8840348264796154826" at="33,66,34,61" />
+      <scope id="8840348264796069805" at="29,0,32,0">
+        <var name="template" id="8840348264796071265" />
+      </scope>
+      <scope id="8840348264796154823" at="33,0,36,0">
+        <var name="template" id="8840348264796155886" />
+      </scope>
+      <scope id="9018357307822201033" at="17,0,22,0" />
+      <scope id="9018357307822384155" at="23,0,28,0" />
+      <unit id="9018357307822200651" at="13,0,37,0" name="org.fbme.ide.platform.projectWizard.IEC61499ProjectTemplateGroup" />
+    </file>
+  </root>
+</debug-info>
+

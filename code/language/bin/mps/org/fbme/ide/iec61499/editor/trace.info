@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068390468200:jetbrains.mps.baseLanguage.structure.FieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/6329021646629104954:jetbrains.mps.baseLanguage.structure.SingleLineComment" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/5351203823916750322:jetbrains.mps.baseLanguage.structure.TryUniversalStatement" />
+  <root nodeRef="r:b054d510-f3eb-4f3b-8611-d75feed6cb53(org.fbme.ide.iec61499.editor)/2629077762050868457">
+    <file name="ProjectEditorSpecsImpl.java">
+      <node id="1724686863267157061" at="36,0,37,0" concept="2" trace="myOptions" />
+      <node id="2629077762050890412" at="37,0,38,0" concept="2" trace="myProject" />
+      <node id="2629077762050892474" at="38,0,39,0" concept="2" trace="myModel" />
+      <node id="2629077762051209592" at="40,0,41,0" concept="2" trace="mySpecMap" />
+      <node id="2629077762051319218" at="42,47,43,67" concept="1" />
+      <node id="2629077762051324337" at="45,49,46,70" concept="1" />
+      <node id="2629077762050890798" at="49,50,50,29" concept="1" />
+      <node id="6283834332140697952" at="50,29,51,64" concept="5" />
+      <node id="6283834332140727219" at="51,64,52,147" concept="5" />
+      <node id="6283834332140741330" at="59,41,60,25" concept="6" />
+      <node id="6283834332140745102" at="63,45,64,25" concept="6" />
+      <node id="6283834332140821911" at="68,6,69,34" concept="1" />
+      <node id="638924399114901758" at="74,77,75,122" concept="6" />
+      <node id="638924399114919085" at="76,5,77,16" concept="6" />
+      <node id="638924399115335333" at="82,77,83,131" concept="6" />
+      <node id="638924399115335339" at="84,5,85,16" concept="6" />
+      <node id="2629077762051195303" at="89,75,90,49" concept="1" />
+      <node id="2629077762051202794" at="90,49,91,90" concept="5" />
+      <node id="2629077762051230199" at="92,37,93,53" concept="6" />
+      <node id="2629077762051251391" at="94,5,95,199" concept="5" />
+      <node id="2629077762051244221" at="95,199,96,82" concept="1" />
+      <node id="2629077762051260494" at="96,82,97,67" concept="1" />
+      <node id="2629077762051267816" at="97,67,98,50" concept="1" />
+      <node id="1724686863267451154" at="99,9,100,79" concept="1" />
+      <node id="1724686863270382548" at="101,39,102,13" concept="7" />
+      <node id="2629077762051282025" at="103,5,104,16" concept="6" />
+      <node id="5328903089285501510" at="107,25,108,22" concept="1" />
+      <node id="6283834332140852521" at="108,22,109,59" concept="5" />
+      <node id="6283834332140857355" at="109,59,110,36" concept="1" />
+      <node id="6283834332140840613" at="110,36,111,30" concept="1" />
+      <node id="2629077762050868457" at="115,0,116,0" concept="8" trace="HeaderedEditorSpec$mN" />
+      <node id="2629077762050868457" at="119,0,120,0" concept="8" trace="nodeToShow$H$Qi" />
+      <node id="2629077762050868457" at="123,0,124,0" concept="8" trace="projectionState$H$og" />
+      <node id="2629077762051312974" at="42,0,45,0" concept="9" trace="install#(Ljetbrains/mps/project/Project;)V" />
+      <node id="2629077762051324333" at="45,0,48,0" concept="9" trace="uninstall#(Ljetbrains/mps/project/Project;)V" />
+      <node id="638924399114900030" at="73,42,76,5" concept="3" />
+      <node id="638924399115335327" at="81,52,84,5" concept="3" />
+      <node id="2629077762051205818" at="91,90,94,5" concept="3" />
+      <node id="6283834332140737578" at="58,0,62,0" concept="4" trace="canFireEvent#()Z" />
+      <node id="6283834332140737588" at="62,0,66,0" concept="4" trace="canFireReadEvent#()Z" />
+      <node id="1724686863270377778" at="98,50,103,5" concept="10" />
+      <node id="5328903089285489474" at="107,0,113,0" concept="4" trace="dispose#()V" />
+      <node id="638924399114895110" at="72,0,79,0" concept="4" trace="getSpecTarget#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="638924399115327024" at="80,0,87,0" concept="4" trace="getSpecProjectionState#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="6283834332140684026" at="56,55,66,43" concept="6" />
+      <node id="6283834332140680480" at="54,0,68,0" concept="4" trace="createModel#()Ljetbrains/mps/smodel/ModelLoadResult;" />
+      <node id="2629077762050893188" at="52,147,68,6" concept="1" />
+      <node id="2629077762051179523" at="88,0,106,0" concept="4" trace="getSpec#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="2629077762050890790" at="49,0,71,0" concept="0" trace="ProjectEditorSpecsImpl#(Ljetbrains/mps/project/Project;)V" />
+      <scope id="2629077762051312977" at="42,47,43,67" />
+      <scope id="2629077762051324336" at="45,49,46,70" />
+      <scope id="6283834332140737584" at="59,41,60,25" />
+      <scope id="6283834332140737594" at="63,45,64,25" />
+      <scope id="638924399114900032" at="74,77,75,122" />
+      <scope id="638924399115335332" at="82,77,83,131" />
+      <scope id="2629077762051205820" at="92,37,93,53" />
+      <scope id="1724686863270377780" at="99,9,100,79" />
+      <scope id="1724686863270377787" at="101,39,102,13" />
+      <scope id="1724686863270377781" at="101,5,103,5">
+        <var name="e" id="1724686863270377783" />
+      </scope>
+      <scope id="2629077762051312974" at="42,0,45,0">
+        <var name="project" id="2629077762051314838" />
+      </scope>
+      <scope id="2629077762051324333" at="45,0,48,0">
+        <var name="project" id="2629077762051324334" />
+      </scope>
+      <scope id="6283834332140737578" at="58,0,62,0" />
+      <scope id="6283834332140737588" at="62,0,66,0" />
+      <scope id="638924399114895113" at="73,42,77,16" />
+      <scope id="638924399115327027" at="81,52,85,16" />
+      <scope id="5328903089285489477" at="107,25,111,30">
+        <var name="module" id="6283834332140852522" />
+      </scope>
+      <scope id="5328903089285489474" at="107,0,113,0" />
+      <scope id="638924399114895110" at="72,0,79,0">
+        <var name="spec" id="638924399114897006" />
+      </scope>
+      <scope id="638924399115327024" at="80,0,87,0">
+        <var name="spec" id="638924399115333577" />
+      </scope>
+      <scope id="6283834332140680486" at="56,55,66,43" />
+      <scope id="6283834332140680480" at="54,0,68,0" />
+      <scope id="2629077762051179526" at="89,75,104,16">
+        <var name="key" id="2629077762051202797" />
+        <var name="spec" id="2629077762051251392" />
+      </scope>
+      <scope id="2629077762051179523" at="88,0,106,0">
+        <var name="projectionState" id="2629077762051183207" />
+        <var name="target" id="2629077762051182812" />
+      </scope>
+      <scope id="2629077762050890794" at="49,50,69,34">
+        <var name="module" id="6283834332140697953" />
+        <var name="mr" id="6283834332140727220" />
+      </scope>
+      <scope id="2629077762050890790" at="49,0,71,0">
+        <var name="project" id="2629077762050890797" />
+      </scope>
+      <unit id="2629077762050868457" at="114,0,117,0" name="org.fbme.ide.iec61499.editor.ProjectEditorSpecsImpl$CONCEPTS" />
+      <unit id="2629077762050868457" at="118,0,121,0" name="org.fbme.ide.iec61499.editor.ProjectEditorSpecsImpl$LINKS" />
+      <unit id="2629077762050868457" at="122,0,125,0" name="org.fbme.ide.iec61499.editor.ProjectEditorSpecsImpl$PROPS" />
+      <unit id="6283834332140737359" at="57,47,66,9" name="org.fbme.ide.iec61499.editor.ProjectEditorSpecsImpl$1$1" />
+      <unit id="6283834332140680470" at="53,18,68,5" name="org.fbme.ide.iec61499.editor.ProjectEditorSpecsImpl$1" />
+      <unit id="2629077762050868457" at="34,0,126,0" name="org.fbme.ide.iec61499.editor.ProjectEditorSpecsImpl" />
+    </file>
+  </root>
+</debug-info>
+

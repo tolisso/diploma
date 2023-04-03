@@ -1,19 +1,15 @@
 package org.fbme.integration.nxt.importer;
 
 import openplc.converter.ConverterBaseArguments;
-import openplc.converter.FbdNetworkConverter;
-import openplc.converter.FbtInterfaceConverter;
+import openplc.converter.FbNetworkConverter;
+import openplc.converter.FbtdInterfaceConverter;
 import openplc.oldstandart.dto.IEC61131XmlObjects;
 import openplc.oldstandart.dto.Iec61131Parser;
-import org.fbme.ide.iec61499.repository.PlatformElement;
-import org.fbme.ide.iec61499.repository.PlatformElementsOwner;
 import org.fbme.lib.iec61499.IEC61499Factory;
 import org.fbme.lib.iec61499.declarations.CompositeFBTypeDeclaration;
 import org.fbme.lib.iec61499.declarations.FBTypeDeclaration;
-import org.fbme.lib.iec61499.parser.Iec61499ConverterConfiguration;
 import org.fbme.lib.st.STFactory;
 import org.jdom.input.DOMBuilder;
-import org.jetbrains.mps.openapi.model.SNode;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -37,12 +33,11 @@ public class TmpParseTest {
                 .map(xmlPou -> {
                     var networkFbtd = factory.createCompositeFBTypeDeclaration(null);
                     var converterBaseArguments = new ConverterBaseArguments(factory, stFactory);
-                    new FbdNetworkConverter(
+                    new FbNetworkConverter(
                             xmlPou.getBodyList().get(0).getFbd(),
-                            networkFbtd.getNetwork(),
                             converterBaseArguments
-                    ).fillNetwork();
-                    new FbtInterfaceConverter(xmlPou, networkFbtd, converterBaseArguments).fillInterface();
+                    ).fillNetwork(networkFbtd.getNetwork());
+                    new FbtdInterfaceConverter(xmlPou, converterBaseArguments).fillInterface(networkFbtd);
                     return networkFbtd;
                 }).collect(Collectors.toList());
     }

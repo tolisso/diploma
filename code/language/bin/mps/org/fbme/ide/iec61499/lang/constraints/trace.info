@@ -1,0 +1,1510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/5351203823916750322:jetbrains.mps.baseLanguage.structure.TryUniversalStatement" />
+  <root>
+    <file name="ConstraintsAspectDescriptor.java">
+      <unit at="13,0,87,0" name="org.fbme.ide.iec61499.lang.constraints.ConstraintsAspectDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/2377145822816115293">
+    <file name="EventAssociation_Constraints.java">
+      <node id="2377145822816115293" at="27,41,28,40" concept="8" />
+      <node id="2377145822816115294" at="39,63,40,141" concept="5" />
+      <node id="2377145822816119203" at="43,80,44,128" concept="4" />
+      <node id="2377145822816142570" at="45,73,46,198" concept="5" />
+      <node id="2377145822816186446" at="47,81,48,199" concept="5" />
+      <node id="2377145822816190147" at="49,13,50,24" concept="5" />
+      <node id="2377145822816115293" at="54,6,55,131" concept="4" />
+      <node id="2377145822816115294" at="55,131,56,42" concept="1" />
+      <node id="2377145822816115293" at="56,42,57,22" concept="5" />
+      <node id="2377145822816115293" at="61,0,62,0" concept="6" trace="EventAssociation$qP" />
+      <node id="2377145822816115293" at="62,0,63,0" concept="6" trace="EventDeclaration$7t" />
+      <node id="2377145822816115293" at="63,0,64,0" concept="6" trace="DeclarationWithInterface$hp" />
+      <node id="2377145822816115293" at="67,0,68,0" concept="6" trace="declaration$nT19" />
+      <node id="2377145822816115293" at="68,0,69,0" concept="6" trace="inputVariables$vtgN" />
+      <node id="2377145822816115293" at="69,0,70,0" concept="6" trace="inputEvents$vmel" />
+      <node id="2377145822816115293" at="70,0,71,0" concept="6" trace="outputVariables$vucR" />
+      <node id="2377145822816115293" at="71,0,72,0" concept="6" trace="outputEvents$vmGn" />
+      <node id="2377145822816115293" at="27,0,30,0" concept="0" trace="EventAssociation_Constraints#()V" />
+      <node id="2377145822816115294" at="38,0,42,0" concept="3" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="2377145822816127953" at="44,128,49,13" concept="2" />
+      <node id="2377145822816115294" at="42,0,52,0" concept="3" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="2377145822816115294" at="36,56,52,10" concept="5" />
+      <node id="2377145822816115294" at="34,0,54,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="2377145822816115294" at="32,90,54,6" concept="4" />
+      <node id="2377145822816115293" at="31,0,59,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="2377145822816115293" at="27,41,28,40" />
+      <scope id="2377145822816115294" at="39,63,40,141" />
+      <scope id="2377145822816127955" at="45,73,46,198" />
+      <scope id="2377145822816177347" at="47,81,48,199" />
+      <scope id="2377145822816115293" at="27,0,30,0" />
+      <scope id="2377145822816115294" at="38,0,42,0" />
+      <scope id="2377145822816115294" at="43,80,50,24">
+        <var name="event" id="2377145822816119204" />
+      </scope>
+      <scope id="2377145822816115294" at="42,0,52,0">
+        <var name="_context" id="2377145822816115294" />
+      </scope>
+      <scope id="2377145822816115294" at="36,56,52,10" />
+      <scope id="2377145822816115294" at="34,0,54,0" />
+      <scope id="2377145822816115293" at="32,90,57,22">
+        <var name="d0" id="2377145822816115294" />
+        <var name="references" id="2377145822816115293" />
+      </scope>
+      <scope id="2377145822816115293" at="31,0,59,0" />
+      <unit id="2377145822816115293" at="60,0,65,0" name="org.fbme.ide.iec61499.lang.constraints.EventAssociation_Constraints$CONCEPTS" />
+      <unit id="2377145822816115293" at="66,0,73,0" name="org.fbme.ide.iec61499.lang.constraints.EventAssociation_Constraints$LINKS" />
+      <unit id="2377145822816115294" at="37,19,52,9" name="org.fbme.ide.iec61499.lang.constraints.EventAssociation_Constraints$1$1" />
+      <unit id="2377145822816115294" at="33,48,54,5" name="org.fbme.ide.iec61499.lang.constraints.EventAssociation_Constraints$1" />
+      <unit id="2377145822816115293" at="26,0,74,0" name="org.fbme.ide.iec61499.lang.constraints.EventAssociation_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/2377145822816756775">
+    <file name="StateTransition_Constraints.java">
+      <node id="2377145822816756775" at="18,40,19,39" concept="8" />
+      <node id="2377145822816756778" at="27,56,28,205" concept="5" />
+      <node id="2377145822816757522" at="34,56,35,205" concept="5" />
+      <node id="2377145822816756775" at="37,6,38,131" concept="4" />
+      <node id="2377145822816756778" at="38,131,39,42" concept="1" />
+      <node id="2377145822816757522" at="39,42,40,42" concept="1" />
+      <node id="2377145822816756775" at="40,42,41,22" concept="5" />
+      <node id="2377145822816756775" at="45,0,46,0" concept="6" trace="StateTransition$BQ" />
+      <node id="2377145822816756775" at="46,0,47,0" concept="6" trace="StateDeclaration$AS" />
+      <node id="2377145822816756775" at="50,0,51,0" concept="6" trace="sourceState$mxWl" />
+      <node id="2377145822816756775" at="51,0,52,0" concept="6" trace="targetState$myqn" />
+      <node id="2377145822816756775" at="18,0,21,0" concept="0" trace="StateTransition_Constraints#()V" />
+      <node id="2377145822816756778" at="25,0,30,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="2377145822816757522" at="32,0,37,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="2377145822816756778" at="23,90,30,6" concept="4" />
+      <node id="2377145822816757522" at="30,6,37,6" concept="4" />
+      <node id="2377145822816756775" at="22,0,43,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="2377145822816756775" at="18,40,19,39" />
+      <scope id="2377145822816756778" at="27,56,28,205" />
+      <scope id="2377145822816757522" at="34,56,35,205" />
+      <scope id="2377145822816756775" at="18,0,21,0" />
+      <scope id="2377145822816756778" at="25,0,30,0" />
+      <scope id="2377145822816757522" at="32,0,37,0" />
+      <scope id="2377145822816756775" at="23,90,41,22">
+        <var name="d0" id="2377145822816756778" />
+        <var name="d1" id="2377145822816757522" />
+        <var name="references" id="2377145822816756775" />
+      </scope>
+      <scope id="2377145822816756775" at="22,0,43,0" />
+      <unit id="2377145822816756775" at="44,0,48,0" name="org.fbme.ide.iec61499.lang.constraints.StateTransition_Constraints$CONCEPTS" />
+      <unit id="2377145822816756775" at="49,0,53,0" name="org.fbme.ide.iec61499.lang.constraints.StateTransition_Constraints$LINKS" />
+      <unit id="2377145822816756778" at="24,48,30,5" name="org.fbme.ide.iec61499.lang.constraints.StateTransition_Constraints$1" />
+      <unit id="2377145822816757522" at="31,48,37,5" name="org.fbme.ide.iec61499.lang.constraints.StateTransition_Constraints$2" />
+      <unit id="2377145822816756775" at="17,0,54,0" name="org.fbme.ide.iec61499.lang.constraints.StateTransition_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/2377145822817725572">
+    <file name="StateAction_Constraints.java">
+      <node id="2377145822817725572" at="18,36,19,35" concept="8" />
+      <node id="2377145822817725573" at="27,56,28,209" concept="5" />
+      <node id="2377145822817725572" at="30,6,31,131" concept="4" />
+      <node id="2377145822817725573" at="31,131,32,42" concept="1" />
+      <node id="2377145822817725572" at="32,42,33,22" concept="5" />
+      <node id="2377145822817725572" at="37,0,38,0" concept="6" trace="StateAction$Bn" />
+      <node id="2377145822817725572" at="38,0,39,0" concept="6" trace="AlgorithmDeclaration$Cl" />
+      <node id="2377145822817725572" at="42,0,43,0" concept="6" trace="algorithm$griS" />
+      <node id="2377145822817725572" at="18,0,21,0" concept="0" trace="StateAction_Constraints#()V" />
+      <node id="2377145822817725573" at="25,0,30,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="2377145822817725573" at="23,90,30,6" concept="4" />
+      <node id="2377145822817725572" at="22,0,35,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="2377145822817725572" at="18,36,19,35" />
+      <scope id="2377145822817725573" at="27,56,28,209" />
+      <scope id="2377145822817725572" at="18,0,21,0" />
+      <scope id="2377145822817725573" at="25,0,30,0" />
+      <scope id="2377145822817725572" at="23,90,33,22">
+        <var name="d0" id="2377145822817725573" />
+        <var name="references" id="2377145822817725572" />
+      </scope>
+      <scope id="2377145822817725572" at="22,0,35,0" />
+      <unit id="2377145822817725572" at="41,0,44,0" name="org.fbme.ide.iec61499.lang.constraints.StateAction_Constraints$LINKS" />
+      <unit id="2377145822817725572" at="36,0,40,0" name="org.fbme.ide.iec61499.lang.constraints.StateAction_Constraints$CONCEPTS" />
+      <unit id="2377145822817725573" at="24,48,30,5" name="org.fbme.ide.iec61499.lang.constraints.StateAction_Constraints$1" />
+      <unit id="2377145822817725572" at="17,0,45,0" name="org.fbme.ide.iec61499.lang.constraints.StateAction_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/2693352324629967409">
+    <file name="ParameterAssignment_Constraints.java">
+      <node id="2693352324629967409" at="18,44,19,43" concept="8" />
+      <node id="2693352324629967410" at="27,56,28,209" concept="5" />
+      <node id="2693352324629967409" at="30,6,31,131" concept="4" />
+      <node id="2693352324629967410" at="31,131,32,42" concept="1" />
+      <node id="2693352324629967409" at="32,42,33,22" concept="5" />
+      <node id="2693352324629967409" at="37,0,38,0" concept="6" trace="ParameterAssignment$qs" />
+      <node id="2693352324629967409" at="38,0,39,0" concept="6" trace="ParameterDeclaration$8r" />
+      <node id="2693352324629967409" at="42,0,43,0" concept="6" trace="decl$wjTk" />
+      <node id="2693352324629967409" at="18,0,21,0" concept="0" trace="ParameterAssignment_Constraints#()V" />
+      <node id="2693352324629967410" at="25,0,30,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="2693352324629967410" at="23,90,30,6" concept="4" />
+      <node id="2693352324629967409" at="22,0,35,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="2693352324629967409" at="18,44,19,43" />
+      <scope id="2693352324629967410" at="27,56,28,209" />
+      <scope id="2693352324629967409" at="18,0,21,0" />
+      <scope id="2693352324629967410" at="25,0,30,0" />
+      <scope id="2693352324629967409" at="23,90,33,22">
+        <var name="d0" id="2693352324629967410" />
+        <var name="references" id="2693352324629967409" />
+      </scope>
+      <scope id="2693352324629967409" at="22,0,35,0" />
+      <unit id="2693352324629967409" at="41,0,44,0" name="org.fbme.ide.iec61499.lang.constraints.ParameterAssignment_Constraints$LINKS" />
+      <unit id="2693352324629967409" at="36,0,40,0" name="org.fbme.ide.iec61499.lang.constraints.ParameterAssignment_Constraints$CONCEPTS" />
+      <unit id="2693352324629967410" at="24,48,30,5" name="org.fbme.ide.iec61499.lang.constraints.ParameterAssignment_Constraints$1" />
+      <unit id="2693352324629967409" at="17,0,45,0" name="org.fbme.ide.iec61499.lang.constraints.ParameterAssignment_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/3589220129094133429">
+    <file name="ComponentDataSource_Constraints.java">
+      <node id="3589220129094133429" at="23,44,24,43" concept="8" />
+      <node id="3589220129094136684" at="35,63,36,141" concept="5" />
+      <node id="8167217573771573738" at="39,80,40,133" concept="5" />
+      <node id="3589220129094133429" at="44,6,45,131" concept="4" />
+      <node id="3589220129094136684" at="45,131,46,42" concept="1" />
+      <node id="3589220129094133429" at="46,42,47,22" concept="5" />
+      <node id="3589220129094133429" at="51,0,52,0" concept="6" trace="ComponentDataSource$7h" />
+      <node id="3589220129094133429" at="55,0,56,0" concept="6" trace="declaration$c1_Q" />
+      <node id="3589220129094133429" at="56,0,57,0" concept="6" trace="component$gysY" />
+      <node id="3589220129094133429" at="23,0,26,0" concept="0" trace="ComponentDataSource_Constraints#()V" />
+      <node id="3589220129094136684" at="34,0,38,0" concept="3" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="3589220129094136684" at="38,0,42,0" concept="3" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="3589220129094136684" at="32,56,42,10" concept="5" />
+      <node id="3589220129094136684" at="30,0,44,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="3589220129094136684" at="28,90,44,6" concept="4" />
+      <node id="3589220129094133429" at="27,0,49,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="3589220129094133429" at="23,44,24,43" />
+      <scope id="3589220129094136684" at="35,63,36,141" />
+      <scope id="3589220129094136684" at="39,80,40,133" />
+      <scope id="3589220129094133429" at="23,0,26,0" />
+      <scope id="3589220129094136684" at="34,0,38,0" />
+      <scope id="3589220129094136684" at="38,0,42,0">
+        <var name="_context" id="3589220129094136684" />
+      </scope>
+      <scope id="3589220129094136684" at="32,56,42,10" />
+      <scope id="3589220129094136684" at="30,0,44,0" />
+      <scope id="3589220129094133429" at="28,90,47,22">
+        <var name="d0" id="3589220129094136684" />
+        <var name="references" id="3589220129094133429" />
+      </scope>
+      <scope id="3589220129094133429" at="27,0,49,0" />
+      <unit id="3589220129094133429" at="50,0,53,0" name="org.fbme.ide.iec61499.lang.constraints.ComponentDataSource_Constraints$CONCEPTS" />
+      <unit id="3589220129094133429" at="54,0,58,0" name="org.fbme.ide.iec61499.lang.constraints.ComponentDataSource_Constraints$LINKS" />
+      <unit id="3589220129094136684" at="33,19,42,9" name="org.fbme.ide.iec61499.lang.constraints.ComponentDataSource_Constraints$1$1" />
+      <unit id="3589220129094136684" at="29,48,44,5" name="org.fbme.ide.iec61499.lang.constraints.ComponentDataSource_Constraints$1" />
+      <unit id="3589220129094133429" at="22,0,59,0" name="org.fbme.ide.iec61499.lang.constraints.ComponentDataSource_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/3589220129094143987">
+    <file name="ComponentDataDestination_Constraints.java">
+      <node id="3589220129094143987" at="23,49,24,48" concept="8" />
+      <node id="3589220129094143994" at="35,63,36,141" concept="5" />
+      <node id="3589220129094144005" at="39,80,40,138" concept="5" />
+      <node id="3589220129094143987" at="44,6,45,131" concept="4" />
+      <node id="3589220129094143994" at="45,131,46,42" concept="1" />
+      <node id="3589220129094143987" at="46,42,47,22" concept="5" />
+      <node id="3589220129094143987" at="51,0,52,0" concept="6" trace="ComponentDataDestination$g8" />
+      <node id="3589220129094143987" at="55,0,56,0" concept="6" trace="declaration$c1_Q" />
+      <node id="3589220129094143987" at="56,0,57,0" concept="6" trace="component$gysY" />
+      <node id="3589220129094143987" at="23,0,26,0" concept="0" trace="ComponentDataDestination_Constraints#()V" />
+      <node id="3589220129094143994" at="34,0,38,0" concept="3" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="3589220129094143994" at="38,0,42,0" concept="3" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="3589220129094143994" at="32,56,42,10" concept="5" />
+      <node id="3589220129094143994" at="30,0,44,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="3589220129094143994" at="28,90,44,6" concept="4" />
+      <node id="3589220129094143987" at="27,0,49,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="3589220129094143987" at="23,49,24,48" />
+      <scope id="3589220129094143994" at="35,63,36,141" />
+      <scope id="3589220129094143994" at="39,80,40,138" />
+      <scope id="3589220129094143987" at="23,0,26,0" />
+      <scope id="3589220129094143994" at="34,0,38,0" />
+      <scope id="3589220129094143994" at="38,0,42,0">
+        <var name="_context" id="3589220129094143994" />
+      </scope>
+      <scope id="3589220129094143994" at="32,56,42,10" />
+      <scope id="3589220129094143994" at="30,0,44,0" />
+      <scope id="3589220129094143987" at="28,90,47,22">
+        <var name="d0" id="3589220129094143994" />
+        <var name="references" id="3589220129094143987" />
+      </scope>
+      <scope id="3589220129094143987" at="27,0,49,0" />
+      <unit id="3589220129094143987" at="50,0,53,0" name="org.fbme.ide.iec61499.lang.constraints.ComponentDataDestination_Constraints$CONCEPTS" />
+      <unit id="3589220129094143987" at="54,0,58,0" name="org.fbme.ide.iec61499.lang.constraints.ComponentDataDestination_Constraints$LINKS" />
+      <unit id="3589220129094143994" at="33,19,42,9" name="org.fbme.ide.iec61499.lang.constraints.ComponentDataDestination_Constraints$1$1" />
+      <unit id="3589220129094143994" at="29,48,44,5" name="org.fbme.ide.iec61499.lang.constraints.ComponentDataDestination_Constraints$1" />
+      <unit id="3589220129094143987" at="22,0,59,0" name="org.fbme.ide.iec61499.lang.constraints.ComponentDataDestination_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/3589220129094554618">
+    <file name="ContextDataSource_Constraints.java">
+      <node id="3589220129094554618" at="22,42,23,41" concept="8" />
+      <node id="3589220129094554619" at="34,63,35,141" concept="5" />
+      <node id="8167217573772132935" at="38,80,39,80" concept="5" />
+      <node id="3589220129094554618" at="43,6,44,131" concept="4" />
+      <node id="3589220129094554619" at="44,131,45,42" concept="1" />
+      <node id="3589220129094554618" at="45,42,46,22" concept="5" />
+      <node id="3589220129094554618" at="50,0,51,0" concept="6" trace="ContextDataSource$dP" />
+      <node id="3589220129094554618" at="54,0,55,0" concept="6" trace="declaration$BXX9" />
+      <node id="3589220129094554618" at="22,0,25,0" concept="0" trace="ContextDataSource_Constraints#()V" />
+      <node id="3589220129094554619" at="33,0,37,0" concept="3" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="3589220129094554619" at="37,0,41,0" concept="3" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="3589220129094554619" at="31,56,41,10" concept="5" />
+      <node id="3589220129094554619" at="29,0,43,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="3589220129094554619" at="27,90,43,6" concept="4" />
+      <node id="3589220129094554618" at="26,0,48,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="3589220129094554618" at="22,42,23,41" />
+      <scope id="3589220129094554619" at="34,63,35,141" />
+      <scope id="3589220129094554619" at="38,80,39,80" />
+      <scope id="3589220129094554618" at="22,0,25,0" />
+      <scope id="3589220129094554619" at="33,0,37,0" />
+      <scope id="3589220129094554619" at="37,0,41,0">
+        <var name="_context" id="3589220129094554619" />
+      </scope>
+      <scope id="3589220129094554619" at="31,56,41,10" />
+      <scope id="3589220129094554619" at="29,0,43,0" />
+      <scope id="3589220129094554618" at="27,90,46,22">
+        <var name="d0" id="3589220129094554619" />
+        <var name="references" id="3589220129094554618" />
+      </scope>
+      <scope id="3589220129094554618" at="26,0,48,0" />
+      <unit id="3589220129094554618" at="49,0,52,0" name="org.fbme.ide.iec61499.lang.constraints.ContextDataSource_Constraints$CONCEPTS" />
+      <unit id="3589220129094554618" at="53,0,56,0" name="org.fbme.ide.iec61499.lang.constraints.ContextDataSource_Constraints$LINKS" />
+      <unit id="3589220129094554619" at="32,19,41,9" name="org.fbme.ide.iec61499.lang.constraints.ContextDataSource_Constraints$1$1" />
+      <unit id="3589220129094554619" at="28,48,43,5" name="org.fbme.ide.iec61499.lang.constraints.ContextDataSource_Constraints$1" />
+      <unit id="3589220129094554618" at="21,0,57,0" name="org.fbme.ide.iec61499.lang.constraints.ContextDataSource_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/3589220129094585274">
+    <file name="ContextDataDestination_Constraints.java">
+      <node id="3589220129094585274" at="22,47,23,46" concept="8" />
+      <node id="3589220129094585275" at="34,63,35,141" concept="5" />
+      <node id="8167217573771593451" at="38,80,39,85" concept="5" />
+      <node id="3589220129094585274" at="43,6,44,131" concept="4" />
+      <node id="3589220129094585275" at="44,131,45,42" concept="1" />
+      <node id="3589220129094585274" at="45,42,46,22" concept="5" />
+      <node id="3589220129094585274" at="50,0,51,0" concept="6" trace="ContextDataDestination$XQ" />
+      <node id="3589220129094585274" at="54,0,55,0" concept="6" trace="declaration$BXX9" />
+      <node id="3589220129094585274" at="22,0,25,0" concept="0" trace="ContextDataDestination_Constraints#()V" />
+      <node id="3589220129094585275" at="33,0,37,0" concept="3" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="3589220129094585275" at="37,0,41,0" concept="3" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="3589220129094585275" at="31,56,41,10" concept="5" />
+      <node id="3589220129094585275" at="29,0,43,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="3589220129094585275" at="27,90,43,6" concept="4" />
+      <node id="3589220129094585274" at="26,0,48,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="3589220129094585274" at="22,47,23,46" />
+      <scope id="3589220129094585275" at="34,63,35,141" />
+      <scope id="3589220129094585275" at="38,80,39,85" />
+      <scope id="3589220129094585274" at="22,0,25,0" />
+      <scope id="3589220129094585275" at="33,0,37,0" />
+      <scope id="3589220129094585275" at="37,0,41,0">
+        <var name="_context" id="3589220129094585275" />
+      </scope>
+      <scope id="3589220129094585275" at="31,56,41,10" />
+      <scope id="3589220129094585275" at="29,0,43,0" />
+      <scope id="3589220129094585274" at="27,90,46,22">
+        <var name="d0" id="3589220129094585275" />
+        <var name="references" id="3589220129094585274" />
+      </scope>
+      <scope id="3589220129094585274" at="26,0,48,0" />
+      <unit id="3589220129094585274" at="49,0,52,0" name="org.fbme.ide.iec61499.lang.constraints.ContextDataDestination_Constraints$CONCEPTS" />
+      <unit id="3589220129094585274" at="53,0,56,0" name="org.fbme.ide.iec61499.lang.constraints.ContextDataDestination_Constraints$LINKS" />
+      <unit id="3589220129094585275" at="32,19,41,9" name="org.fbme.ide.iec61499.lang.constraints.ContextDataDestination_Constraints$1$1" />
+      <unit id="3589220129094585275" at="28,48,43,5" name="org.fbme.ide.iec61499.lang.constraints.ContextDataDestination_Constraints$1" />
+      <unit id="3589220129094585274" at="21,0,57,0" name="org.fbme.ide.iec61499.lang.constraints.ContextDataDestination_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/3768822378099108442">
+    <file name="EndpointCoordinate_Constraints.java">
+      <node id="3768822378099108442" at="23,43,24,42" concept="8" />
+      <node id="3768822378099108443" at="35,63,36,141" concept="5" />
+      <node id="3768822378099108762" at="39,80,40,310" concept="5" />
+      <node id="3768822378099108442" at="44,6,45,131" concept="4" />
+      <node id="3768822378099108443" at="45,131,46,42" concept="1" />
+      <node id="3768822378099108442" at="46,42,47,22" concept="5" />
+      <node id="3768822378099108442" at="51,0,52,0" concept="6" trace="EndpointCoordinate$vM" />
+      <node id="3768822378099108442" at="55,0,56,0" concept="6" trace="endpoint$k7rg" />
+      <node id="3768822378099108442" at="23,0,26,0" concept="0" trace="EndpointCoordinate_Constraints#()V" />
+      <node id="3768822378099108443" at="34,0,38,0" concept="3" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="3768822378099108443" at="38,0,42,0" concept="3" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="3768822378099108443" at="32,56,42,10" concept="5" />
+      <node id="3768822378099108443" at="30,0,44,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="3768822378099108443" at="28,90,44,6" concept="4" />
+      <node id="3768822378099108442" at="27,0,49,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="3768822378099108442" at="23,43,24,42" />
+      <scope id="3768822378099108443" at="35,63,36,141" />
+      <scope id="3768822378099108443" at="39,80,40,310" />
+      <scope id="3768822378099108442" at="23,0,26,0" />
+      <scope id="3768822378099108443" at="34,0,38,0" />
+      <scope id="3768822378099108443" at="38,0,42,0">
+        <var name="_context" id="3768822378099108443" />
+      </scope>
+      <scope id="3768822378099108443" at="32,56,42,10" />
+      <scope id="3768822378099108443" at="30,0,44,0" />
+      <scope id="3768822378099108442" at="28,90,47,22">
+        <var name="d0" id="3768822378099108443" />
+        <var name="references" id="3768822378099108442" />
+      </scope>
+      <scope id="3768822378099108442" at="27,0,49,0" />
+      <unit id="3768822378099108442" at="50,0,53,0" name="org.fbme.ide.iec61499.lang.constraints.EndpointCoordinate_Constraints$CONCEPTS" />
+      <unit id="3768822378099108442" at="54,0,57,0" name="org.fbme.ide.iec61499.lang.constraints.EndpointCoordinate_Constraints$LINKS" />
+      <unit id="3768822378099108443" at="33,19,42,9" name="org.fbme.ide.iec61499.lang.constraints.EndpointCoordinate_Constraints$1$1" />
+      <unit id="3768822378099108443" at="29,48,44,5" name="org.fbme.ide.iec61499.lang.constraints.EndpointCoordinate_Constraints$1" />
+      <unit id="3768822378099108442" at="22,0,58,0" name="org.fbme.ide.iec61499.lang.constraints.EndpointCoordinate_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/4304617121956140496">
+    <file name="Position_Constraints.java">
+      <node id="4304617121956140496" at="20,33,21,32" concept="8" />
+      <node id="4304617121956140497" at="25,56,26,57" concept="8" />
+      <node id="4304617121956140497" at="29,109,30,99" concept="4" />
+      <node id="4304617121956140497" at="31,53,32,167" concept="1" />
+      <node id="4304617121956140497" at="33,7,34,20" concept="5" />
+      <node id="4304617121956141670" at="37,11,38,40" concept="1" />
+      <node id="4304617121956144834" at="38,40,39,20" concept="5" />
+      <node id="4304617121956151190" at="40,41,41,21" concept="5" />
+      <node id="4304617121956152935" at="46,56,47,57" concept="8" />
+      <node id="4304617121956152935" at="50,109,51,99" concept="4" />
+      <node id="4304617121956152935" at="52,53,53,167" concept="1" />
+      <node id="4304617121956152935" at="54,7,55,20" concept="5" />
+      <node id="4304617121956152940" at="58,11,59,40" concept="1" />
+      <node id="4304617121956152943" at="59,40,60,20" concept="5" />
+      <node id="4304617121956152949" at="61,41,62,21" concept="5" />
+      <node id="4304617121956140496" at="67,84,68,119" concept="4" />
+      <node id="4304617121956140497" at="68,119,69,55" concept="1" />
+      <node id="4304617121956152935" at="69,55,70,55" concept="1" />
+      <node id="4304617121956140496" at="70,55,71,22" concept="5" />
+      <node id="4304617121956140496" at="75,0,76,0" concept="6" trace="Position$9U" />
+      <node id="4304617121956140496" at="79,0,80,0" concept="6" trace="x$aFCk" />
+      <node id="4304617121956140496" at="80,0,81,0" concept="6" trace="y$aG6m" />
+      <node id="4304617121956140496" at="20,0,23,0" concept="0" trace="Position_Constraints#()V" />
+      <node id="4304617121956140497" at="25,0,28,0" concept="0" trace="X_Property#(Ljetbrains/mps/smodel/runtime/ConstraintsDescriptor;)V" />
+      <node id="4304617121956140497" at="30,99,33,7" concept="2" />
+      <node id="4304617121956152935" at="46,0,49,0" concept="0" trace="Y_Property#(Ljetbrains/mps/smodel/runtime/ConstraintsDescriptor;)V" />
+      <node id="4304617121956152935" at="51,99,54,7" concept="2" />
+      <node id="4304617121956146440" at="36,85,42,7" concept="9" />
+      <node id="4304617121956152938" at="57,85,63,7" concept="9" />
+      <node id="4304617121956140496" at="66,0,73,0" concept="3" trace="getSpecifiedProperties#()Ljava/util/Map;" />
+      <node id="4304617121956140497" at="28,0,36,0" concept="3" trace="validateValue#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/Object;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Z" />
+      <node id="4304617121956140497" at="36,0,44,0" concept="7" trace="staticValidateProperty#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Z" />
+      <node id="4304617121956152935" at="49,0,57,0" concept="3" trace="validateValue#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/Object;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Z" />
+      <node id="4304617121956152935" at="57,0,65,0" concept="7" trace="staticValidateProperty#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Z" />
+      <scope id="4304617121956140496" at="20,33,21,32" />
+      <scope id="4304617121956140497" at="25,56,26,57" />
+      <scope id="4304617121956140497" at="31,53,32,167" />
+      <scope id="4304617121956146445" at="40,41,41,21" />
+      <scope id="4304617121956152935" at="46,56,47,57" />
+      <scope id="4304617121956152935" at="52,53,53,167" />
+      <scope id="4304617121956152948" at="61,41,62,21" />
+      <scope id="4304617121956146441" at="37,11,39,20" />
+      <scope id="4304617121956146442" at="40,7,42,7">
+        <var name="e" id="4304617121956146443" />
+      </scope>
+      <scope id="4304617121956152939" at="58,11,60,20" />
+      <scope id="4304617121956152945" at="61,7,63,7">
+        <var name="e" id="4304617121956152946" />
+      </scope>
+      <scope id="4304617121956140496" at="20,0,23,0" />
+      <scope id="4304617121956140497" at="25,0,28,0">
+        <var name="container" id="4304617121956140497" />
+      </scope>
+      <scope id="4304617121956152935" at="46,0,49,0">
+        <var name="container" id="4304617121956152935" />
+      </scope>
+      <scope id="4304617121956140496" at="67,84,71,22">
+        <var name="properties" id="4304617121956140496" />
+      </scope>
+      <scope id="4304617121956140497" at="29,109,34,20">
+        <var name="result" id="4304617121956140497" />
+      </scope>
+      <scope id="4304617121956152935" at="50,109,55,20">
+        <var name="result" id="4304617121956152935" />
+      </scope>
+      <scope id="4304617121956141202" at="36,85,42,7" />
+      <scope id="4304617121956152937" at="57,85,63,7" />
+      <scope id="4304617121956140496" at="66,0,73,0" />
+      <scope id="4304617121956140497" at="28,0,36,0">
+        <var name="checkingNodeContext" id="4304617121956140497" />
+        <var name="node" id="4304617121956140497" />
+        <var name="propertyValue" id="4304617121956140497" />
+      </scope>
+      <scope id="4304617121956140497" at="36,0,44,0">
+        <var name="node" id="4304617121956140497" />
+        <var name="propertyValue" id="4304617121956140497" />
+      </scope>
+      <scope id="4304617121956152935" at="49,0,57,0">
+        <var name="checkingNodeContext" id="4304617121956152935" />
+        <var name="node" id="4304617121956152935" />
+        <var name="propertyValue" id="4304617121956152935" />
+      </scope>
+      <scope id="4304617121956152935" at="57,0,65,0">
+        <var name="node" id="4304617121956152935" />
+        <var name="propertyValue" id="4304617121956152935" />
+      </scope>
+      <unit id="4304617121956140496" at="74,0,77,0" name="org.fbme.ide.iec61499.lang.constraints.Position_Constraints$CONCEPTS" />
+      <unit id="4304617121956140496" at="78,0,82,0" name="org.fbme.ide.iec61499.lang.constraints.Position_Constraints$PROPS" />
+      <unit id="4304617121956140497" at="24,0,45,0" name="org.fbme.ide.iec61499.lang.constraints.Position_Constraints$X_Property" />
+      <unit id="4304617121956152935" at="45,0,66,0" name="org.fbme.ide.iec61499.lang.constraints.Position_Constraints$Y_Property" />
+      <unit id="4304617121956140496" at="19,0,83,0" name="org.fbme.ide.iec61499.lang.constraints.Position_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/4304617121958142643">
+    <file name="ConnectionPath_Constraints.java">
+      <node id="4304617121958142643" at="10,39,11,38" concept="8" />
+      <node id="4304617121958142643" at="15,0,16,0" concept="6" trace="ConnectionPath$IA" />
+      <node id="4304617121958142643" at="10,0,13,0" concept="0" trace="ConnectionPath_Constraints#()V" />
+      <scope id="4304617121958142643" at="10,39,11,38" />
+      <scope id="4304617121958142643" at="10,0,13,0" />
+      <unit id="4304617121958142643" at="14,0,17,0" name="org.fbme.ide.iec61499.lang.constraints.ConnectionPath_Constraints$CONCEPTS" />
+      <unit id="4304617121958142643" at="9,0,18,0" name="org.fbme.ide.iec61499.lang.constraints.ConnectionPath_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/4304617121958142864">
+    <file name="TwoAngleConnectionPath_Constraints.java">
+      <node id="4304617121958142864" at="20,47,21,46" concept="8" />
+      <node id="4304617121958143850" at="25,57,26,58" concept="8" />
+      <node id="4304617121958143850" at="29,109,30,99" concept="4" />
+      <node id="4304617121958143850" at="31,53,32,167" concept="1" />
+      <node id="4304617121958143850" at="33,7,34,20" concept="5" />
+      <node id="4304617121958143855" at="37,11,38,40" concept="1" />
+      <node id="4304617121958143858" at="38,40,39,20" concept="5" />
+      <node id="4304617121958143864" at="40,41,41,21" concept="5" />
+      <node id="4304617121958142864" at="46,84,47,119" concept="4" />
+      <node id="4304617121958143850" at="47,119,48,57" concept="1" />
+      <node id="4304617121958142864" at="48,57,49,22" concept="5" />
+      <node id="4304617121958142864" at="53,0,54,0" concept="6" trace="TwoAngleConnectionPath$Ua" />
+      <node id="4304617121958142864" at="57,0,58,0" concept="6" trace="dx$jL8R" />
+      <node id="4304617121958142864" at="20,0,23,0" concept="0" trace="TwoAngleConnectionPath_Constraints#()V" />
+      <node id="4304617121958143850" at="25,0,28,0" concept="0" trace="Dx_Property#(Ljetbrains/mps/smodel/runtime/ConstraintsDescriptor;)V" />
+      <node id="4304617121958143850" at="30,99,33,7" concept="2" />
+      <node id="4304617121958143853" at="36,85,42,7" concept="9" />
+      <node id="4304617121958142864" at="45,0,51,0" concept="3" trace="getSpecifiedProperties#()Ljava/util/Map;" />
+      <node id="4304617121958143850" at="28,0,36,0" concept="3" trace="validateValue#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/Object;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Z" />
+      <node id="4304617121958143850" at="36,0,44,0" concept="7" trace="staticValidateProperty#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Z" />
+      <scope id="4304617121958142864" at="20,47,21,46" />
+      <scope id="4304617121958143850" at="25,57,26,58" />
+      <scope id="4304617121958143850" at="31,53,32,167" />
+      <scope id="4304617121958143863" at="40,41,41,21" />
+      <scope id="4304617121958143854" at="37,11,39,20" />
+      <scope id="4304617121958143860" at="40,7,42,7">
+        <var name="e" id="4304617121958143861" />
+      </scope>
+      <scope id="4304617121958142864" at="20,0,23,0" />
+      <scope id="4304617121958143850" at="25,0,28,0">
+        <var name="container" id="4304617121958143850" />
+      </scope>
+      <scope id="4304617121958142864" at="46,84,49,22">
+        <var name="properties" id="4304617121958142864" />
+      </scope>
+      <scope id="4304617121958143850" at="29,109,34,20">
+        <var name="result" id="4304617121958143850" />
+      </scope>
+      <scope id="4304617121958143852" at="36,85,42,7" />
+      <scope id="4304617121958142864" at="45,0,51,0" />
+      <scope id="4304617121958143850" at="28,0,36,0">
+        <var name="checkingNodeContext" id="4304617121958143850" />
+        <var name="node" id="4304617121958143850" />
+        <var name="propertyValue" id="4304617121958143850" />
+      </scope>
+      <scope id="4304617121958143850" at="36,0,44,0">
+        <var name="node" id="4304617121958143850" />
+        <var name="propertyValue" id="4304617121958143850" />
+      </scope>
+      <unit id="4304617121958142864" at="52,0,55,0" name="org.fbme.ide.iec61499.lang.constraints.TwoAngleConnectionPath_Constraints$CONCEPTS" />
+      <unit id="4304617121958142864" at="56,0,59,0" name="org.fbme.ide.iec61499.lang.constraints.TwoAngleConnectionPath_Constraints$PROPS" />
+      <unit id="4304617121958143850" at="24,0,45,0" name="org.fbme.ide.iec61499.lang.constraints.TwoAngleConnectionPath_Constraints$Dx_Property" />
+      <unit id="4304617121958142864" at="19,0,60,0" name="org.fbme.ide.iec61499.lang.constraints.TwoAngleConnectionPath_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/4304617121958159065">
+    <file name="FourAngleConncetionPath_Constraints.java">
+      <node id="4304617121958159065" at="20,48,21,47" concept="8" />
+      <node id="4304617121958159987" at="25,58,26,59" concept="8" />
+      <node id="4304617121958159987" at="29,109,30,99" concept="4" />
+      <node id="4304617121958159987" at="31,53,32,167" concept="1" />
+      <node id="4304617121958159987" at="33,7,34,20" concept="5" />
+      <node id="4304617121958159992" at="37,11,38,40" concept="1" />
+      <node id="4304617121958159995" at="38,40,39,20" concept="5" />
+      <node id="4304617121958160001" at="40,41,41,21" concept="5" />
+      <node id="4304617121958160939" at="46,57,47,58" concept="8" />
+      <node id="4304617121958160939" at="50,109,51,99" concept="4" />
+      <node id="4304617121958160939" at="52,53,53,167" concept="1" />
+      <node id="4304617121958160939" at="54,7,55,20" concept="5" />
+      <node id="4304617121958160944" at="58,11,59,40" concept="1" />
+      <node id="4304617121958160947" at="59,40,60,20" concept="5" />
+      <node id="4304617121958160953" at="61,41,62,21" concept="5" />
+      <node id="4304617121958161921" at="67,58,68,59" concept="8" />
+      <node id="4304617121958161921" at="71,109,72,99" concept="4" />
+      <node id="4304617121958161921" at="73,53,74,167" concept="1" />
+      <node id="4304617121958161921" at="75,7,76,20" concept="5" />
+      <node id="4304617121958161926" at="79,11,80,40" concept="1" />
+      <node id="4304617121958161929" at="80,40,81,20" concept="5" />
+      <node id="4304617121958161935" at="82,41,83,21" concept="5" />
+      <node id="4304617121958159065" at="88,84,89,119" concept="4" />
+      <node id="4304617121958159987" at="89,119,90,59" concept="1" />
+      <node id="4304617121958160939" at="90,59,91,57" concept="1" />
+      <node id="4304617121958161921" at="91,57,92,59" concept="1" />
+      <node id="4304617121958159065" at="92,59,93,22" concept="5" />
+      <node id="4304617121958159065" at="97,0,98,0" concept="6" trace="FourAngleConncetionPath$sg" />
+      <node id="4304617121958159065" at="101,0,102,0" concept="6" trace="dx1$QkNk" />
+      <node id="4304617121958159065" at="102,0,103,0" concept="6" trace="dy$Qlhm" />
+      <node id="4304617121958159065" at="103,0,104,0" concept="6" trace="dx2$QqTI" />
+      <node id="4304617121958159065" at="20,0,23,0" concept="0" trace="FourAngleConncetionPath_Constraints#()V" />
+      <node id="4304617121958159987" at="25,0,28,0" concept="0" trace="Dx1_Property#(Ljetbrains/mps/smodel/runtime/ConstraintsDescriptor;)V" />
+      <node id="4304617121958159987" at="30,99,33,7" concept="2" />
+      <node id="4304617121958160939" at="46,0,49,0" concept="0" trace="Dy_Property#(Ljetbrains/mps/smodel/runtime/ConstraintsDescriptor;)V" />
+      <node id="4304617121958160939" at="51,99,54,7" concept="2" />
+      <node id="4304617121958161921" at="67,0,70,0" concept="0" trace="Dx2_Property#(Ljetbrains/mps/smodel/runtime/ConstraintsDescriptor;)V" />
+      <node id="4304617121958161921" at="72,99,75,7" concept="2" />
+      <node id="4304617121958159990" at="36,85,42,7" concept="9" />
+      <node id="4304617121958160942" at="57,85,63,7" concept="9" />
+      <node id="4304617121958161924" at="78,85,84,7" concept="9" />
+      <node id="4304617121958159987" at="28,0,36,0" concept="3" trace="validateValue#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/Object;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Z" />
+      <node id="4304617121958159987" at="36,0,44,0" concept="7" trace="staticValidateProperty#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Z" />
+      <node id="4304617121958160939" at="49,0,57,0" concept="3" trace="validateValue#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/Object;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Z" />
+      <node id="4304617121958160939" at="57,0,65,0" concept="7" trace="staticValidateProperty#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Z" />
+      <node id="4304617121958161921" at="70,0,78,0" concept="3" trace="validateValue#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/Object;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Z" />
+      <node id="4304617121958161921" at="78,0,86,0" concept="7" trace="staticValidateProperty#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Z" />
+      <node id="4304617121958159065" at="87,0,95,0" concept="3" trace="getSpecifiedProperties#()Ljava/util/Map;" />
+      <scope id="4304617121958159065" at="20,48,21,47" />
+      <scope id="4304617121958159987" at="25,58,26,59" />
+      <scope id="4304617121958159987" at="31,53,32,167" />
+      <scope id="4304617121958160000" at="40,41,41,21" />
+      <scope id="4304617121958160939" at="46,57,47,58" />
+      <scope id="4304617121958160939" at="52,53,53,167" />
+      <scope id="4304617121958160952" at="61,41,62,21" />
+      <scope id="4304617121958161921" at="67,58,68,59" />
+      <scope id="4304617121958161921" at="73,53,74,167" />
+      <scope id="4304617121958161934" at="82,41,83,21" />
+      <scope id="4304617121958159991" at="37,11,39,20" />
+      <scope id="4304617121958159997" at="40,7,42,7">
+        <var name="e" id="4304617121958159998" />
+      </scope>
+      <scope id="4304617121958160943" at="58,11,60,20" />
+      <scope id="4304617121958160949" at="61,7,63,7">
+        <var name="e" id="4304617121958160950" />
+      </scope>
+      <scope id="4304617121958161925" at="79,11,81,20" />
+      <scope id="4304617121958161931" at="82,7,84,7">
+        <var name="e" id="4304617121958161932" />
+      </scope>
+      <scope id="4304617121958159065" at="20,0,23,0" />
+      <scope id="4304617121958159987" at="25,0,28,0">
+        <var name="container" id="4304617121958159987" />
+      </scope>
+      <scope id="4304617121958160939" at="46,0,49,0">
+        <var name="container" id="4304617121958160939" />
+      </scope>
+      <scope id="4304617121958161921" at="67,0,70,0">
+        <var name="container" id="4304617121958161921" />
+      </scope>
+      <scope id="4304617121958159987" at="29,109,34,20">
+        <var name="result" id="4304617121958159987" />
+      </scope>
+      <scope id="4304617121958160939" at="50,109,55,20">
+        <var name="result" id="4304617121958160939" />
+      </scope>
+      <scope id="4304617121958161921" at="71,109,76,20">
+        <var name="result" id="4304617121958161921" />
+      </scope>
+      <scope id="4304617121958159065" at="88,84,93,22">
+        <var name="properties" id="4304617121958159065" />
+      </scope>
+      <scope id="4304617121958159989" at="36,85,42,7" />
+      <scope id="4304617121958160941" at="57,85,63,7" />
+      <scope id="4304617121958161923" at="78,85,84,7" />
+      <scope id="4304617121958159987" at="28,0,36,0">
+        <var name="checkingNodeContext" id="4304617121958159987" />
+        <var name="node" id="4304617121958159987" />
+        <var name="propertyValue" id="4304617121958159987" />
+      </scope>
+      <scope id="4304617121958159987" at="36,0,44,0">
+        <var name="node" id="4304617121958159987" />
+        <var name="propertyValue" id="4304617121958159987" />
+      </scope>
+      <scope id="4304617121958160939" at="49,0,57,0">
+        <var name="checkingNodeContext" id="4304617121958160939" />
+        <var name="node" id="4304617121958160939" />
+        <var name="propertyValue" id="4304617121958160939" />
+      </scope>
+      <scope id="4304617121958160939" at="57,0,65,0">
+        <var name="node" id="4304617121958160939" />
+        <var name="propertyValue" id="4304617121958160939" />
+      </scope>
+      <scope id="4304617121958161921" at="70,0,78,0">
+        <var name="checkingNodeContext" id="4304617121958161921" />
+        <var name="node" id="4304617121958161921" />
+        <var name="propertyValue" id="4304617121958161921" />
+      </scope>
+      <scope id="4304617121958161921" at="78,0,86,0">
+        <var name="node" id="4304617121958161921" />
+        <var name="propertyValue" id="4304617121958161921" />
+      </scope>
+      <scope id="4304617121958159065" at="87,0,95,0" />
+      <unit id="4304617121958159065" at="96,0,99,0" name="org.fbme.ide.iec61499.lang.constraints.FourAngleConncetionPath_Constraints$CONCEPTS" />
+      <unit id="4304617121958159065" at="100,0,105,0" name="org.fbme.ide.iec61499.lang.constraints.FourAngleConncetionPath_Constraints$PROPS" />
+      <unit id="4304617121958159987" at="24,0,45,0" name="org.fbme.ide.iec61499.lang.constraints.FourAngleConncetionPath_Constraints$Dx1_Property" />
+      <unit id="4304617121958160939" at="45,0,66,0" name="org.fbme.ide.iec61499.lang.constraints.FourAngleConncetionPath_Constraints$Dy_Property" />
+      <unit id="4304617121958161921" at="66,0,87,0" name="org.fbme.ide.iec61499.lang.constraints.FourAngleConncetionPath_Constraints$Dx2_Property" />
+      <unit id="4304617121958159065" at="19,0,106,0" name="org.fbme.ide.iec61499.lang.constraints.FourAngleConncetionPath_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/5481506291238982416">
+    <file name="ComponentDataEndpoint_Constraints.java">
+      <node id="5481506291238982416" at="22,46,23,45" concept="8" />
+      <node id="5481506291238985746" at="34,63,35,141" concept="5" />
+      <node id="8167217573771542711" at="38,80,39,79" concept="5" />
+      <node id="5481506291238982416" at="43,6,44,131" concept="4" />
+      <node id="5481506291238985746" at="44,131,45,42" concept="1" />
+      <node id="5481506291238982416" at="45,42,46,22" concept="5" />
+      <node id="5481506291238982416" at="50,0,51,0" concept="6" trace="ComponentDataEndpoint$3U" />
+      <node id="5481506291238982416" at="54,0,55,0" concept="6" trace="component$gysY" />
+      <node id="5481506291238982416" at="22,0,25,0" concept="0" trace="ComponentDataEndpoint_Constraints#()V" />
+      <node id="5481506291238985746" at="33,0,37,0" concept="3" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="5481506291238985746" at="37,0,41,0" concept="3" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="5481506291238985746" at="31,56,41,10" concept="5" />
+      <node id="5481506291238985746" at="29,0,43,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="5481506291238985746" at="27,90,43,6" concept="4" />
+      <node id="5481506291238982416" at="26,0,48,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="5481506291238982416" at="22,46,23,45" />
+      <scope id="5481506291238985746" at="34,63,35,141" />
+      <scope id="5481506291238985746" at="38,80,39,79" />
+      <scope id="5481506291238982416" at="22,0,25,0" />
+      <scope id="5481506291238985746" at="33,0,37,0" />
+      <scope id="5481506291238985746" at="37,0,41,0">
+        <var name="_context" id="5481506291238985746" />
+      </scope>
+      <scope id="5481506291238985746" at="31,56,41,10" />
+      <scope id="5481506291238985746" at="29,0,43,0" />
+      <scope id="5481506291238982416" at="27,90,46,22">
+        <var name="d0" id="5481506291238985746" />
+        <var name="references" id="5481506291238982416" />
+      </scope>
+      <scope id="5481506291238982416" at="26,0,48,0" />
+      <unit id="5481506291238982416" at="49,0,52,0" name="org.fbme.ide.iec61499.lang.constraints.ComponentDataEndpoint_Constraints$CONCEPTS" />
+      <unit id="5481506291238982416" at="53,0,56,0" name="org.fbme.ide.iec61499.lang.constraints.ComponentDataEndpoint_Constraints$LINKS" />
+      <unit id="5481506291238985746" at="32,19,41,9" name="org.fbme.ide.iec61499.lang.constraints.ComponentDataEndpoint_Constraints$1$1" />
+      <unit id="5481506291238985746" at="28,48,43,5" name="org.fbme.ide.iec61499.lang.constraints.ComponentDataEndpoint_Constraints$1" />
+      <unit id="5481506291238982416" at="21,0,57,0" name="org.fbme.ide.iec61499.lang.constraints.ComponentDataEndpoint_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/554302972928530749">
+    <file name="SystemApplicationReference_Constraints.java">
+      <node id="554302972928530749" at="26,51,27,50" concept="8" />
+      <node id="554302972928530750" at="38,63,39,140" concept="5" />
+      <node id="554302972928530946" at="42,80,43,205" concept="5" />
+      <node id="554302972928530749" at="47,6,48,131" concept="4" />
+      <node id="554302972928530750" at="48,131,49,42" concept="1" />
+      <node id="554302972928530749" at="49,42,50,22" concept="5" />
+      <node id="554302972928530749" at="54,0,55,0" concept="6" trace="SystemApplicationReference$6P" />
+      <node id="554302972928530749" at="55,0,56,0" concept="6" trace="SystemDeclaration$SC" />
+      <node id="554302972928530749" at="59,0,60,0" concept="6" trace="application$$a5O" />
+      <node id="554302972928530749" at="60,0,61,0" concept="6" trace="applications$HpWx" />
+      <node id="554302972928530749" at="26,0,29,0" concept="0" trace="SystemApplicationReference_Constraints#()V" />
+      <node id="554302972928530750" at="37,0,41,0" concept="3" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="554302972928530750" at="41,0,45,0" concept="3" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="554302972928530750" at="35,56,45,10" concept="5" />
+      <node id="554302972928530750" at="33,0,47,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="554302972928530750" at="31,90,47,6" concept="4" />
+      <node id="554302972928530749" at="30,0,52,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="554302972928530749" at="26,51,27,50" />
+      <scope id="554302972928530750" at="38,63,39,140" />
+      <scope id="554302972928530750" at="42,80,43,205" />
+      <scope id="554302972928530749" at="26,0,29,0" />
+      <scope id="554302972928530750" at="37,0,41,0" />
+      <scope id="554302972928530750" at="41,0,45,0">
+        <var name="_context" id="554302972928530750" />
+      </scope>
+      <scope id="554302972928530750" at="35,56,45,10" />
+      <scope id="554302972928530750" at="33,0,47,0" />
+      <scope id="554302972928530749" at="31,90,50,22">
+        <var name="d0" id="554302972928530750" />
+        <var name="references" id="554302972928530749" />
+      </scope>
+      <scope id="554302972928530749" at="30,0,52,0" />
+      <unit id="554302972928530749" at="53,0,57,0" name="org.fbme.ide.iec61499.lang.constraints.SystemApplicationReference_Constraints$CONCEPTS" />
+      <unit id="554302972928530749" at="58,0,62,0" name="org.fbme.ide.iec61499.lang.constraints.SystemApplicationReference_Constraints$LINKS" />
+      <unit id="554302972928530750" at="36,19,45,9" name="org.fbme.ide.iec61499.lang.constraints.SystemApplicationReference_Constraints$1$1" />
+      <unit id="554302972928530750" at="32,48,47,5" name="org.fbme.ide.iec61499.lang.constraints.SystemApplicationReference_Constraints$1" />
+      <unit id="554302972928530749" at="25,0,63,0" name="org.fbme.ide.iec61499.lang.constraints.SystemApplicationReference_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/554302972929721111">
+    <file name="ResourceReference_Constraints.java">
+      <node id="554302972929721111" at="30,42,31,41" concept="8" />
+      <node id="554302972929721112" at="42,63,43,140" concept="5" />
+      <node id="554302972929721308" at="46,80,47,200" concept="5" />
+      <node id="554302972930284513" at="58,63,59,140" concept="5" />
+      <node id="554302972930288798" at="62,80,63,101" concept="4" />
+      <node id="554302972930293251" at="63,101,64,76" concept="4" />
+      <node id="554302972930289459" at="64,76,65,133" concept="1" />
+      <node id="554302972930335382" at="65,133,66,177" concept="1" />
+      <node id="554302972930379111" at="66,177,67,51" concept="5" />
+      <node id="554302972929721111" at="71,6,72,131" concept="4" />
+      <node id="554302972929721112" at="72,131,73,42" concept="1" />
+      <node id="554302972930284513" at="73,42,74,42" concept="1" />
+      <node id="554302972929721111" at="74,42,75,22" concept="5" />
+      <node id="554302972929721111" at="79,0,80,0" concept="6" trace="ResourceReference$85" />
+      <node id="554302972929721111" at="80,0,81,0" concept="6" trace="SystemDeclaration$SC" />
+      <node id="554302972929721111" at="84,0,85,0" concept="6" trace="device$eEHO" />
+      <node id="554302972929721111" at="85,0,86,0" concept="6" trace="devices$Hqqz" />
+      <node id="554302972929721111" at="86,0,87,0" concept="6" trace="resource$eFbQ" />
+      <node id="554302972929721111" at="87,0,88,0" concept="6" trace="resources$vyYm" />
+      <node id="554302972929721111" at="88,0,89,0" concept="6" trace="type$sXNm" />
+      <node id="554302972929721111" at="89,0,90,0" concept="6" trace="resources$cUHg" />
+      <node id="554302972929721111" at="30,0,33,0" concept="0" trace="ResourceReference_Constraints#()V" />
+      <node id="554302972929721112" at="41,0,45,0" concept="3" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="554302972929721112" at="45,0,49,0" concept="3" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="554302972930284513" at="57,0,61,0" concept="3" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="554302972930284513" at="61,0,69,0" concept="3" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="554302972929721112" at="39,56,49,10" concept="5" />
+      <node id="554302972929721112" at="37,0,51,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="554302972930284513" at="55,56,69,10" concept="5" />
+      <node id="554302972929721112" at="35,90,51,6" concept="4" />
+      <node id="554302972930284513" at="53,0,71,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="554302972930284513" at="51,6,71,6" concept="4" />
+      <node id="554302972929721111" at="34,0,77,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="554302972929721111" at="30,42,31,41" />
+      <scope id="554302972929721112" at="42,63,43,140" />
+      <scope id="554302972929721112" at="46,80,47,200" />
+      <scope id="554302972930284513" at="58,63,59,140" />
+      <scope id="554302972929721111" at="30,0,33,0" />
+      <scope id="554302972929721112" at="41,0,45,0" />
+      <scope id="554302972929721112" at="45,0,49,0">
+        <var name="_context" id="554302972929721112" />
+      </scope>
+      <scope id="554302972930284513" at="57,0,61,0" />
+      <scope id="554302972930284513" at="62,80,67,51">
+        <var name="device" id="554302972930288799" />
+        <var name="res" id="554302972930293252" />
+      </scope>
+      <scope id="554302972930284513" at="61,0,69,0">
+        <var name="_context" id="554302972930284513" />
+      </scope>
+      <scope id="554302972929721112" at="39,56,49,10" />
+      <scope id="554302972929721112" at="37,0,51,0" />
+      <scope id="554302972930284513" at="55,56,69,10" />
+      <scope id="554302972930284513" at="53,0,71,0" />
+      <scope id="554302972929721111" at="35,90,75,22">
+        <var name="d0" id="554302972929721112" />
+        <var name="d1" id="554302972930284513" />
+        <var name="references" id="554302972929721111" />
+      </scope>
+      <scope id="554302972929721111" at="34,0,77,0" />
+      <unit id="554302972929721111" at="78,0,82,0" name="org.fbme.ide.iec61499.lang.constraints.ResourceReference_Constraints$CONCEPTS" />
+      <unit id="554302972929721111" at="83,0,91,0" name="org.fbme.ide.iec61499.lang.constraints.ResourceReference_Constraints$LINKS" />
+      <unit id="554302972929721112" at="40,19,49,9" name="org.fbme.ide.iec61499.lang.constraints.ResourceReference_Constraints$1$1" />
+      <unit id="554302972930284513" at="56,19,69,9" name="org.fbme.ide.iec61499.lang.constraints.ResourceReference_Constraints$2$1" />
+      <unit id="554302972929721112" at="36,48,51,5" name="org.fbme.ide.iec61499.lang.constraints.ResourceReference_Constraints$1" />
+      <unit id="554302972930284513" at="52,48,71,5" name="org.fbme.ide.iec61499.lang.constraints.ResourceReference_Constraints$2" />
+      <unit id="554302972929721111" at="29,0,92,0" name="org.fbme.ide.iec61499.lang.constraints.ResourceReference_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/554302972930922277">
+    <file name="ResourceFunctionBlockReference_Constraints.java">
+      <node id="554302972930922277" at="26,55,27,54" concept="8" />
+      <node id="554302972930922278" at="38,63,39,140" concept="5" />
+      <node id="554302972930922474" at="42,80,43,197" concept="5" />
+      <node id="554302972930922277" at="47,6,48,131" concept="4" />
+      <node id="554302972930922278" at="48,131,49,42" concept="1" />
+      <node id="554302972930922277" at="49,42,50,22" concept="5" />
+      <node id="554302972930922277" at="54,0,55,0" concept="6" trace="ResourceFunctionBlockReference$hB" />
+      <node id="554302972930922277" at="58,0,59,0" concept="6" trace="functionBlock$QZse" />
+      <node id="554302972930922277" at="59,0,60,0" concept="6" trace="resource$QYYc" />
+      <node id="554302972930922277" at="26,0,29,0" concept="0" trace="ResourceFunctionBlockReference_Constraints#()V" />
+      <node id="554302972930922278" at="37,0,41,0" concept="3" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="554302972930922278" at="41,0,45,0" concept="3" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="554302972930922278" at="35,56,45,10" concept="5" />
+      <node id="554302972930922278" at="33,0,47,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="554302972930922278" at="31,90,47,6" concept="4" />
+      <node id="554302972930922277" at="30,0,52,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="554302972930922277" at="26,55,27,54" />
+      <scope id="554302972930922278" at="38,63,39,140" />
+      <scope id="554302972930922278" at="42,80,43,197" />
+      <scope id="554302972930922277" at="26,0,29,0" />
+      <scope id="554302972930922278" at="37,0,41,0" />
+      <scope id="554302972930922278" at="41,0,45,0">
+        <var name="_context" id="554302972930922278" />
+      </scope>
+      <scope id="554302972930922278" at="35,56,45,10" />
+      <scope id="554302972930922278" at="33,0,47,0" />
+      <scope id="554302972930922277" at="31,90,50,22">
+        <var name="d0" id="554302972930922278" />
+        <var name="references" id="554302972930922277" />
+      </scope>
+      <scope id="554302972930922277" at="30,0,52,0" />
+      <unit id="554302972930922277" at="53,0,56,0" name="org.fbme.ide.iec61499.lang.constraints.ResourceFunctionBlockReference_Constraints$CONCEPTS" />
+      <unit id="554302972930922277" at="57,0,61,0" name="org.fbme.ide.iec61499.lang.constraints.ResourceFunctionBlockReference_Constraints$LINKS" />
+      <unit id="554302972930922278" at="36,19,45,9" name="org.fbme.ide.iec61499.lang.constraints.ResourceFunctionBlockReference_Constraints$1$1" />
+      <unit id="554302972930922278" at="32,48,47,5" name="org.fbme.ide.iec61499.lang.constraints.ResourceFunctionBlockReference_Constraints$1" />
+      <unit id="554302972930922277" at="25,0,62,0" name="org.fbme.ide.iec61499.lang.constraints.ResourceFunctionBlockReference_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/554302972933104132">
+    <file name="SubapplicationReference_Constraints.java">
+      <node id="554302972933104132" at="26,48,27,47" concept="8" />
+      <node id="554302972933104135" at="38,63,39,140" concept="5" />
+      <node id="554302972933104331" at="42,80,43,202" concept="5" />
+      <node id="554302972933104132" at="47,6,48,131" concept="4" />
+      <node id="554302972933104135" at="48,131,49,42" concept="1" />
+      <node id="554302972933104132" at="49,42,50,22" concept="5" />
+      <node id="554302972933104132" at="54,0,55,0" concept="6" trace="SubapplicationReference$3A" />
+      <node id="554302972933104132" at="58,0,59,0" concept="6" trace="subapp$afhL" />
+      <node id="554302972933104132" at="59,0,60,0" concept="6" trace="parentApp$adRF" />
+      <node id="554302972933104132" at="26,0,29,0" concept="0" trace="SubapplicationReference_Constraints#()V" />
+      <node id="554302972933104135" at="37,0,41,0" concept="3" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="554302972933104135" at="41,0,45,0" concept="3" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="554302972933104135" at="35,56,45,10" concept="5" />
+      <node id="554302972933104135" at="33,0,47,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="554302972933104135" at="31,90,47,6" concept="4" />
+      <node id="554302972933104132" at="30,0,52,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="554302972933104132" at="26,48,27,47" />
+      <scope id="554302972933104135" at="38,63,39,140" />
+      <scope id="554302972933104135" at="42,80,43,202" />
+      <scope id="554302972933104132" at="26,0,29,0" />
+      <scope id="554302972933104135" at="37,0,41,0" />
+      <scope id="554302972933104135" at="41,0,45,0">
+        <var name="_context" id="554302972933104135" />
+      </scope>
+      <scope id="554302972933104135" at="35,56,45,10" />
+      <scope id="554302972933104135" at="33,0,47,0" />
+      <scope id="554302972933104132" at="31,90,50,22">
+        <var name="d0" id="554302972933104135" />
+        <var name="references" id="554302972933104132" />
+      </scope>
+      <scope id="554302972933104132" at="30,0,52,0" />
+      <unit id="554302972933104132" at="53,0,56,0" name="org.fbme.ide.iec61499.lang.constraints.SubapplicationReference_Constraints$CONCEPTS" />
+      <unit id="554302972933104132" at="57,0,61,0" name="org.fbme.ide.iec61499.lang.constraints.SubapplicationReference_Constraints$LINKS" />
+      <unit id="554302972933104135" at="36,19,45,9" name="org.fbme.ide.iec61499.lang.constraints.SubapplicationReference_Constraints$1$1" />
+      <unit id="554302972933104135" at="32,48,47,5" name="org.fbme.ide.iec61499.lang.constraints.SubapplicationReference_Constraints$1" />
+      <unit id="554302972933104132" at="25,0,62,0" name="org.fbme.ide.iec61499.lang.constraints.SubapplicationReference_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/554302972937645409">
+    <file name="ApplicationFunctionBlockReference_Constraints.java">
+      <node id="554302972937645409" at="26,58,27,57" concept="8" />
+      <node id="554302972937645410" at="38,63,39,140" concept="5" />
+      <node id="554302972937645606" at="42,80,43,203" concept="5" />
+      <node id="554302972937645409" at="47,6,48,131" concept="4" />
+      <node id="554302972937645410" at="48,131,49,42" concept="1" />
+      <node id="554302972937645409" at="49,42,50,22" concept="5" />
+      <node id="554302972937645409" at="54,0,55,0" concept="6" trace="ApplicationFunctionBlockReference$VG" />
+      <node id="554302972937645409" at="58,0,59,0" concept="6" trace="functionBlock$rzdQ" />
+      <node id="554302972937645409" at="59,0,60,0" concept="6" trace="application$ryJO" />
+      <node id="554302972937645409" at="26,0,29,0" concept="0" trace="ApplicationFunctionBlockReference_Constraints#()V" />
+      <node id="554302972937645410" at="37,0,41,0" concept="3" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="554302972937645410" at="41,0,45,0" concept="3" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="554302972937645410" at="35,56,45,10" concept="5" />
+      <node id="554302972937645410" at="33,0,47,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="554302972937645410" at="31,90,47,6" concept="4" />
+      <node id="554302972937645409" at="30,0,52,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="554302972937645409" at="26,58,27,57" />
+      <scope id="554302972937645410" at="38,63,39,140" />
+      <scope id="554302972937645410" at="42,80,43,203" />
+      <scope id="554302972937645409" at="26,0,29,0" />
+      <scope id="554302972937645410" at="37,0,41,0" />
+      <scope id="554302972937645410" at="41,0,45,0">
+        <var name="_context" id="554302972937645410" />
+      </scope>
+      <scope id="554302972937645410" at="35,56,45,10" />
+      <scope id="554302972937645410" at="33,0,47,0" />
+      <scope id="554302972937645409" at="31,90,50,22">
+        <var name="d0" id="554302972937645410" />
+        <var name="references" id="554302972937645409" />
+      </scope>
+      <scope id="554302972937645409" at="30,0,52,0" />
+      <unit id="554302972937645409" at="53,0,56,0" name="org.fbme.ide.iec61499.lang.constraints.ApplicationFunctionBlockReference_Constraints$CONCEPTS" />
+      <unit id="554302972937645409" at="57,0,61,0" name="org.fbme.ide.iec61499.lang.constraints.ApplicationFunctionBlockReference_Constraints$LINKS" />
+      <unit id="554302972937645410" at="36,19,45,9" name="org.fbme.ide.iec61499.lang.constraints.ApplicationFunctionBlockReference_Constraints$1$1" />
+      <unit id="554302972937645410" at="32,48,47,5" name="org.fbme.ide.iec61499.lang.constraints.ApplicationFunctionBlockReference_Constraints$1" />
+      <unit id="554302972937645409" at="25,0,62,0" name="org.fbme.ide.iec61499.lang.constraints.ApplicationFunctionBlockReference_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/6279537560537435629">
+    <file name="Link_Constraints.java">
+      <node id="6279537560537435629" at="26,29,27,28" concept="8" />
+      <node id="6279537560537435632" at="38,63,39,141" concept="5" />
+      <node id="6279537560537436209" at="42,80,43,202" concept="5" />
+      <node id="6279537560537435629" at="47,6,48,131" concept="4" />
+      <node id="6279537560537435632" at="48,131,49,42" concept="1" />
+      <node id="6279537560537435629" at="49,42,50,22" concept="5" />
+      <node id="6279537560537435629" at="54,0,55,0" concept="6" trace="Link$UJ" />
+      <node id="6279537560537435629" at="55,0,56,0" concept="6" trace="SystemDeclaration$SC" />
+      <node id="6279537560537435629" at="59,0,60,0" concept="6" trace="segment$x_dT" />
+      <node id="6279537560537435629" at="60,0,61,0" concept="6" trace="segments$3iD" />
+      <node id="6279537560537435629" at="26,0,29,0" concept="0" trace="Link_Constraints#()V" />
+      <node id="6279537560537435632" at="37,0,41,0" concept="3" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="6279537560537435632" at="41,0,45,0" concept="3" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="6279537560537435632" at="35,56,45,10" concept="5" />
+      <node id="6279537560537435632" at="33,0,47,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="6279537560537435632" at="31,90,47,6" concept="4" />
+      <node id="6279537560537435629" at="30,0,52,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="6279537560537435629" at="26,29,27,28" />
+      <scope id="6279537560537435632" at="38,63,39,141" />
+      <scope id="6279537560537435632" at="42,80,43,202" />
+      <scope id="6279537560537435629" at="26,0,29,0" />
+      <scope id="6279537560537435632" at="37,0,41,0" />
+      <scope id="6279537560537435632" at="41,0,45,0">
+        <var name="_context" id="6279537560537435632" />
+      </scope>
+      <scope id="6279537560537435632" at="35,56,45,10" />
+      <scope id="6279537560537435632" at="33,0,47,0" />
+      <scope id="6279537560537435629" at="31,90,50,22">
+        <var name="d0" id="6279537560537435632" />
+        <var name="references" id="6279537560537435629" />
+      </scope>
+      <scope id="6279537560537435629" at="30,0,52,0" />
+      <unit id="6279537560537435629" at="53,0,57,0" name="org.fbme.ide.iec61499.lang.constraints.Link_Constraints$CONCEPTS" />
+      <unit id="6279537560537435629" at="58,0,62,0" name="org.fbme.ide.iec61499.lang.constraints.Link_Constraints$LINKS" />
+      <unit id="6279537560537435632" at="36,19,45,9" name="org.fbme.ide.iec61499.lang.constraints.Link_Constraints$1$1" />
+      <unit id="6279537560537435632" at="32,48,47,5" name="org.fbme.ide.iec61499.lang.constraints.Link_Constraints$1" />
+      <unit id="6279537560537435629" at="25,0,63,0" name="org.fbme.ide.iec61499.lang.constraints.Link_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/7206730950342630992">
+    <file name="TransitionCondition_Constraints.java">
+      <node id="7206730950342630992" at="10,44,11,43" concept="8" />
+      <node id="7206730950342630992" at="15,0,16,0" concept="6" trace="TransitionCondition$EK" />
+      <node id="7206730950342630992" at="10,0,13,0" concept="0" trace="TransitionCondition_Constraints#()V" />
+      <scope id="7206730950342630992" at="10,44,11,43" />
+      <scope id="7206730950342630992" at="10,0,13,0" />
+      <unit id="7206730950342630992" at="14,0,17,0" name="org.fbme.ide.iec61499.lang.constraints.TransitionCondition_Constraints$CONCEPTS" />
+      <unit id="7206730950342630992" at="9,0,18,0" name="org.fbme.ide.iec61499.lang.constraints.TransitionCondition_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/8167217573768893868">
+    <file name="ComponentEventSource_Constraints.java">
+      <node id="8167217573768893868" at="23,45,24,44" concept="8" />
+      <node id="8167217573768893871" at="35,63,36,141" concept="5" />
+      <node id="8167217573772127750" at="39,80,40,134" concept="5" />
+      <node id="8167217573768893868" at="44,6,45,131" concept="4" />
+      <node id="8167217573768893871" at="45,131,46,42" concept="1" />
+      <node id="8167217573768893868" at="46,42,47,22" concept="5" />
+      <node id="8167217573768893868" at="51,0,52,0" concept="6" trace="ComponentEventSource$vb" />
+      <node id="8167217573768893868" at="55,0,56,0" concept="6" trace="declaration$eWQJ" />
+      <node id="8167217573768893868" at="56,0,57,0" concept="6" trace="component$gysY" />
+      <node id="8167217573768893868" at="23,0,26,0" concept="0" trace="ComponentEventSource_Constraints#()V" />
+      <node id="8167217573768893871" at="34,0,38,0" concept="3" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="8167217573768893871" at="38,0,42,0" concept="3" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="8167217573768893871" at="32,56,42,10" concept="5" />
+      <node id="8167217573768893871" at="30,0,44,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="8167217573768893871" at="28,90,44,6" concept="4" />
+      <node id="8167217573768893868" at="27,0,49,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="8167217573768893868" at="23,45,24,44" />
+      <scope id="8167217573768893871" at="35,63,36,141" />
+      <scope id="8167217573768893871" at="39,80,40,134" />
+      <scope id="8167217573768893868" at="23,0,26,0" />
+      <scope id="8167217573768893871" at="34,0,38,0" />
+      <scope id="8167217573768893871" at="38,0,42,0">
+        <var name="_context" id="8167217573768893871" />
+      </scope>
+      <scope id="8167217573768893871" at="32,56,42,10" />
+      <scope id="8167217573768893871" at="30,0,44,0" />
+      <scope id="8167217573768893868" at="28,90,47,22">
+        <var name="d0" id="8167217573768893871" />
+        <var name="references" id="8167217573768893868" />
+      </scope>
+      <scope id="8167217573768893868" at="27,0,49,0" />
+      <unit id="8167217573768893868" at="50,0,53,0" name="org.fbme.ide.iec61499.lang.constraints.ComponentEventSource_Constraints$CONCEPTS" />
+      <unit id="8167217573768893868" at="54,0,58,0" name="org.fbme.ide.iec61499.lang.constraints.ComponentEventSource_Constraints$LINKS" />
+      <unit id="8167217573768893871" at="33,19,42,9" name="org.fbme.ide.iec61499.lang.constraints.ComponentEventSource_Constraints$1$1" />
+      <unit id="8167217573768893871" at="29,48,44,5" name="org.fbme.ide.iec61499.lang.constraints.ComponentEventSource_Constraints$1" />
+      <unit id="8167217573768893868" at="22,0,59,0" name="org.fbme.ide.iec61499.lang.constraints.ComponentEventSource_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/8167217573769450917">
+    <file name="ComponentEventDestination_Constraints.java">
+      <node id="8167217573769450917" at="23,50,24,49" concept="8" />
+      <node id="8167217573769451709" at="35,63,36,141" concept="5" />
+      <node id="8167217573772132002" at="39,80,40,139" concept="5" />
+      <node id="8167217573769450917" at="44,6,45,131" concept="4" />
+      <node id="8167217573769451709" at="45,131,46,42" concept="1" />
+      <node id="8167217573769450917" at="46,42,47,22" concept="5" />
+      <node id="8167217573769450917" at="51,0,52,0" concept="6" trace="ComponentEventDestination$kN" />
+      <node id="8167217573769450917" at="55,0,56,0" concept="6" trace="declaration$eWQJ" />
+      <node id="8167217573769450917" at="56,0,57,0" concept="6" trace="component$gysY" />
+      <node id="8167217573769450917" at="23,0,26,0" concept="0" trace="ComponentEventDestination_Constraints#()V" />
+      <node id="8167217573769451709" at="34,0,38,0" concept="3" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="8167217573769451709" at="38,0,42,0" concept="3" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="8167217573769451709" at="32,56,42,10" concept="5" />
+      <node id="8167217573769451709" at="30,0,44,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="8167217573769451709" at="28,90,44,6" concept="4" />
+      <node id="8167217573769450917" at="27,0,49,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="8167217573769450917" at="23,50,24,49" />
+      <scope id="8167217573769451709" at="35,63,36,141" />
+      <scope id="8167217573769451709" at="39,80,40,139" />
+      <scope id="8167217573769450917" at="23,0,26,0" />
+      <scope id="8167217573769451709" at="34,0,38,0" />
+      <scope id="8167217573769451709" at="38,0,42,0">
+        <var name="_context" id="8167217573769451709" />
+      </scope>
+      <scope id="8167217573769451709" at="32,56,42,10" />
+      <scope id="8167217573769451709" at="30,0,44,0" />
+      <scope id="8167217573769450917" at="28,90,47,22">
+        <var name="d0" id="8167217573769451709" />
+        <var name="references" id="8167217573769450917" />
+      </scope>
+      <scope id="8167217573769450917" at="27,0,49,0" />
+      <unit id="8167217573769450917" at="50,0,53,0" name="org.fbme.ide.iec61499.lang.constraints.ComponentEventDestination_Constraints$CONCEPTS" />
+      <unit id="8167217573769450917" at="54,0,58,0" name="org.fbme.ide.iec61499.lang.constraints.ComponentEventDestination_Constraints$LINKS" />
+      <unit id="8167217573769451709" at="33,19,42,9" name="org.fbme.ide.iec61499.lang.constraints.ComponentEventDestination_Constraints$1$1" />
+      <unit id="8167217573769451709" at="29,48,44,5" name="org.fbme.ide.iec61499.lang.constraints.ComponentEventDestination_Constraints$1" />
+      <unit id="8167217573769450917" at="22,0,59,0" name="org.fbme.ide.iec61499.lang.constraints.ComponentEventDestination_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/8167217573769933460">
+    <file name="ContextEventSource_Constraints.java">
+      <node id="8167217573769933460" at="22,43,23,42" concept="8" />
+      <node id="8167217573769933461" at="34,63,35,141" concept="5" />
+      <node id="8167217573772136051" at="38,80,39,81" concept="5" />
+      <node id="8167217573769933460" at="43,6,44,131" concept="4" />
+      <node id="8167217573769933461" at="44,131,45,42" concept="1" />
+      <node id="8167217573769933460" at="45,42,46,22" concept="5" />
+      <node id="8167217573769933460" at="50,0,51,0" concept="6" trace="ContextEventSource$YQ" />
+      <node id="8167217573769933460" at="54,0,55,0" concept="6" trace="declaration$8yyk" />
+      <node id="8167217573769933460" at="22,0,25,0" concept="0" trace="ContextEventSource_Constraints#()V" />
+      <node id="8167217573769933461" at="33,0,37,0" concept="3" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="8167217573769933461" at="37,0,41,0" concept="3" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="8167217573769933461" at="31,56,41,10" concept="5" />
+      <node id="8167217573769933461" at="29,0,43,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="8167217573769933461" at="27,90,43,6" concept="4" />
+      <node id="8167217573769933460" at="26,0,48,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="8167217573769933460" at="22,43,23,42" />
+      <scope id="8167217573769933461" at="34,63,35,141" />
+      <scope id="8167217573769933461" at="38,80,39,81" />
+      <scope id="8167217573769933460" at="22,0,25,0" />
+      <scope id="8167217573769933461" at="33,0,37,0" />
+      <scope id="8167217573769933461" at="37,0,41,0">
+        <var name="_context" id="8167217573769933461" />
+      </scope>
+      <scope id="8167217573769933461" at="31,56,41,10" />
+      <scope id="8167217573769933461" at="29,0,43,0" />
+      <scope id="8167217573769933460" at="27,90,46,22">
+        <var name="d0" id="8167217573769933461" />
+        <var name="references" id="8167217573769933460" />
+      </scope>
+      <scope id="8167217573769933460" at="26,0,48,0" />
+      <unit id="8167217573769933460" at="49,0,52,0" name="org.fbme.ide.iec61499.lang.constraints.ContextEventSource_Constraints$CONCEPTS" />
+      <unit id="8167217573769933460" at="53,0,56,0" name="org.fbme.ide.iec61499.lang.constraints.ContextEventSource_Constraints$LINKS" />
+      <unit id="8167217573769933461" at="32,19,41,9" name="org.fbme.ide.iec61499.lang.constraints.ContextEventSource_Constraints$1$1" />
+      <unit id="8167217573769933461" at="28,48,43,5" name="org.fbme.ide.iec61499.lang.constraints.ContextEventSource_Constraints$1" />
+      <unit id="8167217573769933460" at="21,0,57,0" name="org.fbme.ide.iec61499.lang.constraints.ContextEventSource_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/8167217573769936099">
+    <file name="ContextEventDestination_Constraints.java">
+      <node id="8167217573769936099" at="22,48,23,47" concept="8" />
+      <node id="8167217573769936100" at="34,63,35,141" concept="5" />
+      <node id="8167217573772137132" at="38,80,39,86" concept="5" />
+      <node id="8167217573769936099" at="43,6,44,131" concept="4" />
+      <node id="8167217573769936100" at="44,131,45,42" concept="1" />
+      <node id="8167217573769936099" at="45,42,46,22" concept="5" />
+      <node id="8167217573769936099" at="50,0,51,0" concept="6" trace="ContextEventDestination$Mu" />
+      <node id="8167217573769936099" at="54,0,55,0" concept="6" trace="declaration$8yyk" />
+      <node id="8167217573769936099" at="22,0,25,0" concept="0" trace="ContextEventDestination_Constraints#()V" />
+      <node id="8167217573769936100" at="33,0,37,0" concept="3" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="8167217573769936100" at="37,0,41,0" concept="3" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="8167217573769936100" at="31,56,41,10" concept="5" />
+      <node id="8167217573769936100" at="29,0,43,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="8167217573769936100" at="27,90,43,6" concept="4" />
+      <node id="8167217573769936099" at="26,0,48,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="8167217573769936099" at="22,48,23,47" />
+      <scope id="8167217573769936100" at="34,63,35,141" />
+      <scope id="8167217573769936100" at="38,80,39,86" />
+      <scope id="8167217573769936099" at="22,0,25,0" />
+      <scope id="8167217573769936100" at="33,0,37,0" />
+      <scope id="8167217573769936100" at="37,0,41,0">
+        <var name="_context" id="8167217573769936100" />
+      </scope>
+      <scope id="8167217573769936100" at="31,56,41,10" />
+      <scope id="8167217573769936100" at="29,0,43,0" />
+      <scope id="8167217573769936099" at="27,90,46,22">
+        <var name="d0" id="8167217573769936100" />
+        <var name="references" id="8167217573769936099" />
+      </scope>
+      <scope id="8167217573769936099" at="26,0,48,0" />
+      <unit id="8167217573769936099" at="49,0,52,0" name="org.fbme.ide.iec61499.lang.constraints.ContextEventDestination_Constraints$CONCEPTS" />
+      <unit id="8167217573769936099" at="53,0,56,0" name="org.fbme.ide.iec61499.lang.constraints.ContextEventDestination_Constraints$LINKS" />
+      <unit id="8167217573769936100" at="32,19,41,9" name="org.fbme.ide.iec61499.lang.constraints.ContextEventDestination_Constraints$1$1" />
+      <unit id="8167217573769936100" at="28,48,43,5" name="org.fbme.ide.iec61499.lang.constraints.ContextEventDestination_Constraints$1" />
+      <unit id="8167217573769936099" at="21,0,57,0" name="org.fbme.ide.iec61499.lang.constraints.ContextEventDestination_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/8167217573771541917">
+    <file name="EndpointScopes.java">
+      <node id="8167217573771542688" at="22,60,23,56" concept="4" />
+      <node id="6647825535669173332" at="23,56,24,68" concept="4" />
+      <node id="6647825535669272934" at="24,68,25,179" concept="1" />
+      <node id="554302972921984369" at="25,179,26,184" concept="1" />
+      <node id="6647825535669956505" at="26,184,27,144" concept="1" />
+      <node id="4046047820623036736" at="27,144,28,159" concept="4" />
+      <node id="4046047820623062981" at="29,37,30,142" concept="1" />
+      <node id="4046047820623062988" at="30,142,31,195" concept="1" />
+      <node id="4046047820623062997" at="31,195,32,155" concept="1" />
+      <node id="8167217573771542696" at="33,5,34,43" concept="5" />
+      <node id="8167217573771573723" at="37,61,38,114" concept="5" />
+      <node id="8167217573771578562" at="40,66,41,119" concept="5" />
+      <node id="8167217573771581015" at="43,62,44,115" concept="5" />
+      <node id="8167217573771581032" at="46,67,47,120" concept="5" />
+      <node id="8167217573771593428" at="50,61,51,41" concept="4" />
+      <node id="8167217573771593436" at="51,41,52,117" concept="5" />
+      <node id="8167217573771596432" at="54,66,55,41" concept="4" />
+      <node id="8167217573771596440" at="55,41,56,122" concept="5" />
+      <node id="8167217573771596618" at="58,62,59,41" concept="4" />
+      <node id="8167217573771596626" at="59,41,60,118" concept="5" />
+      <node id="8167217573771597728" at="62,67,63,41" concept="4" />
+      <node id="8167217573771597736" at="63,41,64,123" concept="5" />
+      <node id="8167217573776693024" at="67,55,68,122" concept="5" />
+      <node id="8167217573776693041" at="70,57,71,124" concept="5" />
+      <node id="8167217573771607490" at="74,51,75,92" concept="5" />
+      <node id="8167217573771541917" at="79,0,80,0" concept="6" trace="IWithFBNetwork$Ih" />
+      <node id="8167217573771541917" at="80,0,81,0" concept="6" trace="IWithSubappNetwork$Dk" />
+      <node id="8167217573771541917" at="81,0,82,0" concept="6" trace="IContext$Eg" />
+      <node id="8167217573771541917" at="85,0,86,0" concept="6" trace="functionBlocks$Q7gp" />
+      <node id="8167217573771541917" at="86,0,87,0" concept="6" trace="subapplications$rHpi" />
+      <node id="8167217573771573733" at="37,0,40,0" concept="7" trace="componentDataSources#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/scope/Scope;" />
+      <node id="8167217573771578550" at="40,0,43,0" concept="7" trace="componentDataDestinations#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/scope/Scope;" />
+      <node id="8167217573771581003" at="43,0,46,0" concept="7" trace="componentEventSources#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/scope/Scope;" />
+      <node id="8167217573771581020" at="46,0,49,0" concept="7" trace="componentEventDestinations#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/scope/Scope;" />
+      <node id="8167217573776693012" at="67,0,70,0" concept="7" trace="componentPlugs#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/scope/Scope;" />
+      <node id="8167217573776693029" at="70,0,73,0" concept="7" trace="componentSockets#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/scope/Scope;" />
+      <node id="8167217573771607592" at="74,0,77,0" concept="7" trace="context#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="8167217573771593446" at="50,0,54,0" concept="7" trace="contextDataSources#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/scope/Scope;" />
+      <node id="8167217573771596426" at="54,0,58,0" concept="7" trace="contextDataDestinations#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/scope/Scope;" />
+      <node id="8167217573771596612" at="58,0,62,0" concept="7" trace="contextEventSources#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/scope/Scope;" />
+      <node id="8167217573771597722" at="62,0,66,0" concept="7" trace="contextEventDestinations#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/scope/Scope;" />
+      <node id="4046047820623023783" at="28,159,33,5" concept="2" />
+      <node id="8167217573771542706" at="22,0,36,0" concept="7" trace="contextComponents#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/scope/Scope;" />
+      <scope id="8167217573771573716" at="37,61,38,114" />
+      <scope id="8167217573771578555" at="40,66,41,119" />
+      <scope id="8167217573771581008" at="43,62,44,115" />
+      <scope id="8167217573771581025" at="46,67,47,120" />
+      <scope id="8167217573776693017" at="67,55,68,122" />
+      <scope id="8167217573776693034" at="70,57,71,124" />
+      <scope id="8167217573771607467" at="74,51,75,92" />
+      <scope id="8167217573771593427" at="50,61,52,117">
+        <var name="context" id="8167217573771593429" />
+      </scope>
+      <scope id="8167217573771596431" at="54,66,56,122">
+        <var name="context" id="8167217573771596433" />
+      </scope>
+      <scope id="8167217573771596617" at="58,62,60,118">
+        <var name="context" id="8167217573771596619" />
+      </scope>
+      <scope id="8167217573771597727" at="62,67,64,123">
+        <var name="context" id="8167217573771597729" />
+      </scope>
+      <scope id="4046047820623023785" at="29,37,32,155" />
+      <scope id="8167217573771573733" at="37,0,40,0">
+        <var name="component" id="8167217573771573728" />
+      </scope>
+      <scope id="8167217573771578550" at="40,0,43,0">
+        <var name="component" id="8167217573771578553" />
+      </scope>
+      <scope id="8167217573771581003" at="43,0,46,0">
+        <var name="component" id="8167217573771581006" />
+      </scope>
+      <scope id="8167217573771581020" at="46,0,49,0">
+        <var name="component" id="8167217573771581023" />
+      </scope>
+      <scope id="8167217573776693012" at="67,0,70,0">
+        <var name="component" id="8167217573776693015" />
+      </scope>
+      <scope id="8167217573776693029" at="70,0,73,0">
+        <var name="component" id="8167217573776693032" />
+      </scope>
+      <scope id="8167217573771607592" at="74,0,77,0">
+        <var name="contextNode" id="8167217573771607496" />
+      </scope>
+      <scope id="8167217573771593446" at="50,0,54,0">
+        <var name="contextNode" id="8167217573771593441" />
+      </scope>
+      <scope id="8167217573771596426" at="54,0,58,0">
+        <var name="contextNode" id="8167217573771596429" />
+      </scope>
+      <scope id="8167217573771596612" at="58,0,62,0">
+        <var name="contextNode" id="8167217573771596615" />
+      </scope>
+      <scope id="8167217573771597722" at="62,0,66,0">
+        <var name="contextNode" id="8167217573771597725" />
+      </scope>
+      <scope id="8167217573771542687" at="22,60,34,43">
+        <var name="context" id="8167217573771542689" />
+        <var name="networkPrototype" id="4046047820623036737" />
+        <var name="res" id="6647825535669173335" />
+      </scope>
+      <scope id="8167217573771542706" at="22,0,36,0">
+        <var name="contextNode" id="8167217573771542701" />
+      </scope>
+      <unit id="8167217573771541917" at="84,0,88,0" name="org.fbme.ide.iec61499.lang.constraints.EndpointScopes$LINKS" />
+      <unit id="8167217573771541917" at="78,0,83,0" name="org.fbme.ide.iec61499.lang.constraints.EndpointScopes$CONCEPTS" />
+      <unit id="8167217573771541917" at="21,0,89,0" name="org.fbme.ide.iec61499.lang.constraints.EndpointScopes" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/8167217573776704295">
+    <file name="FBPlugReference_Constraints.java">
+      <node id="8167217573776704295" at="23,40,24,39" concept="8" />
+      <node id="8167217573776704296" at="35,63,36,141" concept="5" />
+      <node id="8167217573776704492" at="39,80,40,79" concept="5" />
+      <node id="8167217573776705428" at="51,63,52,141" concept="5" />
+      <node id="8167217573776705676" at="55,80,56,127" concept="5" />
+      <node id="8167217573776704295" at="60,6,61,131" concept="4" />
+      <node id="8167217573776704296" at="61,131,62,42" concept="1" />
+      <node id="8167217573776705428" at="62,42,63,42" concept="1" />
+      <node id="8167217573776704295" at="63,42,64,22" concept="5" />
+      <node id="8167217573776704295" at="68,0,69,0" concept="6" trace="FBPlugReference$$c" />
+      <node id="8167217573776704295" at="72,0,73,0" concept="6" trace="component$zYCH" />
+      <node id="8167217573776704295" at="73,0,74,0" concept="6" trace="declaration$zZ6J" />
+      <node id="8167217573776704295" at="23,0,26,0" concept="0" trace="FBPlugReference_Constraints#()V" />
+      <node id="8167217573776704296" at="34,0,38,0" concept="3" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="8167217573776704296" at="38,0,42,0" concept="3" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="8167217573776705428" at="50,0,54,0" concept="3" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="8167217573776705428" at="54,0,58,0" concept="3" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="8167217573776704296" at="32,56,42,10" concept="5" />
+      <node id="8167217573776705428" at="48,56,58,10" concept="5" />
+      <node id="8167217573776704296" at="30,0,44,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="8167217573776705428" at="46,0,60,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="8167217573776704296" at="28,90,44,6" concept="4" />
+      <node id="8167217573776705428" at="44,6,60,6" concept="4" />
+      <node id="8167217573776704295" at="27,0,66,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="8167217573776704295" at="23,40,24,39" />
+      <scope id="8167217573776704296" at="35,63,36,141" />
+      <scope id="8167217573776704296" at="39,80,40,79" />
+      <scope id="8167217573776705428" at="51,63,52,141" />
+      <scope id="8167217573776705428" at="55,80,56,127" />
+      <scope id="8167217573776704295" at="23,0,26,0" />
+      <scope id="8167217573776704296" at="34,0,38,0" />
+      <scope id="8167217573776704296" at="38,0,42,0">
+        <var name="_context" id="8167217573776704296" />
+      </scope>
+      <scope id="8167217573776705428" at="50,0,54,0" />
+      <scope id="8167217573776705428" at="54,0,58,0">
+        <var name="_context" id="8167217573776705428" />
+      </scope>
+      <scope id="8167217573776704296" at="32,56,42,10" />
+      <scope id="8167217573776705428" at="48,56,58,10" />
+      <scope id="8167217573776704296" at="30,0,44,0" />
+      <scope id="8167217573776705428" at="46,0,60,0" />
+      <scope id="8167217573776704295" at="28,90,64,22">
+        <var name="d0" id="8167217573776704296" />
+        <var name="d1" id="8167217573776705428" />
+        <var name="references" id="8167217573776704295" />
+      </scope>
+      <scope id="8167217573776704295" at="27,0,66,0" />
+      <unit id="8167217573776704295" at="67,0,70,0" name="org.fbme.ide.iec61499.lang.constraints.FBPlugReference_Constraints$CONCEPTS" />
+      <unit id="8167217573776704295" at="71,0,75,0" name="org.fbme.ide.iec61499.lang.constraints.FBPlugReference_Constraints$LINKS" />
+      <unit id="8167217573776704296" at="33,19,42,9" name="org.fbme.ide.iec61499.lang.constraints.FBPlugReference_Constraints$1$1" />
+      <unit id="8167217573776705428" at="49,19,58,9" name="org.fbme.ide.iec61499.lang.constraints.FBPlugReference_Constraints$2$1" />
+      <unit id="8167217573776704296" at="29,48,44,5" name="org.fbme.ide.iec61499.lang.constraints.FBPlugReference_Constraints$1" />
+      <unit id="8167217573776705428" at="45,48,60,5" name="org.fbme.ide.iec61499.lang.constraints.FBPlugReference_Constraints$2" />
+      <unit id="8167217573776704295" at="22,0,76,0" name="org.fbme.ide.iec61499.lang.constraints.FBPlugReference_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/8167217573776708726">
+    <file name="FBSocketReference_Constraints.java">
+      <node id="8167217573776708726" at="23,42,24,41" concept="8" />
+      <node id="8167217573776708727" at="35,63,36,141" concept="5" />
+      <node id="8167217573776708730" at="39,80,40,79" concept="5" />
+      <node id="8167217573776708733" at="51,63,52,141" concept="5" />
+      <node id="8167217573776708736" at="55,80,56,129" concept="5" />
+      <node id="8167217573776708726" at="60,6,61,131" concept="4" />
+      <node id="8167217573776708727" at="61,131,62,42" concept="1" />
+      <node id="8167217573776708733" at="62,42,63,42" concept="1" />
+      <node id="8167217573776708726" at="63,42,64,22" concept="5" />
+      <node id="8167217573776708726" at="68,0,69,0" concept="6" trace="FBSocketReference$8O" />
+      <node id="8167217573776708726" at="72,0,73,0" concept="6" trace="component$bjF1" />
+      <node id="8167217573776708726" at="73,0,74,0" concept="6" trace="declaration$dLNz" />
+      <node id="8167217573776708726" at="23,0,26,0" concept="0" trace="FBSocketReference_Constraints#()V" />
+      <node id="8167217573776708727" at="34,0,38,0" concept="3" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="8167217573776708727" at="38,0,42,0" concept="3" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="8167217573776708733" at="50,0,54,0" concept="3" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="8167217573776708733" at="54,0,58,0" concept="3" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="8167217573776708727" at="32,56,42,10" concept="5" />
+      <node id="8167217573776708733" at="48,56,58,10" concept="5" />
+      <node id="8167217573776708727" at="30,0,44,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="8167217573776708733" at="46,0,60,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="8167217573776708727" at="28,90,44,6" concept="4" />
+      <node id="8167217573776708733" at="44,6,60,6" concept="4" />
+      <node id="8167217573776708726" at="27,0,66,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="8167217573776708726" at="23,42,24,41" />
+      <scope id="8167217573776708727" at="35,63,36,141" />
+      <scope id="8167217573776708727" at="39,80,40,79" />
+      <scope id="8167217573776708733" at="51,63,52,141" />
+      <scope id="8167217573776708733" at="55,80,56,129" />
+      <scope id="8167217573776708726" at="23,0,26,0" />
+      <scope id="8167217573776708727" at="34,0,38,0" />
+      <scope id="8167217573776708727" at="38,0,42,0">
+        <var name="_context" id="8167217573776708727" />
+      </scope>
+      <scope id="8167217573776708733" at="50,0,54,0" />
+      <scope id="8167217573776708733" at="54,0,58,0">
+        <var name="_context" id="8167217573776708733" />
+      </scope>
+      <scope id="8167217573776708727" at="32,56,42,10" />
+      <scope id="8167217573776708733" at="48,56,58,10" />
+      <scope id="8167217573776708727" at="30,0,44,0" />
+      <scope id="8167217573776708733" at="46,0,60,0" />
+      <scope id="8167217573776708726" at="28,90,64,22">
+        <var name="d0" id="8167217573776708727" />
+        <var name="d1" id="8167217573776708733" />
+        <var name="references" id="8167217573776708726" />
+      </scope>
+      <scope id="8167217573776708726" at="27,0,66,0" />
+      <unit id="8167217573776708726" at="67,0,70,0" name="org.fbme.ide.iec61499.lang.constraints.FBSocketReference_Constraints$CONCEPTS" />
+      <unit id="8167217573776708726" at="71,0,75,0" name="org.fbme.ide.iec61499.lang.constraints.FBSocketReference_Constraints$LINKS" />
+      <unit id="8167217573776708727" at="33,19,42,9" name="org.fbme.ide.iec61499.lang.constraints.FBSocketReference_Constraints$1$1" />
+      <unit id="8167217573776708733" at="49,19,58,9" name="org.fbme.ide.iec61499.lang.constraints.FBSocketReference_Constraints$2$1" />
+      <unit id="8167217573776708727" at="29,48,44,5" name="org.fbme.ide.iec61499.lang.constraints.FBSocketReference_Constraints$1" />
+      <unit id="8167217573776708733" at="45,48,60,5" name="org.fbme.ide.iec61499.lang.constraints.FBSocketReference_Constraints$2" />
+      <unit id="8167217573776708726" at="22,0,76,0" name="org.fbme.ide.iec61499.lang.constraints.FBSocketReference_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/967875482180374636">
+    <file name="StateDeclaration_Constraints.java">
+      <node id="967875482180374636" at="21,41,22,40" concept="8" />
+      <node id="967875482180374641" at="26,59,27,60" concept="8" />
+      <node id="967875482180374641" at="30,109,31,99" concept="4" />
+      <node id="967875482180374641" at="32,53,33,166" concept="1" />
+      <node id="967875482180374641" at="34,7,35,20" concept="5" />
+      <node id="967875482180377325" at="37,85,38,111" concept="5" />
+      <node id="967875482180374636" at="42,84,43,119" concept="4" />
+      <node id="967875482180374641" at="43,119,44,61" concept="1" />
+      <node id="967875482180374636" at="44,61,45,22" concept="5" />
+      <node id="967875482180392757" at="47,0,48,0" concept="6" trace="REGEXP" />
+      <node id="967875482180374636" at="50,0,51,0" concept="6" trace="StateDeclaration$AS" />
+      <node id="967875482180374636" at="54,0,55,0" concept="6" trace="name$MnvL" />
+      <node id="967875482180374636" at="21,0,24,0" concept="0" trace="StateDeclaration_Constraints#()V" />
+      <node id="967875482180374641" at="26,0,29,0" concept="0" trace="Name_Property#(Ljetbrains/mps/smodel/runtime/ConstraintsDescriptor;)V" />
+      <node id="967875482180374641" at="31,99,34,7" concept="2" />
+      <node id="967875482180374641" at="37,0,40,0" concept="7" trace="staticValidateProperty#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Z" />
+      <node id="967875482180374636" at="41,0,47,0" concept="3" trace="getSpecifiedProperties#()Ljava/util/Map;" />
+      <node id="967875482180374641" at="29,0,37,0" concept="3" trace="validateValue#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/Object;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Z" />
+      <scope id="967875482180374636" at="21,41,22,40" />
+      <scope id="967875482180374641" at="26,59,27,60" />
+      <scope id="967875482180374641" at="32,53,33,166" />
+      <scope id="967875482180374644" at="37,85,38,111" />
+      <scope id="967875482180374636" at="21,0,24,0" />
+      <scope id="967875482180374641" at="26,0,29,0">
+        <var name="container" id="967875482180374641" />
+      </scope>
+      <scope id="967875482180374641" at="37,0,40,0">
+        <var name="node" id="967875482180374641" />
+        <var name="propertyValue" id="967875482180374641" />
+      </scope>
+      <scope id="967875482180374636" at="42,84,45,22">
+        <var name="properties" id="967875482180374636" />
+      </scope>
+      <scope id="967875482180374641" at="30,109,35,20">
+        <var name="result" id="967875482180374641" />
+      </scope>
+      <scope id="967875482180374636" at="41,0,47,0" />
+      <scope id="967875482180374641" at="29,0,37,0">
+        <var name="checkingNodeContext" id="967875482180374641" />
+        <var name="node" id="967875482180374641" />
+        <var name="propertyValue" id="967875482180374641" />
+      </scope>
+      <unit id="967875482180374636" at="49,0,52,0" name="org.fbme.ide.iec61499.lang.constraints.StateDeclaration_Constraints$CONCEPTS" />
+      <unit id="967875482180374636" at="53,0,56,0" name="org.fbme.ide.iec61499.lang.constraints.StateDeclaration_Constraints$PROPS" />
+      <unit id="967875482180374641" at="25,0,41,0" name="org.fbme.ide.iec61499.lang.constraints.StateDeclaration_Constraints$Name_Property" />
+      <unit id="967875482180374636" at="20,0,57,0" name="org.fbme.ide.iec61499.lang.constraints.StateDeclaration_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/967875482185907237">
+    <file name="EventDeclaration_Constraints.java">
+      <node id="967875482185907237" at="21,41,22,40" concept="8" />
+      <node id="967875482185907720" at="26,59,27,60" concept="8" />
+      <node id="967875482185907720" at="30,109,31,99" concept="4" />
+      <node id="967875482185907720" at="32,53,33,166" concept="1" />
+      <node id="967875482185907720" at="34,7,35,20" concept="5" />
+      <node id="967875482185908182" at="37,85,38,111" concept="5" />
+      <node id="967875482185907237" at="42,84,43,119" concept="4" />
+      <node id="967875482185907720" at="43,119,44,61" concept="1" />
+      <node id="967875482185907237" at="44,61,45,22" concept="5" />
+      <node id="967875482185908187" at="47,0,48,0" concept="6" trace="REGEXP" />
+      <node id="967875482185907237" at="50,0,51,0" concept="6" trace="EventDeclaration$7t" />
+      <node id="967875482185907237" at="54,0,55,0" concept="6" trace="name$MnvL" />
+      <node id="967875482185907237" at="21,0,24,0" concept="0" trace="EventDeclaration_Constraints#()V" />
+      <node id="967875482185907720" at="26,0,29,0" concept="0" trace="Name_Property#(Ljetbrains/mps/smodel/runtime/ConstraintsDescriptor;)V" />
+      <node id="967875482185907720" at="31,99,34,7" concept="2" />
+      <node id="967875482185907720" at="37,0,40,0" concept="7" trace="staticValidateProperty#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Z" />
+      <node id="967875482185907237" at="41,0,47,0" concept="3" trace="getSpecifiedProperties#()Ljava/util/Map;" />
+      <node id="967875482185907720" at="29,0,37,0" concept="3" trace="validateValue#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/Object;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Z" />
+      <scope id="967875482185907237" at="21,41,22,40" />
+      <scope id="967875482185907720" at="26,59,27,60" />
+      <scope id="967875482185907720" at="32,53,33,166" />
+      <scope id="967875482185907724" at="37,85,38,111" />
+      <scope id="967875482185907237" at="21,0,24,0" />
+      <scope id="967875482185907720" at="26,0,29,0">
+        <var name="container" id="967875482185907720" />
+      </scope>
+      <scope id="967875482185907720" at="37,0,40,0">
+        <var name="node" id="967875482185907720" />
+        <var name="propertyValue" id="967875482185907720" />
+      </scope>
+      <scope id="967875482185907237" at="42,84,45,22">
+        <var name="properties" id="967875482185907237" />
+      </scope>
+      <scope id="967875482185907720" at="30,109,35,20">
+        <var name="result" id="967875482185907720" />
+      </scope>
+      <scope id="967875482185907237" at="41,0,47,0" />
+      <scope id="967875482185907720" at="29,0,37,0">
+        <var name="checkingNodeContext" id="967875482185907720" />
+        <var name="node" id="967875482185907720" />
+        <var name="propertyValue" id="967875482185907720" />
+      </scope>
+      <unit id="967875482185907237" at="49,0,52,0" name="org.fbme.ide.iec61499.lang.constraints.EventDeclaration_Constraints$CONCEPTS" />
+      <unit id="967875482185907237" at="53,0,56,0" name="org.fbme.ide.iec61499.lang.constraints.EventDeclaration_Constraints$PROPS" />
+      <unit id="967875482185907720" at="25,0,41,0" name="org.fbme.ide.iec61499.lang.constraints.EventDeclaration_Constraints$Name_Property" />
+      <unit id="967875482185907237" at="20,0,57,0" name="org.fbme.ide.iec61499.lang.constraints.EventDeclaration_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:a4fe33ac-e966-4c3c-bbd8-837296363b92(org.fbme.ide.iec61499.lang.constraints)/967875482187468959">
+    <file name="ComponentEventEndpoint_Constraints.java">
+      <node id="967875482187468959" at="22,47,23,46" concept="8" />
+      <node id="967875482187468966" at="34,63,35,140" concept="5" />
+      <node id="8167217573771570339" at="38,80,39,79" concept="5" />
+      <node id="967875482187468959" at="43,6,44,131" concept="4" />
+      <node id="967875482187468966" at="44,131,45,42" concept="1" />
+      <node id="967875482187468959" at="45,42,46,22" concept="5" />
+      <node id="967875482187468959" at="50,0,51,0" concept="6" trace="ComponentEventEndpoint$vG" />
+      <node id="967875482187468959" at="54,0,55,0" concept="6" trace="component$gysY" />
+      <node id="967875482187468959" at="22,0,25,0" concept="0" trace="ComponentEventEndpoint_Constraints#()V" />
+      <node id="967875482187468966" at="33,0,37,0" concept="3" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="967875482187468966" at="37,0,41,0" concept="3" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="967875482187468966" at="31,56,41,10" concept="5" />
+      <node id="967875482187468966" at="29,0,43,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="967875482187468966" at="27,90,43,6" concept="4" />
+      <node id="967875482187468959" at="26,0,48,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="967875482187468959" at="22,47,23,46" />
+      <scope id="967875482187468966" at="34,63,35,140" />
+      <scope id="967875482187468966" at="38,80,39,79" />
+      <scope id="967875482187468959" at="22,0,25,0" />
+      <scope id="967875482187468966" at="33,0,37,0" />
+      <scope id="967875482187468966" at="37,0,41,0">
+        <var name="_context" id="967875482187468966" />
+      </scope>
+      <scope id="967875482187468966" at="31,56,41,10" />
+      <scope id="967875482187468966" at="29,0,43,0" />
+      <scope id="967875482187468959" at="27,90,46,22">
+        <var name="d0" id="967875482187468966" />
+        <var name="references" id="967875482187468959" />
+      </scope>
+      <scope id="967875482187468959" at="26,0,48,0" />
+      <unit id="967875482187468959" at="49,0,52,0" name="org.fbme.ide.iec61499.lang.constraints.ComponentEventEndpoint_Constraints$CONCEPTS" />
+      <unit id="967875482187468959" at="53,0,56,0" name="org.fbme.ide.iec61499.lang.constraints.ComponentEventEndpoint_Constraints$LINKS" />
+      <unit id="967875482187468966" at="32,19,41,9" name="org.fbme.ide.iec61499.lang.constraints.ComponentEventEndpoint_Constraints$1$1" />
+      <unit id="967875482187468966" at="28,48,43,5" name="org.fbme.ide.iec61499.lang.constraints.ComponentEventEndpoint_Constraints$1" />
+      <unit id="967875482187468959" at="21,0,57,0" name="org.fbme.ide.iec61499.lang.constraints.ComponentEventEndpoint_Constraints" />
+    </file>
+  </root>
+</debug-info>
+

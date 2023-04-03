@@ -1,0 +1,1314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1082485599095:jetbrains.mps.baseLanguage.structure.BlockStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081855346303:jetbrains.mps.baseLanguage.structure.BreakStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068390468200:jetbrains.mps.baseLanguage.structure.FieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1144231330558:jetbrains.mps.baseLanguage.structure.ForStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1144226303539:jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/6329021646629104954:jetbrains.mps.baseLanguage.structure.SingleLineComment" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1164991038168:jetbrains.mps.baseLanguage.structure.ThrowStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/5351203823916750322:jetbrains.mps.baseLanguage.structure.TryUniversalStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1076505808687:jetbrains.mps.baseLanguage.structure.WhileStatement" />
+  <root>
+    <file name="IconContainer.java">
+      <unit at="7,0,10,0" name="org.fbme.ide.integration.fordiac.IconContainer" />
+    </file>
+    <file name="RunConfigurationsInitializer_AppPluginPart.java">
+      <unit at="18,0,70,0" name="org.fbme.ide.integration.fordiac.RunConfigurationsInitializer_AppPluginPart" />
+    </file>
+  </root>
+  <root nodeRef="r:ef3c0253-8ec4-4bdb-8e1b-9ba0526fc8d8(org.fbme.ide.integration.fordiac)/389923072171677739">
+    <file name="ForteLocalPC_Producer.java">
+      <node id="389923072171677739" at="27,102,28,53" concept="9" />
+      <node id="389923072171677739" at="28,53,29,77" concept="11" />
+      <node id="389923072171677739" at="29,77,30,117" concept="11" />
+      <node id="389923072171677739" at="30,117,31,130" concept="11" />
+      <node id="389923072171677739" at="31,130,32,54" concept="11" />
+      <node id="389923072171677739" at="34,56,35,33" concept="3" />
+      <node id="389923072171677739" at="35,33,36,14" concept="1" />
+      <node id="389923072171677739" at="39,39,40,78" concept="3" />
+      <node id="389923072171677739" at="41,5,42,119" concept="9" />
+      <node id="389923072171677748" at="42,119,43,118" concept="3" />
+      <node id="389923072171677739" at="43,118,44,20" concept="10" />
+      <node id="389923072171677748" at="48,99,49,34" concept="15" />
+      <node id="389923072171677748" at="53,51,54,118" concept="10" />
+      <node id="389923072171677748" at="58,84,59,73" concept="3" />
+      <node id="5944309193049428350" at="59,73,60,74" concept="9" />
+      <node id="5944309193049439353" at="62,46,63,81" concept="10" />
+      <node id="389923072171691277" at="65,34,66,86" concept="9" />
+      <node id="389923072171696761" at="66,86,67,88" concept="9" />
+      <node id="3547310088940815906" at="68,74,69,294" concept="9" />
+      <node id="389923072171697841" at="69,294,70,40" concept="3" />
+      <node id="389923072171800285" at="70,40,71,19" concept="10" />
+      <node id="389923072171801132" at="72,7,73,18" concept="10" />
+      <node id="389923072171677748" at="78,64,79,73" concept="10" />
+      <node id="389923072171677739" at="84,0,85,0" concept="13" trace="DeviceDeclaration$Hk" />
+      <node id="389923072171677739" at="38,5,41,5" concept="7" />
+      <node id="389923072171677748" at="48,0,51,0" concept="2" trace="ProducerPart_NodeDeviceDeclaration_1495h3_a#(Lcom/intellij/execution/configurations/ConfigurationFactory;)V" />
+      <node id="5944309193049387190" at="62,0,65,0" concept="8" trace="test#(Ljetbrains/mps/project/Project;)Z" />
+      <node id="389923072171677739" at="33,82,37,7" concept="7" />
+      <node id="389923072171677748" at="52,0,56,0" concept="8" trace="isApplicable#(Ljava/lang/Object;)Z" />
+      <node id="389923072171677748" at="77,0,81,0" concept="8" trace="clone#()Lorg/fbme/ide/integration/fordiac/ForteLocalPC_Producer/ProducerPart_NodeDeviceDeclaration_1495h3_a;" />
+      <node id="5944309193049368150" at="60,74,65,34" concept="9" />
+      <node id="389923072171793725" at="67,88,72,7" concept="7" />
+      <node id="389923072171677739" at="32,54,38,5" concept="6" />
+      <node id="389923072171677748" at="57,0,75,0" concept="8" trace="doCreateConfiguration#(Lorg/jetbrains/mps/openapi/model/SNode;)Lcom/intellij/execution/configurations/RunConfigurationBase;" />
+      <node id="389923072171677739" at="27,0,46,0" concept="14" trace="getProducers#(Lcom/intellij/execution/configurations/ConfigurationType;)Ljava/util/List;" />
+      <scope id="389923072171677739" at="39,39,40,78" />
+      <scope id="389923072171677748" at="48,99,49,34" />
+      <scope id="389923072171677748" at="53,51,54,118" />
+      <scope id="5944309193049387191" at="62,46,63,81" />
+      <scope id="389923072171677748" at="78,64,79,73" />
+      <scope id="389923072171677739" at="34,56,36,14" />
+      <scope id="389923072171677748" at="48,0,51,0">
+        <var name="configurationFactory" id="389923072171677748" />
+      </scope>
+      <scope id="5944309193049387190" at="62,0,65,0">
+        <var name="project" id="5944309193049387190" />
+      </scope>
+      <scope id="389923072171793727" at="68,74,71,19">
+        <var name="cfg" id="3547310088940815907" />
+      </scope>
+      <scope id="389923072171677739" at="33,82,37,7" />
+      <scope id="389923072171677748" at="52,0,56,0">
+        <var name="source" id="389923072171677748" />
+      </scope>
+      <scope id="389923072171677748" at="77,0,81,0" />
+      <scope id="389923072171677739" at="32,54,38,5">
+        <var name="f" id="389923072171677739" />
+      </scope>
+      <scope id="389923072171677748" at="58,84,73,18">
+        <var name="device" id="389923072171696762" />
+        <var name="module" id="5944309193049428351" />
+        <var name="project" id="5944309193049368151" />
+        <var name="repository" id="389923072171691278" />
+      </scope>
+      <scope id="389923072171677739" at="27,102,44,20">
+        <var name="configurationFactory" id="389923072171677739" />
+        <var name="creators" id="389923072171677739" />
+      </scope>
+      <scope id="389923072171677748" at="57,0,75,0">
+        <var name="source" id="389923072171677748" />
+      </scope>
+      <scope id="389923072171677739" at="27,0,46,0">
+        <var name="configurationType" id="389923072171677739" />
+      </scope>
+      <unit id="389923072171677739" at="83,0,86,0" name="org.fbme.ide.integration.fordiac.ForteLocalPC_Producer$CONCEPTS" />
+      <unit id="5944309193049387190" at="61,93,65,7" name="org.fbme.ide.integration.fordiac.ForteLocalPC_Producer$ProducerPart_NodeDeviceDeclaration_1495h3_a$1" />
+      <unit id="389923072171677748" at="47,0,82,0" name="org.fbme.ide.integration.fordiac.ForteLocalPC_Producer$ProducerPart_NodeDeviceDeclaration_1495h3_a" />
+      <unit id="389923072171677739" at="25,0,87,0" name="org.fbme.ide.integration.fordiac.ForteLocalPC_Producer" />
+    </file>
+    <file name="RunConfigurationsInitializer_AppPluginPart.java">
+      <node id="389923072171677739" at="39,44,40,108" concept="9" />
+      <node id="389923072171677739" at="40,108,41,160" concept="3" />
+      <node id="389923072171677739" at="42,101,43,61" concept="3" />
+      <node id="389923072171677739" at="44,9,45,14" concept="1" />
+      <node id="389923072171677739" at="41,160,44,9" concept="6" />
+      <node id="389923072171677739" at="38,79,46,7" concept="7" />
+      <node id="389923072171677739" at="37,178,47,5" concept="6" />
+      <scope id="389923072171677739" at="42,101,43,61" />
+      <scope id="389923072171677739" at="41,160,44,9">
+        <var name="producer" id="389923072171677739" />
+      </scope>
+      <scope id="389923072171677739" at="39,44,45,14">
+        <var name="configurationProducers" id="389923072171677739" />
+      </scope>
+      <scope id="389923072171677739" at="38,79,46,7" />
+      <scope id="389923072171677739" at="37,178,47,5">
+        <var name="ext" id="389923072171677739" />
+      </scope>
+    </file>
+  </root>
+  <root nodeRef="r:ef3c0253-8ec4-4bdb-8e1b-9ba0526fc8d8(org.fbme.ide.integration.fordiac)/4046047820617399059">
+    <file name="ForteDeviceConnection.java">
+      <node id="4046047820617399059" at="41,0,42,0" concept="13" trace="LOG" />
+      <node id="4046047820617407659" at="42,0,43,0" concept="4" trace="socket" />
+      <node id="4046047820617477174" at="43,0,44,0" concept="4" trace="inputStream" />
+      <node id="4046047820617476884" at="44,0,45,0" concept="4" trace="outputStream" />
+      <node id="4046047820617519269" at="45,0,46,0" concept="4" trace="id" />
+      <node id="6538520914186259536" at="47,77,48,58" concept="9" />
+      <node id="4046047820617437536" at="48,58,49,54" concept="9" />
+      <node id="4046047820617450460" at="50,38,51,57" concept="16" />
+      <node id="4046047820617407667" at="52,5,53,31" concept="3" />
+      <node id="4046047820617408650" at="53,31,54,80" concept="3" />
+      <node id="4046047820617478745" at="54,80,55,93" concept="3" />
+      <node id="4046047820617498611" at="55,93,56,97" concept="3" />
+      <node id="4046047820618038633" at="59,66,60,275" concept="3" />
+      <node id="4046047820622886574" at="64,64,65,135" concept="3" />
+      <node id="4046047820618111881" at="68,75,69,517" concept="3" />
+      <node id="4046047820618046515" at="72,54,73,393" concept="3" />
+      <node id="4046047820623467299" at="77,129,78,630" concept="3" />
+      <node id="4046047820619493384" at="79,12,80,525" concept="3" />
+      <node id="4046047820619323485" at="85,73,86,187" concept="3" />
+      <node id="4046047820619453658" at="90,76,91,187" concept="3" />
+      <node id="4456337600852419662" at="94,55,95,72" concept="9" />
+      <node id="6724774586587750862" at="97,57,98,28" concept="10" />
+      <node id="6585350836363434752" at="103,69,104,112" concept="9" />
+      <node id="6585350836363452301" at="104,112,105,140" concept="9" />
+      <node id="6585350836363197821" at="105,140,106,476" concept="3" />
+      <node id="7341516260114374538" at="110,65,111,36" concept="3" />
+      <node id="4046047820622939015" at="111,36,112,28" concept="3" />
+      <node id="2661760209288759036" at="116,88,117,95" concept="3" />
+      <node id="7341516260114374471" at="121,72,122,29" concept="3" />
+      <node id="7341516260114374480" at="123,110,124,19" concept="3" />
+      <node id="7341516260114374489" at="125,109,126,36" concept="3" />
+      <node id="7341516260114374498" at="129,113,130,32" concept="3" />
+      <node id="7341516260114374507" at="132,120,133,35" concept="3" />
+      <node id="7341516260114374516" at="135,119,136,35" concept="3" />
+      <node id="3857278197875502395" at="141,63,142,170" concept="3" />
+      <node id="2622017053162134256" at="146,65,147,172" concept="3" />
+      <node id="4046047820619629803" at="151,50,152,92" concept="10" />
+      <node id="6552380147537795183" at="156,28,157,56" concept="10" />
+      <node id="4046047820617587859" at="160,78,161,31" concept="3" />
+      <node id="4046047820617624176" at="161,31,162,47" concept="3" />
+      <node id="4046047820617695327" at="162,47,163,38" concept="3" />
+      <node id="4046047820617738445" at="163,38,164,31" concept="3" />
+      <node id="4046047820617739794" at="164,31,165,46" concept="3" />
+      <node id="4046047820617739801" at="165,46,166,37" concept="3" />
+      <node id="4046047820617744066" at="166,37,167,25" concept="3" />
+      <node id="4046047820617781042" at="167,25,168,0" concept="12" />
+      <node id="4046047820622768300" at="168,0,169,136" concept="3" />
+      <node id="4046047820622766525" at="169,136,170,0" concept="12" />
+      <node id="4046047820617807109" at="170,0,171,22" concept="10" />
+      <node id="4046047820617809420" at="174,48,175,36" concept="9" />
+      <node id="4046047820617854016" at="175,36,176,41" concept="9" />
+      <node id="4046047820617905629" at="176,41,177,34" concept="9" />
+      <node id="4046047820617922871" at="178,36,179,49" concept="3" />
+      <node id="4046047820623197866" at="180,5,181,38" concept="9" />
+      <node id="4046047820622789395" at="181,38,182,0" concept="12" />
+      <node id="4046047820622802069" at="182,0,183,106" concept="3" />
+      <node id="4046047820622789443" at="183,106,184,0" concept="12" />
+      <node id="4046047820617985487" at="184,0,185,18" concept="10" />
+      <node id="4656577189957705507" at="190,42,191,25" concept="3" />
+      <node id="4656577189957736104" at="191,25,192,24" concept="3" />
+      <node id="4656577189957766165" at="192,24,193,19" concept="3" />
+      <node id="4046047820617503328" at="198,0,199,0" concept="13" trace="CREATE_RESOURCE_INSTANCE" />
+      <node id="4046047820617503332" at="199,0,200,0" concept="13" trace="CREATE_FB_INSTANCE" />
+      <node id="4046047820617503336" at="200,0,201,0" concept="13" trace="CREATE_CONNECTION" />
+      <node id="4046047820617503340" at="201,0,202,0" concept="13" trace="WRITE_PARAMETER" />
+      <node id="4046047820617503344" at="202,0,203,0" concept="13" trace="START" />
+      <node id="4046047820617503348" at="203,0,204,0" concept="13" trace="START_FB" />
+      <node id="4046047820617503352" at="204,0,205,0" concept="13" trace="KILL_FB" />
+      <node id="4046047820617503356" at="205,0,206,0" concept="13" trace="KILL_DEVICE" />
+      <node id="4046047820617503360" at="206,0,207,0" concept="13" trace="STOP_FB" />
+      <node id="4046047820617503364" at="207,0,208,0" concept="13" trace="DELETE_FB" />
+      <node id="4046047820617503368" at="208,0,209,0" concept="13" trace="DELETE_CONNECTION" />
+      <node id="4046047820617503372" at="209,0,210,0" concept="13" trace="QUERY_FB_INSTANCES" />
+      <node id="4046047820617503376" at="210,0,211,0" concept="13" trace="READ_WATCHES" />
+      <node id="4046047820617503380" at="211,0,212,0" concept="13" trace="ADD_WATCH" />
+      <node id="4046047820617503384" at="212,0,213,0" concept="13" trace="DELETE_WATCH" />
+      <node id="4046047820617503388" at="213,0,214,0" concept="13" trace="FORCE_VALUE" />
+      <node id="2661760209288816228" at="215,69,216,47" concept="10" />
+      <node id="4046047820617399059" at="220,0,221,0" concept="13" trace="name$MnvL" />
+      <node id="4046047820617399059" at="224,0,225,0" concept="13" trace="type$kKRO" />
+      <node id="4046047820617399059" at="225,0,226,0" concept="13" trace="value$wpKH" />
+      <node id="4046047820617399059" at="226,0,227,0" concept="13" trace="decl$wjTk" />
+      <node id="4046047820617399059" at="227,0,228,0" concept="13" trace="type$8JPO" />
+      <node id="4046047820617399059" at="228,0,229,0" concept="13" trace="source$ta_q" />
+      <node id="4046047820617399059" at="229,0,230,0" concept="13" trace="value$Tv1m" />
+      <node id="4046047820617399059" at="230,0,231,0" concept="13" trace="destination$tbit" />
+      <node id="4046047820617399059" at="231,0,232,0" concept="13" trace="parameters$wA9n" />
+      <node id="4046047820617399059" at="232,0,233,0" concept="13" trace="functionBlocks$Q7gp" />
+      <node id="4046047820617399059" at="233,0,234,0" concept="13" trace="parameters$C0k2" />
+      <node id="4046047820617399059" at="234,0,235,0" concept="13" trace="eventConnections$Qe3Q" />
+      <node id="4046047820617399059" at="235,0,236,0" concept="13" trace="dataConnections$QcSL" />
+      <node id="4046047820617399059" at="239,0,240,0" concept="13" trace="ResourceDeclaration$kp" />
+      <node id="4046047820617399059" at="240,0,241,0" concept="13" trace="ConstantDataSource$JK" />
+      <node id="4046047820617399059" at="241,0,242,0" concept="13" trace="FunctionBlockDeclaration$il" />
+      <node id="4046047820623462428" at="79,10,81,5" concept="0" />
+      <node id="4046047820617438757" at="49,54,52,5" concept="7" />
+      <node id="4046047820617514993" at="59,0,62,0" concept="8" trace="createResource#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="4046047820618111879" at="68,0,71,0" concept="8" trace="writeParameter#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="4046047820618046513" at="72,0,75,0" concept="8" trace="createFB#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="6724774586587750860" at="97,0,100,0" concept="8" trace="select#(Lorg/fbme/lib/iec61499/fbnetwork/FunctionBlockDeclaration;)Ljava/lang/String;" />
+      <node id="7341516260114374483" at="124,19,127,7" concept="6" />
+      <node id="7341516260114374492" at="128,5,131,5" concept="6" />
+      <node id="7341516260114374501" at="131,5,134,5" concept="6" />
+      <node id="7341516260114374510" at="134,5,137,5" concept="6" />
+      <node id="4046047820617908806" at="177,34,180,5" concept="5" />
+      <node id="2661760209288816228" at="215,0,218,0" concept="14" trace="as_nozbl3_a0a0a0a82#(Ljava/lang/Object;Ljava/lang/Class;)null" />
+      <node id="4046047820622886572" at="63,0,67,0" concept="8" trace="startResource#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="4046047820619323483" at="84,0,88,0" concept="8" trace="addWatch#(Lorg/fbme/ide/platform/debugger/Watchable;)V" />
+      <node id="4046047820619453656" at="89,0,93,0" concept="8" trace="removeWatch#(Lorg/fbme/ide/platform/debugger/Watchable;)V" />
+      <node id="8355268134339022791" at="115,0,119,0" concept="8" trace="deployResource#(Lorg/fbme/lib/iec61499/declarations/ResourceDeclaration;)V" />
+      <node id="3857278197875250427" at="140,0,144,0" concept="8" trace="killResource#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="2622017053162060678" at="145,0,149,0" concept="8" trace="deleteResource#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="4046047820619623255" at="150,0,154,0" concept="8" trace="readWatches#()Ljava/lang/String;" />
+      <node id="6552380147537754521" at="155,0,159,0" concept="8" trace="isAlive#()Z" />
+      <node id="4046047820623444482" at="76,70,81,5" concept="7" />
+      <node id="6724774586587750845" at="95,72,100,41" concept="10" />
+      <node id="6585350836362914754" at="103,0,108,0" concept="8" trace="writeFBParameter#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="4046047820622698675" at="109,0,114,0" concept="8" trace="deployResource#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="7341516260114374474" at="122,29,128,5" concept="6" />
+      <node id="4656577189957698038" at="189,0,195,0" concept="8" trace="close#()V" />
+      <node id="4046047820619493382" at="76,0,83,0" concept="8" trace="createConnection#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="6724774586587751385" at="94,0,102,0" concept="8" trace="serializeSource#(Lorg/fbme/ide/platform/debugger/Watchable;)Ljava/lang/String;" />
+      <node id="4046047820617400097" at="47,0,58,0" concept="2" trace="ForteDeviceConnection#(Lorg/fbme/lib/iec61499/declarations/DeviceDeclaration;)V" />
+      <node id="4046047820617579817" at="160,0,173,0" concept="8" trace="request#(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;" />
+      <node id="4046047820617801107" at="174,0,187,0" concept="8" trace="response#()Ljava/lang/String;" />
+      <node id="7341516260114374528" at="120,0,139,0" concept="8" trace="createResourceNetwork#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="4046047820617438759" at="50,38,51,57" />
+      <scope id="4046047820617514996" at="59,66,60,275" />
+      <scope id="4046047820622886573" at="64,64,65,135" />
+      <scope id="4046047820618111880" at="68,75,69,517" />
+      <scope id="4046047820618046514" at="72,54,73,393" />
+      <scope id="4046047820623444484" at="77,129,78,630" />
+      <scope id="4046047820623462429" at="79,12,80,525" />
+      <scope id="4046047820619323484" at="85,73,86,187" />
+      <scope id="4046047820619453657" at="90,76,91,187" />
+      <scope id="6724774586587750861" at="97,57,98,28" />
+      <scope id="8355268134339022798" at="116,88,117,95" />
+      <scope id="7341516260114374488" at="125,109,126,36" />
+      <scope id="7341516260114374497" at="129,113,130,32" />
+      <scope id="7341516260114374506" at="132,120,133,35" />
+      <scope id="7341516260114374515" at="135,119,136,35" />
+      <scope id="3857278197875250435" at="141,63,142,170" />
+      <scope id="2622017053162060686" at="146,65,147,172" />
+      <scope id="4046047820619623258" at="151,50,152,92" />
+      <scope id="6552380147537754525" at="156,28,157,56" />
+      <scope id="4046047820617908808" at="178,36,179,49" />
+      <scope id="2661760209288816228" at="215,69,216,47" />
+      <scope id="4046047820622698678" at="110,65,112,28" />
+      <scope id="4046047820617514993" at="59,0,62,0">
+        <var name="resource" id="4046047820617516399" />
+      </scope>
+      <scope id="4046047820618111879" at="68,0,71,0">
+        <var name="resourceParameter" id="4046047820618111906" />
+      </scope>
+      <scope id="4046047820618046513" at="72,0,75,0">
+        <var name="fb" id="4046047820618046540" />
+      </scope>
+      <scope id="6724774586587750860" at="97,0,100,0">
+        <var name="it" id="6724774586587750860" />
+      </scope>
+      <scope id="6585350836362914757" at="103,69,106,476">
+        <var name="fb" id="6585350836363434755" />
+        <var name="resource" id="6585350836363452302" />
+      </scope>
+      <scope id="7341516260114374483" at="124,19,127,7">
+        <var name="parameter" id="7341516260114374484" />
+      </scope>
+      <scope id="7341516260114374492" at="128,5,131,5">
+        <var name="parameter" id="7341516260114374493" />
+      </scope>
+      <scope id="7341516260114374501" at="131,5,134,5">
+        <var name="connection" id="7341516260114374502" />
+      </scope>
+      <scope id="7341516260114374510" at="134,5,137,5">
+        <var name="connection" id="7341516260114374511" />
+      </scope>
+      <scope id="4046047820617908806" at="177,34,180,5">
+        <var name="i" id="4046047820617908809" />
+      </scope>
+      <scope id="4656577189957698044" at="190,42,193,19" />
+      <scope id="2661760209288816228" at="215,0,218,0">
+        <var name="o" id="2661760209288816228" />
+        <var name="type" id="2661760209288816228" />
+      </scope>
+      <scope id="4046047820622886572" at="63,0,67,0">
+        <var name="resource" id="4046047820622886599" />
+      </scope>
+      <scope id="4046047820619323483" at="84,0,88,0">
+        <var name="watchable" id="6724774586587573981" />
+      </scope>
+      <scope id="4046047820619453656" at="89,0,93,0">
+        <var name="watchable" id="6724774586587489821" />
+      </scope>
+      <scope id="8355268134339022791" at="115,0,119,0">
+        <var name="resource" id="8355268134339022795" />
+      </scope>
+      <scope id="7341516260114374479" at="123,110,127,7" />
+      <scope id="3857278197875250427" at="140,0,144,0">
+        <var name="resource" id="926833698035608463" />
+      </scope>
+      <scope id="2622017053162060678" at="145,0,149,0">
+        <var name="resource" id="926833698035802804" />
+      </scope>
+      <scope id="4046047820619623255" at="150,0,154,0" />
+      <scope id="6552380147537754521" at="155,0,159,0" />
+      <scope id="4046047820619493383" at="76,70,81,5" />
+      <scope id="6585350836362914754" at="103,0,108,0">
+        <var name="parameter" id="6585350836363424984" />
+      </scope>
+      <scope id="4046047820622698675" at="109,0,114,0">
+        <var name="resource" id="4046047820622704773" />
+      </scope>
+      <scope id="6724774586587750337" at="94,55,100,41">
+        <var name="path" id="4456337600852419663" />
+      </scope>
+      <scope id="7341516260114374474" at="122,29,128,5">
+        <var name="fb" id="7341516260114374475" />
+      </scope>
+      <scope id="4656577189957698038" at="189,0,195,0" />
+      <scope id="4046047820619493382" at="76,0,83,0">
+        <var name="connection" id="4046047820619493415" />
+      </scope>
+      <scope id="6724774586587751385" at="94,0,102,0">
+        <var name="watchable" id="6724774586587750873" />
+      </scope>
+      <scope id="4046047820617400100" at="47,77,56,97">
+        <var name="address" id="6538520914186259539" />
+        <var name="port" id="4046047820617437537" />
+      </scope>
+      <scope id="4046047820617400097" at="47,0,58,0">
+        <var name="device" id="4046047820617400528" />
+      </scope>
+      <scope id="4046047820617579820" at="160,78,171,22" />
+      <scope id="4046047820617801110" at="174,48,185,18">
+        <var name="b" id="4046047820617809423" />
+        <var name="chars" id="4046047820617905630" />
+        <var name="output" id="4046047820623197867" />
+        <var name="size" id="4046047820617854019" />
+      </scope>
+      <scope id="4046047820617579817" at="160,0,173,0">
+        <var name="request" id="4046047820617582145" />
+        <var name="resource" id="4046047820617584083" />
+      </scope>
+      <scope id="4046047820617801107" at="174,0,187,0" />
+      <scope id="7341516260114374470" at="121,72,137,5" />
+      <scope id="7341516260114374528" at="120,0,139,0">
+        <var name="resource" id="7341516260114374519" />
+      </scope>
+      <unit id="4046047820617399059" at="219,0,222,0" name="org.fbme.ide.integration.fordiac.ForteDeviceConnection$PROPS" />
+      <unit id="6724774586587750860" at="96,69,100,5" name="org.fbme.ide.integration.fordiac.ForteDeviceConnection$1" />
+      <unit id="4046047820617399059" at="238,0,243,0" name="org.fbme.ide.integration.fordiac.ForteDeviceConnection$CONCEPTS" />
+      <unit id="4046047820617399059" at="223,0,237,0" name="org.fbme.ide.integration.fordiac.ForteDeviceConnection$LINKS" />
+      <unit id="4046047820617506782" at="196,0,215,0" name="org.fbme.ide.integration.fordiac.ForteDeviceConnection$Requests" />
+      <unit id="4046047820617399059" at="40,0,244,0" name="org.fbme.ide.integration.fordiac.ForteDeviceConnection" />
+    </file>
+  </root>
+  <root nodeRef="r:ef3c0253-8ec4-4bdb-8e1b-9ba0526fc8d8(org.fbme.ide.integration.fordiac)/4613829506519224706">
+    <file name="Fordiac_ApplicationPlugin.java">
+      <node id="4613829506519224706" at="33,66,34,61" concept="3" />
+    </file>
+    <file name="IEC_61499_FortePC_Devices_AppPluginPart.java">
+      <node id="4656577189957841232" at="17,56,18,49" concept="10" />
+      <node id="4656577189957852531" at="19,7,20,18" concept="10" />
+      <node id="2212688570782645199" at="26,22,27,119" concept="3" />
+      <node id="2212688570782666094" at="30,25,31,121" concept="3" />
+      <node id="4613829506519224706" at="23,0,25,0" concept="2" trace="IEC_61499_FortePC_Devices_AppPluginPart#()V" />
+      <node id="4656577189957821731" at="16,85,19,7" concept="7" />
+      <node id="4613829506519224706" at="25,0,29,0" concept="8" trace="init#()V" />
+      <node id="4613829506519224706" at="29,0,33,0" concept="8" trace="dispose#()V" />
+      <node id="4656577189957820026" at="15,0,22,0" concept="8" trace="tryConnect#(Lorg/fbme/lib/iec61499/declarations/DeviceDeclaration;)Lorg/fbme/ide/platform/debugger/DeviceConnection;" />
+      <node id="4613829506519224707" at="14,0,23,0" concept="4" trace="myConnector" />
+      <scope id="4613829506519224706" at="23,52,23,52" />
+      <scope id="4656577189957821733" at="17,56,18,49" />
+      <scope id="2212688570782580740" at="26,22,27,119" />
+      <scope id="2212688570782665620" at="30,25,31,121" />
+      <scope id="4613829506519224706" at="23,0,25,0" />
+      <scope id="4656577189957820034" at="16,85,20,18" />
+      <scope id="4613829506519224706" at="25,0,29,0" />
+      <scope id="4613829506519224706" at="29,0,33,0" />
+      <scope id="4656577189957820026" at="15,0,22,0">
+        <var name="device" id="4656577189957820027" />
+      </scope>
+      <unit id="4656577189957820023" at="14,44,22,3" name="org.fbme.ide.integration.fordiac.IEC_61499_FortePC_Devices_AppPluginPart$1" />
+      <unit id="4613829506519224706" at="13,0,34,0" name="org.fbme.ide.integration.fordiac.IEC_61499_FortePC_Devices_AppPluginPart" />
+    </file>
+  </root>
+  <root nodeRef="r:ef3c0253-8ec4-4bdb-8e1b-9ba0526fc8d8(org.fbme.ide.integration.fordiac)/4656577189957807263">
+    <file name="Fordiac_ApplicationPlugin.java">
+      <node id="4656577189957807263" at="13,0,14,0" concept="4" trace="myId" />
+      <node id="4656577189957807263" at="19,27,20,16" concept="10" />
+      <node id="4656577189957807263" at="23,30,24,29" concept="11" />
+      <node id="4656577189957807263" at="25,52,26,13" concept="11" />
+      <node id="4656577189957807263" at="34,61,35,64" concept="3" />
+      <node id="4656577189957807263" at="15,0,17,0" concept="2" trace="Fordiac_ApplicationPlugin#()V" />
+      <node id="4656577189957807263" at="29,0,32,0" concept="8" trace="adjustRegularGroups#()V" />
+      <node id="4656577189957807263" at="18,0,22,0" concept="8" trace="getId#()Lcom/intellij/openapi/extensions/PluginId;" />
+      <node id="4656577189957807263" at="32,0,37,0" concept="8" trace="fillCustomParts#(Ljava/util/List;)V" />
+      <node id="4656577189957807263" at="23,0,29,0" concept="8" trace="createGroups#()V" />
+      <scope id="4656577189957807263" at="15,38,15,38" />
+      <scope id="4656577189957807263" at="19,27,20,16" />
+      <scope id="4656577189957807263" at="29,37,30,126" />
+      <scope id="4656577189957807263" at="15,0,17,0" />
+      <scope id="4656577189957807263" at="33,66,35,64" />
+      <scope id="4656577189957807263" at="29,0,32,0" />
+      <scope id="4656577189957807263" at="18,0,22,0" />
+      <scope id="4656577189957807263" at="23,30,27,52" />
+      <scope id="4656577189957807263" at="32,0,37,0">
+        <var name="parts" id="4656577189957807263" />
+      </scope>
+      <scope id="4656577189957807263" at="23,0,29,0" />
+      <unit id="4656577189957807263" at="12,0,38,0" name="org.fbme.ide.integration.fordiac.Fordiac_ApplicationPlugin" />
+    </file>
+    <file name="Fordiac_ProjectPlugin.java">
+      <node id="4656577189957807263" at="10,0,12,0" concept="2" trace="Fordiac_ProjectPlugin#()V" />
+      <node id="4656577189957807263" at="12,0,15,0" concept="8" trace="fillCustomParts#(Ljava/util/List;)V" />
+      <scope id="4656577189957807263" at="10,34,10,34" />
+      <scope id="4656577189957807263" at="12,62,13,64" />
+      <scope id="4656577189957807263" at="10,0,12,0" />
+      <scope id="4656577189957807263" at="12,0,15,0">
+        <var name="parts" id="4656577189957807263" />
+      </scope>
+      <unit id="4656577189957807263" at="9,0,16,0" name="org.fbme.ide.integration.fordiac.Fordiac_ProjectPlugin" />
+    </file>
+    <file name="startup.properties">
+      <unit id="4656577189957807263" at="1,0,6,0" name="org.fbme.ide.integration.fordiac.startup" />
+    </file>
+  </root>
+  <root nodeRef="r:ef3c0253-8ec4-4bdb-8e1b-9ba0526fc8d8(org.fbme.ide.integration.fordiac)/5130266120273066585">
+    <file name="ForteLocalPC_Configuration.java">
+      <node id="5130266120273066585" at="35,0,36,0" concept="13" trace="LOG" />
+      <node id="5130266120273232497" at="38,0,39,0" concept="4" trace="myDevice" />
+      <node id="5130266120273304146" at="41,117,42,49" concept="3" />
+      <node id="5130266120273066585" at="45,76,46,57" concept="3" />
+      <node id="5130266120273232497" at="47,5,48,53" concept="9" />
+      <node id="5130266120273232497" at="48,53,49,43" concept="3" />
+      <node id="5130266120273232497" at="49,43,50,39" concept="3" />
+      <node id="5130266120273066585" at="56,26,57,81" concept="16" />
+      <node id="5130266120273066585" at="58,5,59,83" concept="3" />
+      <node id="5130266120273232497" at="60,5,61,58" concept="9" />
+      <node id="5130266120273232497" at="62,33,63,44" concept="3" />
+      <node id="5130266120273232497" at="65,35,66,97" concept="3" />
+      <node id="5130266120273066585" at="74,45,75,61" concept="9" />
+      <node id="5130266120273066585" at="76,9,77,101" concept="11" />
+      <node id="5130266120273066585" at="77,101,78,83" concept="11" />
+      <node id="5130266120273066585" at="78,83,79,48" concept="3" />
+      <node id="5130266120273066585" at="81,42,82,26" concept="3" />
+      <node id="5130266120273232497" at="84,5,85,61" concept="3" />
+      <node id="5130266120273066585" at="85,61,86,17" concept="10" />
+      <node id="5130266120273066585" at="90,44,91,69" concept="9" />
+      <node id="5130266120273066585" at="91,69,92,99" concept="11" />
+      <node id="5130266120273066585" at="92,99,93,81" concept="11" />
+      <node id="5130266120273066585" at="93,81,94,53" concept="3" />
+      <node id="5130266120273232497" at="94,53,95,80" concept="3" />
+      <node id="5130266120273066585" at="95,80,96,25" concept="10" />
+      <node id="5130266120273066585" at="99,43,100,20" concept="10" />
+      <node id="5130266120273066585" at="102,34,103,33" concept="10" />
+      <node id="5130266120273066585" at="106,53,107,21" concept="3" />
+      <node id="5130266120273066585" at="109,44,110,34" concept="3" />
+      <node id="5130266120274538338" at="114,0,115,0" concept="4" trace="myForteRTPath" />
+      <node id="5130266120273066585" at="118,61,119,46" concept="9" />
+      <node id="5130266120274538338" at="119,46,120,42" concept="3" />
+      <node id="5130266120273066585" at="120,42,121,19" concept="10" />
+      <node id="5130266120273066585" at="126,11,127,33" concept="10" />
+      <node id="5130266120273066585" at="129,44,130,27" concept="3" />
+      <node id="5130266120273066585" at="131,9,132,20" concept="10" />
+      <node id="5130266120273066585" at="136,97,137,34" concept="15" />
+      <node id="5130266120273066585" at="140,132,141,87" concept="10" />
+      <node id="5130266120273066585" at="144,103,145,16" concept="10" />
+      <node id="5130266120273066585" at="147,98,148,16" concept="10" />
+      <node id="5130266120273066585" at="150,80,151,70" concept="10" />
+      <node id="5130266120273066585" at="153,59,154,54" concept="10" />
+      <node id="5130266120273066585" at="156,75,157,71" concept="10" />
+      <node id="5130266120273066585" at="160,73,161,97" concept="9" />
+      <node id="5130266120273066585" at="163,57,164,26" concept="10" />
+      <node id="5130266120273066585" at="169,48,170,77" concept="10" />
+      <node id="5130266120273066585" at="36,0,38,0" concept="4" trace="myState" />
+      <node id="5130266120273066585" at="172,0,174,0" concept="14" trace="configureBeforeTaskDefaults#(Lcom/intellij/openapi/util/Key;Lcom/intellij/execution/BeforeRunTask;)V" />
+      <node id="5130266120273066585" at="55,73,58,5" concept="7" />
+      <node id="5130266120273232497" at="64,14,67,9" concept="7" />
+      <node id="5130266120273066585" at="80,45,83,7" concept="7" />
+      <node id="5130266120273066585" at="99,0,102,0" concept="8" trace="getDevice#()Ljetbrains/mps/execution/api/settings/IPersistentConfiguration;" />
+      <node id="5130266120273066585" at="102,0,105,0" concept="8" trace="getForteRTPath#()Ljava/lang/String;" />
+      <node id="5130266120273066585" at="106,0,109,0" concept="8" trace="setDevice#(Ljetbrains/mps/execution/api/settings/IPersistentConfiguration;)V" />
+      <node id="5130266120273066585" at="109,0,112,0" concept="8" trace="setForteRTPath#(Ljava/lang/String;)V" />
+      <node id="5130266120273066585" at="128,46,131,9" concept="7" />
+      <node id="5130266120273066585" at="136,0,139,0" concept="2" trace="ForteLocalPC_Configuration#(Lcom/intellij/openapi/project/Project;Lcom/intellij/execution/configurations/ConfigurationFactory;Ljava/lang/String;)V" />
+      <node id="5130266120273066585" at="147,0,150,0" concept="8" trace="createRunnerSettings#(Lcom/intellij/execution/configurations/ConfigurationInfoProvider;)Lcom/intellij/execution/configurations/ConfigurationPerRunnerSettings;" />
+      <node id="5130266120273066585" at="150,0,153,0" concept="8" trace="getConfigurationEditor#()Ljetbrains/mps/execution/api/settings/SettingsEditorEx;" />
+      <node id="5130266120273066585" at="153,0,156,0" concept="8" trace="createCloneTemplate#()Lorg/fbme/ide/integration/fordiac/ForteLocalPC_Configuration;" />
+      <node id="5130266120273066585" at="156,0,159,0" concept="8" trace="getEditor#()Ljetbrains/mps/execution/api/settings/SettingsEditorEx;" />
+      <node id="5130266120273066585" at="163,0,166,0" concept="8" trace="getProject#()Ljetbrains/mps/project/Project;" />
+      <node id="5130266120273066585" at="40,0,44,0" concept="8" trace="checkConfiguration#(Ljetbrains/mps/execution/api/settings/PersistentConfigurationContext;)V" />
+      <node id="5130266120273232497" at="64,12,68,7" concept="0" />
+      <node id="5130266120273066585" at="139,0,143,0" concept="8" trace="getState#(Lcom/intellij/execution/Executor;Lcom/intellij/execution/runners/ExecutionEnvironment;)Lcom/intellij/execution/configurations/RunProfileState;" />
+      <node id="5130266120273066585" at="143,0,147,0" concept="8" trace="getRunnerSettingsEditor#(Lcom/intellij/execution/runners/ProgramRunner;)Lcom/intellij/openapi/options/SettingsEditor;" />
+      <node id="5130266120273066585" at="168,0,172,0" concept="8" trace="canExecute#(Ljava/lang/String;)Z" />
+      <node id="5130266120273232497" at="46,57,51,5" concept="0" />
+      <node id="5130266120273066585" at="161,97,166,7" concept="3" />
+      <node id="5130266120273232497" at="61,58,68,7" concept="7" />
+      <node id="5130266120273066585" at="116,0,123,0" concept="8" trace="clone#()Ljava/lang/Object;" />
+      <node id="5130266120273066585" at="125,27,133,7" concept="17" />
+      <node id="5130266120273066585" at="44,0,53,0" concept="8" trace="writeExternal#(Lorg/jdom/Element;)V" />
+      <node id="5130266120273066585" at="75,61,84,5" concept="17" />
+      <node id="5130266120273066585" at="89,0,98,0" concept="8" trace="copy#()Lorg/fbme/ide/integration/fordiac/ForteLocalPC_Configuration;" />
+      <node id="5130266120273066585" at="159,0,168,0" concept="8" trace="checkConfiguration#()V" />
+      <node id="5130266120273232497" at="59,83,69,5" concept="0" />
+      <node id="5130266120273066585" at="124,0,135,0" concept="8" trace="copy#()Lorg/fbme/ide/integration/fordiac/ForteLocalPC_Configuration/MyState;" />
+      <node id="5130266120273066585" at="72,0,88,0" concept="8" trace="clone#()Lorg/fbme/ide/integration/fordiac/ForteLocalPC_Configuration;" />
+      <node id="5130266120273066585" at="54,0,71,0" concept="8" trace="readExternal#(Lorg/jdom/Element;)V" />
+      <scope id="5130266120273066585" at="172,111,172,111" />
+      <scope id="5130266120273066585" at="41,117,42,49" />
+      <scope id="5130266120273066585" at="56,26,57,81" />
+      <scope id="5130266120273232497" at="62,33,63,44" />
+      <scope id="5130266120273232497" at="65,35,66,97" />
+      <scope id="5130266120273066585" at="81,42,82,26" />
+      <scope id="5130266120273066585" at="99,43,100,20" />
+      <scope id="5130266120273066585" at="102,34,103,33" />
+      <scope id="5130266120273066585" at="106,53,107,21" />
+      <scope id="5130266120273066585" at="109,44,110,34" />
+      <scope id="5130266120273066585" at="126,11,127,33" />
+      <scope id="5130266120273066585" at="129,44,130,27" />
+      <scope id="5130266120273066585" at="136,97,137,34" />
+      <scope id="5130266120273066585" at="140,132,141,87" />
+      <scope id="5130266120273066585" at="144,103,145,16" />
+      <scope id="5130266120273066585" at="147,98,148,16" />
+      <scope id="5130266120273066585" at="150,80,151,70" />
+      <scope id="5130266120273066585" at="153,59,154,54" />
+      <scope id="5130266120273066585" at="156,75,157,71" />
+      <scope id="5130266120273066585" at="163,57,164,26" />
+      <scope id="5130266120273066585" at="169,48,170,77" />
+      <scope id="5130266120273066585" at="172,0,174,0">
+        <var name="providerID" id="5130266120273066585" />
+        <var name="task" id="5130266120273066585" />
+      </scope>
+      <scope id="5130266120273232497" at="47,5,50,39">
+        <var name="fieldElement" id="5130266120273232497" />
+      </scope>
+      <scope id="5130266120273232497" at="64,14,67,9" />
+      <scope id="5130266120273066585" at="76,9,79,48" />
+      <scope id="5130266120273066585" at="80,45,83,7" />
+      <scope id="5130266120273066585" at="99,0,102,0" />
+      <scope id="5130266120273066585" at="102,0,105,0" />
+      <scope id="5130266120273066585" at="106,0,109,0">
+        <var name="value" id="5130266120273066585" />
+      </scope>
+      <scope id="5130266120273066585" at="109,0,112,0">
+        <var name="value" id="5130266120273066585" />
+      </scope>
+      <scope id="5130266120273066585" at="118,61,121,19">
+        <var name="state" id="5130266120273066585" />
+      </scope>
+      <scope id="5130266120273066585" at="136,0,139,0">
+        <var name="factory" id="5130266120273066585" />
+        <var name="name" id="5130266120273066585" />
+        <var name="project" id="5130266120273066585" />
+      </scope>
+      <scope id="5130266120273066585" at="147,0,150,0">
+        <var name="provider" id="5130266120273066585" />
+      </scope>
+      <scope id="5130266120273066585" at="150,0,153,0" />
+      <scope id="5130266120273066585" at="153,0,156,0" />
+      <scope id="5130266120273066585" at="156,0,159,0" />
+      <scope id="5130266120273066585" at="163,0,166,0" />
+      <scope id="5130266120273066585" at="40,0,44,0">
+        <var name="context" id="5130266120273066585" />
+      </scope>
+      <scope id="5130266120273066585" at="80,5,84,5">
+        <var name="ex" id="5130266120273066585" />
+      </scope>
+      <scope id="5130266120273066585" at="128,46,132,20" />
+      <scope id="5130266120273066585" at="139,0,143,0">
+        <var name="environment" id="5130266120273066585" />
+        <var name="executor" id="5130266120273066585" />
+      </scope>
+      <scope id="5130266120273066585" at="143,0,147,0">
+        <var name="runner" id="5130266120273066585" />
+      </scope>
+      <scope id="5130266120273066585" at="168,0,172,0">
+        <var name="executorId" id="5130266120273066585" />
+      </scope>
+      <scope id="5130266120273066585" at="128,7,133,7">
+        <var name="e" id="5130266120273066585" />
+      </scope>
+      <scope id="5130266120273066585" at="45,76,51,5" />
+      <scope id="5130266120273066585" at="90,44,96,25">
+        <var name="cloneTemplate" id="5130266120273066585" />
+      </scope>
+      <scope id="5130266120273066585" at="160,73,166,7">
+        <var name="mpsProject" id="5130266120273066585" />
+      </scope>
+      <scope id="5130266120273066585" at="116,0,123,0" />
+      <scope id="5130266120273232497" at="60,5,68,7">
+        <var name="fieldElement" id="5130266120273232497" />
+      </scope>
+      <scope id="5130266120273066585" at="125,27,133,7" />
+      <scope id="5130266120273066585" at="44,0,53,0">
+        <var name="element" id="5130266120273066585" />
+      </scope>
+      <scope id="5130266120273066585" at="89,0,98,0" />
+      <scope id="5130266120273066585" at="159,0,168,0" />
+      <scope id="5130266120273066585" at="124,0,135,0" />
+      <scope id="5130266120273066585" at="74,45,86,17">
+        <var name="clone" id="5130266120273066585" />
+      </scope>
+      <scope id="5130266120273066585" at="55,73,69,5" />
+      <scope id="5130266120273066585" at="72,0,88,0" />
+      <scope id="5130266120273066585" at="54,0,71,0">
+        <var name="element" id="5130266120273066585" />
+      </scope>
+      <unit id="5130266120273066585" at="162,27,166,5" name="org.fbme.ide.integration.fordiac.ForteLocalPC_Configuration$1" />
+      <unit id="5130266120273066585" at="113,0,136,0" name="org.fbme.ide.integration.fordiac.ForteLocalPC_Configuration$MyState" />
+      <unit id="5130266120273066585" at="34,0,175,0" name="org.fbme.ide.integration.fordiac.ForteLocalPC_Configuration" />
+    </file>
+    <file name="ForteLocalPC_Configuration_Editor.java">
+      <node id="7286600719708360691" at="17,0,18,0" concept="4" trace="myRTPathChooser" />
+      <node id="5130266120273232497" at="18,0,19,0" concept="4" trace="myDevice" />
+      <node id="5130266120273232497" at="19,31,20,31" concept="3" />
+      <node id="5130266120274587775" at="24,33,25,53" concept="9" />
+      <node id="7286600719709616007" at="25,53,26,0" concept="12" />
+      <node id="5130266120273327740" at="26,0,27,51" concept="9" />
+      <node id="5130266120274853014" at="27,51,28,60" concept="3" />
+      <node id="7286600719709619510" at="28,60,29,0" concept="12" />
+      <node id="6062668769033909460" at="29,0,30,63" concept="9" />
+      <node id="7286600719709593108" at="30,63,31,65" concept="3" />
+      <node id="7286600719709623014" at="31,65,32,0" concept="12" />
+      <node id="5130266120274902510" at="32,0,33,51" concept="9" />
+      <node id="7286600719709626519" at="33,51,34,60" concept="3" />
+      <node id="7286600719709634167" at="34,60,35,0" concept="12" />
+      <node id="7286600719709665109" at="35,0,36,54" concept="3" />
+      <node id="5130266120275497062" at="36,54,37,69" concept="3" />
+      <node id="7286600719709699746" at="37,69,38,0" concept="12" />
+      <node id="5130266120273460257" at="38,0,39,17" concept="10" />
+      <node id="5130266120273591148" at="42,107,43,54" concept="3" />
+      <node id="7286600719708400529" at="43,54,44,60" concept="3" />
+      <node id="5130266120273502837" at="47,79,48,56" concept="3" />
+      <node id="7286600719708389110" at="48,56,49,60" concept="3" />
+      <node id="5130266120273232497" at="51,80,52,22" concept="3" />
+      <node id="5130266120273066585" at="19,0,22,0" concept="8" trace="disposeEditor#()V" />
+      <node id="5130266120273066585" at="51,0,54,0" concept="2" trace="ForteLocalPC_Configuration_Editor#(Lcom/intellij/openapi/options/SettingsEditor;)V" />
+      <node id="5130266120273066585" at="42,0,46,0" concept="8" trace="applyEditorTo#(Lorg/fbme/ide/integration/fordiac/ForteLocalPC_Configuration;)V" />
+      <node id="5130266120273066585" at="47,0,51,0" concept="8" trace="resetEditorFrom#(Lorg/fbme/ide/integration/fordiac/ForteLocalPC_Configuration;)V" />
+      <node id="5130266120273066585" at="23,0,41,0" concept="8" trace="createEditor#()Lcom/intellij/ui/components/JBPanel;" />
+      <scope id="5130266120273066585" at="19,31,20,31" />
+      <scope id="5130266120273066585" at="51,80,52,22" />
+      <scope id="5130266120273066585" at="42,107,44,60" />
+      <scope id="5130266120273066585" at="47,79,49,60" />
+      <scope id="5130266120273066585" at="19,0,22,0" />
+      <scope id="5130266120273066585" at="51,0,54,0">
+        <var name="device" id="5130266120273232497" />
+      </scope>
+      <scope id="5130266120273066585" at="42,0,46,0">
+        <var name="configuration" id="5130266120273066585" />
+      </scope>
+      <scope id="5130266120273066585" at="47,0,51,0">
+        <var name="configuration" id="5130266120273066585" />
+      </scope>
+      <scope id="5130266120273066589" at="24,33,39,17">
+        <var name="dLabel" id="5130266120273327741" />
+        <var name="fLabel" id="5130266120274902511" />
+        <var name="nodeChooser" id="6062668769033909461" />
+        <var name="panel" id="5130266120274587776" />
+      </scope>
+      <scope id="5130266120273066585" at="23,0,41,0" />
+      <unit id="5130266120273066585" at="16,0,55,0" name="org.fbme.ide.integration.fordiac.ForteLocalPC_Configuration_Editor" />
+    </file>
+    <file name="RunConfigurationsInitializer_AppPluginPart.java">
+      <node id="5130266120273066585" at="28,134,29,91" concept="3" />
+    </file>
+  </root>
+  <root nodeRef="r:ef3c0253-8ec4-4bdb-8e1b-9ba0526fc8d8(org.fbme.ide.integration.fordiac)/5130266120273100886">
+    <file name="ForteLocalPC_Configuration_RunProfileState.java">
+      <node id="5130266120273100886" at="41,175,42,39" concept="3" />
+      <node id="5130266120273100886" at="42,39,43,32" concept="3" />
+      <node id="5130266120273100886" at="46,68,47,16" concept="10" />
+      <node id="5130266120273100886" at="50,45,51,16" concept="10" />
+      <node id="5130266120273100886" at="55,110,56,49" concept="9" />
+      <node id="5130266120276434765" at="56,49,57,55" concept="9" />
+      <node id="5130266120276436114" at="57,55,58,81" concept="9" />
+      <node id="5392078491271410570" at="58,81,59,53" concept="9" />
+      <node id="5392078491271417754" at="59,53,60,0" concept="12" />
+      <node id="4613829506519704997" at="60,0,61,129" concept="9" />
+      <node id="4613829506519711780" at="61,129,62,73" concept="9" />
+      <node id="5392078491271445783" at="63,53,64,102" concept="9" />
+      <node id="5392078491271453031" at="64,102,65,114" concept="3" />
+      <node id="5130266120276667099" at="66,7,67,0" concept="12" />
+      <node id="5130266120276420278" at="67,0,68,112" concept="9" />
+      <node id="5130266120276666694" at="68,112,69,75" concept="9" />
+      <node id="361324406237545611" at="69,75,70,35" concept="3" />
+      <node id="5130266120276666315" at="70,35,71,0" concept="12" />
+      <node id="5130266120276509740" at="72,5,73,47" concept="9" />
+      <node id="5130266120276509740" at="73,47,74,47" concept="9" />
+      <node id="5130266120276509740" at="74,47,75,52" concept="3" />
+      <node id="5130266120276509740" at="75,52,76,145" concept="10" />
+      <node id="5130266120273100886" at="82,60,83,18" concept="10" />
+      <node id="5130266120273100886" at="84,5,85,17" concept="10" />
+      <node id="5130266120273100886" at="89,0,90,0" concept="13" trace="DeviceDeclaration$Hk" />
+      <node id="5130266120273100886" at="36,0,38,0" concept="4" trace="myRunConfiguration" />
+      <node id="5130266120273100886" at="38,0,40,0" concept="4" trace="myEnvironment" />
+      <node id="5130266120273100886" at="46,0,49,0" concept="8" trace="getConfigurationSettings#()Lcom/intellij/execution/configurations/ConfigurationPerRunnerSettings;" />
+      <node id="5130266120273100886" at="50,0,53,0" concept="8" trace="getRunnerSettings#()Lcom/intellij/execution/configurations/RunnerSettings;" />
+      <node id="5130266120273100886" at="81,55,84,5" concept="7" />
+      <node id="5130266120273100886" at="41,0,45,0" concept="2" trace="ForteLocalPC_Configuration_RunProfileState#(Lorg/fbme/ide/integration/fordiac/ForteLocalPC_Configuration;Lcom/intellij/execution/Executor;Lcom/intellij/execution/runners/ExecutionEnvironment;)V" />
+      <node id="5392078491271423119" at="62,73,66,7" concept="3" />
+      <node id="5130266120276509740" at="71,0,77,5" concept="0" />
+      <node id="5130266120273100886" at="81,0,87,0" concept="14" trace="canExecute#(Ljava/lang/String;)Z" />
+      <node id="5130266120273100886" at="54,0,79,0" concept="8" trace="execute#(Lcom/intellij/execution/Executor;Lcom/intellij/execution/runners/ProgramRunner;)Lcom/intellij/execution/ExecutionResult;" />
+      <scope id="5130266120273100886" at="46,68,47,16" />
+      <scope id="5130266120273100886" at="50,45,51,16" />
+      <scope id="5130266120273100886" at="82,60,83,18" />
+      <scope id="5130266120273100886" at="41,175,43,32" />
+      <scope id="5392078491271431304" at="63,53,65,114">
+        <var name="device" id="5392078491271445784" />
+      </scope>
+      <scope id="5130266120273100886" at="46,0,49,0" />
+      <scope id="5130266120273100886" at="50,0,53,0" />
+      <scope id="5130266120273100886" at="41,0,45,0">
+        <var name="configuration" id="5130266120273100886" />
+        <var name="environment" id="5130266120273100886" />
+        <var name="executor" id="5130266120273100886" />
+      </scope>
+      <scope id="5130266120276509740" at="72,5,76,145">
+        <var name="_consoleView" id="5130266120276509740" />
+        <var name="_processHandler" id="5130266120276509740" />
+      </scope>
+      <scope id="5130266120273100886" at="81,55,85,17" />
+      <scope id="5130266120273100886" at="81,0,87,0">
+        <var name="executorId" id="5130266120273100886" />
+      </scope>
+      <scope id="5130266120273100886" at="55,110,77,5">
+        <var name="console" id="6062668769033909656" />
+        <var name="deviceRef" id="5130266120276436117" />
+        <var name="forte" id="5130266120276434766" />
+        <var name="platformRepository" id="4613829506519704998" />
+        <var name="port" id="5392078491271410573" />
+        <var name="process" id="5130266120276420279" />
+        <var name="project" id="5130266120273100886" />
+        <var name="repository" id="4613829506519711781" />
+      </scope>
+      <scope id="5130266120273100886" at="54,0,79,0">
+        <var name="executor" id="5130266120273100886" />
+        <var name="runner" id="5130266120273100886" />
+      </scope>
+      <unit id="5130266120273100886" at="88,0,91,0" name="org.fbme.ide.integration.fordiac.ForteLocalPC_Configuration_RunProfileState$CONCEPTS" />
+      <unit id="5130266120273100886" at="35,0,92,0" name="org.fbme.ide.integration.fordiac.ForteLocalPC_Configuration_RunProfileState" />
+    </file>
+  </root>
+  <root nodeRef="r:ef3c0253-8ec4-4bdb-8e1b-9ba0526fc8d8(org.fbme.ide.integration.fordiac)/5130266120273224461">
+    <file name="RunConfigurationsInitializer_AppPluginPart.java">
+      <node id="5130266120273224461" at="27,5,28,134" concept="9" />
+      <node id="5130266120273224461" at="29,91,30,98" concept="3" />
+      <node id="5130266120273224461" at="30,98,31,74" concept="3" />
+      <node id="5130266120273224461" at="26,152,32,5" concept="0" />
+      <scope id="5130266120273224461" at="27,5,31,74">
+        <var name="runConfigurationKind" id="5130266120273224461" />
+      </scope>
+    </file>
+  </root>
+  <root nodeRef="r:ef3c0253-8ec4-4bdb-8e1b-9ba0526fc8d8(org.fbme.ide.integration.fordiac)/7286600719706849124">
+    <file name="RunLocalFortePC.java">
+      <node id="7286600719706873301" at="20,0,21,0" concept="13" trace="TYPE" />
+      <node id="5392078491271529811" at="22,0,23,0" concept="13" trace="EXECUTOR" />
+      <node id="7286600719706926622" at="25,63,26,16" concept="10" />
+      <node id="5392078491271539239" at="30,25,31,30" concept="10" />
+      <node id="9018357307818453768" at="35,36,36,78" concept="9" />
+      <node id="9018357307818651671" at="36,78,37,18" concept="10" />
+      <node id="7286600719707000514" at="41,33,42,16" concept="10" />
+      <node id="7286600719706928701" at="45,66,46,45" concept="15" />
+      <node id="3744396566857664571" at="51,68,52,55" concept="9" />
+      <node id="3744396566857706677" at="53,27,54,18" concept="10" />
+      <node id="5392078491272263453" at="55,5,56,84" concept="10" />
+      <node id="7286600719706928695" at="45,0,48,0" concept="2" trace="RunLocalFortePC#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/message/EditorMessageOwner;)V" />
+      <node id="3744396566857701477" at="52,55,55,5" concept="7" />
+      <node id="7286600719706865801" at="24,0,28,0" concept="8" trace="getType#()Ljetbrains/mps/nodeEditor/EditorMessageIconRenderer/IconRendererType;" />
+      <node id="7286600719706863211" at="29,0,33,0" concept="8" trace="getIcon#()Ljavax/swing/Icon;" />
+      <node id="7286600719706998327" at="40,0,44,0" concept="8" trace="showInGutter#()Z" />
+      <node id="7286600719706932035" at="34,0,39,0" concept="8" trace="getClickAction#()Lcom/intellij/openapi/actionSystem/AnAction;" />
+      <node id="5392078491272252875" at="49,0,58,0" concept="8" trace="getAnchorCell#(Ljetbrains/mps/openapi/editor/EditorComponent;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <scope id="7286600719706865809" at="25,63,26,16" />
+      <scope id="7286600719706863219" at="30,25,31,30" />
+      <scope id="7286600719706998334" at="41,33,42,16" />
+      <scope id="7286600719706928699" at="45,66,46,45" />
+      <scope id="3744396566857701479" at="53,27,54,18" />
+      <scope id="7286600719706932043" at="35,36,37,18">
+        <var name="action" id="9018357307818453769" />
+      </scope>
+      <scope id="7286600719706928695" at="45,0,48,0">
+        <var name="device" id="7286600719706928702" />
+        <var name="owner" id="7286600719706928706" />
+      </scope>
+      <scope id="7286600719706865801" at="24,0,28,0" />
+      <scope id="7286600719706863211" at="29,0,33,0" />
+      <scope id="7286600719706998327" at="40,0,44,0" />
+      <scope id="7286600719706932035" at="34,0,39,0" />
+      <scope id="5392078491272252887" at="51,68,56,84">
+        <var name="nodeCell" id="3744396566857664572" />
+      </scope>
+      <scope id="5392078491272252875" at="49,0,58,0">
+        <var name="editorComponent" id="5392078491272252881" />
+      </scope>
+      <unit id="7286600719706849124" at="19,0,59,0" name="org.fbme.ide.integration.fordiac.RunLocalFortePC" />
+    </file>
+  </root>
+  <root nodeRef="r:ef3c0253-8ec4-4bdb-8e1b-9ba0526fc8d8(org.fbme.ide.integration.fordiac)/7286600719707040349">
+    <file name="RunLocalFortePCChecker.java">
+      <node id="4613829506520056012" at="32,0,33,0" concept="13" trace="INSTANCES" />
+      <node id="9018357307818557686" at="33,0,34,0" concept="4" trace="myRepository" />
+      <node id="4613829506519518489" at="35,51,36,67" concept="3" />
+      <node id="4613829506520189699" at="39,51,40,73" concept="9" />
+      <node id="4613829506520168302" at="40,73,41,36" concept="3" />
+      <node id="4613829506520155741" at="41,36,42,69" concept="9" />
+      <node id="4613829506520155748" at="42,69,43,35" concept="3" />
+      <node id="4613829506520202416" at="46,53,47,63" concept="9" />
+      <node id="4613829506520193919" at="47,63,48,69" concept="9" />
+      <node id="4613829506520193926" at="48,69,49,38" concept="3" />
+      <node id="7286600719707067733" at="54,116,55,43" concept="9" />
+      <node id="7286600719707162960" at="55,43,56,89" concept="9" />
+      <node id="4613829506519567587" at="56,89,57,67" concept="9" />
+      <node id="4613829506519591518" at="59,49,60,63" concept="9" />
+      <node id="7286600719708201990" at="61,35,62,126" concept="3" />
+      <node id="8574644388812828947" at="64,7,65,39" concept="3" />
+      <node id="7286600719708237773" at="66,5,67,54" concept="10" />
+      <node id="7286600719707042233" at="71,78,72,16" concept="10" />
+      <node id="7286600719708102986" at="75,64,76,31" concept="9" />
+      <node id="7286600719708100683" at="76,31,77,36" concept="10" />
+      <node id="3794540161411383264" at="80,55,81,38" concept="9" />
+      <node id="6192168411672340716" at="81,38,82,40" concept="9" />
+      <node id="6192168411672340723" at="82,40,83,18" concept="9" />
+      <node id="6192168411672340729" at="84,9,85,63" concept="3" />
+      <node id="6192168411672340744" at="87,5,88,16" concept="10" />
+      <node id="3794540161411428397" at="91,56,92,38" concept="9" />
+      <node id="3794540161411429946" at="92,38,93,50" concept="10" />
+      <node id="3794540161411366883" at="97,85,98,16" concept="10" />
+      <node id="3794540161411366892" at="99,5,100,198" concept="9" />
+      <node id="3794540161411366921" at="101,26,102,16" concept="10" />
+      <node id="3794540161411366926" at="103,5,104,44" concept="9" />
+      <node id="3794540161411366933" at="104,44,105,72" concept="9" />
+      <node id="3794540161411377457" at="105,72,106,17" concept="10" />
+      <node id="4613829506519518481" at="35,0,38,0" concept="2" trace="RunLocalFortePCChecker#(Ljetbrains/mps/project/Project;)V" />
+      <node id="4613829506519595103" at="60,63,63,9" concept="7" />
+      <node id="3794540161411366881" at="96,61,99,5" concept="7" />
+      <node id="3794540161411366919" at="100,198,103,5" concept="7" />
+      <node id="7286600719707040899" at="70,0,74,0" concept="8" trace="needsUpdateAfterPropertyEvent#(Ljetbrains/mps/smodel/event/SModelPropertyEvent;)Z" />
+      <node id="7286600719707588434" at="75,0,79,0" concept="14" trace="isApplicable#(Lorg/fbme/lib/iec61499/declarations/DeviceDeclaration;)Z" />
+      <node id="6192168411672340727" at="83,18,87,5" concept="17" />
+      <node id="3794540161411423491" at="91,0,95,0" concept="14" trace="getIP#(Lorg/fbme/lib/iec61499/declarations/DeviceDeclaration;)Ljava/lang/String;" />
+      <node id="4613829506520130381" at="46,0,51,0" concept="14" trace="unregister#(Ljetbrains/mps/project/MPSProject;)V" />
+      <node id="4613829506520126485" at="39,0,45,0" concept="14" trace="register#(Ljetbrains/mps/project/MPSProject;)V" />
+      <node id="4613829506519586299" at="58,29,64,7" concept="7" />
+      <node id="4613829506519581120" at="57,67,66,5" concept="18" />
+      <node id="4613829506519361137" at="80,0,90,0" concept="14" trace="getPort#(Lorg/fbme/lib/iec61499/declarations/DeviceDeclaration;)I" />
+      <node id="3794540161411361039" at="96,0,108,0" concept="14" trace="getAddress#(Lorg/fbme/lib/iec61499/declarations/DeviceDeclaration;)Ljava/lang/String;" />
+      <node id="7286600719707042675" at="52,0,69,0" concept="8" trace="update#(Ljetbrains/mps/nodeEditor/EditorComponent;ZZLjetbrains/mps/util/Cancellable;)Ljetbrains/mps/nodeEditor/checking/UpdateResult;" />
+      <scope id="6192168411672340743" at="86,27,86,27" />
+      <scope id="4613829506519518485" at="35,51,36,67" />
+      <scope id="4613829506519595105" at="61,35,62,126" />
+      <scope id="7286600719707040905" at="71,78,72,16" />
+      <scope id="6192168411672340728" at="84,9,85,63" />
+      <scope id="6192168411672340739" at="86,5,87,5">
+        <var name="e" id="6192168411672340740" />
+      </scope>
+      <scope id="3794540161411366882" at="97,85,98,16" />
+      <scope id="3794540161411366920" at="101,26,102,16" />
+      <scope id="7286600719707588437" at="75,64,77,36">
+        <var name="port" id="7286600719708102987" />
+      </scope>
+      <scope id="3794540161411423494" at="91,56,93,50">
+        <var name="value" id="3794540161411428398" />
+      </scope>
+      <scope id="4613829506519518481" at="35,0,38,0">
+        <var name="project" id="4613829506519518488" />
+      </scope>
+      <scope id="4613829506520130382" at="46,53,49,38">
+        <var name="checker" id="4613829506520202417" />
+        <var name="higlighter" id="4613829506520193920" />
+      </scope>
+      <scope id="4613829506520126488" at="39,51,43,35">
+        <var name="checker" id="4613829506520189700" />
+        <var name="higlighter" id="4613829506520155742" />
+      </scope>
+      <scope id="4613829506519586301" at="59,49,63,9">
+        <var name="device" id="4613829506519591519" />
+      </scope>
+      <scope id="7286600719707040899" at="70,0,74,0">
+        <var name="event" id="7286600719707040903" />
+      </scope>
+      <scope id="7286600719707588434" at="75,0,79,0">
+        <var name="device" id="7286600719707589986" />
+      </scope>
+      <scope id="3794540161411423491" at="91,0,95,0">
+        <var name="device" id="3794540161411428014" />
+      </scope>
+      <scope id="4613829506520130381" at="46,0,51,0">
+        <var name="project" id="4613829506520130385" />
+      </scope>
+      <scope id="4613829506520126485" at="39,0,45,0">
+        <var name="project" id="4613829506520129864" />
+      </scope>
+      <scope id="4613829506519581122" at="58,29,65,39" />
+      <scope id="4613829506519361138" at="80,55,88,16">
+        <var name="port" id="6192168411672340724" />
+        <var name="portStarts" id="6192168411672340717" />
+        <var name="value" id="3794540161411383267" />
+      </scope>
+      <scope id="4613829506519361137" at="80,0,90,0">
+        <var name="device" id="4613829506519361237" />
+      </scope>
+      <scope id="3794540161411361042" at="96,61,106,17">
+        <var name="address" id="3794540161411366893" />
+        <var name="literal" id="3794540161411366927" />
+        <var name="value" id="3794540161411366934" />
+      </scope>
+      <scope id="3794540161411361039" at="96,0,108,0">
+        <var name="device" id="3794540161411366573" />
+      </scope>
+      <scope id="7286600719707042689" at="54,116,67,54">
+        <var name="element" id="4613829506519567588" />
+        <var name="messages" id="7286600719707162966" />
+        <var name="node" id="7286600719707067734" />
+      </scope>
+      <scope id="7286600719707042675" at="52,0,69,0">
+        <var name="applyFixes" id="7286600719707042684" />
+        <var name="cancellable" id="7286600719707042686" />
+        <var name="component" id="7286600719707042680" />
+        <var name="incr" id="7286600719707042682" />
+      </scope>
+      <unit id="7286600719707040349" at="30,0,110,0" name="org.fbme.ide.integration.fordiac.RunLocalFortePCChecker" />
+    </file>
+  </root>
+  <root nodeRef="r:ef3c0253-8ec4-4bdb-8e1b-9ba0526fc8d8(org.fbme.ide.integration.fordiac)/7286600719708727746">
+    <file name="Fordiac_ProjectPlugin.java">
+      <node id="7286600719708727746" at="12,62,13,64" concept="3" />
+    </file>
+    <file name="IEC_61499_FortePC_Gutter_ProjectPluginPart.java">
+      <node id="4613829506520208540" at="12,40,13,45" concept="3" />
+      <node id="4613829506520208872" at="16,43,17,47" concept="3" />
+      <node id="7286600719708727746" at="9,0,11,0" concept="2" trace="IEC_61499_FortePC_Gutter_ProjectPluginPart#()V" />
+      <node id="7286600719708727746" at="11,0,15,0" concept="8" trace="init#(Ljetbrains/mps/project/MPSProject;)V" />
+      <node id="7286600719708727746" at="15,0,19,0" concept="8" trace="dispose#(Ljetbrains/mps/project/MPSProject;)V" />
+      <scope id="7286600719708727746" at="9,55,9,55" />
+      <scope id="7286600719708727748" at="12,40,13,45" />
+      <scope id="7286600719708741072" at="16,43,17,47" />
+      <scope id="7286600719708727746" at="9,0,11,0" />
+      <scope id="7286600719708727746" at="11,0,15,0">
+        <var name="project" id="7286600719708727746" />
+      </scope>
+      <scope id="7286600719708727746" at="15,0,19,0">
+        <var name="project" id="7286600719708727746" />
+      </scope>
+      <unit id="7286600719708727746" at="8,0,20,0" name="org.fbme.ide.integration.fordiac.IEC_61499_FortePC_Gutter_ProjectPluginPart" />
+    </file>
+  </root>
+  <root nodeRef="r:ef3c0253-8ec4-4bdb-8e1b-9ba0526fc8d8(org.fbme.ide.integration.fordiac)/8278380780105768314">
+    <file name="Device_Configuration.java">
+      <node id="8278380780105768314" at="32,0,33,0" concept="13" trace="LOG" />
+      <node id="2070521360955568484" at="37,117,38,66" concept="9" />
+      <node id="4613829506520329397" at="38,66,39,105" concept="9" />
+      <node id="166226772503702672" at="40,31,41,13" concept="10" />
+      <node id="2070521360955522644" at="44,11,45,48" concept="9" />
+      <node id="2070521360955682573" at="46,26,47,44" concept="10" />
+      <node id="2070521360955586205" at="48,9,49,43" concept="9" />
+      <node id="4613829506520393647" at="49,43,50,94" concept="9" />
+      <node id="2070521360955606619" at="51,29,52,44" concept="10" />
+      <node id="4613829506520418659" at="54,61,55,44" concept="10" />
+      <node id="2070521360955766080" at="57,45,58,49" concept="9" />
+      <node id="2070521360955766084" at="58,49,59,91" concept="10" />
+      <node id="4613829506520428091" at="60,7,61,18" concept="10" />
+      <node id="6072045827976707180" at="63,56,64,53" concept="16" />
+      <node id="8278380780105768314" at="68,76,69,57" concept="3" />
+      <node id="8278380780105768314" at="74,26,75,81" concept="16" />
+      <node id="8278380780105768314" at="76,5,77,83" concept="3" />
+      <node id="8278380780105768341" at="82,40,83,18" concept="10" />
+      <node id="8278380780105768354" at="84,5,85,86" concept="10" />
+      <node id="8278380780105768375" at="88,23,89,32" concept="3" />
+      <node id="760327805388905849" at="89,32,90,29" concept="3" />
+      <node id="3261175532206574522" at="91,12,92,48" concept="3" />
+      <node id="760327805388903008" at="92,48,93,52" concept="3" />
+      <node id="3261175532206565930" at="96,62,97,102" concept="3" />
+      <node id="8278380780105768314" at="101,39,102,55" concept="9" />
+      <node id="8278380780105768314" at="103,9,104,101" concept="11" />
+      <node id="8278380780105768314" at="104,101,105,83" concept="11" />
+      <node id="8278380780105768314" at="105,83,106,48" concept="3" />
+      <node id="8278380780105768314" at="108,42,109,26" concept="3" />
+      <node id="8278380780105768314" at="111,5,112,17" concept="10" />
+      <node id="8278380780105768314" at="116,38,117,63" concept="9" />
+      <node id="8278380780105768314" at="117,63,118,99" concept="11" />
+      <node id="8278380780105768314" at="118,99,119,81" concept="11" />
+      <node id="8278380780105768314" at="119,81,120,53" concept="3" />
+      <node id="8278380780105768314" at="120,53,121,25" concept="10" />
+      <node id="8278380780105768314" at="124,34,125,33" concept="10" />
+      <node id="8278380780105768314" at="127,31,128,30" concept="10" />
+      <node id="8278380780105768314" at="131,44,132,34" concept="3" />
+      <node id="8278380780105768314" at="134,41,135,31" concept="3" />
+      <node id="8278380780105768457" at="139,0,140,0" concept="4" trace="myNodePointer" />
+      <node id="760327805388801935" at="140,0,141,0" concept="4" trace="myNodeText" />
+      <node id="8278380780105768314" at="144,61,145,46" concept="9" />
+      <node id="8278380780105768457" at="145,46,146,42" concept="3" />
+      <node id="760327805388801935" at="146,42,147,36" concept="3" />
+      <node id="8278380780105768314" at="147,36,148,19" concept="10" />
+      <node id="8278380780105768314" at="153,11,154,33" concept="10" />
+      <node id="8278380780105768314" at="156,44,157,27" concept="3" />
+      <node id="8278380780105768314" at="158,9,159,20" concept="10" />
+      <node id="4613829506520636010" at="163,63,164,36" concept="3" />
+      <node id="4613829506520636010" at="166,0,167,0" concept="4" trace="myConfiguration" />
+      <node id="8278380780105768314" at="167,53,168,53" concept="10" />
+      <node id="8278380780105768314" at="170,50,171,60" concept="10" />
+      <node id="8278380780105768314" at="33,0,35,0" concept="4" trace="myState" />
+      <node id="166226772503699928" at="39,105,42,5" concept="7" />
+      <node id="2070521360955677527" at="45,48,48,9" concept="7" />
+      <node id="2070521360955601374" at="50,94,53,9" concept="7" />
+      <node id="4613829506520408524" at="53,9,56,9" concept="7" />
+      <node id="6072045827976706466" at="62,7,65,5" concept="7" />
+      <node id="8278380780105768314" at="73,73,76,5" concept="7" />
+      <node id="8278380780105768339" at="81,38,84,5" concept="7" />
+      <node id="8278380780105768384" at="91,10,94,5" concept="0" />
+      <node id="3261175532206505651" at="96,0,99,0" concept="8" trace="setNode#(Lorg/jetbrains/mps/openapi/model/SNodeReference;)V" />
+      <node id="8278380780105768314" at="107,45,110,7" concept="7" />
+      <node id="8278380780105768314" at="124,0,127,0" concept="8" trace="getNodePointer#()Ljava/lang/String;" />
+      <node id="8278380780105768314" at="127,0,130,0" concept="8" trace="getNodeText#()Ljava/lang/String;" />
+      <node id="8278380780105768314" at="131,0,134,0" concept="8" trace="setNodePointer#(Ljava/lang/String;)V" />
+      <node id="8278380780105768314" at="134,0,137,0" concept="8" trace="setNodeText#(Ljava/lang/String;)V" />
+      <node id="8278380780105768314" at="155,46,158,9" concept="7" />
+      <node id="8278380780105768314" at="163,0,166,0" concept="2" trace="Device_Configuration#(Lcom/intellij/execution/configurations/RunConfiguration;)V" />
+      <node id="8278380780105768314" at="167,0,170,0" concept="8" trace="createCloneTemplate#()Lorg/fbme/ide/integration/fordiac/Device_Configuration;" />
+      <node id="8278380780105768314" at="170,0,173,0" concept="8" trace="getEditor#()Lorg/fbme/ide/integration/fordiac/Device_Configuration_Editor;" />
+      <node id="8278380780105768314" at="67,0,71,0" concept="8" trace="writeExternal#(Lorg/jdom/Element;)V" />
+      <node id="8278380780105768314" at="72,0,79,0" concept="8" trace="readExternal#(Lorg/jdom/Element;)V" />
+      <node id="8278380780105768336" at="80,0,87,0" concept="8" trace="getNodeRef#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="8278380780105768367" at="87,45,94,5" concept="7" />
+      <node id="8278380780105768314" at="115,0,123,0" concept="8" trace="copy#()Lorg/fbme/ide/integration/fordiac/Device_Configuration;" />
+      <node id="8278380780105768314" at="142,0,150,0" concept="8" trace="clone#()Ljava/lang/Object;" />
+      <node id="8278380780105768314" at="152,27,160,7" concept="17" />
+      <node id="8278380780105768364" at="87,0,96,0" concept="8" trace="setNode#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="8278380780105768314" at="102,55,111,5" concept="17" />
+      <node id="8278380780105768314" at="151,0,162,0" concept="8" trace="copy#()Lorg/fbme/ide/integration/fordiac/Device_Configuration/MyState;" />
+      <node id="8278380780105768314" at="99,0,114,0" concept="8" trace="clone#()Lorg/fbme/ide/integration/fordiac/Device_Configuration;" />
+      <node id="6744899951645931937" at="43,72,60,7" concept="17" />
+      <node id="6072045827976706427" at="42,5,62,7" concept="9" />
+      <node id="8278380780105768314" at="36,0,67,0" concept="8" trace="checkConfiguration#(Ljetbrains/mps/execution/api/settings/PersistentConfigurationContext;)V" />
+      <scope id="166226772503699930" at="40,31,41,13" />
+      <scope id="2070521360955677529" at="46,26,47,44" />
+      <scope id="2070521360955601376" at="51,29,52,44" />
+      <scope id="4613829506520408526" at="54,61,55,44" />
+      <scope id="6072045827976706467" at="63,56,64,53" />
+      <scope id="8278380780105768314" at="68,76,69,57" />
+      <scope id="8278380780105768314" at="74,26,75,81" />
+      <scope id="8278380780105768340" at="82,40,83,18" />
+      <scope id="3261175532206505653" at="96,62,97,102" />
+      <scope id="8278380780105768314" at="108,42,109,26" />
+      <scope id="8278380780105768314" at="124,34,125,33" />
+      <scope id="8278380780105768314" at="127,31,128,30" />
+      <scope id="8278380780105768314" at="131,44,132,34" />
+      <scope id="8278380780105768314" at="134,41,135,31" />
+      <scope id="8278380780105768314" at="153,11,154,33" />
+      <scope id="8278380780105768314" at="156,44,157,27" />
+      <scope id="8278380780105768314" at="163,63,164,36" />
+      <scope id="8278380780105768314" at="167,53,168,53" />
+      <scope id="8278380780105768314" at="170,50,171,60" />
+      <scope id="6744899951645931946" at="57,45,59,91">
+        <var name="m" id="2070521360955766081" />
+      </scope>
+      <scope id="8278380780105768368" at="88,23,90,29" />
+      <scope id="8278380780105768385" at="91,12,93,52" />
+      <scope id="6744899951645931940" at="57,7,60,7">
+        <var name="ex" id="6744899951645931942" />
+      </scope>
+      <scope id="3261175532206505651" at="96,0,99,0">
+        <var name="nodePtr" id="3261175532206506699" />
+      </scope>
+      <scope id="8278380780105768314" at="103,9,106,48" />
+      <scope id="8278380780105768314" at="107,45,110,7" />
+      <scope id="8278380780105768314" at="124,0,127,0" />
+      <scope id="8278380780105768314" at="127,0,130,0" />
+      <scope id="8278380780105768314" at="131,0,134,0">
+        <var name="value" id="8278380780105768314" />
+      </scope>
+      <scope id="8278380780105768314" at="134,0,137,0">
+        <var name="value" id="8278380780105768314" />
+      </scope>
+      <scope id="8278380780105768314" at="163,0,166,0">
+        <var name="configuration" id="4613829506520636010" />
+      </scope>
+      <scope id="8278380780105768314" at="167,0,170,0" />
+      <scope id="8278380780105768314" at="170,0,173,0" />
+      <scope id="8278380780105768314" at="67,0,71,0">
+        <var name="element" id="8278380780105768314" />
+      </scope>
+      <scope id="8278380780105768314" at="73,73,77,83" />
+      <scope id="8278380780105768338" at="81,38,85,86" />
+      <scope id="8278380780105768314" at="107,5,111,5">
+        <var name="ex" id="8278380780105768314" />
+      </scope>
+      <scope id="8278380780105768314" at="144,61,148,19">
+        <var name="state" id="8278380780105768314" />
+      </scope>
+      <scope id="8278380780105768314" at="155,46,159,20" />
+      <scope id="8278380780105768314" at="116,38,121,25">
+        <var name="cloneTemplate" id="8278380780105768314" />
+      </scope>
+      <scope id="8278380780105768314" at="155,7,160,7">
+        <var name="e" id="8278380780105768314" />
+      </scope>
+      <scope id="8278380780105768314" at="72,0,79,0">
+        <var name="element" id="8278380780105768314" />
+      </scope>
+      <scope id="8278380780105768336" at="80,0,87,0" />
+      <scope id="8278380780105768366" at="87,45,94,5" />
+      <scope id="8278380780105768314" at="115,0,123,0" />
+      <scope id="8278380780105768314" at="142,0,150,0" />
+      <scope id="8278380780105768314" at="152,27,160,7" />
+      <scope id="8278380780105768364" at="87,0,96,0">
+        <var name="node" id="8278380780105768414" />
+      </scope>
+      <scope id="8278380780105768314" at="101,39,112,17">
+        <var name="clone" id="8278380780105768314" />
+      </scope>
+      <scope id="8278380780105768314" at="151,0,162,0" />
+      <scope id="6744899951645931939" at="44,11,56,9">
+        <var name="device" id="4613829506520393648" />
+        <var name="ptr" id="2070521360955522645" />
+        <var name="resolved" id="2070521360955586206" />
+      </scope>
+      <scope id="8278380780105768314" at="99,0,114,0" />
+      <scope id="2070521360955586204" at="43,72,61,18" />
+      <scope id="8278380780105768314" at="37,117,65,5">
+        <var name="errorText" id="6072045827976706428" />
+        <var name="platformRepo" id="4613829506520329398" />
+        <var name="repo" id="2070521360955568485" />
+      </scope>
+      <scope id="8278380780105768314" at="36,0,67,0">
+        <var name="context" id="8278380780105768314" />
+      </scope>
+      <unit id="8278380780105768314" at="138,0,163,0" name="org.fbme.ide.integration.fordiac.Device_Configuration$MyState" />
+      <unit id="8278380780105768314" at="31,0,174,0" name="org.fbme.ide.integration.fordiac.Device_Configuration" />
+    </file>
+    <file name="Device_Configuration_Editor.java">
+      <node id="8278380780105768418" at="21,0,22,0" concept="4" trace="myChooser" />
+      <node id="8278380780105768422" at="26,46,27,43" concept="3" />
+      <node id="8278380780105768427" at="27,43,28,62" concept="3" />
+      <node id="4613829506520707392" at="29,43,30,84" concept="9" />
+      <node id="4613829506520408623" at="30,84,31,88" concept="9" />
+      <node id="4613829506520463928" at="31,88,32,88" concept="9" />
+      <node id="4613829506520729434" at="32,88,33,57" concept="10" />
+      <node id="8278380780105768437" at="34,7,35,21" concept="10" />
+      <node id="670386341911210989" at="38,101,39,47" concept="3" />
+      <node id="760327805388882979" at="39,47,40,51" concept="3" />
+      <node id="670386341911209822" at="43,73,44,50" concept="3" />
+      <node id="760327805388865876" at="44,50,45,51" concept="3" />
+      <node id="4613829506520636010" at="47,0,48,0" concept="4" trace="myConfiguration" />
+      <node id="8278380780105768314" at="50,44,51,55" concept="10" />
+      <node id="4613829506520636010" at="53,7,54,36" concept="3" />
+      <node id="8278380780105768314" at="58,0,59,0" concept="13" trace="DeviceDeclaration$Hk" />
+      <node id="8278380780105768314" at="22,0,24,0" concept="8" trace="disposeEditor#()V" />
+      <node id="8278380780105768314" at="50,0,53,0" concept="8" trace="create#()Lorg/fbme/ide/integration/fordiac/Device_Configuration;" />
+      <node id="8278380780105768314" at="38,0,42,0" concept="8" trace="applyEditorTo#(Lorg/fbme/ide/integration/fordiac/Device_Configuration;)V" />
+      <node id="8278380780105768314" at="43,0,47,0" concept="8" trace="resetEditorFrom#(Lorg/fbme/ide/integration/fordiac/Device_Configuration;)V" />
+      <node id="8278380780105768314" at="48,76,53,7" concept="15" />
+      <node id="8278380780105768432" at="28,62,34,7" concept="3" />
+      <node id="8278380780105768314" at="48,0,56,0" concept="2" trace="Device_Configuration_Editor#(Lcom/intellij/execution/configurations/RunConfiguration;)V" />
+      <node id="8278380780105768314" at="25,0,37,0" concept="8" trace="createEditor#()Ljetbrains/mps/execution/lib/ui/NodeByConceptChooser;" />
+      <scope id="8278380780105768314" at="22,31,22,31" />
+      <scope id="8278380780105768314" at="50,44,51,55" />
+      <scope id="8278380780105768314" at="22,0,24,0" />
+      <scope id="8278380780105768314" at="38,101,40,51" />
+      <scope id="8278380780105768314" at="43,73,45,51" />
+      <scope id="8278380780105768314" at="50,0,53,0" />
+      <scope id="4613829506520400389" at="29,43,33,57">
+        <var name="device" id="4613829506520463929" />
+        <var name="platformRepo" id="4613829506520408624" />
+        <var name="project" id="4613829506520707393" />
+      </scope>
+      <scope id="8278380780105768314" at="38,0,42,0">
+        <var name="configuration" id="8278380780105768314" />
+      </scope>
+      <scope id="8278380780105768314" at="43,0,47,0">
+        <var name="configuration" id="8278380780105768314" />
+      </scope>
+      <scope id="8278380780105768314" at="48,76,54,36" />
+      <scope id="8278380780105768314" at="48,0,56,0">
+        <var name="configuration" id="4613829506520636010" />
+      </scope>
+      <scope id="8278380780105768421" at="26,46,35,21" />
+      <scope id="8278380780105768314" at="25,0,37,0" />
+      <unit id="8278380780105768314" at="57,0,60,0" name="org.fbme.ide.integration.fordiac.Device_Configuration_Editor$CONCEPTS" />
+      <unit id="8278380780105768314" at="49,14,53,5" name="org.fbme.ide.integration.fordiac.Device_Configuration_Editor$1" />
+      <unit id="8278380780105768314" at="20,0,61,0" name="org.fbme.ide.integration.fordiac.Device_Configuration_Editor" />
+    </file>
+  </root>
+  <root nodeRef="r:ef3c0253-8ec4-4bdb-8e1b-9ba0526fc8d8(org.fbme.ide.integration.fordiac)/8743130917937368144">
+    <file name="ExportFBTypeAsLuaScript_Action.java">
+      <node id="8743130917937368144" at="21,0,22,0" concept="13" trace="ICON" />
+      <node id="8743130917937368144" at="23,43,24,44" concept="15" />
+      <node id="8743130917937368144" at="24,44,25,35" concept="3" />
+      <node id="8743130917937368144" at="25,35,26,52" concept="3" />
+      <node id="8743130917937368144" at="29,32,30,16" concept="10" />
+      <node id="4253231295682629259" at="33,87,34,55" concept="9" />
+      <node id="8743130917937701405" at="34,55,35,160" concept="10" />
+      <node id="8743130917937368144" at="38,89,39,85" concept="3" />
+      <node id="8743130917937368144" at="43,53,44,19" concept="10" />
+      <node id="8743130917937700437" at="46,5,47,54" concept="9" />
+      <node id="8743130917937700438" at="48,22,49,21" concept="10" />
+      <node id="8743130917937368144" at="51,5,52,16" concept="10" />
+      <node id="8743130917937710812" at="55,96,56,108" concept="9" />
+      <node id="8743130917937729647" at="57,81,58,135" concept="3" />
+      <node id="7558503085818858446" at="59,12,60,143" concept="3" />
+      <node id="8743130917937368144" at="65,0,66,0" concept="13" trace="BasicFBTypeDeclaration$CS" />
+      <node id="8743130917937368144" at="66,0,67,0" concept="13" trace="CompositeFBTypeDeclaration$hQ" />
+      <node id="8743130917937368144" at="67,0,68,0" concept="13" trace="FBTypeDeclaration$Uo" />
+      <node id="7558503085818855634" at="59,10,61,5" concept="0" />
+      <node id="8743130917937368144" at="42,95,45,5" concept="7" />
+      <node id="8743130917937700438" at="47,54,50,7" concept="7" />
+      <node id="8743130917937368144" at="28,0,32,0" concept="8" trace="isDumbAware#()Z" />
+      <node id="8743130917937368144" at="37,0,41,0" concept="8" trace="doUpdate#(Lcom/intellij/openapi/actionSystem/AnActionEvent;Ljava/util/Map;)V" />
+      <node id="8743130917937368144" at="23,0,28,0" concept="2" trace="ExportFBTypeAsLuaScript_Action#()V" />
+      <node id="8743130917937368144" at="32,0,37,0" concept="8" trace="isApplicable#(Lcom/intellij/openapi/actionSystem/AnActionEvent;Ljava/util/Map;)Z" />
+      <node id="7558503085818851110" at="56,108,61,5" concept="7" />
+      <node id="8743130917937700437" at="45,5,51,5" concept="0" />
+      <node id="8743130917937368144" at="54,0,63,0" concept="8" trace="doExecute#(Lcom/intellij/openapi/actionSystem/AnActionEvent;Ljava/util/Map;)V" />
+      <node id="8743130917937368144" at="41,0,54,0" concept="8" trace="collectActionData#(Lcom/intellij/openapi/actionSystem/AnActionEvent;Ljava/util/Map;)Z" />
+      <scope id="8743130917937368144" at="29,32,30,16" />
+      <scope id="8743130917937368144" at="38,89,39,85" />
+      <scope id="8743130917937368144" at="43,53,44,19" />
+      <scope id="8743130917937700438" at="48,22,49,21" />
+      <scope id="7558503085818851112" at="57,81,58,135" />
+      <scope id="7558503085818855635" at="59,12,60,143" />
+      <scope id="8743130917937700455" at="33,87,35,160">
+        <var name="node" id="4253231295682629260" />
+      </scope>
+      <scope id="8743130917937368144" at="23,43,26,52" />
+      <scope id="8743130917937368144" at="28,0,32,0" />
+      <scope id="8743130917937368144" at="37,0,41,0">
+        <var name="_params" id="8743130917937368144" />
+        <var name="event" id="8743130917937368144" />
+      </scope>
+      <scope id="8743130917937700437" at="46,5,50,7">
+        <var name="p" id="8743130917937700437" />
+      </scope>
+      <scope id="8743130917937368144" at="23,0,28,0" />
+      <scope id="8743130917937368144" at="32,0,37,0">
+        <var name="_params" id="8743130917937368144" />
+        <var name="event" id="8743130917937368144" />
+      </scope>
+      <scope id="8743130917937368144" at="55,96,61,5">
+        <var name="node" id="8743130917937710813" />
+      </scope>
+      <scope id="8743130917937368144" at="54,0,63,0">
+        <var name="_params" id="8743130917937368144" />
+        <var name="event" id="8743130917937368144" />
+      </scope>
+      <scope id="8743130917937368144" at="42,95,52,16" />
+      <scope id="8743130917937368144" at="41,0,54,0">
+        <var name="_params" id="8743130917937368144" />
+        <var name="event" id="8743130917937368144" />
+      </scope>
+      <unit id="8743130917937368144" at="64,0,69,0" name="org.fbme.ide.integration.fordiac.ExportFBTypeAsLuaScript_Action$CONCEPTS" />
+      <unit id="8743130917937368144" at="20,0,70,0" name="org.fbme.ide.integration.fordiac.ExportFBTypeAsLuaScript_Action" />
+    </file>
+    <file name="Fordiac_ApplicationPlugin.java">
+      <node id="8743130917937368144" at="24,29,25,52" concept="3" />
+    </file>
+  </root>
+  <root nodeRef="r:ef3c0253-8ec4-4bdb-8e1b-9ba0526fc8d8(org.fbme.ide.integration.fordiac)/8743130917937731110">
+    <file name="Fordiac_ApplicationPlugin.java">
+      <node id="8743130917937731110" at="26,13,27,52" concept="3" />
+      <node id="8743130917937731115" at="29,37,30,126" concept="3" />
+    </file>
+    <file name="FourDiacActions_ActionGroup.java">
+      <node id="8743130917937731110" at="10,0,11,0" concept="13" trace="ID" />
+      <node id="8743130917937731110" at="12,73,13,41" concept="15" />
+      <node id="8743130917937731110" at="13,41,14,25" concept="3" />
+      <node id="8743130917937731110" at="14,25,15,20" concept="3" />
+      <node id="8743130917937731114" at="15,20,16,114" concept="3" />
+      <node id="8743130917937731110" at="12,0,18,0" concept="2" trace="FourDiacActions_ActionGroup#(Ljetbrains/mps/workbench/action/ApplicationPlugin;)V" />
+      <scope id="8743130917937731110" at="12,73,16,114" />
+      <scope id="8743130917937731110" at="12,0,18,0">
+        <var name="plugin" id="8743130917937731110" />
+      </scope>
+      <unit id="8743130917937731110" at="9,0,19,0" name="org.fbme.ide.integration.fordiac.FourDiacActions_ActionGroup" />
+    </file>
+  </root>
+</debug-info>
+

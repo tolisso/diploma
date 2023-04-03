@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1163670490218:jetbrains.mps.baseLanguage.structure.SwitchStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1164991038168:jetbrains.mps.baseLanguage.structure.ThrowStatement" />
+  <root>
+    <file name="BehaviorAspectDescriptor.java">
+      <unit at="14,0,32,0" name="org.fbme.ide.meta.editor.behavior.BehaviorAspectDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:4533029f-ece5-4846-96d2-78f236591d4d(org.fbme.ide.meta.editor.behavior)/3981577588228013725">
+    <file name="CellCreateOperationInlineEditor__BehaviorDescriptor.java">
+      <node id="3981577588228013725" at="27,0,28,0" concept="6" trace="CONCEPT" />
+      <node id="3981577588228013725" at="29,0,30,0" concept="6" trace="getConceptDeclaration_id67EYkym$wx3" />
+      <node id="3981577588228013725" at="31,0,32,0" concept="6" trace="BH_METHODS" />
+      <node id="3981577588228068650" at="36,93,37,128" concept="4" />
+      <node id="3981577588228071705" at="37,128,38,213" concept="4" />
+      <node id="3981577588228072147" at="38,213,39,63" concept="5" />
+      <node id="3981577588228013725" at="46,114,47,21" concept="1" />
+      <node id="3981577588228013725" at="51,114,52,49" concept="4" />
+      <node id="3981577588228013725" at="53,26,54,56" concept="9" />
+      <node id="3981577588228013725" at="57,13,58,71" concept="5" />
+      <node id="3981577588228013725" at="59,14,60,58" concept="9" />
+      <node id="3981577588228013725" at="65,128,66,49" concept="4" />
+      <node id="3981577588228013725" at="67,26,68,56" concept="9" />
+      <node id="3981577588228013725" at="71,14,72,58" concept="9" />
+      <node id="3981577588228013725" at="78,48,79,22" concept="5" />
+      <node id="3981577588228013725" at="84,40,85,19" concept="5" />
+      <node id="3981577588228013725" at="89,0,90,0" concept="6" trace="CellCreateOperation$yN" />
+      <node id="3981577588228013725" at="90,0,91,0" concept="6" trace="SNodeType$hR" />
+      <node id="3981577588228013725" at="94,0,95,0" concept="6" trace="contextNode$$Fya" />
+      <node id="3981577588228013725" at="95,0,96,0" concept="6" trace="concept$OMgE" />
+      <node id="3981577588228013725" at="33,0,35,0" concept="7" trace="___init___#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="3981577588228013725" at="42,0,44,0" concept="0" trace="CellCreateOperationInlineEditor__BehaviorDescriptor#()V" />
+      <node id="3981577588228013725" at="52,49,55,5" concept="2" />
+      <node id="3981577588228013725" at="66,49,69,5" concept="2" />
+      <node id="3981577588228013725" at="45,0,49,0" concept="3" trace="initNode#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SConstructor;[Ljava/lang/Object;)V" />
+      <node id="3981577588228013725" at="69,5,73,5" concept="8" />
+      <node id="3981577588228013725" at="36,0,41,0" concept="7" trace="getConceptDeclaration_id67EYkym$wx3#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="3981577588228013725" at="76,0,81,0" concept="3" trace="getDeclaredMethods#()Ljava/util/List;" />
+      <node id="3981577588228013725" at="82,0,87,0" concept="3" trace="getConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="3981577588228013725" at="55,5,61,5" concept="8" />
+      <node id="3981577588228013725" at="64,0,75,0" concept="3" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
+      <node id="3981577588228013725" at="50,0,63,0" concept="3" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
+      <scope id="3981577588228013725" at="33,63,33,63" />
+      <scope id="3981577588228013725" at="42,69,42,69" />
+      <scope id="3981577588228013725" at="46,114,47,21" />
+      <scope id="3981577588228013725" at="53,26,54,56" />
+      <scope id="3981577588228013725" at="57,13,58,71" />
+      <scope id="3981577588228013725" at="59,14,60,58" />
+      <scope id="3981577588228013725" at="67,26,68,56" />
+      <scope id="3981577588228013725" at="71,14,72,58" />
+      <scope id="3981577588228013725" at="78,48,79,22" />
+      <scope id="3981577588228013725" at="84,40,85,19" />
+      <scope id="3981577588228013725" at="33,0,35,0">
+        <var name="__thisNode__" id="3981577588228013725" />
+      </scope>
+      <scope id="3981577588228013725" at="42,0,44,0" />
+      <scope id="3981577588228018382" at="36,93,39,63">
+        <var name="cellCreateExpression" id="3981577588228068651" />
+        <var name="type" id="3981577588228071706" />
+      </scope>
+      <scope id="3981577588228013725" at="45,0,49,0">
+        <var name="constructor" id="3981577588228013725" />
+        <var name="node" id="3981577588228013725" />
+        <var name="parameters" id="3981577588228013725" />
+      </scope>
+      <scope id="3981577588228013725" at="36,0,41,0">
+        <var name="__thisNode__" id="3981577588228013725" />
+      </scope>
+      <scope id="3981577588228013725" at="76,0,81,0" />
+      <scope id="3981577588228013725" at="82,0,87,0" />
+      <scope id="3981577588228013725" at="65,128,73,5">
+        <var name="methodIndex" id="3981577588228013725" />
+      </scope>
+      <scope id="3981577588228013725" at="51,114,61,5">
+        <var name="methodIndex" id="3981577588228013725" />
+      </scope>
+      <scope id="3981577588228013725" at="64,0,75,0">
+        <var name="concept" id="3981577588228013725" />
+        <var name="method" id="3981577588228013725" />
+        <var name="parameters" id="3981577588228013725" />
+      </scope>
+      <scope id="3981577588228013725" at="50,0,63,0">
+        <var name="method" id="3981577588228013725" />
+        <var name="node" id="3981577588228013725" />
+        <var name="parameters" id="3981577588228013725" />
+      </scope>
+      <unit id="3981577588228013725" at="88,0,92,0" name="org.fbme.ide.meta.editor.behavior.CellCreateOperationInlineEditor__BehaviorDescriptor$CONCEPTS" />
+      <unit id="3981577588228013725" at="93,0,97,0" name="org.fbme.ide.meta.editor.behavior.CellCreateOperationInlineEditor__BehaviorDescriptor$LINKS" />
+      <unit id="3981577588228013725" at="26,0,98,0" name="org.fbme.ide.meta.editor.behavior.CellCreateOperationInlineEditor__BehaviorDescriptor" />
+    </file>
+  </root>
+</debug-info>
+

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd">
+<FBType Name="ParserTestFbt1">
+  <InterfaceList />
+  <BasicFB>
+    <pou name="functionBlock0" pouType="functionBlock">
+        <interface>
+          <localVars>
+            <variable name="CTU0">
+              <type>
+                <derived name="CTU"/>
+              </type>
+            </variable>
+          </localVars>
+          <inputVars>
+            <variable name="c">
+              <type>
+                <BOOL/>
+              </type>
+              <initialValue>
+                <simpleValue value="false"/>
+              </initialValue>
+            </variable>
+          </inputVars>
+        </interface>
+        <body>
+          <FBD>
+            <block localId="1" typeName="CTU" instanceName="CTU0" executionOrderId="0" height="80" width="90">
+              <position x="400" y="40"/>
+              <inputVariables>
+                <variable formalParameter="CU" edge="rising">
+                  <connectionPointIn>
+                    <relPosition x="0" y="30"/>
+                    <connection refLocalId="4">
+                      <position x="400" y="70"/>
+                      <position x="330" y="70"/>
+                      <position x="330" y="100"/>
+                      <position x="260" y="100"/>
+                    </connection>
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="R">
+                  <connectionPointIn>
+                    <relPosition x="0" y="50"/>
+                    <connection refLocalId="6">
+                      <position x="400" y="90"/>
+                      <position x="335" y="90"/>
+                      <position x="335" y="50"/>
+                      <position x="270" y="50"/>
+                    </connection>
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="PV">
+                  <connectionPointIn>
+                    <relPosition x="0" y="70"/>
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables/>
+              <outputVariables>
+                <variable formalParameter="Q">
+                  <connectionPointOut>
+                    <relPosition x="90" y="30"/>
+                  </connectionPointOut>
+                </variable>
+                <variable formalParameter="CV">
+                  <connectionPointOut>
+                    <relPosition x="90" y="50"/>
+                  </connectionPointOut>
+                </variable>
+              </outputVariables>
+            </block>
+            <outVariable localId="2" executionOrderId="0" height="30" width="20" negated="false">
+              <position x="590" y="30"/>
+              <connectionPointIn>
+                <relPosition x="0" y="20"/>
+                <connection refLocalId="1" formalParameter="Q">
+                  <position x="590" y="50"/>
+                  <position x="530" y="50"/>
+                  <position x="530" y="70"/>
+                  <position x="490" y="70"/>
+                </connection>
+              </connectionPointIn>
+              <expression>a</expression>
+            </outVariable>
+            <inOutVariable localId="3" executionOrderId="0" height="30" width="20" negatedOut="false" negatedIn="false">
+              <position x="608" y="100"/>
+              <connectionPointIn>
+                <relPosition x="0" y="20"/>
+                <connection refLocalId="1" formalParameter="CV">
+                  <position x="608" y="120"/>
+                  <position x="549" y="120"/>
+                  <position x="549" y="90"/>
+                  <position x="490" y="90"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="20" y="20"/>
+              </connectionPointOut>
+              <expression>b</expression>
+            </inOutVariable>
+            <inVariable localId="4" executionOrderId="0" height="30" width="20" negated="false">
+              <position x="240" y="90"/>
+              <connectionPointOut>
+                <relPosition x="20" y="10"/>
+              </connectionPointOut>
+              <expression>c</expression>
+            </inVariable>
+            <continuation name="Connection0" localId="6" height="30" width="130">
+              <position x="140" y="30"/>
+              <connectionPointOut>
+                <relPosition x="130" y="20"/>
+              </connectionPointOut>
+            </continuation>
+          </FBD>
+        </body>
+      </pou>
+  </BasicFB>
+</FBType>
