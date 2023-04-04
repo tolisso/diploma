@@ -1,12 +1,11 @@
 package org.fbme.integration.nxt.importer;
 
-import openplc.converter.ConverterBaseArguments;
+import openplc.converter.ConverterArguments;
 import openplc.converter.FbNetworkConverter;
 import openplc.converter.FbtdInterfaceConverter;
 import openplc.oldstandart.dto.IEC61131XmlObjects;
 import openplc.oldstandart.dto.Iec61131Parser;
 import org.fbme.lib.iec61499.IEC61499Factory;
-import org.fbme.lib.iec61499.declarations.CompositeFBTypeDeclaration;
 import org.fbme.lib.iec61499.declarations.FBTypeDeclaration;
 import org.fbme.lib.st.STFactory;
 import org.jdom.input.DOMBuilder;
@@ -16,6 +15,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -28,18 +28,23 @@ public class TmpParseTest {
         return result;
     }
 
-    private static List<CompositeFBTypeDeclaration> getChildNodes(IEC61499Factory factory, STFactory stFactory, IEC61131XmlObjects.Project a) {
+    private static List<FBTypeDeclaration> getChildNodes(IEC61499Factory factory, STFactory stFactory, IEC61131XmlObjects.Project a) {
         return a.getTypes().getPous().getPouList().stream()
                 .map(xmlPou -> {
+                    var result = new ArrayList<FBTypeDeclaration>();
                     var networkFbtd = factory.createCompositeFBTypeDeclaration(null);
-                    var converterBaseArguments = new ConverterBaseArguments(factory, stFactory);
-                    new FbNetworkConverter(
+                    var converterBaseArguments = new ConverterArguments(factory, stFactory);
+                    result.addAll(new FbNetworkConverter(
                             xmlPou.getBodyList().get(0).getFbd(),
+                            xmlPou.getPouInterface(),
                             converterBaseArguments
-                    ).fillNetwork(networkFbtd.getNetwork());
+                    ).fillNetwork(networkFbtd.getNetwork()));
                     new FbtdInterfaceConverter(xmlPou, converterBaseArguments).fillInterface(networkFbtd);
-                    return networkFbtd;
-                }).collect(Collectors.toList());
+                    result.add(networkFbtd);
+                    return result;
+                })
+                .flatMap(Collection::stream)
+                .collect(Collectors.toList());
     }
 
     public static class NodesStructure {

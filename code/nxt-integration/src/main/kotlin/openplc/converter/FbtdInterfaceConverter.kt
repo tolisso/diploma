@@ -7,8 +7,8 @@ import org.fbme.lib.st.types.ElementaryType
 
 class FbtdInterfaceConverter(
     val xmlPou: IEC61131XmlObjects.Pou,
-    converterBaseArguments: ConverterBaseArguments
-) : ConverterBase(converterBaseArguments) {
+    converterArguments: ConverterArguments
+) : ConverterBase(converterArguments) {
 
     fun fillInterface(fbtd: FBTypeDeclaration) {
         fbtd.name = xmlPou.name
