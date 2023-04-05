@@ -30,16 +30,8 @@ class FbNetworkEventConverter(
         for (i in -1 until blocksTopologicalOrder.size) {
             val sourceId = if (i == -1) null else blocksTopologicalOrder[i]
             val targetId = if (i == blocksTopologicalOrder.size - 1) null else blocksTopologicalOrder[i + 1]
-            val sourceWriteTo =
-                if (sourceId != null)
-                    blockToVarConnectionService.getVariablesConnectedToInput(sourceId)
-                else HashSet()
-            val targetReadFrom =
-                if (targetId != null)
-                    blockToVarConnectionService.getVariablesConnectedToOutput(targetId)
-                else HashSet()
 
-            connections.addAll(getConnectionsBetweenBlocks(sourceId, targetId, sourceWriteTo, targetReadFrom))
+            connections.addAll(getConnectionsBetweenBlocks(sourceId, targetId))
         }
 
         return connections
@@ -48,21 +40,30 @@ class FbNetworkEventConverter(
     private fun getConnectionsBetweenBlocks(
         sourceId: Long?,
         targetId: Long?,
-        sourceWriteTo: Set<String>,
-        targetReadFrom: Set<String>
     ): List<FBNetworkConnection> {
         val connections = ArrayList<FBNetworkConnection>()
+        val sourceWriteTo: Set<String>
+        val targetReadFrom: Set<String>
         val sourceName: String?
+        val targetName: String?
         var lastOutVariable: String?
 
         if (sourceId == null) {
             lastOutVariable = null
             sourceName = null
+            sourceWriteTo = HashSet()
         } else {
             sourceName = blockService.getNameById(sourceId)
             lastOutVariable = "$sourceName.CNF"
+            sourceWriteTo = blockToVarConnectionService.getVariablesConnectedToInput(sourceId)
         }
-        val targetName = if (targetId == null) null else blockService.getNameById(targetId)
+        if (targetId == null) {
+            targetName = null
+            targetReadFrom = HashSet()
+        } else {
+            targetName = blockService.getNameById(targetId)
+            targetReadFrom = blockToVarConnectionService.getVariablesConnectedToOutput(targetId)
+        }
 
         val variableNameList = HashSet<String>()
         variableNameList.addAll(sourceWriteTo)
