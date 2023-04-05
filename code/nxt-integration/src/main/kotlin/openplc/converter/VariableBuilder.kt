@@ -15,10 +15,10 @@ class VariableBuilder(
 
     private fun createConnection(setData: String?, getData: String?): ConnectionNames {
         val connection = ConnectionNames(
-            EVENT_IN_PREFIX + counter,
-            EVENT_OUT_PREFIX + counter,
-            setData,
-            getData
+            "$varName.$EVENT_IN_PREFIX$counter",
+            "$varName.$EVENT_OUT_PREFIX$counter",
+            "$varName.$setData",
+            "$varName.$getData"
         )
         connectionNamesList.add(connection)
         counter++

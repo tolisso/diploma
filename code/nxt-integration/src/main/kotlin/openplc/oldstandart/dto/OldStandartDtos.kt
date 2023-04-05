@@ -3,7 +3,7 @@ package openplc.oldstandart.dto
 import nl.adaptivity.xmlutil.serialization.XmlSerialName
 import org.jdom.Element
 
-class IEC61131XmlObjects {
+class OldStandardXml {
 
 
     class NotImplemented

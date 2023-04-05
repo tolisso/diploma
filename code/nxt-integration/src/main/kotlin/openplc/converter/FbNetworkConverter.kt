@@ -1,41 +1,26 @@
 package openplc.converter
 
-import openplc.oldstandart.dto.IEC61131XmlObjects
+import openplc.oldstandart.dto.OldStandardXml
 import org.fbme.lib.iec61499.declarations.FBTypeDeclaration
 import org.fbme.lib.iec61499.fbnetwork.*
 
 class FbNetworkConverter(
-    private val xmlFbd: IEC61131XmlObjects.FBD,
-    private val xmlInterface: IEC61131XmlObjects.Interface,
+    private val xmlFbd: OldStandardXml.FBD,
+    private val xmlInterface: OldStandardXml.Interface,
     private val converterArguments: ConverterArguments,
 ) : ConverterBase(converterArguments) {
 
     private val scale: Int = 3
-    private val blockNameByIdMap: Map<Long, String>
-    private val variableNameByIdMap: Map<Long, String>
-
-    init {
-        blockNameByIdMap = getBlockNameByIdMap()
-        variableNameByIdMap = getInVariableNameByIdMap()
-    }
 
     // returns additional FBTypeDeclarations of variables
     fun fillNetwork(network: FBNetwork): List<FBTypeDeclaration> {
         val blocks = xmlFbd.blockList.map(::createFunctionBlockDeclaration)
         network.functionBlocks.addAll(blocks)
 
-//        network.dataConnections.addAll(xmlFbd.blockList.map(::getConnectionsToBlock).flatten())
-//        network.dataConnections.addAll(xmlFbd.outVariableList.map(::getConnectionsToOutVariable).flatten())
         network.endpointCoordinates.addAll(getEndpointCoordinates())
 
         val variableBuilders = getVariableBuilders()
-        val connections = FbNetworkEventConverter(
-            xmlFbd,
-            blockNameByIdMap,
-            variableNameByIdMap,
-            variableBuilders,
-            converterArguments
-        ).getEvents()
+        val connections = FbNetworkEventConverter(xmlFbd, variableBuilders, converterArguments).getEvents()
 
         network.eventConnections.addAll(connections.filter { it.kind == EntryKind.EVENT })
         network.dataConnections.addAll(connections.filter { it.kind == EntryKind.DATA })
@@ -51,7 +36,7 @@ class FbNetworkConverter(
     }
 
     private fun getVariableBuilders(): List<VariableBuilder> {
-        val variables = ArrayList<IEC61131XmlObjects.VariableList.Variable>()
+        val variables = ArrayList<OldStandardXml.VariableList.Variable>()
         variables.addAll(xmlInterface.outputVars.map { it.variableList }.flatten())
         variables.addAll(xmlInterface.inputVars.map { it.variableList }.flatten())
         variables.addAll(xmlInterface.inOutVars.map { it.variableList }.flatten())
@@ -60,23 +45,6 @@ class FbNetworkConverter(
         return variables.map {
             VariableBuilder(it.name)
         }
-    }
-
-    private fun getInVariableNameByIdMap(): Map<Long, String> {
-        val variableIdToName = HashMap<Long, String>()
-        xmlFbd.inVariableList.forEach { variableIdToName[it.localId] = it.expression.element.text }
-        xmlFbd.outVariableList.forEach { variableIdToName[it.localId] = it.expression.element.text }
-        xmlFbd.inOutVariableList.forEach { variableIdToName[it.localId] = it.expression.element.text }
-
-        return variableIdToName;
-    }
-
-    private fun getBlockNameByIdMap(): Map<Long, String> {
-        val localIdToBlockName = HashMap<Long, String>()
-        for (block in xmlFbd.blockList) {
-            localIdToBlockName[block.localId] = block.getName()
-        }
-        return localIdToBlockName
     }
 
     private fun getEndpointCoordinates(): List<EndpointCoordinate> {
@@ -96,40 +64,7 @@ class FbNetworkConverter(
         }
     }
 
-    private fun getConnectionsToOutVariable(outVariable: IEC61131XmlObjects.FBD.OutVariable): List<FBNetworkConnection> {
-        outVariable.connectionPointIn ?: return ArrayList()
-        return outVariable.connectionPointIn.connections.map { xmlConnection ->
-            val sourceReferenceFQName = getSourceReferenceFQName(xmlConnection)
-            val connection = factory.createFBNetworkConnection(EntryKind.DATA)
-            connection.sourceReference.setFQName(sourceReferenceFQName)
-            connection.targetReference.setFQName(outVariable.expression.element.text)
-            connection
-        }
-    }
-
-    private fun getConnectionsToBlock(xmlBlock: IEC61131XmlObjects.Block): List<FBNetworkConnection> {
-        return xmlBlock.inputVariables.variables.mapNotNull { variable ->
-            variable.connectionPointIn?.connections?.map { xmlConnection ->
-                val sourceReferenceFQName = getSourceReferenceFQName(xmlConnection)
-                val connection = factory.createFBNetworkConnection(EntryKind.DATA)
-                connection.sourceReference.setFQName(sourceReferenceFQName)
-                connection.targetReference.setFQName(xmlBlock.getName() + "." + variable.formalParameter)
-                connection
-            }
-        }.flatten()
-    }
-
-    private fun getSourceReferenceFQName(xmlConnection: IEC61131XmlObjects.Connection): String {
-        return if (xmlConnection.formalParameter != null) {
-            // source reference - block
-            blockNameByIdMap[xmlConnection.refLocalId] + "." + xmlConnection.formalParameter
-        } else {
-            // source reference - input variable
-            variableNameByIdMap[xmlConnection.refLocalId]!!
-        }
-    }
-
-    private fun createFunctionBlockDeclaration(xmlBlock: IEC61131XmlObjects.Block): FunctionBlockDeclaration {
+    private fun createFunctionBlockDeclaration(xmlBlock: OldStandardXml.Block): FunctionBlockDeclaration {
         val block = factory.createFunctionBlockDeclaration(null)
         block.name = xmlBlock.getName()
         block.typeReference.setTargetName(xmlBlock.typeName)

@@ -1,19 +1,8 @@
 package org.fbme.integration.nxt.importer;
 
-import openplc.converter.ConverterArguments;
-import openplc.converter.FbNetworkConverter;
-import openplc.oldstandart.dto.IEC61131XmlObjects;
-import openplc.oldstandart.dto.Iec61131Parser;
 import org.fbme.ide.platform.testing.PlatformTestBase;
 import org.fbme.ide.platform.testing.PlatformTestRunner;
-import org.jdom.input.DOMBuilder;
-import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.xml.sax.SAXException;
-
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import java.io.IOException;
 
 @RunWith(PlatformTestRunner.class)
 public class BasicFbTypeNxtImporterTest extends PlatformTestBase {

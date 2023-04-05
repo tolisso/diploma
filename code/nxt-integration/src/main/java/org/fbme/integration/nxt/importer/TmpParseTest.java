@@ -3,7 +3,7 @@ package org.fbme.integration.nxt.importer;
 import openplc.converter.ConverterArguments;
 import openplc.converter.FbNetworkConverter;
 import openplc.converter.FbtdInterfaceConverter;
-import openplc.oldstandart.dto.IEC61131XmlObjects;
+import openplc.oldstandart.dto.OldStandardXml;
 import openplc.oldstandart.dto.Iec61131Parser;
 import org.fbme.lib.iec61499.IEC61499Factory;
 import org.fbme.lib.iec61499.declarations.FBTypeDeclaration;
@@ -22,13 +22,13 @@ import java.util.stream.Collectors;
 public class TmpParseTest {
     public static NodesStructure test(IEC61499Factory factory, STFactory stFactory, String path) throws ParserConfigurationException, IOException, SAXException {
         var root = new DOMBuilder().build(DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(path));
-        var a = new Iec61131Parser().parse(root.getRootElement(), IEC61131XmlObjects.Project.class);
+        var a = new Iec61131Parser().parse(root.getRootElement(), OldStandardXml.Project.class);
         var result = new NodesStructure(factory.createBasicFBTypeDeclaration(null));
         result.childFbtdList.addAll(getChildNodes(factory, stFactory, a));
         return result;
     }
 
-    private static List<FBTypeDeclaration> getChildNodes(IEC61499Factory factory, STFactory stFactory, IEC61131XmlObjects.Project a) {
+    private static List<FBTypeDeclaration> getChildNodes(IEC61499Factory factory, STFactory stFactory, OldStandardXml.Project a) {
         return a.getTypes().getPous().getPouList().stream()
                 .map(xmlPou -> {
                     var result = new ArrayList<FBTypeDeclaration>();

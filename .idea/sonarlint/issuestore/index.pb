@@ -93,3 +93,13 @@ ncode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/iec61131-3
 bcode/nxt-integration/src/main/java/org/fbme/integration/nxt/importer/NxtImporterConfiguration.java,c\f\cfb649eb230a0e188868275765f413aa297deb53
 ê
 `code/nxt-integration/src/main/java/org/fbme/integration/nxt/importer/BasicFbTypeNxtImporter.java,1\7\17c714f6551060ee57eb2d33f2794643f133cb01
+é
+^code/nxt-integration/src/main/java/org/fbme/integration/nxt/importer/FBNetworkNxtImporter.java,5\2\528e36363b2445f64ea7044e8dc89799b9a26a30
+~
+Ncode/nxt-integration/src/main/java/org/fbme/integration/nxt/importer/Type.java,b\c\bc450ea2e67c87e548706dd696ac0557a6d10bdf
+î
+dcode/nxt-integration/src/main/java/org/fbme/integration/nxt/importer/PortPathNetworkCoordinates.java,2\7\27933272e4364cd8f8234d827c26f64246461c5d
+~
+Ncode/nxt-integration/src/main/kotlin/openplc/oldstandart/dto/Iec61131Parser.kt,9\d\9da37dec69e7aecdda3509da60a277f76835e980
+î
+dcode/nxt-integration/src/test/java/org/fbme/integration/nxt/importer/BasicFbTypeNxtImporterTest.java,8\9\897d89a5f0edd162e9cee5d3e3033444680c5366

@@ -1,23 +1,18 @@
 package openplc.converter
 
-import openplc.oldstandart.dto.IEC61131XmlObjects
+import openplc.oldstandart.dto.OldStandardXml
 import org.fbme.lib.iec61499.fbnetwork.EntryKind
 import org.fbme.lib.iec61499.fbnetwork.FBNetworkConnection
-import java.util.*
 
 class FbNetworkEventConverter(
-    private val xmlFbd: IEC61131XmlObjects.FBD,
-    private val blockNameByIdMap: Map<Long, String>,
-    private val variableNameByIdMap: Map<Long, String>,
+    private val xmlFbd: OldStandardXml.FBD,
     variableBuilders: List<VariableBuilder>,
     converterArguments: ConverterArguments
 ) : ConverterBase(converterArguments) {
 
+    private val blockService = FbdBlockService(xmlFbd)
+    private val blockToVarConnectionService = FbdBlockToVarConnectionService(xmlFbd)
     private val variableBuilderByNameMap: Map<String, VariableBuilder>
-    private val varToBlockDataInput =
-        TreeMap<Pair<Long, String>, String>(compareBy { p: Pair<Long, String> -> p.first }.thenBy { it.second })
-    private val blockToVarDataOutput =
-        TreeMap<Pair<Long, String>, String>(compareBy { p: Pair<Long, String> -> p.first }.thenBy { it.second })
 
     init {
         variableBuilderByNameMap = HashMap()
@@ -25,113 +20,107 @@ class FbNetworkEventConverter(
     }
 
     fun getEvents(): List<FBNetworkConnection> {
-        if (blockNameByIdMap.isEmpty()) {
-            val connection = factory.createFBNetworkConnection(EntryKind.EVENT)
-            connection.sourceReference.setFQName("REQ")
-            connection.targetReference.setFQName("CNF")
-            return listOf(connection)
-        }
-
         val graph = getBlockGraph()
         val blocksTopologicalOrder: List<Long> = getBlocksTopologicalOrder(graph)
         return getConnections(blocksTopologicalOrder)
     }
 
     private fun getConnections(blocksTopologicalOrder: List<Long>): List<FBNetworkConnection> {
-        val result = ArrayList<FBNetworkConnection>()
-        val blockInputLocalVariables = getBlockInputLocalVariables()
-        val blockOutputLocalVariables = getBlockOutputLocalVariables()
+        val connections = ArrayList<FBNetworkConnection>()
         for (i in -1 until blocksTopologicalOrder.size) {
-            val sourceId: Long?
-            val targetId: Long?
-            var lastOutVariable: String?
-            val sourceBlockName: String?
-            val targetBlockName: String?
-            val sourceWriteTo: Set<String>
-            val targetReadFrom: Set<String>
+            val sourceId = if (i == -1) null else blocksTopologicalOrder[i]
+            val targetId = if (i == blocksTopologicalOrder.size - 1) null else blocksTopologicalOrder[i + 1]
+            val sourceWriteTo =
+                if (sourceId != null)
+                    blockToVarConnectionService.getVariablesConnectedToInput(sourceId)
+                else HashSet()
+            val targetReadFrom =
+                if (targetId != null)
+                    blockToVarConnectionService.getVariablesConnectedToOutput(targetId)
+                else HashSet()
 
-            if (i == -1) {
-                sourceId = null
-                lastOutVariable = null
-                sourceBlockName = null
-                sourceWriteTo = HashSet()
-            } else {
-                sourceId = blocksTopologicalOrder[i]
-                lastOutVariable = blockNameByIdMap[sourceId] + ".CNF"
-                sourceBlockName = blockNameByIdMap[sourceId]
-                sourceWriteTo = blockOutputLocalVariables[sourceId]!!
-            }
-
-            if (i == blocksTopologicalOrder.size - 1) {
-                targetId = null
-                targetBlockName = null
-                targetReadFrom = HashSet()
-            } else {
-                targetId = blocksTopologicalOrder[i + 1]
-                targetBlockName = blockNameByIdMap[targetId]
-                targetReadFrom = blockInputLocalVariables[targetId]!!
-            }
-
-            val variableNameList = HashSet<String>()
-            variableNameList.addAll(sourceWriteTo)
-            variableNameList.addAll(targetReadFrom)
-            for (varName in variableNameList) {
-                val variableBuilder = variableBuilderByNameMap[varName]!!
-
-                val connectionNames =
-                    if (varName in sourceWriteTo && varName in targetReadFrom) {
-                        variableBuilder.createSetAndGetConnection()
-                    } else if (varName in sourceWriteTo) {
-                        variableBuilder.createSetConnection()
-                    } else if (varName in targetReadFrom) {
-                        variableBuilder.createGetConnection()
-                    } else {
-                        throw RuntimeException("Недопустимое состояние: переменная [$varName] не связана с блоками [$sourceBlockName] и [$targetBlockName]")
-                    }
-
-                if (lastOutVariable != null) {
-                    val eventConnection = factory.createFBNetworkConnection(EntryKind.EVENT)
-                    eventConnection.sourceReference.setFQName(lastOutVariable)
-                    eventConnection.targetReference.setFQName(varName + "." + connectionNames.eventIn)
-                    result.add(eventConnection)
-                }
-
-                if (connectionNames.setData != null) {
-                    val inConnection = factory.createFBNetworkConnection(EntryKind.DATA)
-                    inConnection.sourceReference.setFQName(sourceBlockName + "." + blockToVarDataOutput[Pair(sourceId, varName)])
-                    inConnection.targetReference.setFQName(varName + "." + connectionNames.setData)
-                    result.add(inConnection)
-                }
-
-                if (connectionNames.getData != null) {
-                    val outConnection = factory.createFBNetworkConnection(EntryKind.DATA)
-                    outConnection.sourceReference.setFQName(varName + "." + connectionNames.getData)
-                    outConnection.targetReference.setFQName(targetBlockName + "." + varToBlockDataInput[Pair(targetId, varName)])
-                    result.add(outConnection)
-                }
-
-                lastOutVariable = varName + "." + connectionNames.eventOut
-            }
-
-            if (targetBlockName != null && lastOutVariable != null) {
-                val connection = factory.createFBNetworkConnection(EntryKind.EVENT)
-                connection.sourceReference.setFQName(lastOutVariable)
-                connection.targetReference.setFQName("$targetBlockName.REQ")
-                result.add(connection)
-            }
+            connections.addAll(getConnectionsBetweenBlocks(sourceId, targetId, sourceWriteTo, targetReadFrom))
         }
 
-        return result
+        return connections
+    }
+
+    private fun getConnectionsBetweenBlocks(
+        sourceId: Long?,
+        targetId: Long?,
+        sourceWriteTo: Set<String>,
+        targetReadFrom: Set<String>
+    ): List<FBNetworkConnection> {
+        val connections = ArrayList<FBNetworkConnection>()
+        val sourceName: String?
+        var lastOutVariable: String?
+
+        if (sourceId == null) {
+            lastOutVariable = null
+            sourceName = null
+        } else {
+            sourceName = blockService.getNameById(sourceId)
+            lastOutVariable = "$sourceName.CNF"
+        }
+        val targetName = if (targetId == null) null else blockService.getNameById(targetId)
+
+        val variableNameList = HashSet<String>()
+        variableNameList.addAll(sourceWriteTo)
+        variableNameList.addAll(targetReadFrom)
+        for (varName in variableNameList) {
+            val variableBuilder = variableBuilderByNameMap[varName]!!
+
+            val connectionNames =
+                if (varName in sourceWriteTo && varName in targetReadFrom) {
+                    variableBuilder.createSetAndGetConnection()
+                } else if (varName in sourceWriteTo) {
+                    variableBuilder.createSetConnection()
+                } else if (varName in targetReadFrom) {
+                    variableBuilder.createGetConnection()
+                } else {
+                    throw RuntimeException("Недопустимое состояние: переменная [$varName] не связана с блоками [$sourceName] и [$targetName]")
+                }
+
+            // in event connection
+            if (lastOutVariable != null) {
+                connections.add(createConnection(lastOutVariable, connectionNames.eventIn, EntryKind.EVENT))
+            }
+
+            if (connectionNames.setData != null) {
+                val setDataSourceName = sourceName + "." + blockToVarConnectionService.getBlockOutputByVariable(sourceId!!, varName)
+                connections.add(createConnection(setDataSourceName, connectionNames.setData, EntryKind.DATA))
+            }
+
+            if (connectionNames.getData != null) {
+                val getDataTargetName = targetName + "." + blockToVarConnectionService.getBlockInputByVariable(targetId!!, varName)
+                connections.add(createConnection(connectionNames.getData, getDataTargetName, EntryKind.DATA))
+            }
+
+            lastOutVariable = connectionNames.eventOut
+        }
+
+        // last event connection
+        if (targetName != null && lastOutVariable != null) {
+            connections.add(createConnection(lastOutVariable, "$targetName.REQ", EntryKind.EVENT))
+        }
+        return connections
+    }
+
+    private fun createConnection(source: String, target: String, type: EntryKind): FBNetworkConnection {
+        val connection = factory.createFBNetworkConnection(type)
+        connection.sourceReference.setFQName(source)
+        connection.targetReference.setFQName(target)
+        return connection
     }
 
     private fun getBlockGraph(): Map<Long, Set<Long>> {
         val graph = HashMap<Long, MutableSet<Long>>()
-        blockNameByIdMap.keys.forEach { graph[it] = HashSet() }
+        blockService.getAllBlockIds().forEach { graph[it] = HashSet() }
 
         for (block in xmlFbd.blockList) {
             block.inputVariables.variables.forEach { variable ->
                 variable.connectionPointIn?.connections?.forEach { connection ->
-                    if (blockNameByIdMap.containsKey(connection.refLocalId)) {
+                    if (blockService.isBlockId(connection.refLocalId)) {
                         graph[connection.refLocalId]?.add(block.localId)
                     }
                 }
@@ -158,61 +147,5 @@ class FbNetworkEventConverter(
             }
         }
         return ans.reversed()
-    }
-
-    private fun getBlockInputLocalVariables(): Map<Long, Set<String>> {
-        val blockInputLocalVariables = HashMap<Long, MutableSet<String>>()
-        blockNameByIdMap.keys.forEach { blockInputLocalVariables[it] = HashSet() }
-
-        for (block in xmlFbd.blockList) {
-            block.inputVariables.variables.forEach { targetVariable ->
-                targetVariable.connectionPointIn?.connections?.forEach { connection ->
-                    if (isVariableId(connection.refLocalId)) {
-                        blockInputLocalVariables[block.localId]?.add(variableNameByIdMap[connection.refLocalId]!!)
-
-                        val sourceVariableName = variableNameByIdMap[connection.refLocalId]!!
-                        // formal parameter is true because source is block
-                        varToBlockDataInput[Pair(block.localId, sourceVariableName)] = targetVariable.formalParameter
-                    }
-                }
-            }
-        }
-        return blockInputLocalVariables
-    }
-
-    private fun getBlockOutputLocalVariables(): Map<Long, Set<String>> {
-        val blockInputLocalVariables = HashMap<Long, MutableSet<String>>()
-        blockNameByIdMap.keys.forEach { blockInputLocalVariables[it] = HashSet() }
-        xmlFbd.inOutVariableList.forEach { variable ->
-            variable.connectionPointIn?.connections?.forEach { connection ->
-                if (isBlockId(connection.refLocalId)) {
-                    val blockId = connection.refLocalId
-                    blockInputLocalVariables[blockId]!!.add(variableNameByIdMap[variable.localId]!!)
-                    val variableName = variableNameByIdMap[variable.localId]!!
-                    // formal parameter is true because source is block
-                    blockToVarDataOutput[Pair(blockId, variableName)] = connection.formalParameter!!
-                }
-            }
-        }
-        xmlFbd.outVariableList.forEach { variable ->
-            variable.connectionPointIn?.connections?.forEach { connection ->
-                if (isBlockId(connection.refLocalId)) {
-                    val blockId = connection.refLocalId
-                    blockInputLocalVariables[blockId]!!.add(variableNameByIdMap[variable.localId]!!)
-                    val variableName = variableNameByIdMap[variable.localId]!!
-                    // formal parameter is true because source is block
-                    blockToVarDataOutput[Pair(blockId, variableName)] = connection.formalParameter!!
-                }
-            }
-        }
-        return blockInputLocalVariables
-    }
-
-    private fun isBlockId(id: Long): Boolean {
-        return blockNameByIdMap.containsKey(id)
-    }
-
-    private fun isVariableId(id: Long): Boolean {
-        return variableNameByIdMap.containsKey(id)
     }
 }

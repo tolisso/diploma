@@ -1,12 +1,12 @@
 package openplc.converter
 
-import openplc.oldstandart.dto.IEC61131XmlObjects
+import openplc.oldstandart.dto.OldStandardXml
 import org.fbme.lib.iec61499.declarations.FBTypeDeclaration
 import org.fbme.lib.iec61499.declarations.ParameterDeclaration
 import org.fbme.lib.st.types.ElementaryType
 
 class FbtdInterfaceConverter(
-    val xmlPou: IEC61131XmlObjects.Pou,
+    val xmlPou: OldStandardXml.Pou,
     converterArguments: ConverterArguments
 ) : ConverterBase(converterArguments) {
 
@@ -34,7 +34,7 @@ class FbtdInterfaceConverter(
         )
     }
 
-    private fun mapVariableToInputParameter(xmlVariable: IEC61131XmlObjects.VariableList.Variable): ParameterDeclaration {
+    private fun mapVariableToInputParameter(xmlVariable: OldStandardXml.VariableList.Variable): ParameterDeclaration {
         val parameterDeclaration = factory.createParameterDeclaration(null)
         parameterDeclaration.name = xmlVariable.name
         parameterDeclaration.type = ElementaryType.valueOf(xmlVariable.type.element.children[0].name)
