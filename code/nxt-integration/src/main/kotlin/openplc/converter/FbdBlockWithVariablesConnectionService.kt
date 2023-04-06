@@ -34,9 +34,9 @@ class FbdBlockToVarConnectionService(xmlFbd: OldStandardXml.FBD) {
             val varToBlockDataOutput = HashMap<Long, BlockToVarConnection>()
 
             for (c in connectionsService.getBlocksInConnections()) {
-                if (variableService.isVariableId(c.sourceId)) { // is block input connected to variable
+                if (variableService.isVariableId(c.sourceId)) {
                     val sourceVariableName = variableService.getNameById(c.sourceId)
-                    // formal parameter is true because source is block
+                    varToBlockDataOutput.putIfAbsent(c.targetBlockId, BlockToVarConnection())
                     varToBlockDataOutput[c.targetBlockId]!!
                         .addConnection(c.targetBlockVariableName, sourceVariableName)
                 }
@@ -56,7 +56,6 @@ class FbdBlockToVarConnectionService(xmlFbd: OldStandardXml.FBD) {
                     val sourceBlockId = c.sourceId
                     val variableName = variableInfoService.getNameById(c.targetVariableId)
                     blockToVarDataInput.putIfAbsent(sourceBlockId, BlockToVarConnection())
-                    // formal parameter is true because the source is block
                     blockToVarDataInput[sourceBlockId]!!
                         .addConnection(c.sourceFormalParameter!!, variableName)
                 }

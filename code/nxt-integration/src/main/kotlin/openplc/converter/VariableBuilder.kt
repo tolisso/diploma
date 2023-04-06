@@ -9,16 +9,25 @@ class VariableBuilder(
     private var counter = 1
     private val connectionNamesList = ArrayList<ConnectionNames>()
 
-    fun createGetConnection(): ConnectionNames = createConnection(null, GET_DATA_PREFIX + counter);
-    fun createSetConnection(): ConnectionNames = createConnection(SET_DATA_PREFIX + counter, null);
-    fun createSetAndGetConnection(): ConnectionNames = createConnection(SET_DATA_PREFIX + counter, GET_DATA_PREFIX + counter);
+    fun createGetConnection(): ConnectionNames = createConnection(
+        null,
+        "$GET_DATA_PREFIX$counter"
+    );
+    fun createSetConnection(): ConnectionNames = createConnection(
+        "$SET_DATA_PREFIX$counter",
+        null);
+    fun createSetAndGetConnection(): ConnectionNames = createConnection(
+        "$SET_DATA_PREFIX$counter",
+        "$GET_DATA_PREFIX$counter"
+    )
 
     private fun createConnection(setData: String?, getData: String?): ConnectionNames {
         val connection = ConnectionNames(
-            "$varName.$EVENT_IN_PREFIX$counter",
-            "$varName.$EVENT_OUT_PREFIX$counter",
-            "$varName.$setData",
-            "$varName.$getData"
+            varName,
+            "$EVENT_IN_PREFIX$counter",
+            "$EVENT_OUT_PREFIX$counter",
+            setData,
+            getData
         )
         connectionNamesList.add(connection)
         counter++
@@ -57,11 +66,17 @@ class VariableBuilder(
     }
 
     class ConnectionNames(
+        private val varName: String,
         val eventIn: String,
         val eventOut: String,
         val setData: String?,
         val getData: String?
-    )
+    ) {
+        fun fullEventIn() = "$varName.$eventIn"
+        fun fullEventOut() = "$varName.$eventOut"
+        fun fullSetData() = "$varName.$setData"
+        fun fullGetData() = "$varName.$getData"
+    }
 
     companion object {
         const val EVENT_IN_PREFIX = "event_in_"

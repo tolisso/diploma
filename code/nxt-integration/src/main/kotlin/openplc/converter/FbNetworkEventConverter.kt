@@ -25,86 +25,114 @@ class FbNetworkEventConverter(
         return getConnections(blocksTopologicalOrder)
     }
 
+    /**
+     * create connections between blocks in topological order and their in/out/inout variables
+     */
     private fun getConnections(blocksTopologicalOrder: List<Long>): List<FBNetworkConnection> {
         val connections = ArrayList<FBNetworkConnection>()
         for (i in -1 until blocksTopologicalOrder.size) {
-            val sourceId = if (i == -1) null else blocksTopologicalOrder[i]
-            val targetId = if (i == blocksTopologicalOrder.size - 1) null else blocksTopologicalOrder[i + 1]
+            val source = if (i == -1) null else getSource(blocksTopologicalOrder[i])
+            val target = if (i == blocksTopologicalOrder.size - 1) null else getTarget(blocksTopologicalOrder[i + 1])
 
-            connections.addAll(getConnectionsBetweenBlocks(sourceId, targetId))
+            connections.addAll(getConnectionsBetweenBlocks(source, target))
         }
 
         return connections
     }
 
+    private fun getSource(blockId: Long): BlockInfo {
+
+        return BlockInfo(
+            blockId,
+            blockService.getNameById(blockId),
+            blockToVarConnectionService.getVariablesConnectedToOutput(blockId)
+        )
+    }
+
+    private fun getTarget(blockId: Long): BlockInfo {
+        return BlockInfo(
+            blockId,
+            blockService.getNameById(blockId),
+            blockToVarConnectionService.getVariablesConnectedToInput(blockId)
+        )
+    }
+
+    /**
+     * consequentially connects
+     * - source block
+     * - (output variables of source block) union (input variables of target block)
+     * - target block
+     */
     private fun getConnectionsBetweenBlocks(
-        sourceId: Long?,
-        targetId: Long?,
+        source: BlockInfo?,
+        target: BlockInfo?
     ): List<FBNetworkConnection> {
         val connections = ArrayList<FBNetworkConnection>()
-        val sourceWriteTo: Set<String>
-        val targetReadFrom: Set<String>
-        val sourceName: String?
-        val targetName: String?
-        var lastOutVariable: String?
 
-        if (sourceId == null) {
-            lastOutVariable = null
-            sourceName = null
-            sourceWriteTo = HashSet()
-        } else {
-            sourceName = blockService.getNameById(sourceId)
-            lastOutVariable = "$sourceName.CNF"
-            sourceWriteTo = blockToVarConnectionService.getVariablesConnectedToInput(sourceId)
-        }
-        if (targetId == null) {
-            targetName = null
-            targetReadFrom = HashSet()
-        } else {
-            targetName = blockService.getNameById(targetId)
-            targetReadFrom = blockToVarConnectionService.getVariablesConnectedToOutput(targetId)
-        }
+        var lastOutVariable = if (source != null) {
+            source.name + ".CNF"
+        } else null
 
-        val variableNameList = HashSet<String>()
-        variableNameList.addAll(sourceWriteTo)
-        variableNameList.addAll(targetReadFrom)
-        for (varName in variableNameList) {
+        for (varName in source.connectedVars() union target.connectedVars()) {
             val variableBuilder = variableBuilderByNameMap[varName]!!
 
-            val connectionNames =
-                if (varName in sourceWriteTo && varName in targetReadFrom) {
-                    variableBuilder.createSetAndGetConnection()
-                } else if (varName in sourceWriteTo) {
-                    variableBuilder.createSetConnection()
-                } else if (varName in targetReadFrom) {
-                    variableBuilder.createGetConnection()
-                } else {
-                    throw RuntimeException("Недопустимое состояние: переменная [$varName] не связана с блоками [$sourceName] и [$targetName]")
-                }
+            val variableConnections = createConnection(variableBuilder, source, target)
 
-            // in event connection
+            // skipping when processing first variable before first block in fbd
             if (lastOutVariable != null) {
-                connections.add(createConnection(lastOutVariable, connectionNames.eventIn, EntryKind.EVENT))
+                connections.add(createConnection(lastOutVariable, variableConnections.fullEventIn(), EntryKind.EVENT))
             }
 
-            if (connectionNames.setData != null) {
-                val setDataSourceName = sourceName + "." + blockToVarConnectionService.getBlockOutputByVariable(sourceId!!, varName)
-                connections.add(createConnection(setDataSourceName, connectionNames.setData, EntryKind.DATA))
+            if (variableConnections.setData != null) {
+                // if we need to set a variable source is not null
+                val setDataSourceName =
+                    source!!.name + "." + blockToVarConnectionService.getBlockOutputByVariable(source.id, varName)
+                val setDataConnection = createConnection(setDataSourceName, variableConnections.fullSetData(), EntryKind.DATA)
+                connections.add(setDataConnection)
             }
 
-            if (connectionNames.getData != null) {
-                val getDataTargetName = targetName + "." + blockToVarConnectionService.getBlockInputByVariable(targetId!!, varName)
-                connections.add(createConnection(connectionNames.getData, getDataTargetName, EntryKind.DATA))
+            if (variableConnections.getData != null) {
+                // if we need to get a variable target is not null
+                val getDataTargetName =
+                    target!!.name + "." + blockToVarConnectionService.getBlockInputByVariable(target.id, varName)
+                val getDataConnection = createConnection(variableConnections.fullGetData(), getDataTargetName, EntryKind.DATA)
+                connections.add(getDataConnection)
             }
 
-            lastOutVariable = connectionNames.eventOut
+            lastOutVariable = variableConnections.fullEventOut()
         }
 
-        // last event connection
-        if (targetName != null && lastOutVariable != null) {
-            connections.add(createConnection(lastOutVariable, "$targetName.REQ", EntryKind.EVENT))
+        // skipping when we are setting last variable after last block in fbd
+        if (target != null && lastOutVariable != null) {
+            val lastEventConnection =
+                createConnection(lastOutVariable, target.name + ".REQ", EntryKind.EVENT)
+            connections.add(lastEventConnection)
         }
         return connections
+    }
+
+    /**
+     * for variable which variableBuilder builds
+     * if the variable is output of source block - generate getter
+     * if the variable is input of target block - generate setter
+     * @returns names of generated connections
+     */
+
+    private fun createConnection(
+        variableBuilder: VariableBuilder,
+        source: BlockInfo?,
+        target: BlockInfo?
+    ): VariableBuilder.ConnectionNames {
+        val varName = variableBuilder.varName
+        return if (varName in source.connectedVars() && varName in target.connectedVars()) {
+            variableBuilder.createSetAndGetConnection()
+        } else if (varName in source.connectedVars()) {
+            variableBuilder.createSetConnection()
+        } else if (varName in target.connectedVars()) {
+            variableBuilder.createGetConnection()
+        } else {
+            throw RuntimeException("Недопустимое состояние: переменная [$varName] не связана с блоками [${source?.name}] и [$target?.name]")
+        }
     }
 
     private fun createConnection(source: String, target: String, type: EntryKind): FBNetworkConnection {
@@ -148,5 +176,15 @@ class FbNetworkEventConverter(
             }
         }
         return ans.reversed()
+    }
+
+    class BlockInfo(
+        val id: Long,
+        val name: String,
+        val connectedVars: Set<String>
+    )
+
+    private fun BlockInfo?.connectedVars(): Set<String> {
+        return this?.connectedVars ?: HashSet()
     }
 }
