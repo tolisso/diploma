@@ -20,7 +20,7 @@ class FbNetworkConverter(
         network.endpointCoordinates.addAll(getEndpointCoordinates())
 
         val variableBuilders = getVariableBuilders()
-        val connections = FbNetworkEventConverter(xmlFbd, variableBuilders, converterArguments).getEvents()
+        val connections = FbNetworkEventConverter(xmlFbd, variableBuilders, converterArguments).networkConnections
 
         network.eventConnections.addAll(connections.filter { it.kind == EntryKind.EVENT })
         network.dataConnections.addAll(connections.filter { it.kind == EntryKind.DATA })

@@ -74,8 +74,8 @@ class VariableBuilder(
     ) {
         fun fullEventIn() = "$varName.$eventIn"
         fun fullEventOut() = "$varName.$eventOut"
-        fun fullSetData() = "$varName.$setData"
-        fun fullGetData() = "$varName.$getData"
+        fun fullSetData() = if (setData != null) "$varName.$setData" else null
+        fun fullGetData() = if (getData != null) "$varName.$getData" else null
     }
 
     companion object {

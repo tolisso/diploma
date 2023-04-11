@@ -103,3 +103,13 @@ dcode/nxt-integration/src/main/java/org/fbme/integration/nxt/importer/PortPathNe
 Ncode/nxt-integration/src/main/kotlin/openplc/oldstandart/dto/Iec61131Parser.kt,9\d\9da37dec69e7aecdda3509da60a277f76835e980
 ”
 dcode/nxt-integration/src/test/java/org/fbme/integration/nxt/importer/BasicFbTypeNxtImporterTest.java,8\9\897d89a5f0edd162e9cee5d3e3033444680c5366
+š
+jcode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/iec61131-3/bitwiseOperators/F_NOT.fbt,a\3\a361801b81efa35816403732e90250624b345fa6
+y
+Icode/nxt-integration/src/main/kotlin/openplc/converter/FbdBlockService.kt,b\d\bd1a4e8a6a0aea7e76d48e758ebdce555da6944b
+†
+Vcode/nxt-integration/src/main/java/org/fbme/integration/nxt/importer/TmpParseTest.java,d\8\d82b5a9faf2fde40816b8ed4f373609ad843c969
+€
+Pcode/nxt-integration/src/main/kotlin/openplc/converter/FbtdInterfaceConverter.kt,8\9\891d64e56644597b63bca8d2549a6befec9d09b0
+w
+Gcode/nxt-integration/src/main/kotlin/openplc/converter/ConverterBase.kt,e\a\ea74b5f948fce456da2c76847777552c602ef6d9
