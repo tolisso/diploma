@@ -10,6 +10,12 @@ class FbdVariableService(private val xmlFbd: OldStandardXml.FBD) {
     fun isVariableId(variableId: Long): Boolean = variableId in variableIdToNameMap.keys
     fun getAllDeclaredOutVariables() = declaredOutVariables
 
+    fun getInVariables() = xmlFbd.inVariableList.map { it.expression.element.text }
+
+    fun getOutVariables() = xmlFbd.outVariableList.map { it.expression.element.text }
+
+    fun getInOutVariables() = xmlFbd.inOutVariableList.map { it.expression.element.text }
+
     private fun getVariableNameByIdMap(): Map<Long, String> {
         val variableIdToName = HashMap<Long, String>()
         xmlFbd.inVariableList.forEach { variableIdToName[it.localId] = it.expression.element.text }

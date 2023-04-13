@@ -4,36 +4,45 @@ import org.fbme.lib.iec61499.IEC61499Factory
 import org.fbme.lib.iec61499.declarations.FBTypeDeclaration
 
 class VariableBuilder(
-    val varName: String
+    val varName: String,
+    val varType: VariableType
 ) {
     private var counter = 1
     private val connectionNamesList = ArrayList<ConnectionNames>()
+    private val fullConnectionToConnectionNames = HashMap<String, ConnectionNames>()
+
+    fun getConnectionNamesList(): List<ConnectionNames> = connectionNamesList
+//    fun getAllFullConnections(): Set<String> = fullConnectionToConnectionNames.keys
+//    fun getLinkedConnectionNames(fullConnection: String) = fullConnectionToConnectionNames[fullConnection]!!
 
     fun createGetConnection(): ConnectionNames = createConnection(
         null,
         "$GET_DATA_PREFIX$counter"
-    );
+    )
     fun createSetConnection(): ConnectionNames = createConnection(
         "$SET_DATA_PREFIX$counter",
-        null);
-    fun createSetAndGetConnection(): ConnectionNames = createConnection(
-        "$SET_DATA_PREFIX$counter",
-        "$GET_DATA_PREFIX$counter"
+        null
     )
 
     private fun createConnection(setData: String?, getData: String?): ConnectionNames {
+        val eventIn = "$EVENT_IN_PREFIX$counter"
+        val eventOut = "$EVENT_OUT_PREFIX$counter"
         val connection = ConnectionNames(
             varName,
-            "$EVENT_IN_PREFIX$counter",
-            "$EVENT_OUT_PREFIX$counter",
+            eventIn,
+            eventOut,
             setData,
             getData
         )
+        fullConnectionToConnectionNames[eventIn] = connection
+        fullConnectionToConnectionNames[eventOut] = connection
+        if (setData != null) fullConnectionToConnectionNames[setData] = connection
+        if (getData != null) fullConnectionToConnectionNames[getData] = connection
         connectionNamesList.add(connection)
+
         counter++
         return connection
     }
-
 
     fun build(factory: IEC61499Factory): FBTypeDeclaration {
         val fbtd = factory.createBasicFBTypeDeclaration(null)
@@ -79,9 +88,13 @@ class VariableBuilder(
     }
 
     companion object {
-        const val EVENT_IN_PREFIX = "event_in_"
-        const val EVENT_OUT_PREFIX = "event_out_"
-        const val SET_DATA_PREFIX = "set_data_"
-        const val GET_DATA_PREFIX = "get_data_"
+        const val EVENT_IN_PREFIX = "in_"
+        const val EVENT_OUT_PREFIX = "out_"
+        const val SET_DATA_PREFIX = "set_"
+        const val GET_DATA_PREFIX = "get_"
     }
+}
+
+enum class VariableType {
+    IN, OUT, INOUT, LOCAL
 }

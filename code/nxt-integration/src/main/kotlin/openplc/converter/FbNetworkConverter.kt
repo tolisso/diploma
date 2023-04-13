@@ -36,15 +36,21 @@ class FbNetworkConverter(
     }
 
     private fun getVariableBuilders(): List<VariableBuilder> {
-        val variables = ArrayList<OldStandardXml.VariableList.Variable>()
-        variables.addAll(xmlInterface.outputVars.map { it.variableList }.flatten())
-        variables.addAll(xmlInterface.inputVars.map { it.variableList }.flatten())
-        variables.addAll(xmlInterface.inOutVars.map { it.variableList }.flatten())
-        variables.addAll(xmlInterface.localVars.map { it.variableList }.flatten())
+        val variables = ArrayList<VariableBuilder>()
+        variables.addAll(toVariableBuilderList(xmlInterface.outputVars, VariableType.OUT))
+        variables.addAll(toVariableBuilderList(xmlInterface.inputVars, VariableType.IN))
+        variables.addAll(toVariableBuilderList(xmlInterface.inOutVars, VariableType.INOUT))
+        variables.addAll(toVariableBuilderList(xmlInterface.localVars, VariableType.LOCAL))
 
-        return variables.map {
-            VariableBuilder(it.name)
-        }
+        return variables
+    }
+
+    private fun toVariableBuilderList(varList: List<OldStandardXml.VariableList>, type: VariableType): List<VariableBuilder> {
+        return varList
+            .map { it.variableList }
+            .flatten()
+            .map {it.name}
+            .map { VariableBuilder(it, type) }
     }
 
     private fun getEndpointCoordinates(): List<EndpointCoordinate> {
