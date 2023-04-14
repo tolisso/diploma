@@ -19,38 +19,11 @@ class FbNetworkConverter(
 
         network.endpointCoordinates.addAll(getEndpointCoordinates())
 
-        val variableBuilders = getVariableBuilders()
-        val connections = FbNetworkEventConverter(xmlFbd, variableBuilders, converterArguments).networkConnections
+        val connections = FbNetworkEventConverter(xmlFbd, xmlInterface, converterArguments).networkConnections
 
         network.eventConnections.addAll(connections.filter { it.kind == EntryKind.EVENT })
         network.dataConnections.addAll(connections.filter { it.kind == EntryKind.DATA })
-
-        network.functionBlocks.addAll(variableBuilders.map {
-            val variableFbtd = factory.createFunctionBlockDeclaration(null)
-            variableFbtd.name = it.varName
-            variableFbtd.typeReference.setTargetName(it.varName)
-            variableFbtd
-        })
-
-        return variableBuilders.map { it.build(factory) }
-    }
-
-    private fun getVariableBuilders(): List<VariableBuilder> {
-        val variables = ArrayList<VariableBuilder>()
-        variables.addAll(toVariableBuilderList(xmlInterface.outputVars, VariableType.OUT))
-        variables.addAll(toVariableBuilderList(xmlInterface.inputVars, VariableType.IN))
-        variables.addAll(toVariableBuilderList(xmlInterface.inOutVars, VariableType.INOUT))
-        variables.addAll(toVariableBuilderList(xmlInterface.localVars, VariableType.LOCAL))
-
-        return variables
-    }
-
-    private fun toVariableBuilderList(varList: List<OldStandardXml.VariableList>, type: VariableType): List<VariableBuilder> {
-        return varList
-            .map { it.variableList }
-            .flatten()
-            .map {it.name}
-            .map { VariableBuilder(it, type) }
+        return emptyList()
     }
 
     private fun getEndpointCoordinates(): List<EndpointCoordinate> {

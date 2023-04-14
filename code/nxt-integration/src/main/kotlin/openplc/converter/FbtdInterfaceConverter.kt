@@ -22,19 +22,20 @@ class FbtdInterfaceConverter(
         fbtd.outputEvents.add(outputEvent)
 
         xmlPou.pouInterface ?: return
-        fbtd.inputParameters.addAll(
-            xmlPou.pouInterface.inputVars
-                .map { it.variableList.map(::mapVariableToInputParameter) }
-                .flatten()
-        )
-        fbtd.outputParameters.addAll(
-            xmlPou.pouInterface.outputVars
-                .map { it.variableList.map(::mapVariableToInputParameter) }
-                .flatten()
-        )
+        fbtd.inputParameters.addAll(mapVarListToParameters(xmlPou.pouInterface.inputVars))
+        fbtd.inputParameters.addAll(mapVarListToParameters(xmlPou.pouInterface.inOutVars))
+
+        fbtd.outputParameters.addAll(mapVarListToParameters(xmlPou.pouInterface.outputVars))
+        fbtd.outputParameters.addAll(mapVarListToParameters(xmlPou.pouInterface.inOutVars))
     }
 
-    private fun mapVariableToInputParameter(xmlVariable: OldStandardXml.VariableList.Variable): ParameterDeclaration {
+    private fun mapVarListToParameters(varListList: List<OldStandardXml.VariableList>): List<ParameterDeclaration> {
+        return varListList
+            .map { it.variableList.map(::mapVariableToParameter) }
+            .flatten()
+    }
+
+    private fun mapVariableToParameter(xmlVariable: OldStandardXml.VariableList.Variable): ParameterDeclaration {
         val parameterDeclaration = factory.createParameterDeclaration(null)
         parameterDeclaration.name = xmlVariable.name
         parameterDeclaration.type = ElementaryType.valueOf(xmlVariable.type.element.children[0].name)
