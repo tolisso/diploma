@@ -10,19 +10,31 @@ class FbNetworkConverter(
     private val converterArguments: ConverterArguments,
 ) : ConverterBase(converterArguments) {
 
+    private val blockTypeService = BlockTypeService()
     private val scale: Int = 3
 
     // returns additional FBTypeDeclarations of variables
     fun fillNetwork(network: FBNetwork): List<FBTypeDeclaration> {
-        val blocks = xmlFbd.blockList.map(::createFunctionBlockDeclaration)
-        network.functionBlocks.addAll(blocks)
 
         network.endpointCoordinates.addAll(getEndpointCoordinates())
 
-        val connections = FbNetworkEventConverter(xmlFbd, xmlInterface, converterArguments).networkConnections
+        val connections = FbNetworkEventConverter(xmlFbd, xmlInterface, converterArguments)
+            .networkConnections
+            .filterIsInstance<Connection>()
+            .map { convertConnection(it) }
+
+        val assignments = FbNetworkEventConverter(xmlFbd, xmlInterface, converterArguments)
+            .networkConnections
+            .filterIsInstance<Assignment>()
+            .groupBy { it.blockName }
 
         network.eventConnections.addAll(connections.filter { it.kind == EntryKind.EVENT })
         network.dataConnections.addAll(connections.filter { it.kind == EntryKind.DATA })
+        val blocks = xmlFbd.blockList.map {
+            val blockAssigns = assignments.getOrDefault(it.getName(), ArrayList())
+            createFBD(it, blockAssigns)
+        }
+        network.functionBlocks.addAll(blocks)
         return emptyList()
     }
 
@@ -43,13 +55,28 @@ class FbNetworkConverter(
         }
     }
 
-    private fun createFunctionBlockDeclaration(xmlBlock: OldStandardXml.Block): FunctionBlockDeclaration {
+    private fun createFBD(xmlBlock: OldStandardXml.Block, assignments: List<Assignment>): FunctionBlockDeclaration {
         val block = factory.createFunctionBlockDeclaration(null)
         block.name = xmlBlock.getName()
-        block.typeReference.setTargetName(xmlBlock.typeName)
+        val type = blockTypeService.to4diacType(xmlBlock.typeName)
+        block.typeReference.setTargetName(type)
         block.x = xmlBlock.position.x * scale
         block.y = xmlBlock.position.y * scale
 
+        val parameterAssignments = assignments.map {
+            val parameterAssign = factory.createParameterAssignment()
+            parameterAssign.value = it.literal
+            parameterAssign.parameterReference.setTargetName(it.inputVarName)
+            parameterAssign
+        }
+        block.parameters.addAll(parameterAssignments)
         return block
+    }
+
+    private fun convertConnection(connection: Connection): FBNetworkConnection {
+        val convConnection = factory.createFBNetworkConnection(connection.type)
+        convConnection.sourceReference.setFQName(connection.source)
+        convConnection.targetReference.setFQName(connection.target)
+        return convConnection
     }
 }

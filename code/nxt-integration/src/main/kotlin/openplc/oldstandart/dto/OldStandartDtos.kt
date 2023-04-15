@@ -130,12 +130,20 @@ class OldStandardXml {
     ) {
         class Variable(
             val type: DataType,
-            val initialValue: NotImplemented?,
+            val initialValue: InitialValue?,
             val addData: AddData?,
             val documentation: Documentation?,
             val name: String,
             val address: String?,
             val globalId: String?
+        )
+
+        class InitialValue (
+            val simpleValue: SimpleValue?
+        )
+
+        class SimpleValue(
+            val value: String
         )
     }
 

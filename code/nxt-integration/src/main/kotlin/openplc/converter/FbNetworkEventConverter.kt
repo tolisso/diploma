@@ -2,7 +2,6 @@ package openplc.converter
 
 import openplc.oldstandart.dto.OldStandardXml
 import org.fbme.lib.iec61499.fbnetwork.EntryKind
-import org.fbme.lib.iec61499.fbnetwork.FBNetworkConnection
 
 class FbNetworkEventConverter(
     xmlFbd: OldStandardXml.FBD,
@@ -14,32 +13,24 @@ class FbNetworkEventConverter(
     private val varService = FbdVariableService(xmlFbd)
     private val evaluationOrderService = FbdEvaluationOrderService(xmlFbd)
     private val inConnectionsService = FbdInConnectionsService(xmlFbd)
-    private val interfaceService = InterfaceService(xmlInterface)
-    val networkConnections: List<FBNetworkConnection>
+    private val interfaceService = InterfaceService(xmlInterface, converterArguments)
+    val networkConnections: List<NetworkPart>
 
     private var lastEventOut = "REQ"
     private val varNameToConnection = HashMap<String, String>()
     private val outVarToConnection = HashMap<String, String>()
 
-
     init {
         interfaceService.getInVariables().forEach { varNameToConnection[it] = it }
         interfaceService.getInOutVariables().forEach { varNameToConnection[it] = it }
-        networkConnections = getConnections().map { convertConnection(it) }
-    }
-
-    private fun convertConnection(connection: Connection): FBNetworkConnection {
-        val convConnection = factory.createFBNetworkConnection(connection.type)
-        convConnection.sourceReference.setFQName(connection.source)
-        convConnection.targetReference.setFQName(connection.target)
-        return convConnection
+        networkConnections = getConnections()
     }
 
     /**
      * create connections between blocks in topological order and their in/out/inout variables
      */
-    private fun getConnections(): List<Connection> {
-        val connections = ArrayList<Connection>()
+    private fun getConnections(): List<NetworkPart> {
+        val connections = ArrayList<NetworkPart>()
         for (to in evaluationOrderService.evaluationOrder) {
             val newConnections = when (to) {
                 is FbdEvaluationOrderService.Block -> connectBlock(to.id)
@@ -74,21 +65,27 @@ class FbNetworkEventConverter(
         return ArrayList()
     }
 
-    private fun connectBlock(blockId: Long): List<Connection> {
-        val blockConnections = ArrayList<Connection>()
+    private fun connectBlock(blockId: Long): List<NetworkPart> {
+        val blockConnections = ArrayList<NetworkPart>()
         val toBlockName = blockService.getNameById(blockId)
         for (connection in inConnectionsService.getBlockInConnections(blockId)) {
+
+
             val to = toBlockName + "." + connection.targetBlockVariableName
 
-            val from = if (blockService.isBlockId(connection.sourceId)) {
-                blockService.getNameById(connection.sourceId) + "." + connection.sourceFormalParameter
+            if (blockService.isBlockId(connection.sourceId)) {
+                val from = blockService.getNameById(connection.sourceId) + "." + connection.sourceFormalParameter
+                blockConnections.add(createConnection(from, to, EntryKind.DATA))
             } else if (varService.isVariableId(connection.sourceId)) {
                 val varName = varService.getNameById(connection.sourceId)
-                varNameToConnection[varName]!!
-            } else {
-                throw RuntimeException()
+                if (varName in varNameToConnection.keys) {
+                    blockConnections.add(createConnection(varNameToConnection[varName]!!, to, EntryKind.DATA))
+                } else {
+                    val initValue = interfaceService.getInitValue(varName)
+                    blockConnections.add(Assignment(toBlockName, connection.targetBlockVariableName, initValue))
+                }
             }
-            blockConnections.add(createConnection(from, to, EntryKind.DATA))
+
         }
         blockConnections.add(createConnection(lastEventOut, "$toBlockName.REQ", EntryKind.EVENT))
         lastEventOut = "$toBlockName.CNF"

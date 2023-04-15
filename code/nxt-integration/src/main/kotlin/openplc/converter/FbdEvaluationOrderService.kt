@@ -31,7 +31,7 @@ class FbdEvaluationOrderService(xmlFbd: OldStandardXml.FBD) {
 
         for (outVar in outVars) {
             val connectedElementId = outVar.connection?.refLocalId
-            if (connectedElementId != null && blockService.isBlockId(connectedElementId)) {
+            if (connectedElementId != null && blockService.isBlockId(connectedElementId) && connectedElementId !in usedIds) {
                 blockDfs(connectedElementId)
             }
             executionOrder.add(OutVar(outVar.name, outVar.connection))
