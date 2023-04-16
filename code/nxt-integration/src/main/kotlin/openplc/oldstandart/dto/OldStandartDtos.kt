@@ -5,7 +5,6 @@ import org.jdom.Element
 
 class OldStandardXml {
 
-
     class NotImplemented
 
     class Project(
@@ -14,9 +13,44 @@ class OldStandardXml {
         val fileHeader: NotImplemented,
         val contentHeader: NotImplemented,
         val types: Types,
-        val instances: NotImplemented,
+        val instances: Instances,
         val addData: AddData?,
         val documentation: Documentation?
+    )
+
+    class Instances(
+        val configurations: Configurations
+    )
+
+    class Configurations(
+        @ChildElementList(target = Configuration::class, name = "configuration")
+        val configurationList: List<Configuration>
+    )
+
+    class Configuration(
+        @ChildElementList(target = Resource::class, name = "resource")
+        val resourceList: List<Resource>
+
+        // TODO ...
+    )
+
+    class Resource(
+        @ChildElementList(target = Task::class, name = "task")
+        val taskList: List<Task>
+
+        // TODO ...
+    )
+
+    class Task(
+        @ChildElementList(target = PouInstance::class, name = "pouInstance")
+        val pouInstanceList: List<PouInstance>
+
+        // TODO ...
+    )
+
+    class PouInstance(
+        val name: String,
+        val typeName: String
     )
 
     class AddData // TODO
@@ -108,7 +142,7 @@ class OldStandardXml {
         val documentation: Documentation?
     )
 
-    class DataType (
+    class DataType(
         @ElementObject
         val element: Element
     )
@@ -138,7 +172,7 @@ class OldStandardXml {
             val globalId: String?
         )
 
-        class InitialValue (
+        class InitialValue(
             val simpleValue: SimpleValue?
         )
 
@@ -156,7 +190,7 @@ class OldStandardXml {
     class ActionBlock // TODO
     class VendorElement // TODO
 
-    class Position (
+    class Position(
         val x: Int,
         val y: Int
     )

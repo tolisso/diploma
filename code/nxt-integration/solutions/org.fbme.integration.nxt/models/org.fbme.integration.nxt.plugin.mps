@@ -122,9 +122,6 @@
         <child id="1197027771414" name="operand" index="2Oq$k0" />
         <child id="1197027833540" name="operation" index="2OqNvi" />
       </concept>
-      <concept id="1197029447546" name="jetbrains.mps.baseLanguage.structure.FieldReferenceOperation" flags="nn" index="2OwXpG">
-        <reference id="1197029500499" name="fieldDeclaration" index="2Oxat5" />
-      </concept>
       <concept id="1145552977093" name="jetbrains.mps.baseLanguage.structure.GenericNewExpression" flags="nn" index="2ShNRf">
         <child id="1145553007750" name="creator" index="2ShVmc" />
       </concept>
@@ -1231,37 +1228,6 @@
                     </node>
                   </node>
                   <node concept="3clFbS" id="73gY_D002jc" role="1zxBo7">
-                    <node concept="3cpWs8" id="Oy3WrlWmiS" role="3cqZAp">
-                      <node concept="3cpWsn" id="Oy3WrlWmiY" role="3cpWs9">
-                        <property role="TrG5h" value="nodeStructure" />
-                        <node concept="3uibUv" id="Oy3WrlWBOn" role="1tU5fm">
-                          <ref role="3uigEE" to="r3nk:~TmpParseTest$NodesStructure" resolve="NodesStructure" />
-                        </node>
-                        <node concept="2YIFZM" id="Oy3WrlVCi5" role="33vP2m">
-                          <ref role="1Pybhc" to="r3nk:~TmpParseTest" resolve="TmpParseTest" />
-                          <ref role="37wK5l" to="r3nk:~TmpParseTest.test(org.fbme.lib.iec61499.IEC61499Factory,org.fbme.lib.st.STFactory,java.lang.String)" resolve="test" />
-                          <node concept="2OqwBi" id="Oy3WrlVCi6" role="37wK5m">
-                            <node concept="37vLTw" id="Oy3WrlVCi7" role="2Oq$k0">
-                              <ref role="3cqZAo" node="2M8kVdCcB2r" resolve="configuration" />
-                            </node>
-                            <node concept="liA8E" id="Oy3WrlVCi8" role="2OqNvi">
-                              <ref role="37wK5l" to="epky:~Iec61499ConverterConfiguration.getEntryFactory()" resolve="getEntryFactory" />
-                            </node>
-                          </node>
-                          <node concept="2OqwBi" id="Oy3WrlVCi9" role="37wK5m">
-                            <node concept="37vLTw" id="Oy3WrlVCia" role="2Oq$k0">
-                              <ref role="3cqZAo" node="2M8kVdCcB2r" resolve="configuration" />
-                            </node>
-                            <node concept="liA8E" id="Oy3WrlVCib" role="2OqNvi">
-                              <ref role="37wK5l" to="epky:~Iec61499ConverterConfiguration.getStEntryFactory()" resolve="getStEntryFactory" />
-                            </node>
-                          </node>
-                          <node concept="37vLTw" id="Oy3WrlVCic" role="37wK5m">
-                            <ref role="3cqZAo" node="3NsAtk6NK_z" resolve="nxtImportFile" />
-                          </node>
-                        </node>
-                      </node>
-                    </node>
                     <node concept="3cpWs8" id="O20VdKj_GN" role="3cqZAp">
                       <node concept="3cpWsn" id="O20VdKj_GT" role="3cpWs9">
                         <property role="TrG5h" value="resultNodes" />
@@ -1281,14 +1247,6 @@
                     <node concept="2Gpval" id="O20VdKkpy3" role="3cqZAp">
                       <node concept="2GrKxI" id="O20VdKkpy5" role="2Gsz3X">
                         <property role="TrG5h" value="fbtd" />
-                      </node>
-                      <node concept="2OqwBi" id="O20VdKksCG" role="2GsD0m">
-                        <node concept="37vLTw" id="O20VdKkrDl" role="2Oq$k0">
-                          <ref role="3cqZAo" node="Oy3WrlWmiY" resolve="nodeStructure" />
-                        </node>
-                        <node concept="2OwXpG" id="O20VdKktOg" role="2OqNvi">
-                          <ref role="2Oxat5" to="r3nk:~TmpParseTest$NodesStructure.childFbtdList" resolve="childFbtdList" />
-                        </node>
                       </node>
                       <node concept="3clFbS" id="O20VdKkpy9" role="2LFqv$">
                         <node concept="3clFbF" id="O20VdKkyEC" role="3cqZAp">
@@ -1315,6 +1273,29 @@
                               </node>
                             </node>
                           </node>
+                        </node>
+                      </node>
+                      <node concept="2YIFZM" id="78o5lrxEnQ6" role="2GsD0m">
+                        <ref role="37wK5l" to="r3nk:~TmpParseTest.test(org.fbme.lib.iec61499.IEC61499Factory,org.fbme.lib.st.STFactory,java.lang.String)" resolve="test" />
+                        <ref role="1Pybhc" to="r3nk:~TmpParseTest" resolve="TmpParseTest" />
+                        <node concept="2OqwBi" id="78o5lrxEnQ7" role="37wK5m">
+                          <node concept="37vLTw" id="78o5lrxEnQ8" role="2Oq$k0">
+                            <ref role="3cqZAo" node="2M8kVdCcB2r" resolve="configuration" />
+                          </node>
+                          <node concept="liA8E" id="78o5lrxEnQ9" role="2OqNvi">
+                            <ref role="37wK5l" to="epky:~Iec61499ConverterConfiguration.getEntryFactory()" resolve="getEntryFactory" />
+                          </node>
+                        </node>
+                        <node concept="2OqwBi" id="78o5lrxEnQa" role="37wK5m">
+                          <node concept="37vLTw" id="78o5lrxEnQb" role="2Oq$k0">
+                            <ref role="3cqZAo" node="2M8kVdCcB2r" resolve="configuration" />
+                          </node>
+                          <node concept="liA8E" id="78o5lrxEnQc" role="2OqNvi">
+                            <ref role="37wK5l" to="epky:~Iec61499ConverterConfiguration.getStEntryFactory()" resolve="getStEntryFactory" />
+                          </node>
+                        </node>
+                        <node concept="37vLTw" id="78o5lrxEnQd" role="37wK5m">
+                          <ref role="3cqZAo" node="3NsAtk6NK_z" resolve="nxtImportFile" />
                         </node>
                       </node>
                     </node>

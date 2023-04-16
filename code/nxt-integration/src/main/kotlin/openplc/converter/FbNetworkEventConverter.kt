@@ -10,8 +10,8 @@ class FbNetworkEventConverter(
 ) : ConverterBase(converterArguments) {
 
     private val blockService = FbdBlockService(xmlFbd)
-    private val varService = FbdVariableService(xmlFbd)
-    private val evaluationOrderService = FbdEvaluationOrderService(xmlFbd)
+    private val varService = FbdVariableService(xmlFbd, xmlInterface, converterArguments)
+    private val evaluationOrderService = FbdEvaluationOrderService(xmlFbd, xmlInterface, converterArguments)
     private val inConnectionsService = FbdInConnectionsService(xmlFbd)
     private val interfaceService = InterfaceService(xmlInterface, converterArguments)
     val networkConnections: List<NetworkPart>
@@ -43,7 +43,6 @@ class FbNetworkEventConverter(
         return connections
     }
 
-    // TODO return Connections?
     private fun connectOutVar(toVar: FbdEvaluationOrderService.OutVar): Collection<Connection> {
         if (toVar.connection == null) {
             return ArrayList()
@@ -70,26 +69,33 @@ class FbNetworkEventConverter(
         val toBlockName = blockService.getNameById(blockId)
         for (connection in inConnectionsService.getBlockInConnections(blockId)) {
 
-
-            val to = toBlockName + "." + connection.targetBlockVariableName
-
             if (blockService.isBlockId(connection.sourceId)) {
+                val to = toBlockName + "." + connection.targetBlockVariableName
                 val from = blockService.getNameById(connection.sourceId) + "." + connection.sourceFormalParameter
                 blockConnections.add(createConnection(from, to, EntryKind.DATA))
             } else if (varService.isVariableId(connection.sourceId)) {
-                val varName = varService.getNameById(connection.sourceId)
-                if (varName in varNameToConnection.keys) {
-                    blockConnections.add(createConnection(varNameToConnection[varName]!!, to, EntryKind.DATA))
-                } else {
-                    val initValue = interfaceService.getInitValue(varName)
-                    blockConnections.add(Assignment(toBlockName, connection.targetBlockVariableName, initValue))
-                }
+                blockConnections.add(createVarToBlockConnection(connection, toBlockName))
             }
 
         }
         blockConnections.add(createConnection(lastEventOut, "$toBlockName.REQ", EntryKind.EVENT))
         lastEventOut = "$toBlockName.CNF"
         return blockConnections
+    }
+
+    private fun createVarToBlockConnection(
+        connection: BlockInConnection,
+        toBlockName: String
+    ): NetworkPart {
+        val varName = varService.getNameById(connection.sourceId)
+        val varConnection = varNameToConnection[varName]
+        return if (varConnection != null) {
+            val to = toBlockName + "." + connection.targetBlockVariableName
+            createConnection(varConnection, to, EntryKind.DATA)
+        } else {
+            val initValue = varService.getInitValue(varName)
+            Assignment(toBlockName, connection.targetBlockVariableName, initValue)
+        }
     }
 
     private fun createConnection(source: String, target: String, type: EntryKind): Connection {

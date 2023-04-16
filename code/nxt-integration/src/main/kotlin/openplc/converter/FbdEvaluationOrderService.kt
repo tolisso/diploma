@@ -2,9 +2,13 @@ package openplc.converter
 
 import openplc.oldstandart.dto.OldStandardXml
 
-class FbdEvaluationOrderService(xmlFbd: OldStandardXml.FBD) {
+class FbdEvaluationOrderService(
+    xmlFbd: OldStandardXml.FBD,
+    xmlInterface: OldStandardXml.Interface,
+    converterArguments: ConverterArguments
+) {
 
-    private val variableService = FbdVariableService(xmlFbd)
+    private val variableService = FbdVariableService(xmlFbd, xmlInterface, converterArguments)
     private val inConnectionsService = FbdInConnectionsService(xmlFbd)
     private val blockService = FbdBlockService(xmlFbd)
 

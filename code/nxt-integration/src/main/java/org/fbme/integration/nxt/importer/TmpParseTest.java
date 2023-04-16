@@ -3,8 +3,11 @@ package org.fbme.integration.nxt.importer;
 import openplc.converter.ConverterArguments;
 import openplc.converter.FbNetworkConverter;
 import openplc.converter.FbtdInterfaceConverter;
+import openplc.converter.SystemConverter;
 import openplc.oldstandart.dto.OldStandardXml;
 import openplc.oldstandart.dto.Iec61131Parser;
+import org.fbme.lib.common.Declaration;
+import org.fbme.lib.common.RootElement;
 import org.fbme.lib.iec61499.IEC61499Factory;
 import org.fbme.lib.iec61499.declarations.FBTypeDeclaration;
 import org.fbme.lib.st.STFactory;
@@ -20,39 +23,30 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class TmpParseTest {
-    public static NodesStructure test(IEC61499Factory factory, STFactory stFactory, String path) throws ParserConfigurationException, IOException, SAXException {
+    public static List<Declaration> test(IEC61499Factory factory, STFactory stFactory, String path) throws ParserConfigurationException, IOException, SAXException {
         var root = new DOMBuilder().build(DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(path));
         var a = new Iec61131Parser().parse(root.getRootElement(), OldStandardXml.Project.class);
-        var result = new NodesStructure(factory.createBasicFBTypeDeclaration(null));
-        result.childFbtdList.addAll(getChildNodes(factory, stFactory, a));
-        return result;
+        var converterArguments = new ConverterArguments(factory, stFactory);
+        var resDeclarations = new ArrayList<>(getChildNodes(converterArguments, a));
+        resDeclarations.add(new SystemConverter(a.getInstances(), converterArguments).createSystem());
+        return resDeclarations;
     }
 
-    private static List<FBTypeDeclaration> getChildNodes(IEC61499Factory factory, STFactory stFactory, OldStandardXml.Project a) {
+    private static List<Declaration> getChildNodes(ConverterArguments converterArguments, OldStandardXml.Project a) {
         return a.getTypes().getPous().getPouList().stream()
                 .map(xmlPou -> {
-                    var result = new ArrayList<FBTypeDeclaration>();
-                    var networkFbtd = factory.createCompositeFBTypeDeclaration(null);
-                    var converterBaseArguments = new ConverterArguments(factory, stFactory);
+                    var result = new ArrayList<Declaration>();
+                    var networkFbtd = converterArguments.getFactory().createCompositeFBTypeDeclaration(null);
                     result.addAll(new FbNetworkConverter(
                             xmlPou.getBodyList().get(0).getFbd(),
                             xmlPou.getPouInterface(),
-                            converterBaseArguments
+                            converterArguments
                     ).fillNetwork(networkFbtd.getNetwork()));
-                    new FbtdInterfaceConverter(xmlPou, converterBaseArguments).fillInterface(networkFbtd);
+                    new FbtdInterfaceConverter(xmlPou, converterArguments).fillInterface(networkFbtd);
                     result.add(networkFbtd);
                     return result;
                 })
                 .flatMap(Collection::stream)
                 .collect(Collectors.toList());
-    }
-
-    public static class NodesStructure {
-        public final FBTypeDeclaration topFbtd;
-        public final List<FBTypeDeclaration> childFbtdList = new ArrayList<>();
-
-        public NodesStructure(FBTypeDeclaration topFbtd) {
-            this.topFbtd = topFbtd;
-        }
     }
 }
