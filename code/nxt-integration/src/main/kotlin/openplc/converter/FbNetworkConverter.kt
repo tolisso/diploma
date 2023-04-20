@@ -7,6 +7,7 @@ import org.fbme.lib.iec61499.fbnetwork.*
 class FbNetworkConverter(
     private val xmlFbd: OldStandardXml.FBD,
     xmlInterface: OldStandardXml.Interface,
+    private val parametersTypeProvider: FbParametersTypeProvider,
     converterArguments: ConverterArguments,
     startEvent: String = "REQ",
     endEvent: String? = "CNF"

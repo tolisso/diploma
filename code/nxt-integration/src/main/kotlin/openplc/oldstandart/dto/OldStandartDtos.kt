@@ -210,7 +210,7 @@ class OldStandardXml {
         val executionOrderId: Long?,
         val globalId: String?
     ) {
-        fun getName() = instanceName ?: "UnnamedBlock$localId"
+        fun getName() = instanceName ?: "UNNAMED_$localId"
 
         class InOutVariables(
             @ChildElementList(target = InOutVariable::class, name = "variable")

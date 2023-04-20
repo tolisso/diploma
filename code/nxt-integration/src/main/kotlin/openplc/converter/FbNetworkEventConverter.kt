@@ -2,11 +2,15 @@ package openplc.converter
 
 import openplc.oldstandart.dto.OldStandardXml
 import org.fbme.lib.iec61499.fbnetwork.EntryKind
+import org.fbme.lib.iec61499.parser.STConverter
+import org.fbme.lib.st.types.ElementaryType
+import org.fbme.lib.st.types.GenericType
 
 class FbNetworkEventConverter(
     xmlFbd: OldStandardXml.FBD,
     xmlInterface: OldStandardXml.Interface,
     converterArguments: ConverterArguments,
+    private val parametersTypeProvider: FbParametersTypeProvider,
     private var curEventOut: String,
     private val endEventIn: String?
 ) : ConverterBase(converterArguments) {
@@ -17,15 +21,18 @@ class FbNetworkEventConverter(
     private val inConnectionsService = FbdInConnectionsService(xmlFbd)
     private val interfaceService = InterfaceService(xmlInterface, converterArguments)
     val networkConnections: List<NetworkPart>
+    private val outputVariables = interfaceService.getInOutVariables() + interfaceService.getOutputVariables()
 
 
     private val varNameToConnection = HashMap<String, String>()
     private val outVarToConnection = HashMap<String, String>()
+    private val connectionToType = HashMap(varService.getAllVarTypes().associate { it })
 
     init {
-        interfaceService.getInVariables().forEach { varNameToConnection[it] = it }
+        interfaceService.getInputVariables().forEach { varNameToConnection[it] = it }
         interfaceService.getInOutVariables().forEach { varNameToConnection[it] = it }
         networkConnections = getConnections()
+
     }
 
     /**
@@ -40,9 +47,9 @@ class FbNetworkEventConverter(
             }
             connections.addAll(newConnections)
         }
-        outVarToConnection.forEach { connections.add(Connection(it.value, it.key, EntryKind.DATA)) }
+        outVarToConnection.forEach { connections.add(createConnection(it.value, it.key, EntryKind.DATA)) }
         if (endEventIn != null) {
-            connections.add(Connection(curEventOut, endEventIn, EntryKind.EVENT))
+            connections.add(createConnection(curEventOut, endEventIn, EntryKind.EVENT))
         }
         return connections
     }
@@ -62,7 +69,7 @@ class FbNetworkEventConverter(
             throw RuntimeException("not yet implemented")
         }
         varNameToConnection[toVar.name] = connectionName
-        if (toVar.name in interfaceService.getOutVariables() || toVar.name in interfaceService.getInOutVariables()) {
+        if (toVar.name in outputVariables) {
             outVarToConnection[toVar.name] = connectionName
         }
         return ArrayList()
@@ -72,34 +79,82 @@ class FbNetworkEventConverter(
         val blockConnections = ArrayList<NetworkPart>()
         val toBlockName = blockService.getNameById(blockId)
         for (connection in inConnectionsService.getBlockInConnections(blockId)) {
-
-            if (blockService.isBlockId(connection.sourceId)) {
-                val to = toBlockName + "." + connection.targetBlockVariableName
-                val from = blockService.getNameById(connection.sourceId) + "." + connection.sourceFormalParameter
-                blockConnections.add(createConnection(from, to, EntryKind.DATA))
-            } else if (varService.isVariableId(connection.sourceId)) {
-                blockConnections.add(createVarToBlockConnection(connection, toBlockName))
-            }
-
+            blockConnections.addAll(processBlockDataConnection(connection, toBlockName))
         }
+        assignTypeToBlockOutParameters(blockId)
         blockConnections.add(createConnection(curEventOut, "$toBlockName.REQ", EntryKind.EVENT))
         curEventOut = "$toBlockName.CNF"
         return blockConnections
     }
 
-    private fun createVarToBlockConnection(
+    private fun assignTypeToBlockOutParameters(blockId: Long) {
+        val blockName = blockService.getNameById(blockId)
+        val blockType = blockService.getTypeById(blockId)
+        val typeMapper = HashMap<GenericType, ElementaryType>()
+        for (parameter in parametersTypeProvider.getBlockParameters(blockType)) {
+            val connection = blockName + "." + parameter.name
+            if (parameter.type is GenericType && connectionToType[connection] != null) {
+                typeMapper[parameter.type] = connectionToType[connection]!!
+            }
+        }
+        for (parameter in parametersTypeProvider.getBlockParameters(blockType)) {
+            val connection = blockName + "." + parameter.name
+            if (connectionToType[connection] == null) {
+                connectionToType[connection] = when (parameter.type) {
+                    is ElementaryType -> parameter.type
+                    is GenericType -> typeMapper[parameter.type]!!
+                    else -> throw RuntimeException("Composite types are not supported")
+                }
+            }
+        }
+    }
+
+    private fun processBlockDataConnection(
+        connection: BlockInConnection,
+        toBlockName: String,
+    ): List<NetworkPart> {
+        if (blockService.isBlockId(connection.sourceId)) {
+            val to = toBlockName + "." + connection.targetBlockVariableName
+            val from = blockService.getNameById(connection.sourceId) + "." + connection.sourceFormalParameter
+            transferType(from, to)
+
+            return listOf(
+                createConnection(from, to, EntryKind.DATA),
+                createDefaultAssignment(toBlockName, connection.targetBlockVariableName)
+            )
+        } else if (varService.isVariableId(connection.sourceId)) {
+            return createVarToBlockConnections(connection, toBlockName)
+        }
+        return emptyList()
+    }
+
+    private fun createDefaultAssignment(blockName: String, inputVarName: String): Assignment {
+        val to = "$blockName.$inputVarName"
+        val toDefaultValue = STConverter.parseLiteral(stFactory, getDefaultValue(connectionToType[to]!!))!!
+        return Assignment(blockName, inputVarName, toDefaultValue)
+    }
+
+    private fun createVarToBlockConnections(
         connection: BlockInConnection,
         toBlockName: String
-    ): NetworkPart {
+    ): List<NetworkPart> {
         val varName = varService.getNameById(connection.sourceId)
         val varConnection = varNameToConnection[varName]
         return if (varConnection != null) {
             val to = toBlockName + "." + connection.targetBlockVariableName
-            createConnection(varConnection, to, EntryKind.DATA)
+            transferType(varConnection, to)
+            listOf(
+                createConnection(varConnection, to, EntryKind.DATA),
+                createDefaultAssignment(toBlockName, connection.targetBlockVariableName)
+            )
         } else {
             val initValue = varService.getInitValue(varName)
-            Assignment(toBlockName, connection.targetBlockVariableName, initValue)
+            listOf(Assignment(toBlockName, connection.targetBlockVariableName, initValue))
         }
+    }
+
+    private fun transferType(source: String, target: String) {
+        connectionToType[target] = connectionToType[source]
     }
 
     private fun createConnection(source: String, target: String, type: EntryKind): Connection {

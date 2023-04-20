@@ -103,16 +103,10 @@ jcode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/iec61131-3
 jcode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/iec61131-3/bitwiseOperators/F_XOR.fbt,f\6\f64b46454b8a374e12fdc7d2adce376a03a8eaa5
 ~
 Ncode/nxt-integration/src/main/kotlin/openplc/oldstandart/dto/Iec61131Parser.kt,9\d\9da37dec69e7aecdda3509da60a277f76835e980
-y
-Icode/nxt-integration/src/main/kotlin/openplc/converter/FbdBlockService.kt,b\d\bd1a4e8a6a0aea7e76d48e758ebdce555da6944b
-u
-Ecode/nxt-integration/src/main/kotlin/openplc/converter/NetworkPart.kt,8\2\82556c5d3956eb0e0eeaa6a7e3549a083a26a8e5
 Å
 Qcode/nxt-integration/src/main/kotlin/openplc/converter/FbdInConnectionsService.kt,9\5\95d1025810d8444f81730adf18591e0d75f7dea5
 É
 Scode/nxt-integration/src/main/kotlin/openplc/converter/FbdEvaluationOrderService.kt,a\0\a0e1c606d53a3a2f7bdba9a0fe7610d1d68742fa
-w
-Gcode/nxt-integration/src/main/kotlin/openplc/converter/ConverterBase.kt,e\a\ea74b5f948fce456da2c76847777552c602ef6d9
 ó
 gcode/richediting/src/main/kotlin/org/fbme/ide/richediting/editor/RichApplicationProjectionController.kt,e\c\ecb078c24615ffd0022bd9fe8b739a45dde44846
 î
@@ -143,8 +137,6 @@ Zcode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/convert/BO
 Xcode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/convert/INT2INT.fbt,f\3\f3f73964c7c57419f8ba78e1cbcd5be8001e79ba
 ¢
 rcode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/iec61131-3/conversion/INT/F_INT_TO_STRING.fbt,4\1\41743be13f6545294a721a617029659040bddde9
-|
-Lcode/nxt-integration/src/main/kotlin/openplc/converter/FbdVariableService.kt,6\4\64ae278acaa74edd2f57dfba9765c860899dd3fa
 }
 Mcode/platform/src/main/kotlin/org/fbme/ide/platform/debugger/WatchablePath.kt,1\4\142c25673d09f14e80133fe85a70da2b7c272a06
 y
@@ -157,8 +149,6 @@ Mcode/platform/src/main/kotlin/org/fbme/ide/platform/debugger/WatcherFacade.kt,
 Wcode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/math/FB_RANDOM.fbt,2\b\2bffb459a802cc6c2fd41671fa4b76c63e920a6a
 ç
 ]code/richediting/src/main/kotlin/org/fbme/ide/richediting/editor/RichEditorStyleAttributes.kt,c\0\c0f87104cd7c6f67655d3c2a1cd5fa4eae62bbc8
-|
-Lcode/nxt-integration/src/main/kotlin/openplc/converter/FbNetworkConverter.kt,0\f\0fde57e943f7b7b5f0dfbfac483c203dd09899a3
 x
 Hcode/debugger/src/main/kotlin/org/fbme/debugger/simulator/FBSimulator.kt,c\d\cd70e811d3b59f56b9c3f33f45c623ffb04078eb
 å

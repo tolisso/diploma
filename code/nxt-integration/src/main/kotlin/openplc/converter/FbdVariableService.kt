@@ -8,7 +8,7 @@ import org.fbme.lib.st.types.ElementaryType
 
 class FbdVariableService(
     private val xmlFbd: OldStandardXml.FBD,
-    private val xmlInterface: OldStandardXml.Interface,
+    xmlInterface: OldStandardXml.Interface,
     converterArguments: ConverterArguments
 ) : ConverterBase(converterArguments) {
     private val variableIdToNameMap = getVariableNameByIdMap()
@@ -16,14 +16,21 @@ class FbdVariableService(
     private val elementaryTypes = HashSet(ElementaryType.values().map { it.name })
     private val initVals = getInitVals()
 
-    private fun getDefaultValue(type: DataType): String {
-        return when (type) {
-            ElementaryType.BOOL -> "false"
-            ElementaryType.INT -> "0"
-            ElementaryType.STRING -> ""
-            ElementaryType.TIME -> "0ms"
-            else -> throw RuntimeException("Not implemented")
-        }
+    private val varList: List<OldStandardXml.VariableList.Variable>
+
+    init {
+        val varLists = ArrayList<OldStandardXml.VariableList>()
+        varLists.addAll(xmlInterface.inputVars)
+        varLists.addAll(xmlInterface.inOutVars)
+        varLists.addAll(xmlInterface.outputVars)
+        varLists.addAll(xmlInterface.localVars)
+        varLists.addAll(xmlInterface.tempVars)
+
+        varList = varLists.flatMap { it.variableList }
+    }
+
+    fun getAllVarTypes(): List<Pair<String, ElementaryType>> {
+        return varList.map { Pair(it.name, ElementaryType.valueOf(it.type.element.name)) }
     }
 
     // TODO не только elementaryType
@@ -40,14 +47,9 @@ class FbdVariableService(
     }
 
     private fun getInitVals(): Map<String, String> {
-        val varLists = ArrayList<OldStandardXml.VariableList>()
-        varLists.addAll(xmlInterface.inputVars)
-        varLists.addAll(xmlInterface.inOutVars)
-        varLists.addAll(xmlInterface.outputVars)
-        varLists.addAll(xmlInterface.localVars)
-        varLists.addAll(xmlInterface.tempVars)
+
         val varNameToValue = HashMap<String, String>()
-        for (variable in varLists.flatMap { it.variableList }) {
+        for (variable in varList) {
             if (variable.initialValue != null) {
                 varNameToValue[variable.name] = variable.initialValue.simpleValue!!.value
             } else {
