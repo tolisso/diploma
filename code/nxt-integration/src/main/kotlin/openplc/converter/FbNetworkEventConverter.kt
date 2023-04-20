@@ -7,6 +7,8 @@ class FbNetworkEventConverter(
     xmlFbd: OldStandardXml.FBD,
     xmlInterface: OldStandardXml.Interface,
     converterArguments: ConverterArguments,
+    private var curEventOut: String,
+    private val endEventIn: String?
 ) : ConverterBase(converterArguments) {
 
     private val blockService = FbdBlockService(xmlFbd)
@@ -16,7 +18,7 @@ class FbNetworkEventConverter(
     private val interfaceService = InterfaceService(xmlInterface, converterArguments)
     val networkConnections: List<NetworkPart>
 
-    private var lastEventOut = "REQ"
+
     private val varNameToConnection = HashMap<String, String>()
     private val outVarToConnection = HashMap<String, String>()
 
@@ -39,7 +41,9 @@ class FbNetworkEventConverter(
             connections.addAll(newConnections)
         }
         outVarToConnection.forEach { connections.add(Connection(it.value, it.key, EntryKind.DATA)) }
-        connections.add(Connection(lastEventOut, "CNF", EntryKind.EVENT))
+        if (endEventIn != null) {
+            connections.add(Connection(curEventOut, endEventIn, EntryKind.EVENT))
+        }
         return connections
     }
 
@@ -78,8 +82,8 @@ class FbNetworkEventConverter(
             }
 
         }
-        blockConnections.add(createConnection(lastEventOut, "$toBlockName.REQ", EntryKind.EVENT))
-        lastEventOut = "$toBlockName.CNF"
+        blockConnections.add(createConnection(curEventOut, "$toBlockName.REQ", EntryKind.EVENT))
+        curEventOut = "$toBlockName.CNF"
         return blockConnections
     }
 

@@ -11,16 +11,25 @@ import org.fbme.lib.iec61499.fbnetwork.FBNetworkConnection
 import org.fbme.lib.iec61499.parser.STConverter
 
 class SystemConverter(
-    private val instances: OldStandardXml.Instances,
-    converterArguments: ConverterArguments
+val xmlProject: OldStandardXml.Project,
+val converterArguments: ConverterArguments
 ) : ConverterBase(converterArguments) {
 
-    private val pouInstance = instances
+    private val pouInstance = xmlProject
+        .instances
         .configurations
         .configurationList.firstOrNull()
         ?.resourceList?.firstOrNull()
         ?.taskList?.firstOrNull()
         ?.pouInstanceList?.firstOrNull()
+
+    private fun getPou(): OldStandardXml.Pou {
+        return xmlProject
+            .types
+            .pous
+            .pouList
+            .first { it.name == pouInstance!!.typeName }
+    }
 
     fun createSystem(): SystemDeclaration {
         val system = factory.createSystemDeclaration(null)
@@ -31,12 +40,9 @@ class SystemConverter(
 
         val application = factory.createApplicationDeclaration(null)
         application.name = "App"
-        fillNetwork(application.network)
         system.applications.add(application)
 
         system.devices.add(createDevice())
-        system.mappings.add(createMapping("Testee.MAIN_RES.E_CYCLE", "App.E_CYCLE"))
-        system.mappings.add(createMapping("Testee.MAIN_RES.MainBlock", "App.MainBlock"))
 
         val segment = factory.createSegmentDeclaration(null)
         segment.name = "Ethernet"
@@ -79,8 +85,6 @@ class SystemConverter(
         resource.typeReference.setTargetName("EMB_RES")
         val resourceNetwork = resource.network
         fillNetwork(resourceNetwork)
-        resourceNetwork.eventConnections.add(createEvent("START.COLD", "E_CYCLE.START"))
-        resourceNetwork.eventConnections.add(createEvent("START.WARM", "E_CYCLE.START"))
         return resource
     }
 
@@ -96,12 +100,15 @@ class SystemConverter(
         cycle.parameters.add(cycleTimeout)
         network.functionBlocks.add(cycle)
 
-        val fb = factory.createFunctionBlockDeclaration(null)
-        fb.name = "MainBlock"
-        fb.typeReference.setTargetName(pouInstance!!.typeName)
-        network.functionBlocks.add(fb)
-
-        network.eventConnections.add(createEvent("E_CYCLE.EO","MainBlock.REQ" ))
+        FbNetworkConverter(
+            getPou().bodyList[0].fbd!!,
+            getPou().pouInterface!!,
+            converterArguments,
+            startEvent = "E_CYCLE.EO",
+            endEvent = null
+        ).fillNetwork(network);
+        network.eventConnections.add(createEvent("START.COLD", "E_CYCLE.START"))
+        network.eventConnections.add(createEvent("START.WARM", "E_CYCLE.START"))
     }
 
     private fun createEvent(from: String, to: String): FBNetworkConnection {

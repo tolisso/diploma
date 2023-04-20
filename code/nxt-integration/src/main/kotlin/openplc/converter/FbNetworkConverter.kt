@@ -6,10 +6,14 @@ import org.fbme.lib.iec61499.fbnetwork.*
 
 class FbNetworkConverter(
     private val xmlFbd: OldStandardXml.FBD,
-    private val xmlInterface: OldStandardXml.Interface,
-    private val converterArguments: ConverterArguments,
+    xmlInterface: OldStandardXml.Interface,
+    converterArguments: ConverterArguments,
+    startEvent: String = "REQ",
+    endEvent: String? = "CNF"
 ) : ConverterBase(converterArguments) {
 
+    private val networkEventConverter =
+        FbNetworkEventConverter(xmlFbd, xmlInterface, converterArguments, startEvent, endEvent)
     private val blockTypeService = BlockTypeService()
     private val scale: Int = 3
 
@@ -18,12 +22,12 @@ class FbNetworkConverter(
 
         network.endpointCoordinates.addAll(getEndpointCoordinates())
 
-        val connections = FbNetworkEventConverter(xmlFbd, xmlInterface, converterArguments)
+        val connections = networkEventConverter
             .networkConnections
             .filterIsInstance<Connection>()
             .map { convertConnection(it) }
 
-        val assignments = FbNetworkEventConverter(xmlFbd, xmlInterface, converterArguments)
+        val assignments = networkEventConverter
             .networkConnections
             .filterIsInstance<Assignment>()
             .groupBy { it.blockName }

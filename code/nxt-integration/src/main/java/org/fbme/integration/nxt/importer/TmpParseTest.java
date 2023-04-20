@@ -28,7 +28,7 @@ public class TmpParseTest {
         var a = new Iec61131Parser().parse(root.getRootElement(), OldStandardXml.Project.class);
         var converterArguments = new ConverterArguments(factory, stFactory);
         var resDeclarations = new ArrayList<>(getChildNodes(converterArguments, a));
-        resDeclarations.add(new SystemConverter(a.getInstances(), converterArguments).createSystem());
+        resDeclarations.add(new SystemConverter(a, converterArguments).createSystem());
         return resDeclarations;
     }
 
@@ -40,7 +40,9 @@ public class TmpParseTest {
                     result.addAll(new FbNetworkConverter(
                             xmlPou.getBodyList().get(0).getFbd(),
                             xmlPou.getPouInterface(),
-                            converterArguments
+                            converterArguments,
+                            "REQ",
+                            "CNF"
                     ).fillNetwork(networkFbtd.getNetwork()));
                     new FbtdInterfaceConverter(xmlPou, converterArguments).fillInterface(networkFbtd);
                     result.add(networkFbtd);
