@@ -1,20 +1,12 @@
 
 ö
 jcode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/iec61131-3/bitwiseOperators/F_XOR.fbt,f\6\f64b46454b8a374e12fdc7d2adce376a03a8eaa5
-~
-Ncode/nxt-integration/src/main/kotlin/openplc/oldstandart/dto/Iec61131Parser.kt,9\d\9da37dec69e7aecdda3509da60a277f76835e980
 Å
 Qcode/nxt-integration/src/main/kotlin/openplc/converter/FbdInConnectionsService.kt,9\5\95d1025810d8444f81730adf18591e0d75f7dea5
 É
 Scode/nxt-integration/src/main/kotlin/openplc/converter/FbdEvaluationOrderService.kt,a\0\a0e1c606d53a3a2f7bdba9a0fe7610d1d68742fa
 ó
 gcode/richediting/src/main/kotlin/org/fbme/ide/richediting/editor/RichApplicationProjectionController.kt,e\c\ecb078c24615ffd0022bd9fe8b739a45dde44846
-î
-dcode/nxt-integration/src/test/java/org/fbme/integration/nxt/importer/BasicFbTypeNxtImporterTest.java,8\9\897d89a5f0edd162e9cee5d3e3033444680c5366
-z
-Jcode/nxt-integration/src/main/kotlin/openplc/converter/BlockTypeService.kt,2\b\2bc38a4ccb16fad0960f220e835049aa4b9baf39
-Ü
-Vcode/nxt-integration/src/main/java/org/fbme/integration/nxt/importer/TmpParseTest.java,d\8\d82b5a9faf2fde40816b8ed4f373609ad843c969
 ï
 ecode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/iec61131-3/arithmetic/F_EXPT.fbt,e\c\ec9d96804d856831e768f3cddad8c8455be6a67f
 î

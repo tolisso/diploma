@@ -27,9 +27,9 @@ class FbParametersTypeProvider(additionalBlocks: List<Block>) {
         private val defaultBlocks = listOf(
             Block(
                 "F_ADD",
-                Parameter("in1", GenericType.ANY_MAGNITUDE),
-                Parameter("in2", GenericType.ANY_MAGNITUDE),
-                Parameter("out", GenericType.ANY_MAGNITUDE),
+                Parameter("IN1", GenericType.ANY_MAGNITUDE),
+                Parameter("IN2", GenericType.ANY_MAGNITUDE),
+                Parameter("OUT", GenericType.ANY_MAGNITUDE),
             )
         )
     }

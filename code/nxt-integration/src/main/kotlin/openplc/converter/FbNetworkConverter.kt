@@ -14,7 +14,7 @@ class FbNetworkConverter(
 ) : ConverterBase(converterArguments) {
 
     private val networkEventConverter =
-        FbNetworkEventConverter(xmlFbd, xmlInterface, converterArguments, startEvent, endEvent)
+        FbNetworkEventConverter(xmlFbd, xmlInterface, converterArguments, parametersTypeProvider, startEvent, endEvent)
     private val blockTypeService = BlockTypeService()
     private val scale: Int = 3
 

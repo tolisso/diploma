@@ -11,8 +11,9 @@ import org.fbme.lib.iec61499.fbnetwork.FBNetworkConnection
 import org.fbme.lib.iec61499.parser.STConverter
 
 class SystemConverter(
-val xmlProject: OldStandardXml.Project,
-val converterArguments: ConverterArguments
+    val typeProvider: FbParametersTypeProvider,
+    val xmlProject: OldStandardXml.Project,
+    val converterArguments: ConverterArguments
 ) : ConverterBase(converterArguments) {
 
     private val pouInstance = xmlProject
@@ -103,6 +104,7 @@ val converterArguments: ConverterArguments
         FbNetworkConverter(
             getPou().bodyList[0].fbd!!,
             getPou().pouInterface!!,
+            typeProvider,
             converterArguments,
             startEvent = "E_CYCLE.EO",
             endEvent = null

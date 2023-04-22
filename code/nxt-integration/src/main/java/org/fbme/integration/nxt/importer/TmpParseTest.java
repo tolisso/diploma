@@ -1,9 +1,6 @@
 package org.fbme.integration.nxt.importer;
 
-import openplc.converter.ConverterArguments;
-import openplc.converter.FbNetworkConverter;
-import openplc.converter.FbtdInterfaceConverter;
-import openplc.converter.SystemConverter;
+import openplc.converter.*;
 import openplc.oldstandart.dto.OldStandardXml;
 import openplc.oldstandart.dto.Iec61131Parser;
 import org.fbme.lib.common.Declaration;
@@ -25,21 +22,28 @@ import java.util.stream.Collectors;
 public class TmpParseTest {
     public static List<Declaration> test(IEC61499Factory factory, STFactory stFactory, String path) throws ParserConfigurationException, IOException, SAXException {
         var root = new DOMBuilder().build(DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(path));
-        var a = new Iec61131Parser().parse(root.getRootElement(), OldStandardXml.Project.class);
+        var project = new Iec61131Parser().parse(root.getRootElement(), OldStandardXml.Project.class);
         var converterArguments = new ConverterArguments(factory, stFactory);
-        var resDeclarations = new ArrayList<>(getChildNodes(converterArguments, a));
-        resDeclarations.add(new SystemConverter(a, converterArguments).createSystem());
+        var additionalBlocks = new ProjectService().getAdditionalBlockTypes(project.getTypes().getPous());
+        var parametersTypeProvider = new FbParametersTypeProvider(additionalBlocks);
+        var resDeclarations = new ArrayList<>(getChildNodes(converterArguments, parametersTypeProvider, project));
+        resDeclarations.add(new SystemConverter(parametersTypeProvider, project, converterArguments).createSystem());
         return resDeclarations;
     }
 
-    private static List<Declaration> getChildNodes(ConverterArguments converterArguments, OldStandardXml.Project a) {
-        return a.getTypes().getPous().getPouList().stream()
+    private static List<Declaration> getChildNodes(
+            ConverterArguments converterArguments,
+            FbParametersTypeProvider parametersTypeProvider,
+            OldStandardXml.Project project
+    ) {
+        return project.getTypes().getPous().getPouList().stream()
                 .map(xmlPou -> {
                     var result = new ArrayList<Declaration>();
                     var networkFbtd = converterArguments.getFactory().createCompositeFBTypeDeclaration(null);
                     result.addAll(new FbNetworkConverter(
                             xmlPou.getBodyList().get(0).getFbd(),
                             xmlPou.getPouInterface(),
+                            parametersTypeProvider,
                             converterArguments,
                             "REQ",
                             "CNF"
