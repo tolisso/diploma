@@ -22,8 +22,6 @@ class FbNetworkEventConverter(
     private val interfaceService = InterfaceService(xmlInterface, converterArguments)
     val networkConnections: List<NetworkPart>
     private val outputVariables = interfaceService.getInOutVariables() + interfaceService.getOutputVariables()
-    private val blockTypeService = BlockTypeService()
-
 
     private val varNameToConnection = HashMap<String, String>()
     private val outVarToConnection = HashMap<String, String>()
@@ -113,7 +111,7 @@ class FbNetworkEventConverter(
 
     private fun assignTypeToBlockOutParameters(blockId: Long) {
         val blockName = blockService.getNameById(blockId)
-        val blockType = blockTypeService.to4diacType(blockService.getTypeById(blockId))
+        val blockType = blockService.getTypeById(blockId)
         val typeMapper = HashMap<GenericType, ElementaryType>()
         for (parameter in parametersTypeProvider.getBlockParameters(blockType)) {
             val connection = blockName + "." + parameter.name

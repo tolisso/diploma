@@ -32,12 +32,12 @@ class FbdVariableService(
     }
 
     fun getAllVarTypes(): List<Pair<String, ElementaryType>> {
-        return varList.map { Pair(it.name, ElementaryType.valueOf(it.type.element.children[0].name)) }
+        return varList.map { Pair(it.name, ElementaryType.valueOf(it.type.getType())) }
     }
 
     // TODO не только elementaryType
     private fun getElementaryType(variable: OldStandardXml.VariableList.Variable): DataType? {
-        val typeName = variable.type.element.children[0].name
+        val typeName = variable.type.getType()
         if (typeName in elementaryTypes) {
             return ElementaryType.valueOf(typeName)
         }

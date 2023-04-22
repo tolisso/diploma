@@ -22,7 +22,7 @@ class ProjectService {
     private fun List<OldStandardXml.VariableList>.toParameters(): List<FbParametersTypeProvider.Parameter> {
         return this.map { variableList ->
             variableList.variableList.map { variable ->
-                val typeStr = variable.type.element.children[0].name
+                val typeStr = variable.type.getType()
                 FbParametersTypeProvider.Parameter(variable.name, nameToType[typeStr]!!)
             }
         }.flatten()

@@ -1,8 +1,7 @@
-package openplc.converter
+package openplc.oldstandart.dto
 
-class BlockTypeService {
-    val oldStandardTypes = """
-CTD
+
+private val oldStandardTypes = """CTD
 CTD_DINT
 CTD_LINT
 CTD_UDINT
@@ -399,10 +398,9 @@ WSTRING_TO_ULINT
 WSTRING_TO_USINT
 WSTRING_TO_WORD
 XOR
-XOR_3
-""".split("\\s+".toRegex())
-    val in4diacTypes = """
-FB_CTD
+XOR_3""".split("\\s+".toRegex())
+
+private val in4diacTypes = """FB_CTD
 FB_CTD_DINT
 FB_CTD_LINT
 FB_CTD_UDINT
@@ -799,21 +797,15 @@ F_WSTRING_TO_ULINT
 F_WSTRING_TO_USINT
 F_WSTRING_TO_WORD
 F_XOR
-F_XOR_3
-""".split("\\s+".toRegex())
+F_XOR_3""".split("\\s+".toRegex())
 
-    val oldTo4diacTypesMap = HashMap<String, String>()
+private val oldTo4diacTypesMap =
+    oldStandardTypes.indices.toList().associate { oldStandardTypes[it] to in4diacTypes[it] }
 
-    init {
-        for (i in oldStandardTypes.indices) {
-            oldTo4diacTypesMap[oldStandardTypes[i]] = in4diacTypes[i]
-        }
+
+fun to4diacType(oldStandardName: String): String {
+    if (oldStandardName in oldTo4diacTypesMap.keys) {
+        return oldTo4diacTypesMap[oldStandardName]!!
     }
-
-    fun to4diacType(oldStandardName: String): String {
-        if (oldStandardName in oldTo4diacTypesMap.keys) {
-            return oldTo4diacTypesMap[oldStandardName]!!
-        }
-        return oldStandardName
-    }
+    return oldStandardName
 }

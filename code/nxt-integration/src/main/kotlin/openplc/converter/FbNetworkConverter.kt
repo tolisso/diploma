@@ -15,7 +15,6 @@ class FbNetworkConverter(
 
     private val networkEventConverter =
         FbNetworkEventConverter(xmlFbd, xmlInterface, converterArguments, parametersTypeProvider, startEvent, endEvent)
-    private val blockTypeService = BlockTypeService()
     private val scale: Int = 3
 
     // returns additional FBTypeDeclarations of variables
@@ -63,7 +62,7 @@ class FbNetworkConverter(
     private fun createFBD(xmlBlock: OldStandardXml.Block, assignments: List<Assignment>): FunctionBlockDeclaration {
         val block = factory.createFunctionBlockDeclaration(null)
         block.name = xmlBlock.getName()
-        val type = blockTypeService.to4diacType(xmlBlock.typeName)
+        val type = xmlBlock.getType()
         block.typeReference.setTargetName(type)
         block.x = xmlBlock.position.x * scale
         block.y = xmlBlock.position.y * scale

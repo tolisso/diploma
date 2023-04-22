@@ -80,8 +80,7 @@ class OldStandardXml {
         val name: String,
         val pouType: String,
         val globalId: String?,
-
-        )
+    )
 
     class Actions // TODO
 
@@ -144,8 +143,10 @@ class OldStandardXml {
 
     class DataType(
         @ElementObject
-        val element: Element
-    )
+        private val element: Element
+    ) {
+        fun getType() = element.children[0].name!!
+    }
 
 
     class VariableList(
@@ -205,12 +206,13 @@ class OldStandardXml {
         val localId: Long,
         val width: Long?,
         val height: Long?,
-        val typeName: String,
-        val instanceName: String?,
+        private val typeName: String,
+        private val instanceName: String?,
         val executionOrderId: Long?,
         val globalId: String?
     ) {
         fun getName() = instanceName ?: "UNNAMED_$localId"
+        fun getType() = to4diacType(typeName)
 
         class InOutVariables(
             @ChildElementList(target = InOutVariable::class, name = "variable")
