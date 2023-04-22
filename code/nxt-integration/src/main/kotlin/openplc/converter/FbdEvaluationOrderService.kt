@@ -38,7 +38,7 @@ class FbdEvaluationOrderService(
             if (connectedElementId != null && blockService.isBlockId(connectedElementId) && connectedElementId !in usedIds) {
                 blockDfs(connectedElementId)
             }
-            executionOrder.add(OutVar(outVar.name, outVar.connection))
+            executionOrder.add(OutVar(outVar.id, outVar.name, outVar.connection))
         }
         return executionOrder
     }
@@ -47,6 +47,7 @@ class FbdEvaluationOrderService(
 
     class Block(val id: Long) : ExecutingEntity()
     class OutVar(
+        val id: Long,
         val name: String,
         val connection: OldStandardXml.Connection?
     ) : ExecutingEntity()

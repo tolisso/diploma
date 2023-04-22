@@ -85,6 +85,7 @@ class FbdVariableService(
         val variables = ArrayList<Variable>()
         variables.addAll(xmlFbd.inOutVariableList.map {
             Variable(
+                it.localId,
                 it.expression.element.text,
                 it.position.x,
                 it.position.y,
@@ -93,6 +94,7 @@ class FbdVariableService(
         })
         variables.addAll(xmlFbd.outVariableList.map {
             Variable(
+                it.localId,
                 it.expression.element.text,
                 it.position.x,
                 it.position.y,
@@ -116,6 +118,7 @@ class FbdVariableService(
     }
 
     class Variable(
+        val id: Long,
         val name: String,
         val x: Int,
         val y: Int,

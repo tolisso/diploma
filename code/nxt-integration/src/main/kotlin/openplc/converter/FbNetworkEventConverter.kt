@@ -28,8 +28,9 @@ class FbNetworkEventConverter(
     private val varNameToConnection = HashMap<String, String>()
     private val outVarToConnection = HashMap<String, String>()
     private val connectionToType = HashMap(varService.getAllVarTypes().associate { it })
-    private val variableIdToCallbackConnections = HashMap<Long, List<String>>()
+    private val variableIdToOutConnections = HashMap<Long, MutableList<String>>()
     private val usedVariableIds = HashSet<Long>()
+    private val varNameToInputsWithInitValue = HashMap<String, MutableList<String>>()
 
     init {
         interfaceService.getInputVariables().forEach { varNameToConnection[it] = it }
@@ -54,10 +55,21 @@ class FbNetworkEventConverter(
         if (endEventIn != null) {
             connections.add(createConnection(curEventOut, endEventIn, EntryKind.EVENT))
         }
+        for (entry in varNameToInputsWithInitValue) {
+            val varName = entry.key
+            val initValueConnections = entry.value
+            val varConnection = varNameToConnection[varName]
+            if (varConnection != null) {
+                for (initValueConnection in initValueConnections) {
+                    connections.add(createConnection(varConnection, initValueConnection, EntryKind.DATA))
+                }
+            }
+        }
         return connections
     }
 
     private fun connectOutVar(toVar: FbdEvaluationOrderService.OutVar): Collection<Connection> {
+        usedVariableIds.add(toVar.id)
         if (toVar.connection == null) {
             return ArrayList()
         }
@@ -75,7 +87,16 @@ class FbNetworkEventConverter(
         if (toVar.name in outputVariables) {
             outVarToConnection[toVar.name] = connectionName
         }
-        return ArrayList()
+        return getVarCallbacks(toVar)
+    }
+
+    private fun getVarCallbacks(outVar: FbdEvaluationOrderService.OutVar): List<Connection> {
+        val connections = variableIdToOutConnections[outVar.id] ?: return emptyList()
+        val callbacks = ArrayList<Connection>()
+        for (connection in connections) {
+            callbacks.add(createConnection(varNameToConnection[outVar.name]!!, connection, EntryKind.DATA))
+        }
+        return callbacks
     }
 
     private fun connectBlock(blockId: Long): List<NetworkPart> {
@@ -144,6 +165,9 @@ class FbNetworkEventConverter(
         val varName = varService.getNameById(connection.sourceId)
         val varConnection = varNameToConnection[varName]
         val to = toBlockName + "." + connection.targetBlockVariableName
+
+        variableIdToOutConnections.putIfAbsent(connection.sourceId, ArrayList())
+        variableIdToOutConnections[connection.sourceId]!!.add(to)
         return if (varConnection != null) {
             transferType(varConnection, to)
             listOf(
@@ -151,6 +175,8 @@ class FbNetworkEventConverter(
                 createDefaultAssignment(toBlockName, connection.targetBlockVariableName)
             )
         } else {
+            varNameToInputsWithInitValue.putIfAbsent(varName, ArrayList())
+            varNameToInputsWithInitValue[varName]!!.add(to)
             transferType(varName, to)
             val initValue = varService.getInitValue(varName)
             listOf(Assignment(toBlockName, connection.targetBlockVariableName, initValue))
