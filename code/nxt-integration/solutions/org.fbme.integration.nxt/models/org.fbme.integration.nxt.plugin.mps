@@ -1473,7 +1473,7 @@
                 <node concept="1pGfFk" id="3qzmBf7cZ82" role="2ShVmc">
                   <ref role="37wK5l" to="dxuu:~JLabel.&lt;init&gt;(java.lang.String)" resolve="JLabel" />
                   <node concept="Xl_RD" id="3qzmBf7cZCJ" role="37wK5m">
-                    <property role="Xl_RC" value="IEC61131 PLCOpen file:" />
+                    <property role="Xl_RC" value="IEC61131 file:" />
                   </node>
                 </node>
               </node>
@@ -1607,7 +1607,7 @@
                   <ref role="3cqZAo" node="3qzmBf7cyo4" resolve="nxtImportLocation" />
                 </node>
                 <node concept="Xl_RD" id="4YP8cog1Uey" role="37wK5m">
-                  <property role="Xl_RC" value="Choose IEC61131 PLCOpen file" />
+                  <property role="Xl_RC" value="Choose IEC61131 file" />
                 </node>
                 <node concept="Xl_RD" id="g46k2sbZ62" role="37wK5m" />
                 <node concept="37vLTw" id="g46k2sbZ63" role="37wK5m">
