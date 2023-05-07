@@ -7,7 +7,7 @@ import org.fbme.lib.iec61499.fbnetwork.*
 class FbNetworkConverter(
     private val xmlFbd: OldStandardXml.FBD,
     xmlInterface: OldStandardXml.Interface,
-    private val parametersTypeProvider: FbParametersTypeProvider,
+    parametersTypeProvider: FbParametersTypeProvider,
     converterArguments: ConverterArguments,
     startEvent: String = "REQ",
     endEvent: String? = "CNF"
@@ -15,12 +15,12 @@ class FbNetworkConverter(
 
     private val networkEventConverter =
         FbNetworkEventConverter(xmlFbd, xmlInterface, converterArguments, parametersTypeProvider, startEvent, endEvent)
-    private val scale: Int = 3
+    private val evaluationOrderService = FbdEvaluationOrderService(xmlFbd, xmlInterface, converterArguments)
+    private val blockService = FbdBlockService(xmlFbd)
+
 
     // returns additional FBTypeDeclarations of variables
     fun fillNetwork(network: FBNetwork): List<FBTypeDeclaration> {
-
-        network.endpointCoordinates.addAll(getEndpointCoordinates())
 
         val connections = networkEventConverter
             .networkConnections
@@ -34,38 +34,26 @@ class FbNetworkConverter(
 
         network.eventConnections.addAll(connections.filter { it.kind == EntryKind.EVENT })
         network.dataConnections.addAll(connections.filter { it.kind == EntryKind.DATA })
-        val blocks = xmlFbd.blockList.map {
-            val blockAssigns = assignments.getOrDefault(it.getName(), ArrayList())
-            createFBD(it, blockAssigns)
-        }
+
+        val blocks = evaluationOrderService.evaluationOrder.filterIsInstance(FbdEvaluationOrderService.Block::class.java)
+            .mapIndexed { pos, blockIdDto ->
+                val blockName = blockService.getNameById(blockIdDto.id)
+                val blockAssigns = assignments.getOrDefault(blockName, ArrayList())
+                createFunctionBlock(blockIdDto.id, pos, blockAssigns)
+            }
         network.functionBlocks.addAll(blocks)
+
+        network.endpointCoordinates.addAll(getEndpointCoordinates(blocks.size))
         return emptyList()
     }
 
-    private fun getEndpointCoordinates(): List<EndpointCoordinate> {
-        val variableNameToCoordinates = HashMap<String, Pair<Int, Int>>()
-        for (variable in xmlFbd.inVariableList) {
-            variableNameToCoordinates[variable.expression.element.text] = Pair(variable.position.x, variable.position.y)
-        }
-        for (variable in xmlFbd.outVariableList) {
-            variableNameToCoordinates[variable.expression.element.text] = Pair(variable.position.x, variable.position.y)
-        }
-        return variableNameToCoordinates.map {
-            val endpointCoordinate = factory.createEndpointCoordinate()
-            endpointCoordinate.portReference.setFQName(it.key)
-            endpointCoordinate.x = it.value.first * scale
-            endpointCoordinate.y = it.value.second * scale
-            endpointCoordinate
-        }
-    }
-
-    private fun createFBD(xmlBlock: OldStandardXml.Block, assignments: List<Assignment>): FunctionBlockDeclaration {
+    private fun createFunctionBlock(blockId: Long, pos: Int, assignments: List<Assignment>): FunctionBlockDeclaration {
         val block = factory.createFunctionBlockDeclaration(null)
-        block.name = xmlBlock.getName()
-        val type = xmlBlock.getType()
+        block.name = blockService.getNameById(blockId)
+        val type = blockService.getTypeById(blockId)
         block.typeReference.setTargetName(type)
-        block.x = xmlBlock.position.x * scale
-        block.y = xmlBlock.position.y * scale
+        block.x = 500 * (pos + 2)
+        block.y = 0
 
         val parameterAssignments = assignments.map {
             val parameterAssign = factory.createParameterAssignment()
@@ -75,6 +63,29 @@ class FbNetworkConverter(
         }
         block.parameters.addAll(parameterAssignments)
         return block
+    }
+
+    private fun getEndpointCoordinates(blocksNumber: Int): List<EndpointCoordinate> {
+        val endpointCoordinates = ArrayList<EndpointCoordinate>()
+        for (i in xmlFbd.inVariableList.indices) {
+            val varName = xmlFbd.inVariableList[i].expression.element.text
+            endpointCoordinates.add(createEndpointCoordinate(varName, 0, 100 * (i + 1)))
+        }
+        for (i in xmlFbd.outVariableList.indices) {
+            val varName = xmlFbd.outVariableList[i].expression.element.text
+            endpointCoordinates.add(createEndpointCoordinate(varName, 500 + (blocksNumber + 3) * 500, 100 * (i + 1)))
+        }
+        endpointCoordinates.add(createEndpointCoordinate("REQ", 0, 0))
+        endpointCoordinates.add(createEndpointCoordinate("CNF", 500 + (blocksNumber + 3) * 500, 0))
+        return endpointCoordinates
+    }
+
+    private fun createEndpointCoordinate(name: String, x: Int, y: Int): EndpointCoordinate {
+        val endpointCoordinate = factory.createEndpointCoordinate()
+        endpointCoordinate.portReference.setFQName(name)
+        endpointCoordinate.x = x
+        endpointCoordinate.y = y
+        return endpointCoordinate
     }
 
     private fun convertConnection(connection: Connection): FBNetworkConnection {

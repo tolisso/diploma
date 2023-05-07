@@ -955,7 +955,92 @@
                     </node>
                   </node>
                 </node>
+                <node concept="3clFbF" id="5CVYFCA3mtD" role="3cqZAp">
+                  <node concept="2OqwBi" id="5CVYFCA3mtE" role="3clFbG">
+                    <node concept="2ShNRf" id="5CVYFCA3mtF" role="2Oq$k0">
+                      <node concept="1pGfFk" id="5CVYFCA3mtG" role="2ShVmc">
+                        <property role="373rjd" value="true" />
+                        <ref role="37wK5l" to="w1kc:~ModelImports.&lt;init&gt;(org.jetbrains.mps.openapi.model.SModel)" resolve="ModelImports" />
+                        <node concept="37vLTw" id="5CVYFCA3mtH" role="37wK5m">
+                          <ref role="3cqZAo" node="3qzmBf7cl8f" resolve="m" />
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="liA8E" id="5CVYFCA3mtI" role="2OqNvi">
+                      <ref role="37wK5l" to="w1kc:~ModelImports.addUsedLanguage(org.jetbrains.mps.openapi.language.SLanguage)" resolve="addUsedLanguage" />
+                      <node concept="2OqwBi" id="5CVYFCA3vP9" role="37wK5m">
+                        <node concept="2YIFZM" id="5CVYFCA3uNX" role="2Oq$k0">
+                          <ref role="37wK5l" to="dush:~PersistenceFacade.getInstance()" resolve="getInstance" />
+                          <ref role="1Pybhc" to="dush:~PersistenceFacade" resolve="PersistenceFacade" />
+                        </node>
+                        <node concept="liA8E" id="5CVYFCA3wZX" role="2OqNvi">
+                          <ref role="37wK5l" to="dush:~PersistenceFacade.createLanguage(java.lang.String)" resolve="createLanguage" />
+                          <node concept="Xl_RD" id="5CVYFCA3B7F" role="37wK5m">
+                            <property role="Xl_RC" value="l:6594f340-4d73-4027-b7d3-c6ca2e70a53b:org.fbme.ide.iec61499.lang" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="3clFbF" id="5CVYFCA3GI4" role="3cqZAp">
+                  <node concept="2OqwBi" id="5CVYFCA3GI6" role="3clFbG">
+                    <node concept="2ShNRf" id="5CVYFCA3GI7" role="2Oq$k0">
+                      <node concept="1pGfFk" id="5CVYFCA3GI8" role="2ShVmc">
+                        <property role="373rjd" value="true" />
+                        <ref role="37wK5l" to="w1kc:~ModelImports.&lt;init&gt;(org.jetbrains.mps.openapi.model.SModel)" resolve="ModelImports" />
+                        <node concept="37vLTw" id="5CVYFCA3GI9" role="37wK5m">
+                          <ref role="3cqZAo" node="3qzmBf7cl8f" resolve="m" />
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="liA8E" id="5CVYFCA3GIa" role="2OqNvi">
+                      <ref role="37wK5l" to="w1kc:~ModelImports.addUsedLanguage(org.jetbrains.mps.openapi.language.SLanguage)" resolve="addUsedLanguage" />
+                      <node concept="2OqwBi" id="5CVYFCA3GIb" role="37wK5m">
+                        <node concept="2YIFZM" id="5CVYFCA3GIc" role="2Oq$k0">
+                          <ref role="37wK5l" to="dush:~PersistenceFacade.getInstance()" resolve="getInstance" />
+                          <ref role="1Pybhc" to="dush:~PersistenceFacade" resolve="PersistenceFacade" />
+                        </node>
+                        <node concept="liA8E" id="5CVYFCA3GId" role="2OqNvi">
+                          <ref role="37wK5l" to="dush:~PersistenceFacade.createLanguage(java.lang.String)" resolve="createLanguage" />
+                          <node concept="Xl_RD" id="5CVYFCA3GIe" role="37wK5m">
+                            <property role="Xl_RC" value="l:2046780a-246e-4cb0-90fe-56a2b7d92c54:org.fbme.ide.st.lang" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="3clFbF" id="GUocmp$nGO" role="3cqZAp">
+                  <node concept="2OqwBi" id="GUocmp$nGP" role="3clFbG">
+                    <node concept="2ShNRf" id="GUocmp$nGQ" role="2Oq$k0">
+                      <node concept="1pGfFk" id="GUocmp$nGR" role="2ShVmc">
+                        <property role="373rjd" value="true" />
+                        <ref role="37wK5l" to="w1kc:~ModelImports.&lt;init&gt;(org.jetbrains.mps.openapi.model.SModel)" resolve="ModelImports" />
+                        <node concept="37vLTw" id="GUocmp$nGS" role="37wK5m">
+                          <ref role="3cqZAo" node="3qzmBf7cl8f" resolve="m" />
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="liA8E" id="GUocmp$nGT" role="2OqNvi">
+                      <ref role="37wK5l" to="w1kc:~ModelImports.addUsedDevKit(org.jetbrains.mps.openapi.module.SModuleReference)" resolve="addUsedDevKit" />
+                      <node concept="2OqwBi" id="GUocmp$q0n" role="37wK5m">
+                        <node concept="2YIFZM" id="GUocmp$q0o" role="2Oq$k0">
+                          <ref role="37wK5l" to="dush:~PersistenceFacade.getInstance()" resolve="getInstance" />
+                          <ref role="1Pybhc" to="dush:~PersistenceFacade" resolve="PersistenceFacade" />
+                        </node>
+                        <node concept="liA8E" id="GUocmp$q0p" role="2OqNvi">
+                          <ref role="37wK5l" to="dush:~PersistenceFacade.createModuleReference(java.lang.String)" resolve="createModuleReference" />
+                          <node concept="Xl_RD" id="GUocmp$q0q" role="37wK5m">
+                            <property role="Xl_RC" value="b8a7e14f-52ea-4ee2-b17e-26c27da8084c(IEC-61499)" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
                 <node concept="3clFbH" id="7_cq9iT7mZd" role="3cqZAp" />
+                <node concept="3clFbH" id="GUocmp$mw3" role="3cqZAp" />
                 <node concept="3J1_TO" id="1Hry6ntXegV" role="3cqZAp">
                   <node concept="3uVAMA" id="1Hry6ntXf8H" role="1zxBo5">
                     <node concept="XOnhg" id="1Hry6ntXf8I" role="1zc67B">

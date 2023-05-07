@@ -30,6 +30,12 @@ class FbParametersTypeProvider(additionalBlocks: List<Block>) {
                 Parameter("IN1", GenericType.ANY_MAGNITUDE),
                 Parameter("IN2", GenericType.ANY_MAGNITUDE),
                 Parameter("OUT", GenericType.ANY_MAGNITUDE),
+            ),
+            Block(
+                "F_MUL",
+                Parameter("IN1", GenericType.ANY_MAGNITUDE),
+                Parameter("IN2", GenericType.ANY_MAGNITUDE),
+                Parameter("OUT", GenericType.ANY_MAGNITUDE),
             )
         )
     }

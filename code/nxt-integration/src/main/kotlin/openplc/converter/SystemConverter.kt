@@ -99,6 +99,7 @@ class SystemConverter(
         cycle.name = "E_CYCLE"
         cycle.typeReference.setTargetName("E_CYCLE")
         cycle.parameters.add(cycleTimeout)
+        cycle.x = 500
         network.functionBlocks.add(cycle)
 
         FbNetworkConverter(
