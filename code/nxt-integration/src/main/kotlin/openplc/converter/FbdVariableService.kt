@@ -17,6 +17,7 @@ class FbdVariableService(
     private val varList: List<OldStandardXml.VariableList.Variable>
 
     private val initVals: Map<String, String>
+    val allVarTypes: Map<String, ElementaryType>
 
     init {
         val varLists = ArrayList<OldStandardXml.VariableList>()
@@ -27,12 +28,9 @@ class FbdVariableService(
         varLists.addAll(xmlInterface.tempVars)
 
         varList = varLists.flatMap { it.variableList }
+        allVarTypes = varList.associate { Pair(it.name, ElementaryType.valueOf(it.type.getType())) }
 
         initVals = getInitVals()
-    }
-
-    fun getAllVarTypes(): List<Pair<String, ElementaryType>> {
-        return varList.map { Pair(it.name, ElementaryType.valueOf(it.type.getType())) }
     }
 
     // TODO не только elementaryType

@@ -24,22 +24,21 @@ class FbNetworkConverter(
 
         val connections = networkEventConverter
             .networkConnections
-            .filterIsInstance<Connection>()
+            .filterIsInstance<NetworkPart.Connection>()
             .map { convertConnection(it) }
 
         val assignments = networkEventConverter
             .networkConnections
-            .filterIsInstance<Assignment>()
+            .filterIsInstance<NetworkPart.Assignment>()
             .groupBy { it.blockName }
 
         network.eventConnections.addAll(connections.filter { it.kind == EntryKind.EVENT })
         network.dataConnections.addAll(connections.filter { it.kind == EntryKind.DATA })
 
-        val blocks = evaluationOrderService.evaluationOrder.filterIsInstance(FbdEvaluationOrderService.Block::class.java)
-            .mapIndexed { pos, blockIdDto ->
-                val blockName = blockService.getNameById(blockIdDto.id)
-                val blockAssigns = assignments.getOrDefault(blockName, ArrayList())
-                createFunctionBlock(blockIdDto.id, pos, blockAssigns)
+        val blocks = networkEventConverter.networkConnections.filterIsInstance(NetworkPart.Block::class.java)
+            .mapIndexed { pos, blockDto ->
+                val blockAssigns = assignments.getOrDefault(blockDto.name, ArrayList())
+                createFunctionBlock(blockDto, pos, blockAssigns)
             }
         network.functionBlocks.addAll(blocks)
 
@@ -47,11 +46,14 @@ class FbNetworkConverter(
         return emptyList()
     }
 
-    private fun createFunctionBlock(blockId: Long, pos: Int, assignments: List<Assignment>): FunctionBlockDeclaration {
+    private fun createFunctionBlock(
+        blockDto: NetworkPart.Block,
+        pos: Int,
+        assignments: List<NetworkPart.Assignment>
+    ): FunctionBlockDeclaration {
         val block = factory.createFunctionBlockDeclaration(null)
-        block.name = blockService.getNameById(blockId)
-        val type = blockService.getTypeById(blockId)
-        block.typeReference.setTargetName(type)
+        block.name = blockDto.name
+        block.typeReference.setTargetName(blockDto.type)
         block.x = 500 * (pos + 2)
         block.y = 0
 
@@ -88,7 +90,7 @@ class FbNetworkConverter(
         return endpointCoordinate
     }
 
-    private fun convertConnection(connection: Connection): FBNetworkConnection {
+    private fun convertConnection(connection: NetworkPart.Connection): FBNetworkConnection {
         val convConnection = factory.createFBNetworkConnection(connection.type)
         convConnection.sourceReference.setFQName(connection.source)
         convConnection.targetReference.setFQName(connection.target)
