@@ -19,11 +19,11 @@ class ProjectService {
         return FbParametersTypeProvider.Block(pou.name, parameters)
     }
 
-    private fun List<OldStandardXml.VariableList>.toParameters(): List<FbParametersTypeProvider.Parameter> {
+    private fun List<OldStandardXml.VariableList>.toParameters(): List<FbParametersTypeProvider.Param> {
         return this.map { variableList ->
             variableList.variableList.map { variable ->
                 val typeStr = variable.type.getType()
-                FbParametersTypeProvider.Parameter(variable.name, nameToType[typeStr]!!)
+                FbParametersTypeProvider.Param(variable.name, nameToType[typeStr]!!)
             }
         }.flatten()
     }

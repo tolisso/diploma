@@ -49,8 +49,6 @@ C
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 C
 settings.gradle.kts,7\4\749edfcc96398253e5b3416184e95c46621da850
-U
-%code/nxt-integration/build.gradle.kts,a\9\a99a680d13a2194fd41eeb1eaf2c15217c6a5dc6
 M
 code/library/build.gradle.kts,6\3\632195e59127e2d8d67cf6ffe2197ef7e9d46102
 Q
@@ -61,8 +59,6 @@ b
 2code/4diac-integration/solutions/stdlib/stdlib.msd,d\f\df813c8a5aee01cdb34bdd3483526e559a4bc561
 š
 jcode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/iec61131-3/bistableElements/FB_RS.fbt,4\a\4a0d39e7d5b2a620dae28f35842d19d4f83769ad
-”
-dcode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/iec61131-3/arithmetic/F_ADD.fbt,6\5\6599b47b63f6c3310d2fd85f03d1208231e76889
 š
 jcode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/iec61131-3/bitwiseOperators/F_AND.fbt,7\9\793372538b09971c922d82d242db7ef2509bae5f
 ”
@@ -109,14 +105,10 @@ gcode/richediting/src/main/kotlin/org/fbme/ide/richediting/editor/RichApplicatio
 ecode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/iec61131-3/arithmetic/F_EXPT.fbt,e\c\ec9d96804d856831e768f3cddad8c8455be6a67f
 ”
 dcode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/iec61131-3/arithmetic/F_MOD.fbt,6\e\6e00ba65be528b8b3af843f69982d7bef0db11ee
-•
-ecode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/iec61131-3/arithmetic/F_MOVE.fbt,b\8\b810e347f4945a1897ec9c9efbaa3921dd48e6e2
 ”
 dcode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/iec61131-3/arithmetic/F_SUB.fbt,7\d\7dd2a086c12ffa09ded55a75b83709e906a795a9
 œ
 lcode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/iec61131-3/arithmetic/F_ADD_DT_TIME.fbt,7\2\7299f4eb5cea70965ca18d43102e8be889a56821
-~
-Ncode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/io/ID.fbt,4\b\4be1d6be4710b1fc1da076459735512bdfedae27
 ~
 Ncode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/io/IW.fbt,5\d\5d695929ca969ce170951d30937d3dd8e95a2bfa
 “

@@ -3,6 +3,7 @@ package openplc.converter
 import openplc.oldstandart.dto.OldStandardXml
 import org.fbme.lib.iec61499.declarations.FBTypeDeclaration
 import org.fbme.lib.iec61499.fbnetwork.*
+import kotlin.random.Random
 
 class FbNetworkConverter(
     private val xmlFbd: OldStandardXml.FBD,
@@ -22,19 +23,11 @@ class FbNetworkConverter(
     // returns additional FBTypeDeclarations of variables
     fun fillNetwork(network: FBNetwork): List<FBTypeDeclaration> {
 
-        val connections = networkEventConverter
-            .networkConnections
-            .filterIsInstance<NetworkPart.Connection>()
-            .map { convertConnection(it) }
-
+        // blocks with assignments
         val assignments = networkEventConverter
             .networkConnections
             .filterIsInstance<NetworkPart.Assignment>()
             .groupBy { it.blockName }
-
-        network.eventConnections.addAll(connections.filter { it.kind == EntryKind.EVENT })
-        network.dataConnections.addAll(connections.filter { it.kind == EntryKind.DATA })
-
         val blocks = networkEventConverter.networkConnections.filterIsInstance(NetworkPart.Block::class.java)
             .mapIndexed { pos, blockDto ->
                 val blockAssigns = assignments.getOrDefault(blockDto.name, ArrayList())
@@ -42,8 +35,79 @@ class FbNetworkConverter(
             }
         network.functionBlocks.addAll(blocks)
 
-        network.endpointCoordinates.addAll(getEndpointCoordinates(blocks.size))
+        val connections = networkEventConverter
+            .networkConnections
+            .filterIsInstance<NetworkPart.Connection>()
+
+        // endpoints
+        val endpointCoordinates = getEndpointCoordinates(blocks.size)
+        network.endpointCoordinates.addAll(endpointCoordinates.values)
+
+        // event connections
+        val eventConnections = connections.filter { it.type == EntryKind.EVENT }.map { convertConnection(it) }
+        network.eventConnections.addAll(eventConnections)
+
+        // data connections
+        val blockNameToPosition = networkEventConverter.networkConnections
+            .filterIsInstance(NetworkPart.Block::class.java)
+            .mapIndexed { index, block -> Pair(block.name, index) }
+            .associate { it }
+        val dataConnectionDtos = connections.filter { it.type == EntryKind.DATA }
+        val dataConnections = createDataConnections(dataConnectionDtos, blockNameToPosition)
+        network.dataConnections.addAll(dataConnections)
+
         return emptyList()
+    }
+
+    private fun createDataConnections(
+        dataConnectionDtos: List<NetworkPart.Connection>,
+        blockNameToPosition: Map<String, Int>,
+    ): List<FBNetworkConnection> {
+        class FreeCords(var left: Int, var right: Int)
+
+        // -1: in variables
+        // 0: block
+        // ...
+        // blocks.size: out variables
+        val posToCords = mutableMapOf<Int, FreeCords>()
+        for (it in -1..blockNameToPosition.size) {
+            posToCords[it] = FreeCords(20, 20)
+        }
+
+        val connections = ArrayList<FBNetworkConnection>()
+
+        for (connectionDto in dataConnectionDtos) {
+            val sourceSplit = connectionDto.source.split(".")
+            val sourcePos: Int = if (sourceSplit.size == 1) {
+                -1 // in variable
+            } else {
+                blockNameToPosition[sourceSplit[0]]!!
+            }
+
+            val targetSplit = connectionDto.target.split(".")
+            val targetPos: Int = if (targetSplit.size == 1) {
+               blockNameToPosition.size // out variable
+            } else {
+                blockNameToPosition[targetSplit[0]]!!
+            }
+            val connection = factory.createFBNetworkConnection(EntryKind.DATA)
+            connection.sourceReference.setFQName(connectionDto.source)
+            connection.targetReference.setFQName(connectionDto.target)
+
+            // if the source before the target - default straight link
+            // else - long 4-corner link created below
+            if (sourcePos + 1 != targetPos) {
+                val sourceCords = posToCords[sourcePos]!!
+                val targetCords = posToCords[targetPos]!!
+                connection.path = ConnectionPath(sourceCords.right, Random.nextInt(300, 600), targetCords.left)
+
+                sourceCords.right += 20
+                targetCords.left += 20
+            }
+
+            connections.add(connection)
+        }
+        return connections
     }
 
     private fun createFunctionBlock(
@@ -67,18 +131,18 @@ class FbNetworkConverter(
         return block
     }
 
-    private fun getEndpointCoordinates(blocksNumber: Int): List<EndpointCoordinate> {
-        val endpointCoordinates = ArrayList<EndpointCoordinate>()
+    private fun getEndpointCoordinates(blocksNumber: Int): Map<String, EndpointCoordinate> {
+        val endpointCoordinates = mutableMapOf<String, EndpointCoordinate>()
         for (i in xmlFbd.inVariableList.indices) {
             val varName = xmlFbd.inVariableList[i].expression.element.text
-            endpointCoordinates.add(createEndpointCoordinate(varName, 0, 100 * (i + 1)))
+            endpointCoordinates[varName] = createEndpointCoordinate(varName, 0, 100 * (i + 1))
         }
         for (i in xmlFbd.outVariableList.indices) {
             val varName = xmlFbd.outVariableList[i].expression.element.text
-            endpointCoordinates.add(createEndpointCoordinate(varName, 500 + (blocksNumber + 3) * 500, 100 * (i + 1)))
+            endpointCoordinates[varName] = createEndpointCoordinate(varName, 500 + (blocksNumber + 3) * 500, 100 * (i + 1))
         }
-        endpointCoordinates.add(createEndpointCoordinate("REQ", 0, 0))
-        endpointCoordinates.add(createEndpointCoordinate("CNF", 500 + (blocksNumber + 3) * 500, 0))
+        endpointCoordinates["REQ"] = createEndpointCoordinate("REQ", 0, 0)
+        endpointCoordinates["CNF"] = createEndpointCoordinate("CNF", 500 + (blocksNumber + 3) * 500, 0)
         return endpointCoordinates
     }
 

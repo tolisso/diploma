@@ -9,14 +9,10 @@ gcode/richediting/src/main/kotlin/org/fbme/ide/richediting/editor/RichApplicatio
 ecode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/iec61131-3/arithmetic/F_EXPT.fbt,e\c\ec9d96804d856831e768f3cddad8c8455be6a67f
 ”
 dcode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/iec61131-3/arithmetic/F_MOD.fbt,6\e\6e00ba65be528b8b3af843f69982d7bef0db11ee
-•
-ecode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/iec61131-3/arithmetic/F_MOVE.fbt,b\8\b810e347f4945a1897ec9c9efbaa3921dd48e6e2
 ”
 dcode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/iec61131-3/arithmetic/F_SUB.fbt,7\d\7dd2a086c12ffa09ded55a75b83709e906a795a9
 œ
 lcode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/iec61131-3/arithmetic/F_ADD_DT_TIME.fbt,7\2\7299f4eb5cea70965ca18d43102e8be889a56821
-~
-Ncode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/io/ID.fbt,4\b\4be1d6be4710b1fc1da076459735512bdfedae27
 ~
 Ncode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/io/IW.fbt,5\d\5d695929ca969ce170951d30937d3dd8e95a2bfa
 “

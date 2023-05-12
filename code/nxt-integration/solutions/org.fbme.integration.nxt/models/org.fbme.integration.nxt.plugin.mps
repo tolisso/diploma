@@ -42,6 +42,7 @@
     <import index="uvki" ref="ce018f97-56b9-4ee7-9b5f-2d462b6628bf/java:org.fbme.ide.iec61499.repository(org.fbme.platform.lib/)" />
     <import index="25ix" ref="ce018f97-56b9-4ee7-9b5f-2d462b6628bf/java:org.fbme.ide.platform.converter(org.fbme.platform.lib/)" />
     <import index="r3nk" ref="00c8d7a5-e1fd-4a2c-bbdf-9d0d4ac80c94/java:org.fbme.integration.nxt.importer(org.fbme.integration.nxt.lib/)" />
+    <import index="z1c3" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.project(MPS.Core/)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
   <registry>
@@ -1036,6 +1037,52 @@
                           </node>
                         </node>
                       </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="3cpWs8" id="6GBukUMHk6h" role="3cqZAp">
+                  <node concept="3cpWsn" id="6GBukUMHk6i" role="3cpWs9">
+                    <property role="TrG5h" value="model" />
+                    <node concept="3uibUv" id="6GBukUMHk6j" role="1tU5fm">
+                      <ref role="3uigEE" to="mhbf:~SModel" resolve="SModel" />
+                    </node>
+                    <node concept="37vLTw" id="6GBukUMHK16" role="33vP2m">
+                      <ref role="3cqZAo" node="3qzmBf7cl8f" resolve="m" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="3clFbF" id="6GBukUMHO6M" role="3cqZAp">
+                  <node concept="2OqwBi" id="6GBukUMI3CB" role="3clFbG">
+                    <node concept="1eOMI4" id="6GBukUMI2j1" role="2Oq$k0">
+                      <node concept="10QFUN" id="6GBukUMHV85" role="1eOMHV">
+                        <node concept="3uibUv" id="6GBukUMHZ6$" role="10QFUM">
+                          <ref role="3uigEE" to="z1c3:~AbstractModule" resolve="AbstractModule" />
+                        </node>
+                        <node concept="2OqwBi" id="6GBukUMHPGi" role="10QFUP">
+                          <node concept="37vLTw" id="6GBukUMHO6K" role="2Oq$k0">
+                            <ref role="3cqZAo" node="6GBukUMHk6i" resolve="model" />
+                          </node>
+                          <node concept="liA8E" id="6GBukUMHRLl" role="2OqNvi">
+                            <ref role="37wK5l" to="mhbf:~SModel.getModule()" resolve="getModule" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="liA8E" id="6GBukUMI52z" role="2OqNvi">
+                      <ref role="37wK5l" to="z1c3:~AbstractModule.addDependency(org.jetbrains.mps.openapi.module.SModuleReference,boolean)" resolve="addDependency" />
+                      <node concept="2OqwBi" id="6GBukUMI8ZU" role="37wK5m">
+                        <node concept="2YIFZM" id="6GBukUMI8ZV" role="2Oq$k0">
+                          <ref role="1Pybhc" to="dush:~PersistenceFacade" resolve="PersistenceFacade" />
+                          <ref role="37wK5l" to="dush:~PersistenceFacade.getInstance()" resolve="getInstance" />
+                        </node>
+                        <node concept="liA8E" id="6GBukUMI8ZW" role="2OqNvi">
+                          <ref role="37wK5l" to="dush:~PersistenceFacade.createModuleReference(java.lang.String)" resolve="createModuleReference" />
+                          <node concept="Xl_RD" id="6GBukUMI8ZX" role="37wK5m">
+                            <property role="Xl_RC" value="b8a7e14f-52ea-4ee2-b17e-26c27da8084c(IEC-61499)" />
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="3clFbT" id="6GBukUMIcem" role="37wK5m" />
                     </node>
                   </node>
                 </node>
