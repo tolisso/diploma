@@ -17,24 +17,23 @@ class FbdVariableService(
     private val varList: List<OldStandardXml.VariableList.Variable>
 
     private val initVals: Map<String, String>
-    val allVarTypes: Map<String, ElementaryType>
+    val allVarTypes: Map<String, DataType>
 
     init {
-        val varLists = ArrayList<OldStandardXml.VariableList>()
+        val varLists = mutableListOf<OldStandardXml.VariableList>()
         varLists.addAll(xmlInterface.inputVars)
         varLists.addAll(xmlInterface.inOutVars)
         varLists.addAll(xmlInterface.outputVars)
         varLists.addAll(xmlInterface.localVars)
         varLists.addAll(xmlInterface.tempVars)
 
-        varList = varLists.flatMap { it.variableList }
-        allVarTypes = varList.associate { Pair(it.name, ElementaryType.valueOf(it.type.getType())) }
+        varList = varLists.flatMap { it.variableList }.filter { getVariableType(it) != null }
+        allVarTypes = varList.associate { Pair(it.name, getVariableType(it)!!) }
 
         initVals = getInitVals()
     }
 
-    // TODO не только elementaryType
-    private fun getElementaryType(variable: OldStandardXml.VariableList.Variable): DataType? {
+    private fun getVariableType(variable: OldStandardXml.VariableList.Variable): DataType? {
         val typeName = variable.type.getType()
         if (typeName in elementaryTypes) {
             return ElementaryType.valueOf(typeName)
@@ -43,7 +42,10 @@ class FbdVariableService(
     }
 
     fun getInitValue(varName: String): Literal<*> {
-        return STConverter.parseLiteral(stFactory, initVals[varName])!!
+        // variable name itself can contain expression
+        return STConverter.parseLiteral(stFactory, varName) ?:
+            STConverter.parseLiteral(stFactory, initVals[varName]) ?:
+            throw RuntimeException("No default value if variable [$varName]")
     }
 
     private fun getInitVals(): Map<String, String> {
@@ -53,7 +55,7 @@ class FbdVariableService(
             if (variable.initialValue != null) {
                 varNameToValue[variable.name] = variable.initialValue.simpleValue!!.value
             } else {
-                val type = getElementaryType(variable) ?: continue
+                val type = getVariableType(variable) ?: continue
                 varNameToValue[variable.name] = getDefaultValue(type)
             }
         }
@@ -63,12 +65,6 @@ class FbdVariableService(
     fun getNameById(variableId: Long): String = variableIdToNameMap[variableId]!!
     fun isVariableId(variableId: Long): Boolean = variableId in variableIdToNameMap.keys
     fun getAllDeclaredOutVariables() = declaredOutVariables
-
-    fun getInVariables() = xmlFbd.inVariableList.map { it.expression.element.text }
-
-    fun getOutVariables() = xmlFbd.outVariableList.map { it.expression.element.text }
-
-    fun getInOutVariables() = xmlFbd.inOutVariableList.map { it.expression.element.text }
 
     private fun getVariableNameByIdMap(): Map<Long, String> {
         val variableIdToName = HashMap<Long, String>()

@@ -99,7 +99,7 @@ class FbNetworkConverter(
             if (sourcePos + 1 != targetPos) {
                 val sourceCords = posToCords[sourcePos]!!
                 val targetCords = posToCords[targetPos]!!
-                connection.path = ConnectionPath(sourceCords.right, Random.nextInt(300, 600), targetCords.left)
+                connection.path = ConnectionPath(sourceCords.right, Random.nextInt(300, 1000), targetCords.left)
 
                 sourceCords.right += 20
                 targetCords.left += 20

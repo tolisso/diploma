@@ -52,8 +52,10 @@ class FbNetworkEventConverter(
         outVarToConnection.forEach { connections.add(createConnection(it.value, it.key, EntryKind.DATA)) }
         
         for (varName in varNameToInputsWithInitValue.keys) {
-            connections.addAll(createHolderWithConnections(varName))
+            // if varName hasn't got assignments
+            if (varName !in varNameToConnection) continue
 
+            connections.addAll(createHolderWithConnections(varName))
             for (initValueConnection in varNameToInputsWithInitValue[varName]!!) {
                 connections.add(createConnection(varNameToConnection[varName]!!, initValueConnection, EntryKind.DATA))
             }
@@ -69,23 +71,21 @@ class FbNetworkEventConverter(
         varName: String
     ): List<NetworkPart> {
         val connections = ArrayList<NetworkPart>()
-        val varType = varService.allVarTypes[varName]!!.stringify()
         // holder block after the main part of network containing variable
         val holderName = varName + "_holder" + holderCnt
         holderCnt++
 
-        connections.add(NetworkPart.Block(holderName, "F_ADD"))
-        connections.add(NetworkPart.Assignment(holderName, "IN1", varService.getInitValue(varName)))
-        connections.add(NetworkPart.Assignment(holderName, "IN2", STConverter.parseLiteral(stFactory, "0")!!))
+        connections.add(NetworkPart.Block(holderName, "F_MOVE"))
+        connections.add(NetworkPart.Assignment(holderName, "IN", varService.getInitValue(varName)))
         connections.add(createConnection(curEventOut, "$holderName.REQ", EntryKind.EVENT))
         curEventOut = "$holderName.CNF"
 
         val connectionWithVar = varNameToConnection[varName]
         if (connectionWithVar != null) {
-            connections.add(createConnection(connectionWithVar, "$holderName.IN1", EntryKind.DATA))
+            connections.add(createConnection(connectionWithVar, "$holderName.IN", EntryKind.DATA))
         } else {
             varNameToInputsWithInitValue.putIfAbsent(varName, ArrayList())
-            varNameToInputsWithInitValue[varName]!!.add("$holderName.IN1")
+            varNameToInputsWithInitValue[varName]!!.add("$holderName.IN")
         }
         varNameToConnection[varName] = "$holderName.OUT"
         return connections
@@ -145,7 +145,11 @@ class FbNetworkEventConverter(
         for (parameter in parametersTypeProvider.getBlockParameters(blockType)) {
             val connection = blockName + "." + parameter.name
             if (parameter.type is GenericType && connectionToType[connection] != null) {
-                typeMapper[parameter.type] = connectionToType[connection]!!
+                val varType = connectionToType[connection]!!
+                typeMapper[parameter.type] = when(varType) {
+                    is ElementaryType -> varType
+                    else -> throw RuntimeException("Var connected to generic input must be elementary type")
+                }
             }
         }
         for (parameter in parametersTypeProvider.getBlockParameters(blockType)) {

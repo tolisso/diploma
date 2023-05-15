@@ -212,7 +212,7 @@ class OldStandardXml {
         val globalId: String?
     ) {
         fun getName() = instanceName ?: "UNNAMED_$localId"
-        fun getType() = to4diacType(typeName)
+        fun getType() = convertBlockType(typeName)
 
         class InOutVariables(
             @ChildElementList(target = InOutVariable::class, name = "variable")

@@ -1,5 +1,7 @@
 package openplc.converter
 
+import openplc.oldstandart.dto.BlockInfo
+import openplc.oldstandart.dto.DataParameterInfo
 import openplc.oldstandart.dto.OldStandardXml
 import org.fbme.lib.st.types.DataType
 import org.fbme.lib.st.types.ElementaryType
@@ -10,20 +12,20 @@ class ProjectService {
     private val nameToType: Map<String, DataType> = GenericType.values().associateBy { it.name } +
             ElementaryType.values().associateBy { it.name }
 
-    fun getAdditionalBlockTypes(pous: OldStandardXml.Pous): List<FbParametersTypeProvider.Block> {
+    fun getAdditionalBlockTypes(pous: OldStandardXml.Pous): List<BlockInfo> {
         return pous.pouList.map { toBlockType(it) }
     }
 
-    private fun toBlockType(pou: OldStandardXml.Pou): FbParametersTypeProvider.Block {
+    private fun toBlockType(pou: OldStandardXml.Pou): BlockInfo {
         val parameters = pou.pouInterface?.outputVars?.toParameters() ?: emptyList()
-        return FbParametersTypeProvider.Block(pou.name, parameters)
+        return BlockInfo(pou.name, parameters)
     }
 
-    private fun List<OldStandardXml.VariableList>.toParameters(): List<FbParametersTypeProvider.Param> {
+    private fun List<OldStandardXml.VariableList>.toParameters(): List<DataParameterInfo> {
         return this.map { variableList ->
             variableList.variableList.map { variable ->
                 val typeStr = variable.type.getType()
-                FbParametersTypeProvider.Param(variable.name, nameToType[typeStr]!!)
+                DataParameterInfo(variable.name, nameToType[typeStr]!!)
             }
         }.flatten()
     }
