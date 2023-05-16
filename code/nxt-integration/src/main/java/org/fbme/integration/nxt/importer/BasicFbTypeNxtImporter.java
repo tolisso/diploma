@@ -76,7 +76,7 @@ public class BasicFbTypeNxtImporter extends BasicFBTypeConverter {
             algorithmDeclaration.getTemporaryVariables().add(parameterDeclaration);
             return Unit.INSTANCE;
         };
-        st.getStatements().addAll(STConverter.parseStatementListWithDeclarations(factory, parameterCollector::apply, text));
+        st.getStatements().addAll(STConverter.parseStatementListWithDeclarations(factory, text, parameterCollector::apply));
     };
 
     private static class TransitionImportChecker {

@@ -79,8 +79,6 @@ Tcode/richediting/src/main/kotlin/org/fbme/ide/richediting/adapters/ecc/ECCEdito
 ncode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/iec61131-3/arithmetic/F_SUB_DATE_DATE.fbt,9\8\98601a955dc0f7c9b2c4b0fd6a95fde8c75f7cb7
 í
 bcode/nxt-integration/src/main/java/org/fbme/integration/nxt/importer/NxtImporterConfiguration.java,c\f\cfb649eb230a0e188868275765f413aa297deb53
-ê
-`code/nxt-integration/src/main/java/org/fbme/integration/nxt/importer/BasicFbTypeNxtImporter.java,1\7\17c714f6551060ee57eb2d33f2794643f133cb01
 é
 ^code/nxt-integration/src/main/java/org/fbme/integration/nxt/importer/FBNetworkNxtImporter.java,5\2\528e36363b2445f64ea7044e8dc89799b9a26a30
 ~
