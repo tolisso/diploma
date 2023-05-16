@@ -68,9 +68,9 @@ class FbdVariableService(
 
     private fun getVariableNameByIdMap(): Map<Long, String> {
         val variableIdToName = HashMap<Long, String>()
-        xmlFbd.inVariableList.forEach { variableIdToName[it.localId] = it.expression.element.text }
-        xmlFbd.outVariableList.forEach { variableIdToName[it.localId] = it.expression.element.text }
-        xmlFbd.inOutVariableList.forEach { variableIdToName[it.localId] = it.expression.element.text }
+        xmlFbd.inVariableList.forEach { variableIdToName[it.localId] = it.expression.getText() }
+        xmlFbd.outVariableList.forEach { variableIdToName[it.localId] = it.expression.getText() }
+        xmlFbd.inOutVariableList.forEach { variableIdToName[it.localId] = it.expression.getText() }
 
         return variableIdToName
     }
@@ -80,7 +80,7 @@ class FbdVariableService(
         variables.addAll(xmlFbd.inOutVariableList.map {
             Variable(
                 it.localId,
-                it.expression.element.text,
+                it.expression.getText(),
                 it.position.x,
                 it.position.y,
                 getConnection(it.connectionPointIn)
@@ -89,7 +89,7 @@ class FbdVariableService(
         variables.addAll(xmlFbd.outVariableList.map {
             Variable(
                 it.localId,
-                it.expression.element.text,
+                it.expression.getText(),
                 it.position.x,
                 it.position.y,
                 getConnection(it.connectionPointIn)

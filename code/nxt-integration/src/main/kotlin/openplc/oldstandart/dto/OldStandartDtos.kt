@@ -265,8 +265,12 @@ class OldStandardXml {
 
     class ElementNode(
         @ElementObject
-        val element: Element
-    )
+        private val element: Element
+    ) {
+        fun getText(): String {
+            return element.text
+        }
+    }
 
     class FBD(
         @ChildElementList(target = Comment::class, name = "comment")

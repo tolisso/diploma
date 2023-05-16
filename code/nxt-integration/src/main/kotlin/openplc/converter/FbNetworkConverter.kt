@@ -132,11 +132,11 @@ class FbNetworkConverter(
     private fun getEndpointCoordinates(blocksNumber: Int): Map<String, EndpointCoordinate> {
         val endpointCoordinates = mutableMapOf<String, EndpointCoordinate>()
         for (i in xmlFbd.inVariableList.indices) {
-            val varName = xmlFbd.inVariableList[i].expression.element.text
+            val varName = xmlFbd.inVariableList[i].expression.getText()
             endpointCoordinates[varName] = createEndpointCoordinate(varName, 0, 100 * (i + 1))
         }
         for (i in xmlFbd.outVariableList.indices) {
-            val varName = xmlFbd.outVariableList[i].expression.element.text
+            val varName = xmlFbd.outVariableList[i].expression.getText()
             endpointCoordinates[varName] = createEndpointCoordinate(varName, 500 + (blocksNumber + 3) * 500, 100 * (i + 1))
         }
         endpointCoordinates["REQ"] = createEndpointCoordinate("REQ", 0, 0)
