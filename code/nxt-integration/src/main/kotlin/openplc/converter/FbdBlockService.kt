@@ -10,7 +10,4 @@ class FbdBlockService(xmlFbd: OldStandardXml.FBD) {
     fun getNameById(blockId: Long): String = blockIdToNameMap[blockId]!!
     fun getTypeById(blockId: Long) = blockIdToType[blockId]!!
     fun isBlockId(blockId: Long): Boolean = blockId in blockIdToNameMap.keys
-    fun getAllBlockIds() = blockIdToNameMap.keys
-
-
 }

@@ -23,11 +23,11 @@ class FbNetworkEventConverter(
     val networkConnections: List<NetworkPart>
     private val outputVariables = interfaceService.getInOutVariables() + interfaceService.getOutputVariables()
 
-    private val varNameToConnection = HashMap<String, String>()
-    private val outVarToConnection = HashMap<String, String>()
+    private val varNameToConnection = mutableMapOf<String, String>()
+    private val outVarToConnection = mutableMapOf<String, String>()
     private val connectionToType = HashMap(varService.allVarTypes)
-    private val variableIdToOutConnections = HashMap<Long, MutableList<String>>()
-    private val varNameToInputsWithInitValue = HashMap<String, MutableList<String>>()
+    private val variableIdToOutConnections = mutableMapOf<Long, MutableList<String>>()
+    private val varNameToInputsWithInitValue = mutableMapOf<String, MutableList<String>>()
     private var holderCnt = 0
 
     init {

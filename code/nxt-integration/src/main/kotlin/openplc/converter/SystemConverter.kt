@@ -11,9 +11,9 @@ import org.fbme.lib.iec61499.fbnetwork.FBNetworkConnection
 import org.fbme.lib.iec61499.parser.STConverter
 
 class SystemConverter(
-    val typeProvider: FbParametersTypeProvider,
-    val xmlProject: OldStandardXml.Project,
-    val converterArguments: ConverterArguments
+    private val typeProvider: FbParametersTypeProvider,
+    private val xmlProject: OldStandardXml.Project,
+    private val converterArguments: ConverterArguments
 ) : ConverterBase(converterArguments) {
 
     private val pouInstance = xmlProject

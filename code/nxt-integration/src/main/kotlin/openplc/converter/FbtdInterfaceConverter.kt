@@ -5,10 +5,9 @@ import org.fbme.lib.iec61499.declarations.EventAssociation
 import org.fbme.lib.iec61499.declarations.FBTypeDeclaration
 import org.fbme.lib.iec61499.declarations.ParameterDeclaration
 import org.fbme.lib.iec61499.parser.STConverter
-import org.fbme.lib.st.types.ElementaryType
 
 class FbtdInterfaceConverter(
-    val xmlPou: OldStandardXml.Pou,
+    private val xmlPou: OldStandardXml.Pou,
     converterArguments: ConverterArguments
 ) : ConverterBase(converterArguments) {
 

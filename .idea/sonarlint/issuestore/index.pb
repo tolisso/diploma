@@ -49,8 +49,6 @@ C
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 C
 settings.gradle.kts,7\4\749edfcc96398253e5b3416184e95c46621da850
-M
-code/library/build.gradle.kts,6\3\632195e59127e2d8d67cf6ffe2197ef7e9d46102
 Q
 !code/4diac-integration/.module-id,5\f\5f2e52c295b3babae6cf6c3d05c3cc4cdf0a676c
 W
@@ -95,8 +93,6 @@ dcode/nxt-integration/src/main/java/org/fbme/integration/nxt/importer/PortPathNe
 jcode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/iec61131-3/bitwiseOperators/F_NOT.fbt,a\3\a361801b81efa35816403732e90250624b345fa6
 ö
 jcode/4diac-integration/solutions/stdlib/models/iec61499.4diac.stdlib/iec61131-3/bitwiseOperators/F_XOR.fbt,f\6\f64b46454b8a374e12fdc7d2adce376a03a8eaa5
-Å
-Qcode/nxt-integration/src/main/kotlin/openplc/converter/FbdInConnectionsService.kt,9\5\95d1025810d8444f81730adf18591e0d75f7dea5
 ó
 gcode/richediting/src/main/kotlin/org/fbme/ide/richediting/editor/RichApplicationProjectionController.kt,e\c\ecb078c24615ffd0022bd9fe8b739a45dde44846
 ï

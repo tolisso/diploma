@@ -7,7 +7,6 @@ class FbdEvaluationOrderService(
     xmlInterface: OldStandardXml.Interface,
     converterArguments: ConverterArguments
 ) {
-
     private val variableService = FbdVariableService(xmlFbd, xmlInterface, converterArguments)
     private val inConnectionsService = FbdInConnectionsService(xmlFbd)
     private val blockService = FbdBlockService(xmlFbd)

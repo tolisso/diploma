@@ -14,6 +14,7 @@
   </imports>
   <registry>
     <language id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior">
+      <concept id="6496299201655527393" name="jetbrains.mps.lang.behavior.structure.LocalBehaviorMethodCall" flags="nn" index="BsUDl" />
       <concept id="1225194240794" name="jetbrains.mps.lang.behavior.structure.ConceptBehavior" flags="ng" index="13h7C7">
         <reference id="1225194240799" name="concept" index="13h7C2" />
         <child id="1225194240805" name="method" index="13h7CS" />
@@ -559,6 +560,24 @@
         </node>
       </node>
       <node concept="17QB3L" id="3wAsKTkcn5p" role="3clF45" />
+    </node>
+    <node concept="13i0hz" id="6hXHRcZCsII" role="13h7CS">
+      <property role="TrG5h" value="getLoadablePresentation" />
+      <ref role="13i0hy" node="EAhk9WY3Ij" resolve="getLoadablePresentation" />
+      <node concept="3Tm1VV" id="6hXHRcZCsIJ" role="1B3o_S" />
+      <node concept="3clFbS" id="6hXHRcZCsIK" role="3clF47">
+        <node concept="3clFbF" id="6hXHRcZCsIL" role="3cqZAp">
+          <node concept="3cpWs3" id="6hXHRcZCsIM" role="3clFbG">
+            <node concept="BsUDl" id="6Yz3fs7Q60k" role="3uHU7w">
+              <ref role="37wK5l" to="tpcu:hEwIMiw" resolve="getPresentation" />
+            </node>
+            <node concept="Xl_RD" id="6hXHRcZCsIQ" role="3uHU7B">
+              <property role="Xl_RC" value="BOOL#" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="17QB3L" id="6hXHRcZCsIR" role="3clF45" />
     </node>
   </node>
   <node concept="13h7C7" id="3wAsKTkcorr">

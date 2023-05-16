@@ -3,7 +3,13 @@ package openplc.converter
 import openplc.oldstandart.dto.OldStandardXml
 
 class FbdInConnectionsService(private val fbd: OldStandardXml.FBD) {
-    fun getBlocksInConnections(): List<BlockInConnection> {
+    private val blockInConnections = getBlocksInConnections().groupBy { it.targetBlockId }
+
+    fun getBlockInConnections(blockId: Long): List<BlockInConnection> {
+        return blockInConnections[blockId] ?: emptyList()
+    }
+
+    private fun getBlocksInConnections(): List<BlockInConnection> {
         val connections = ArrayList<BlockInConnection>()
         for (block in fbd.blockList) {
             for (variable in block.inputVariables.variables) {
@@ -22,48 +28,7 @@ class FbdInConnectionsService(private val fbd: OldStandardXml.FBD) {
         }
         return connections
     }
-
-    fun getVariablesInConnections(): List<VariableInConnection> {
-        val connections = ArrayList<VariableInConnection>()
-        fbd.outVariableList.forEach { variable ->
-            variable.connectionPointIn?.connections?.forEach { connection ->
-                connections.add(
-                    VariableInConnection(
-                        connection.refLocalId,
-                        connection.formalParameter,
-                        variable.localId,
-                    )
-                )
-            }
-        }
-        fbd.inOutVariableList.forEach { variable ->
-            variable.connectionPointIn?.connections?.forEach { connection ->
-                connections.add(
-                    VariableInConnection(
-                        connection.refLocalId,
-                        connection.formalParameter,
-                        variable.localId,
-                    )
-                )
-            }
-        }
-        return connections
-    }
-
-    fun getVariableInConnections(varId: Long): List<VariableInConnection> {
-        return getVariablesInConnections().filter { it.targetVariableId == varId }
-    }
-
-    fun getBlockInConnections(blockId: Long): List<BlockInConnection> {
-        return getBlocksInConnections().filter { it.targetBlockId == blockId }
-    }
 }
-
-class VariableInConnection(
-    val sourceId: Long,
-    val sourceFormalParameter: String?, // output variable name in case of block
-    val targetVariableId: Long,
-)
 
 class BlockInConnection(
     val sourceId: Long,

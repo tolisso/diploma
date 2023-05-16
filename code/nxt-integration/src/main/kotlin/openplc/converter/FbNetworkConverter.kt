@@ -16,8 +16,6 @@ class FbNetworkConverter(
 
     private val networkEventConverter =
         FbNetworkEventConverter(xmlFbd, xmlInterface, converterArguments, parametersTypeProvider, startEvent, endEvent)
-    private val evaluationOrderService = FbdEvaluationOrderService(xmlFbd, xmlInterface, converterArguments)
-    private val blockService = FbdBlockService(xmlFbd)
 
 
     // returns additional FBTypeDeclarations of variables
