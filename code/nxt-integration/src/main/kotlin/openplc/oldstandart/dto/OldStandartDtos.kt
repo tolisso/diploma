@@ -1,14 +1,30 @@
+// kotlinx.serialization is enabled but 'idea' doesn't see it
+
 package openplc.oldstandart.dto
 
-import nl.adaptivity.xmlutil.serialization.XmlSerialName
+import com.intellij.util.io.readText
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.decodeFromString
+import kotlinx.serialization.modules.SerializersModule
+import nl.adaptivity.xmlutil.serialization.XML
 import org.jdom.Element
+import kotlin.io.path.Path
 
 class OldStandardXml {
 
+    companion object {
+        fun serializeProject(path: String): Project {
+            return XML() {
+                jacksonPolicy()
+            }.decodeFromString<Project>(Path(path).readText())
+        }
+    }
+
+    @Serializable
     class NotImplemented
 
+    @Serializable
     class Project(
-        @XmlSerialName
         val schemaVersion: String?,
         val fileHeader: NotImplemented,
         val contentHeader: NotImplemented,
@@ -18,15 +34,18 @@ class OldStandardXml {
         val documentation: Documentation?
     )
 
+    @Serializable
     class Instances(
         val configurations: Configurations
     )
 
+    @Serializable
     class Configurations(
         @ChildElementList(target = Configuration::class, name = "configuration")
         val configurationList: List<Configuration>
     )
 
+    @Serializable
     class Configuration(
         @ChildElementList(target = Resource::class, name = "resource")
         val resourceList: List<Resource>
@@ -34,6 +53,7 @@ class OldStandardXml {
         // TODO ...
     )
 
+    @Serializable
     class Resource(
         @ChildElementList(target = Task::class, name = "task")
         val taskList: List<Task>
@@ -41,6 +61,7 @@ class OldStandardXml {
         // TODO ...
     )
 
+    @Serializable
     class Task(
         @ChildElementList(target = PouInstance::class, name = "pouInstance")
         val pouInstanceList: List<PouInstance>
@@ -48,26 +69,32 @@ class OldStandardXml {
         // TODO ...
     )
 
+    @Serializable
     class PouInstance(
         val name: String,
         val typeName: String
     )
 
+    @Serializable
     class AddData // TODO
 
+    @Serializable
     class Documentation // TODO
 
+    @Serializable
     class Types(
         val dataTypes: NotImplemented?,
         val pous: Pous,
     )
 
 
+    @Serializable
     class Pous(
         @ChildElementList(target = Pou::class, name = "pou")
         val pouList: List<Pou>
     )
 
+    @Serializable
     class Pou(
         @ChildElement("interface")
         val pouInterface: Interface?,
@@ -82,8 +109,10 @@ class OldStandardXml {
         val globalId: String?,
     )
 
+    @Serializable
     class Actions // TODO
 
+    @Serializable
     class Body(
         @ChildElement("IL")
         val il: NotImplemented?,
@@ -110,6 +139,7 @@ class OldStandardXml {
 
     )
 
+    @Serializable
     class Interface(
         val returnType: DataType?,
 
@@ -141,14 +171,17 @@ class OldStandardXml {
         val documentation: Documentation?
     )
 
+    @Serializable
     class DataType(
-        @ElementObject
-        private val element: Element
+//        @ElementObject
+//        private val element: Element
     ) {
-        fun getType() = element.children[0].name!!
+//        fun getType() = element.children[0].name!!
+        fun getType() = ""
     }
 
 
+    @Serializable
     class VariableList(
         val name: String?,
         val constant: Boolean?,
@@ -163,6 +196,7 @@ class OldStandardXml {
         val addData: AddData?,
         val documentation: Documentation?
     ) {
+        @Serializable
         class Variable(
             val type: DataType,
             val initialValue: InitialValue?,
@@ -173,10 +207,12 @@ class OldStandardXml {
             val globalId: String?
         )
 
+        @Serializable
         class InitialValue(
             val simpleValue: SimpleValue?
         )
 
+        @Serializable
         class SimpleValue(
             val value: String
         )
@@ -184,18 +220,31 @@ class OldStandardXml {
 
 
     //body common objects
+    @Serializable
     class Comment // TODO
+
+    @Serializable
     class Error // TODO
+
+    @Serializable
     class Connector // TODO
+
+    @Serializable
     class Continuation // TODO
+
+    @Serializable
     class ActionBlock // TODO
+
+    @Serializable
     class VendorElement // TODO
 
+    @Serializable
     class Position(
         val x: Int,
         val y: Int
     )
 
+    @Serializable
     class Block(
         val position: Position,
         val inputVariables: InOutVariables,
@@ -214,11 +263,13 @@ class OldStandardXml {
         fun getName() = instanceName ?: "UNNAMED_$localId"
         fun getType() = convertBlockType(typeName)
 
+        @Serializable
         class InOutVariables(
             @ChildElementList(target = InOutVariable::class, name = "variable")
             val variables: List<InOutVariable>
         )
 
+        @Serializable
         class InOutVariable(
             val connectionPointIn: ConnectionPointIn?,
             val connectionPointOut: ConnectionPointOut?,
@@ -231,6 +282,7 @@ class OldStandardXml {
         )
     }
 
+    @Serializable
     class ConnectionPointIn(
         val relPosition: Position?,
 
@@ -242,6 +294,7 @@ class OldStandardXml {
         val globalId: String?
     )
 
+    @Serializable
     class ConnectionPointOut(
         val relPosition: Position?,
         val expression: ElementNode?,
@@ -249,6 +302,7 @@ class OldStandardXml {
         val globalId: String?
     )
 
+    @Serializable
     class Connection(
         @ChildElementList(target = Position::class, name = "position")
         val positions: List<Position>,
@@ -259,15 +313,26 @@ class OldStandardXml {
         val formalParameter: String?
     )
 
+    @Serializable
     class Label // TODO
+
+    @Serializable
     class Jump // TODO
+
+    @Serializable
     class Return // TODO
 
+    @Serializable
     class ElementNode(
-        @ElementObject
-        val element: Element
-    )
+//        @ElementObject
+//        val element: Element
+    ) {
+        fun getText(): String {
+            return "text"
+        }
+    }
 
+    @Serializable
     class FBD(
         @ChildElementList(target = Comment::class, name = "comment")
         val commentList: List<Comment>,
@@ -308,6 +373,7 @@ class OldStandardXml {
         @ChildElementList(target = Return::class, name = "return")
         val returnList: List<Return>,
     ) {
+        @Serializable
         class InOutVariable(
             val position: Position,
             val connectionPointIn: ConnectionPointIn?,
@@ -328,6 +394,7 @@ class OldStandardXml {
             val globalId: String?
         )
 
+        @Serializable
         class InVariable(
             val position: Position,
             val connectionPointOut: ConnectionPointOut?,
@@ -344,6 +411,7 @@ class OldStandardXml {
             val globalId: String?
         )
 
+        @Serializable
         class OutVariable(
             val position: Position,
             val connectionPointIn: ConnectionPointIn?,

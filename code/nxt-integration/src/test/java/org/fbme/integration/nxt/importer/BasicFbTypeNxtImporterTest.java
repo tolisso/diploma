@@ -1,5 +1,7 @@
 package org.fbme.integration.nxt.importer;
 
+import nl.adaptivity.xmlutil.serialization.XML;
+import openplc.oldstandart.dto.OldStandardXml;
 import org.fbme.ide.platform.testing.PlatformTestBase;
 import org.fbme.ide.platform.testing.PlatformTestRunner;
 import org.fbme.lib.iec61499.parser.STConverter;
@@ -14,6 +16,6 @@ import java.io.IOException;
 public class BasicFbTypeNxtImporterTest extends PlatformTestBase {
     @Test
     public void parseTest0() throws ParserConfigurationException, IOException, SAXException, IOException, SAXException {
-        TmpParseTest.test(getFactory(), getStFactory(), "C:\\Users\\tolisso\\Documents\\openplc\\plc.xml");
+        OldStandardXml.Companion.serializeProject("C:\\Users\\tolisso\\Documents\\openplc\\plc.xml");
     }
 }
