@@ -1,6 +1,6 @@
 package openplc.converter
 
-import openplc.oldstandart.dto.OldStandardXml
+import org.fbme.iec61131.model.OldStandardXml
 import org.fbme.lib.iec61499.declarations.FBTypeDeclaration
 import org.fbme.lib.iec61499.fbnetwork.*
 import kotlin.random.Random

@@ -1,4 +1,4 @@
-package openplc.oldstandart.dto
+package org.fbme.iec61131.model
 
 /*
  * Copyright (c) 2020.
@@ -20,7 +20,6 @@ package openplc.oldstandart.dto
  * under the License.
  */
 
-import nl.adaptivity.xmlutil.ExperimentalXmlUtilApi
 import nl.adaptivity.xmlutil.QName
 import nl.adaptivity.xmlutil.serialization.*
 import nl.adaptivity.xmlutil.serialization.structure.SafeParentInfo

@@ -1,5 +1,6 @@
 import org.fbme.gradle.ModuleDependency
 import org.fbme.gradle.moduleDependency
+import org.gradle.internal.jvm.Jvm
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -15,7 +16,6 @@ dependencies {
     implementation("org.jetbrains:annotations:19.0.0")
     // TODO use real JDOM and somehow bridge it in the intellij platform environment?
     implementation("org.jetbrains.intellij.deps:jdom:2.0.6")
-    api("io.github.pdvrieze.xmlutil:serialization-jvm:0.83.0")
 }
 
 mps {

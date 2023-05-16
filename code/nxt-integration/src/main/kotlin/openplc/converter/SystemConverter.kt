@@ -1,6 +1,6 @@
 package openplc.converter
 
-import openplc.oldstandart.dto.OldStandardXml
+import org.fbme.iec61131.model.OldStandardXml
 import org.fbme.lib.iec61499.declarations.DeviceDeclaration
 import org.fbme.lib.iec61499.declarations.Mapping
 import org.fbme.lib.iec61499.declarations.ResourceDeclaration
@@ -11,9 +11,9 @@ import org.fbme.lib.iec61499.fbnetwork.FBNetworkConnection
 import org.fbme.lib.iec61499.parser.STConverter
 
 class SystemConverter(
-    private val typeProvider: FbParametersTypeProvider,
-    private val xmlProject: OldStandardXml.Project,
-    private val converterArguments: ConverterArguments
+        private val typeProvider: FbParametersTypeProvider,
+        private val xmlProject: OldStandardXml.Project,
+        private val converterArguments: ConverterArguments
 ) : ConverterBase(converterArguments) {
 
     private val pouInstance = xmlProject

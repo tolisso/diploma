@@ -1,15 +1,15 @@
 package openplc.converter
 
-import openplc.oldstandart.dto.OldStandardXml
+import org.fbme.iec61131.model.OldStandardXml
 import org.fbme.lib.iec61499.parser.STConverter
 import org.fbme.lib.st.expressions.Literal
 import org.fbme.lib.st.types.DataType
 import org.fbme.lib.st.types.ElementaryType
 
 class FbdVariableService(
-    private val xmlFbd: OldStandardXml.FBD,
-    xmlInterface: OldStandardXml.Interface,
-    converterArguments: ConverterArguments
+        private val xmlFbd: OldStandardXml.FBD,
+        xmlInterface: OldStandardXml.Interface,
+        converterArguments: ConverterArguments
 ) : ConverterBase(converterArguments) {
     private val variableIdToNameMap = getVariableNameByIdMap()
     private val declaredOutVariables = getDeclaredOutVariables()
@@ -56,8 +56,9 @@ class FbdVariableService(
 
         val varNameToValue = HashMap<String, String>()
         for (variable in varList) {
-            if (variable.initialValue != null) {
-                varNameToValue[variable.name] = variable.initialValue.simpleValue!!.value
+            val initialValue = variable.initialValue
+            if (initialValue != null) {
+                varNameToValue[variable.name] = initialValue.simpleValue!!.value
             } else {
                 val type = getVariableType(variable) ?: continue
                 varNameToValue[variable.name] = getDefaultValue(type)

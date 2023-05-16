@@ -1,10 +1,11 @@
 package openplc.converter
 
-import openplc.oldstandart.dto.OldStandardXml
+import org.fbme.iec61131.model.OldStandardXml
+
 
 class InterfaceService(
-    private val xmlInterface: OldStandardXml.Interface,
-    converterArguments: ConverterArguments
+        private val xmlInterface: OldStandardXml.Interface,
+        converterArguments: ConverterArguments
 ) : ConverterBase(converterArguments) {
 
     fun getInputVariables(): Set<String> {

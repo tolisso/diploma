@@ -1,9 +1,8 @@
 package openplc.converter
 
-import openplc.oldstandart.dto.BlockInfo
-import openplc.oldstandart.dto.DataParameterInfo
-import openplc.oldstandart.dto.oldStandardBocks
-import org.fbme.lib.st.types.DataType
+import org.fbme.iec61131.model.BlockInfo
+import org.fbme.iec61131.model.DataParameterInfo
+import org.fbme.iec61131.model.oldStandardBocks
 
 class FbParametersTypeProvider(additionalBlocks: List<BlockInfo>) {
     private val typeNameToBlock: Map<String, BlockInfo> =

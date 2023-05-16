@@ -1,6 +1,6 @@
 package openplc.converter
 
-import openplc.oldstandart.dto.OldStandardXml
+import org.fbme.iec61131.model.OldStandardXml
 import org.fbme.lib.iec61499.fbnetwork.EntryKind
 import org.fbme.lib.iec61499.parser.STConverter
 import org.fbme.lib.st.types.ElementaryType
@@ -144,9 +144,10 @@ class FbNetworkEventConverter(
         val typeMapper = HashMap<GenericType, ElementaryType>()
         for (parameter in parametersTypeProvider.getBlockParameters(blockType)) {
             val connection = blockName + "." + parameter.name
-            if (parameter.type is GenericType && connectionToType[connection] != null) {
+            val type = parameter.type
+            if (type is GenericType && connectionToType[connection] != null) {
                 val varType = connectionToType[connection]!!
-                typeMapper[parameter.type] = when(varType) {
+                typeMapper[type] = when (varType) {
                     is ElementaryType -> varType
                     else -> throw RuntimeException("Var connected to generic input must be elementary type")
                 }
