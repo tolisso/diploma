@@ -21,9 +21,13 @@ source_gen.caches
 build
 out
 
-lib
+/lib
 
 build.xml
 
 *.log
+*.zip
 *.log.*
+*.jar
+
+.teamcity/target
