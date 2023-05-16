@@ -1,5 +1,7 @@
-package openplc.converter
+package openplc.service
 
+import openplc.converter.ConverterArguments
+import openplc.converter.ConverterBase
 import openplc.oldstandart.dto.OldStandardXml
 
 class InterfaceService(

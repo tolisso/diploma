@@ -8,14 +8,13 @@ import kotlin.random.Random
 class FbNetworkConverter(
     private val xmlFbd: OldStandardXml.FBD,
     xmlInterface: OldStandardXml.Interface,
-    parametersTypeProvider: FbParametersTypeProvider,
     converterArguments: ConverterArguments,
     startEvent: String = "REQ",
     endEvent: String? = "CNF"
 ) : ConverterBase(converterArguments) {
 
     private val networkEventConverter =
-        FbNetworkEventConverter(xmlFbd, xmlInterface, converterArguments, parametersTypeProvider, startEvent, endEvent)
+        FbNetworkEventConverter(xmlFbd, xmlInterface, converterArguments, startEvent, endEvent)
 
 
     // returns additional FBTypeDeclarations of variables

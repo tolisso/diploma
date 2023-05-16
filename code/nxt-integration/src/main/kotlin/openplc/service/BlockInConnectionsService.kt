@@ -1,8 +1,8 @@
-package openplc.converter
+package openplc.service
 
 import openplc.oldstandart.dto.OldStandardXml
 
-class FbdInConnectionsService(private val fbd: OldStandardXml.FBD) {
+class BlockInConnectionsService(private val fbd: OldStandardXml.FBD) {
     private val blockInConnections = getBlocksInConnections().groupBy { it.targetBlockId }
 
     fun getBlockInConnections(blockId: Long): List<BlockInConnection> {

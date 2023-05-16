@@ -1,6 +1,7 @@
 package openplc.converter
 
 import openplc.oldstandart.dto.OldStandardXml
+import openplc.service.*
 import org.fbme.lib.iec61499.fbnetwork.EntryKind
 import org.fbme.lib.iec61499.parser.STConverter
 import org.fbme.lib.st.types.ElementaryType
@@ -10,7 +11,6 @@ class FbNetworkEventConverter(
     xmlFbd: OldStandardXml.FBD,
     xmlInterface: OldStandardXml.Interface,
     converterArguments: ConverterArguments,
-    private val parametersTypeProvider: FbParametersTypeProvider,
     private var curEventOut: String,
     private val endEventIn: String?
 ) : ConverterBase(converterArguments) {
@@ -18,7 +18,7 @@ class FbNetworkEventConverter(
     private val blockService = FbdBlockService(xmlFbd)
     private val varService = FbdVariableService(xmlFbd, xmlInterface, converterArguments)
     private val evaluationOrderService = FbdEvaluationOrderService(xmlFbd, xmlInterface, converterArguments)
-    private val inConnectionsService = FbdInConnectionsService(xmlFbd)
+    private val inConnectionsService = BlockInConnectionsService(xmlFbd)
     private val interfaceService = InterfaceService(xmlInterface, converterArguments)
     val networkConnections: List<NetworkPart>
     private val outputVariables = interfaceService.getInOutVariables() + interfaceService.getOutputVariables()
@@ -142,7 +142,7 @@ class FbNetworkEventConverter(
         val blockName = blockService.getNameById(blockId)
         val blockType = blockService.getTypeById(blockId)
         val typeMapper = HashMap<GenericType, ElementaryType>()
-        for (parameter in parametersTypeProvider.getBlockParameters(blockType)) {
+        for (parameter in blocksInterfaceInfo.getBlockParameters(blockType)) {
             val connection = blockName + "." + parameter.name
             if (parameter.type is GenericType && connectionToType[connection] != null) {
                 val varType = connectionToType[connection]!!
@@ -152,7 +152,7 @@ class FbNetworkEventConverter(
                 }
             }
         }
-        for (parameter in parametersTypeProvider.getBlockParameters(blockType)) {
+        for (parameter in blocksInterfaceInfo.getBlockParameters(blockType)) {
             val connection = blockName + "." + parameter.name
             if (connectionToType[connection] == null) {
                 connectionToType[connection] = when (parameter.type) {
