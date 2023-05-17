@@ -1,9 +1,7 @@
 package org.fbme.integration.nxt.importer;
 
-import openplc.converter.*;
-import openplc.oldstandart.dto.OldStandardXml;
-import openplc.oldstandart.dto.Iec61131Parser;
-import openplc.converter.BlocksInterfaceInfo;
+import org.fbme.iec61131.converter.*;
+import org.fbme.iec61131.model.OldStandardXml;
 import org.fbme.lib.common.Declaration;
 import org.fbme.lib.iec61499.IEC61499Factory;
 import org.fbme.lib.st.STFactory;
@@ -20,18 +18,16 @@ import java.util.stream.Collectors;
 
 public class TmpParseTest {
     public static List<Declaration> test(IEC61499Factory factory, STFactory stFactory, String path) throws ParserConfigurationException, IOException, SAXException {
-        var root = new DOMBuilder().build(DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(path));
-        var project = new Iec61131Parser().parse(root.getRootElement(), OldStandardXml.Project.class);
+        var project = OldStandardXml.Companion.serializeProject(path);
         var blockInterfaceService = new BlocksInterfaceInfo(project.getTypes().getPous());
         var converterArguments = new ConverterArguments(factory, stFactory, blockInterfaceService);
-        var resDeclarations = new ArrayList<>(getChildNodes(converterArguments, blockInterfaceService, project));
+        var resDeclarations = new ArrayList<>(getChildNodes(converterArguments, project));
         resDeclarations.add(new SystemConverter(project, converterArguments).createSystem());
         return resDeclarations;
     }
 
     private static List<Declaration> getChildNodes(
             ConverterArguments converterArguments,
-            BlocksInterfaceInfo blocksInterfaceInfo,
             OldStandardXml.Project project
     ) {
         return project.getTypes().getPous().getPouList().stream()

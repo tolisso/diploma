@@ -1,7 +1,7 @@
-package openplc.service
+package org.fbme.iec61131.service
 
-import openplc.converter.ConverterArguments
-import openplc.oldstandart.dto.OldStandardXml
+import org.fbme.iec61131.converter.ConverterArguments
+import org.fbme.iec61131.model.OldStandardXml
 
 class FbdEvaluationOrderService(
     xmlFbd: OldStandardXml.FBD,

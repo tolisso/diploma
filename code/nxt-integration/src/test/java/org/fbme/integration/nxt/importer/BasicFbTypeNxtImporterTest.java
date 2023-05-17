@@ -14,6 +14,7 @@ import java.io.IOException;
 public class BasicFbTypeNxtImporterTest extends PlatformTestBase {
     @Test
     public void parseTest0() throws ParserConfigurationException, IOException, SAXException, IOException, SAXException {
-        OldStandardXml.Companion.serializeProject("C:\\Users\\tolisso\\Documents\\openplc\\plc.xml");
+        var a = OldStandardXml.Companion.serializeProject("C:\\Users\\tolisso\\Documents\\openplc\\plc.xml");
+        System.out.println(a);
     }
 }

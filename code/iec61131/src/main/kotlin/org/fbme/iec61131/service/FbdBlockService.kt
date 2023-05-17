@@ -1,4 +1,4 @@
-package openplc.service
+package org.fbme.iec61131.service
 
 import org.fbme.iec61131.model.OldStandardXml
 

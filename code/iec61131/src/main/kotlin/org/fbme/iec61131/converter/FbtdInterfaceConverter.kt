@@ -1,4 +1,4 @@
-package openplc.converter
+package org.fbme.iec61131.converter
 
 import org.fbme.iec61131.model.OldStandardXml
 import org.fbme.lib.iec61499.declarations.EventAssociation

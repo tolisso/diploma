@@ -1,9 +1,9 @@
-package openplc.service
+package org.fbme.iec61131.service
 
-import openplc.converter.ConverterArguments
-import openplc.converter.ConverterBase
-import openplc.converter.getDefaultValue
-import openplc.oldstandart.dto.OldStandardXml
+import org.fbme.iec61131.converter.getDefaultValue
+import org.fbme.iec61131.converter.ConverterArguments
+import org.fbme.iec61131.converter.ConverterBase
+import org.fbme.iec61131.model.OldStandardXml
 import org.fbme.lib.iec61499.parser.STConverter
 import org.fbme.lib.st.expressions.Literal
 import org.fbme.lib.st.types.DataType

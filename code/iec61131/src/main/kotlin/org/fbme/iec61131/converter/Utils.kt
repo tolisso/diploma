@@ -1,4 +1,4 @@
-package openplc.converter
+package org.fbme.iec61131.converter
 
 import org.fbme.lib.st.types.DataType
 import org.fbme.lib.st.types.ElementaryType

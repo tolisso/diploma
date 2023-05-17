@@ -1,6 +1,6 @@
-package openplc.converter
+package org.fbme.iec61131.converter
 
-import openplc.oldstandart.dto.OldStandardXml
+import org.fbme.iec61131.model.OldStandardXml
 import org.fbme.lib.iec61499.declarations.DeviceDeclaration
 import org.fbme.lib.iec61499.declarations.Mapping
 import org.fbme.lib.iec61499.declarations.ResourceDeclaration

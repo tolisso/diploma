@@ -45,8 +45,6 @@ C
 build-bootstrap.xml,8\9\8907b3244100347a4a94fa8c7a35153299d294f0
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-C
-settings.gradle.kts,7\4\749edfcc96398253e5b3416184e95c46621da850
 Q
 !code/4diac-integration/.module-id,5\f\5f2e52c295b3babae6cf6c3d05c3cc4cdf0a676c
 W

@@ -1,9 +1,9 @@
-package openplc.converter
+package org.fbme.iec61131.converter
 
-import openplc.oldstandart.dto.BlockInfo
-import openplc.oldstandart.dto.DataParameterInfo
-import openplc.oldstandart.dto.OldStandardXml
-import openplc.oldstandart.dto.oldStandardBocks
+import org.fbme.iec61131.model.BlockInfo
+import org.fbme.iec61131.model.DataParameterInfo
+import org.fbme.iec61131.model.OldStandardXml
+import org.fbme.iec61131.model.oldStandardBocks
 import org.fbme.lib.iec61499.IEC61499Factory
 import org.fbme.lib.st.STFactory
 import org.fbme.lib.st.types.DataType

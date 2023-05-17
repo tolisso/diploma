@@ -1,8 +1,8 @@
-package openplc.service
+package org.fbme.iec61131.service
 
-import openplc.converter.ConverterArguments
-import openplc.converter.ConverterBase
-import openplc.oldstandart.dto.OldStandardXml
+import org.fbme.iec61131.converter.ConverterArguments
+import org.fbme.iec61131.converter.ConverterBase
+import org.fbme.iec61131.model.OldStandardXml
 
 class InterfaceService(
     private val xmlInterface: OldStandardXml.Interface,
