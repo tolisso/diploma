@@ -1,14 +1,14 @@
 package openplc.converter
 
-import openplc.oldstandart.dto.OldStandardXml
+import org.fbme.iec61131.model.OldStandardXml
 import org.fbme.lib.iec61499.declarations.EventAssociation
 import org.fbme.lib.iec61499.declarations.FBTypeDeclaration
 import org.fbme.lib.iec61499.declarations.ParameterDeclaration
 import org.fbme.lib.iec61499.parser.STConverter
 
 class FbtdInterfaceConverter(
-    private val xmlPou: OldStandardXml.Pou,
-    converterArguments: ConverterArguments
+        private val xmlPou: OldStandardXml.Pou,
+        converterArguments: ConverterArguments
 ) : ConverterBase(converterArguments) {
 
     fun fillInterface(fbtd: FBTypeDeclaration) {
@@ -20,12 +20,13 @@ class FbtdInterfaceConverter(
         val outputEvent = factory.createEventDeclaration(null)
         outputEvent.name = "CNF"
 
-        if (xmlPou.pouInterface != null) {
-            fbtd.inputParameters.addAll(mapVarListToParameters(xmlPou.pouInterface.inputVars))
-            fbtd.inputParameters.addAll(mapVarListToParameters(xmlPou.pouInterface.inOutVars))
+        val pouInterface = xmlPou.pouInterface
+        if (pouInterface != null) {
+            fbtd.inputParameters.addAll(mapVarListToParameters(pouInterface.inputVars))
+            fbtd.inputParameters.addAll(mapVarListToParameters(pouInterface.inOutVars))
 
-            fbtd.outputParameters.addAll(mapVarListToParameters(xmlPou.pouInterface.outputVars))
-            fbtd.outputParameters.addAll(mapVarListToParameters(xmlPou.pouInterface.inOutVars))
+            fbtd.outputParameters.addAll(mapVarListToParameters(pouInterface.outputVars))
+            fbtd.outputParameters.addAll(mapVarListToParameters(pouInterface.inOutVars))
 
             fbtd.inputParameters.forEach { inputEvent.associations.add(createAssociation(it.name)) }
             fbtd.outputParameters.forEach { outputEvent.associations.add(createAssociation(it.name)) }

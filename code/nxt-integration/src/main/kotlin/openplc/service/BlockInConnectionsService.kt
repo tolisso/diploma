@@ -1,6 +1,7 @@
 package openplc.service
 
-import openplc.oldstandart.dto.OldStandardXml
+import org.fbme.iec61131.model.OldStandardXml
+
 
 class BlockInConnectionsService(private val fbd: OldStandardXml.FBD) {
     private val blockInConnections = getBlocksInConnections().groupBy { it.targetBlockId }
@@ -13,14 +14,14 @@ class BlockInConnectionsService(private val fbd: OldStandardXml.FBD) {
         val connections = ArrayList<BlockInConnection>()
         for (block in fbd.blockList) {
             for (variable in block.inputVariables.variables) {
-                if (variable.connectionPointIn == null) continue
-                for (connection in variable.connectionPointIn.connections) {
+                val connectionPointIn = variable.connectionPointIn ?: continue
+                for (connection in connectionPointIn.connections) {
 
                     val blockInConnection = BlockInConnection(
-                        connection.refLocalId, // sourceId
-                        connection.formalParameter,
-                        block.localId, // targetBlockId
-                        variable.formalParameter // targetBlockVariableName
+                            connection.refLocalId, // sourceId
+                            connection.formalParameter,
+                            block.localId, // targetBlockId
+                            variable.formalParameter // targetBlockVariableName
                     )
                     connections.add(blockInConnection)
                 }

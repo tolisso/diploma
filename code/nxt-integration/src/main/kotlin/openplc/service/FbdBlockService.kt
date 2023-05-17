@@ -1,6 +1,6 @@
 package openplc.service
 
-import openplc.oldstandart.dto.OldStandardXml
+import org.fbme.iec61131.model.OldStandardXml
 
 class FbdBlockService(xmlFbd: OldStandardXml.FBD) {
     private val blockIdToNameMap = xmlFbd.blockList.associate { it.localId to it.getName() }

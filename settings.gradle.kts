@@ -11,6 +11,7 @@ include(
     "code:scenes",
     "code:smv-debugger",
     "code:debugger",
+    "code:iec61131",
 
     "docs",
 

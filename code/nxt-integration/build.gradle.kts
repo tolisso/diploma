@@ -13,6 +13,7 @@ dependencies {
     implementation(project(":code:library"))
     implementation(project(":code:language"))
     implementation(project(":code:platform"))
+    implementation(project(":code:iec61131"))
     mpsImplementation(project(":code:library", "mps"))
     mpsImplementation(project(":code:language", "mps"))
     mpsImplementation(project(":code:platform", "mps"))

@@ -1,4 +1,4 @@
-package openplc.oldstandart.dto
+package org.fbme.iec61131.model
 
 import org.fbme.lib.st.types.DataType
 import org.fbme.lib.st.types.ElementaryType
