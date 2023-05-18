@@ -1,11 +1,16 @@
 package org.fbme.iec61131.model
 
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
-import kotlinx.serialization.decodeFromString
+import kotlinx.serialization.*
+import kotlinx.serialization.builtins.ListSerializer
+import kotlinx.serialization.descriptors.SerialDescriptor
+import kotlinx.serialization.descriptors.buildClassSerialDescriptor
+import kotlinx.serialization.descriptors.serialDescriptor
+import kotlinx.serialization.encoding.Decoder
+import kotlinx.serialization.encoding.Encoder
+import nl.adaptivity.xmlutil.XmlEvent
 import nl.adaptivity.xmlutil.serialization.XML
-import nl.adaptivity.xmlutil.serialization.XmlElement
-import nl.adaptivity.xmlutil.serialization.XmlSerialName
+import nl.adaptivity.xmlutil.serialization.XmlValue
+import nl.adaptivity.xmlutil.util.CompactFragment
 import kotlin.io.path.Path
 import kotlin.io.path.readText
 
@@ -140,13 +145,34 @@ class OldStandardXml {
         val documentation: Documentation?
     )
 
-    @Serializable
+    @Serializable(with = DataType.Companion::class)
     class DataType(
-//        @ElementObject
-//        private val element: Element
+        val childrenName: String
     ) {
-        //        fun getType() = element.children[0].name!!
         fun getType() = ""
+
+        @Suppress("EXPERIMENTAL_API_USAGE")
+        @Serializer(DataType::class)
+        companion object : KSerializer<DataType> {
+
+            override val descriptor = buildClassSerialDescriptor("DataType") {
+            }
+
+
+            private val NS_XSI = XmlEvent.NamespaceImpl(
+                "prefix",
+                "http://www.plcopen.org/xml/tc6_0201"
+            )
+
+            override fun serialize(encoder: Encoder, value: DataType) {
+                TODO("Not yet implemented")
+            }
+
+
+            override fun deserialize(decoder: Decoder): DataType {
+                return DataType((decoder as XML.XmlInput).input.localName);
+            }
+        }
     }
 
 
@@ -250,7 +276,7 @@ class OldStandardXml {
     @Serializable
     class ConnectionPointIn(
         val relPosition: Position?,
-        val connections: List<Connection>,
+        val connectionList: List<Connection>,
         val expression: ElementNode?,
         val addData: AddData?,
         val globalId: String?
@@ -266,7 +292,7 @@ class OldStandardXml {
 
     @Serializable
     class Connection(
-        val positions: List<Position>,
+        val positionList: List<Position>,
         val addData: AddData?,
         val globalId: String?,
         val refLocalId: Long,
@@ -284,11 +310,11 @@ class OldStandardXml {
 
     @Serializable
     class ElementNode(
-//        @ElementObject
-//        val element: Element
+        @XmlValue(true)
+        private val text: String
     ) {
         fun getText(): String {
-            return "text"
+            return text
         }
     }
 
@@ -363,5 +389,5 @@ class OldStandardXml {
             val globalId: String?
         )
     }
-    // FBD objects end
+// FBD objects end
 }

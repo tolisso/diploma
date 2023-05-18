@@ -1,19 +1,29 @@
 package org.fbme.iec61131.model
 
 import nl.adaptivity.xmlutil.QName
-import nl.adaptivity.xmlutil.serialization.DefaultXmlSerializationPolicy
-import nl.adaptivity.xmlutil.serialization.OutputKind
-import nl.adaptivity.xmlutil.serialization.UnknownChildHandler
-import nl.adaptivity.xmlutil.serialization.XmlElement
-import nl.adaptivity.xmlutil.serialization.XmlSerializationPolicy
+import nl.adaptivity.xmlutil.allText
+import nl.adaptivity.xmlutil.serialization.*
 import nl.adaptivity.xmlutil.serialization.structure.SafeParentInfo
 
 
 object JacksonPolicy : DefaultXmlSerializationPolicy(
     false,
     encodeDefault = XmlSerializationPolicy.XmlEncodeDefault.NEVER,
-    unknownChildHandler = UnknownChildHandler { _, _, _, _, _ -> emptyList() }
+    unknownChildHandler = UnknownChildHandler { input, inputKind, _, _, _ ->
+        emptyList()
+    }
 ) {
+
+    override fun effectiveOutputKind(
+        serializerParent: SafeParentInfo,
+        tagParent: SafeParentInfo,
+        canBeAttribute: Boolean
+    ): OutputKind {
+        if (tagParent.elementUseAnnotations.filterIsInstance<XmlValue>().isNotEmpty()) {
+            return OutputKind.Text
+        }
+        return super.effectiveOutputKind(serializerParent, tagParent, canBeAttribute)
+    }
 
     // naming policy
     override fun effectiveName(

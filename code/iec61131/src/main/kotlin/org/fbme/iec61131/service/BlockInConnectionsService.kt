@@ -15,7 +15,7 @@ class BlockInConnectionsService(private val fbd: OldStandardXml.FBD) {
         for (block in fbd.blockList) {
             for (variable in block.inputVariables.variables) {
                 val connectionPointIn = variable.connectionPointIn ?: continue
-                for (connection in connectionPointIn.connections) {
+                for (connection in connectionPointIn.connectionList) {
 
                     val blockInConnection = BlockInConnection(
                             connection.refLocalId, // sourceId

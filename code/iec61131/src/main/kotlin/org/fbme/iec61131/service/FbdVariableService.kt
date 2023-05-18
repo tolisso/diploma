@@ -105,9 +105,9 @@ class FbdVariableService(
         if (connectionPointIn == null) {
             return null
         }
-        return if (connectionPointIn.connections.size == 1) {
-            connectionPointIn.connections[0]
-        } else if (connectionPointIn.connections.isEmpty()) {
+        return if (connectionPointIn.connectionList.size == 1) {
+            connectionPointIn.connectionList[0]
+        } else if (connectionPointIn.connectionList.isEmpty()) {
             null
         } else {
             throw RuntimeException("More than one connection occured")
