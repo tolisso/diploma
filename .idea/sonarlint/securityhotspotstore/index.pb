@@ -88,8 +88,6 @@ r
 Bcode/iec61131/src/main/kotlin/org/fbme/iec61131/converter/Utils.kt,c\f\cf3afb5b5995438f03e68774c270a9b6160a6a24
 
 Ocode/iec61131/src/main/kotlin/org/fbme/iec61131/converter/FbNetworkConverter.kt,2\b\2b58ef3282c7a05d0e481e2c0c8e69dc193e9085
-Ñ
-Tcode/iec61131/src/main/kotlin/org/fbme/iec61131/converter/FbNetworkEventConverter.kt,c\4\c42b6790619269e6ab14e6b1dc553393c1a1d4f7
 x
 Hcode/iec61131/src/main/kotlin/org/fbme/iec61131/converter/NetworkPart.kt,3\c\3c923337027f7335627d08f69888e5bfbdb44814
 |
@@ -98,8 +96,6 @@ z
 Jcode/iec61131/src/main/kotlin/org/fbme/iec61131/service/FbdBlockService.kt,e\c\ec07c53947ceb983a6d81bcdcf0955d5ae2c647d
 Ñ
 Tcode/iec61131/src/main/kotlin/org/fbme/iec61131/service/FbdEvaluationOrderService.kt,8\5\8581cbf190ee4d5b1bc908da1bed2f41a1445225
-Ü
-Vcode/nxt-integration/src/main/java/org/fbme/integration/nxt/importer/TmpParseTest.java,d\8\d82b5a9faf2fde40816b8ed4f373609ad843c969
 O
 buildSrc/src/main/kotlin/DSL.kt,9\0\905d7d2da58f82f61ea68435aa63c8edf0e7c4a7
 C
@@ -112,3 +108,7 @@ Ccode/iec61131/src/main/kotlin/org/fbme/iec61131/model/BlocksInfo.kt,5\c\5c1414
 Kcode/iec61131/src/main/kotlin/org/fbme/iec61131/service/InterfaceService.kt,f\a\fa7e664f108c43ef5aa4ec26a8243bc900923841
 Ñ
 Tcode/iec61131/src/main/kotlin/org/fbme/iec61131/service/BlockInConnectionsService.kt,a\3\a3e3978fd96ba9bb74cfcfcb96587b1f2c22db12
+v
+Fcode/iec61131/src/main/kotlin/org/fbme/iec61131/model/JacksonPolicy.kt,d\0\d0eb1e96ea5fb354643a098cfbcd3230784f5fe0
+Å
+Qcode/platform/src/main/kotlin/org/fbme/ide/platform/testing/PlatformTestRunner.kt,9\5\9504e5cc1b90ceb7a472bb326984224bef483a0a

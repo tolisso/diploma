@@ -25,6 +25,10 @@ mps {
     moduleName.set("org.fbme.integration.nxt.lib")
     moduleDependency(project(":code:library"))
     moduleDependency(project(":code:platform"))
+    libraryFilters.add("iec61131")
+    libraryFilters.add("xmlutil")
+    libraryFilters.add("serialization")
+    libraryFilters.add("core-jvm")
 }
 
 val mpsPrepare by tasks.getting(Copy::class) {

@@ -1,17 +1,12 @@
 package org.fbme.iec61131.model
 
 import kotlinx.serialization.*
-import kotlinx.serialization.builtins.ListSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.descriptors.buildClassSerialDescriptor
-import kotlinx.serialization.descriptors.serialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import nl.adaptivity.xmlutil.EventType
-import nl.adaptivity.xmlutil.XmlEvent
 import nl.adaptivity.xmlutil.serialization.XML
 import nl.adaptivity.xmlutil.serialization.XmlValue
-import nl.adaptivity.xmlutil.util.CompactFragment
 import kotlin.io.path.Path
 import kotlin.io.path.readText
 
@@ -264,7 +259,7 @@ class OldStandardXml {
 
         @Serializable
         class InOutVariables(
-            val variables: List<InOutVariable>
+            val variableList: List<InOutVariable>
         )
 
         @Serializable

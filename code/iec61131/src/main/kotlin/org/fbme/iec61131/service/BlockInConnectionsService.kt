@@ -13,7 +13,7 @@ class BlockInConnectionsService(private val fbd: OldStandardXml.FBD) {
     private fun getBlocksInConnections(): List<BlockInConnection> {
         val connections = ArrayList<BlockInConnection>()
         for (block in fbd.blockList) {
-            for (variable in block.inputVariables.variables) {
+            for (variable in block.inputVariables.variableList) {
                 val connectionPointIn = variable.connectionPointIn ?: continue
                 for (connection in connectionPointIn.connectionList) {
 
