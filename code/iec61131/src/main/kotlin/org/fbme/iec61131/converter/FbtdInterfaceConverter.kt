@@ -50,7 +50,7 @@ class FbtdInterfaceConverter(
     private fun mapVariableToParameter(xmlVariable: OldStandardXml.VariableList.Variable): ParameterDeclaration {
         val parameterDeclaration = factory.createParameterDeclaration(null)
         parameterDeclaration.name = xmlVariable.name
-        parameterDeclaration.type = STConverter.parseType(stFactory, xmlVariable.type.getType())
+        parameterDeclaration.type = STConverter.parseType(stFactory, xmlVariable.type.typeName)
         return parameterDeclaration
     }
 }

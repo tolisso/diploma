@@ -48,7 +48,7 @@ class FbdVariableService(
     fun getAllDeclaredOutVariables() = declaredOutVariables
 
     private fun getVariableType(variable: OldStandardXml.VariableList.Variable): DataType? {
-        val typeName = variable.type.getType()
+        val typeName = variable.type.typeName
         if (typeName in elementaryTypes) {
             return ElementaryType.valueOf(typeName)
         }

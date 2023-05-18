@@ -51,7 +51,7 @@ class BlocksInterfaceInfo(pous: OldStandardXml.Pous) {
     private fun List<OldStandardXml.VariableList>.toParameters(): List<DataParameterInfo> {
         return this.map { variableList ->
             variableList.variableList.map { variable ->
-                val typeStr = variable.type.getType()
+                val typeStr = variable.type.typeName
                 DataParameterInfo(variable.name, nameToType[typeStr]!!)
             }
         }.flatten()

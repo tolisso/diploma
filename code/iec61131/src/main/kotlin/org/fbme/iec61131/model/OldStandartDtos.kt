@@ -7,6 +7,7 @@ import kotlinx.serialization.descriptors.buildClassSerialDescriptor
 import kotlinx.serialization.descriptors.serialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
+import nl.adaptivity.xmlutil.EventType
 import nl.adaptivity.xmlutil.XmlEvent
 import nl.adaptivity.xmlutil.serialization.XML
 import nl.adaptivity.xmlutil.serialization.XmlValue
@@ -52,19 +53,19 @@ class OldStandardXml {
     @Serializable
     class Configuration(
         val resourceList: List<Resource>
-        // TODO ...
+        // ...
     )
 
     @Serializable
     class Resource(
         val taskList: List<Task>
-        // TODO ...
+        // ...
     )
 
     @Serializable
     class Task(
         val pouInstanceList: List<PouInstance>
-        // TODO ...
+        // ...
     )
 
     @Serializable
@@ -74,10 +75,10 @@ class OldStandardXml {
     )
 
     @Serializable
-    class AddData // TODO
+    class AddData // ...
 
     @Serializable
-    class Documentation // TODO
+    class Documentation // ...
 
     @Serializable
     class Types(
@@ -106,7 +107,7 @@ class OldStandardXml {
     )
 
     @Serializable
-    class Actions // TODO
+    class Actions // ...
 
     @Serializable
     class Body(
@@ -147,30 +148,37 @@ class OldStandardXml {
 
     @Serializable(with = DataType.Companion::class)
     class DataType(
-        val childrenName: String
+        val typeName: String
     ) {
-        fun getType() = ""
-
         @Suppress("EXPERIMENTAL_API_USAGE")
         @Serializer(DataType::class)
         companion object : KSerializer<DataType> {
 
-            override val descriptor = buildClassSerialDescriptor("DataType") {
-            }
+            override val descriptor = buildClassSerialDescriptor("DataType")
+            override fun serialize(encoder: Encoder, value: DataType) = throw RuntimeException("Not needed")
 
-
-            private val NS_XSI = XmlEvent.NamespaceImpl(
-                "prefix",
-                "http://www.plcopen.org/xml/tc6_0201"
-            )
-
-            override fun serialize(encoder: Encoder, value: DataType) {
-                TODO("Not yet implemented")
-            }
-
-
+            // example: <type><BOOL/></type>
             override fun deserialize(decoder: Decoder): DataType {
-                return DataType((decoder as XML.XmlInput).input.localName);
+                val reader = (decoder as XML.XmlInput).input
+
+                fun parseUntil(eventType: EventType) {
+                    while (reader.eventType != eventType) reader.next()
+                }
+
+                parseUntil(EventType.START_ELEMENT)
+                // from example: <type>
+                reader.next()
+                parseUntil(EventType.START_ELEMENT)
+                // from example: </BOOL>
+                val tagName = reader.localName
+                reader.next()
+                parseUntil(EventType.END_ELEMENT)
+                // from example: still </BOOL>
+                reader.next()
+                parseUntil(EventType.END_ELEMENT)
+                // from example: </type>
+
+                return DataType(tagName)
             }
         }
     }
@@ -211,24 +219,23 @@ class OldStandardXml {
     }
 
 
-    //body common objects
     @Serializable
-    class Comment // TODO
+    class Comment // ...
 
     @Serializable
-    class Error // TODO
+    class Error // ...
 
     @Serializable
-    class Connector // TODO
+    class Connector // ...
 
     @Serializable
-    class Continuation // TODO
+    class Continuation // ...
 
     @Serializable
-    class ActionBlock // TODO
+    class ActionBlock // ...
 
     @Serializable
-    class VendorElement // TODO
+    class VendorElement // ...
 
     @Serializable
     class Position(
@@ -300,13 +307,13 @@ class OldStandardXml {
     )
 
     @Serializable
-    class Label // TODO
+    class Label // ...
 
     @Serializable
-    class Jump // TODO
+    class Jump // ...
 
     @Serializable
-    class Return // TODO
+    class Return // ...
 
     @Serializable
     class ElementNode(
@@ -389,5 +396,4 @@ class OldStandardXml {
             val globalId: String?
         )
     }
-// FBD objects end
 }
